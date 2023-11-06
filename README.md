@@ -1,11 +1,12 @@
-# Simple-ZigBee-CC2530-switch-to-Zigbee2MQTT
-Simple ZigBee switch based on TI's CC2530 connecting to Zigbee2MQTT
+# SleepDevice-Simple-ZigBee-CC2530-switch-to-Zigbee2MQTT
+Simple sleeping ZigBee switch based on TI's CC2530 connecting to Zigbee2MQTT.
+This version is similar to Simple-ZigBee-CC2530-switch-to-Zigbee2MQTT. The only but important difference is that this device goes into Sleep Mode when not used. This is ideal for battery powered devices. The power consumption is extremly low - about a few uA. 
 
-This is a prototype of a simple switch connecting to Zigbee2MQTT. It is based on a CC2530 from Texas Instruments using Z-Stack 3.0.2 and IAR 10.30 as compiler.
+It is based on a CC2530 from Texas Instruments using Z-Stack 3.0.2 and IAR 10.30 as compiler.
 
 The foundation for the code is the GenericApp example with the ON-OFF Cluster functionality taken from the SampleSwitch example.
 
-It is programmed as an End Device and is intended as a simple platform as starting point for future upgrades, where more switches, temperature sensors etc.can be implemented.
+It is programmed as an End Device with Power Saving enabled and is intended as a simple platform as starting point for future upgrades, where more switches, temperature sensors etc.can be implemented.
 
 ![IMG2](https://github.com/LemmeDasker/TestZigbee/assets/38005465/5e3acf4f-fb30-45d9-8a93-845ba9567916)
 
