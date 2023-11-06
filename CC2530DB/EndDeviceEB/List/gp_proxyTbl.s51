@@ -1,0 +1,1091 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V10.30.1.6000 for 8051              22/Sep/2023  19:42:31
+// Copyright 2004-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for 8051
+//
+//    Core               =  plain
+//    Code model         =  banked
+//    Data model         =  large
+//    Calling convention =  xdata reentrant
+//    Constant location  =  data_rom
+//    Dptr setup         =  1,16
+//                          
+//    Source file        =  
+//        C:\Texas Instruments\Z-Stack 3.0.2\Components\stack\GP\gp_proxyTbl.c
+//    Command line       =  
+//        -f C:\Users\Flemming\AppData\Local\Temp\EW79F3.tmp ("C:\Texas
+//        Instruments\Z-Stack 3.0.2\Components\stack\GP\gp_proxyTbl.c" -D
+//        SECURE=1 -D TC_LINKKEY_JOIN -D NV_INIT -D NV_RESTORE -D xPOWER_SAVING
+//        -D NWK_AUTO_POLL -D xZTOOL_P1 -D xMT_TASK -D xMT_APP_FUNC -D
+//        xMT_SYS_FUNC -D xMT_ZDO_FUNC -D xMT_ZDO_MGMT -D xMT_APP_CNF_FUNC -D
+//        xLEGACY_LCD_DEBUG -D xLCD_SUPPORTED=DEBUG -D MULTICAST_ENABLED=FALSE
+//        -D ZCL_READ -D ZCL_WRITE -D ZCL_BASIC -D ZCL_IDENTIFY -D xZCL_SCENES
+//        -D xZCL_GROUPS -D ZCL_ON_OFF -D xZCL_DISCOVER -lC "C:\Texas
+//        Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\EndDeviceEB\List"
+//        -lA "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\EndDeviceEB\List"
+//        --diag_suppress Pe001,Pa010 -o "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\EndDeviceEB\Obj"
+//        -e --debug --core=plain --dptr=16,1 --data_model=large
+//        --code_model=banked --calling_convention=xdata_reentrant
+//        --place_constants=data_rom --nr_virtual_regs 16 -f "C:\Texas
+//        Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
+//        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3
+//        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f "C:\Texas
+//        Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
+//        (-DZIGBEEPRO -DSECURE=1 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
+//        -DDEFAULT_CHANLIST=0x00000800 -DZDAPP_CONFIG_PAN_ID=0xFFFF
+//        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
+//        -DBEACON_REQUEST_DELAY=100 -DBEACON_REQ_DELAY_MASK=0x00FF
+//        -DLINK_STATUS_JITTER_MASK=0x007F -DROUTE_EXPIRY_TIME=30
+//        -DAPSC_ACK_WAIT_DURATION_POLLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7
+//        -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3
+//        -DNWK_MAX_DATA_RETRIES=2 -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9
+//        -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40 -DNWK_MAX_BINDING_ENTRIES=4
+//        -DMAX_BINDING_CLUSTER_IDS=4 -DDEFAULT_KEY={0}
+//        -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
+//        "-DCONST=const __code" -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE
+//        -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100
+//        -DREJOIN_POLL_RATE=440 -DREJOIN_BACKOFF=900000 -DREJOIN_SCAN=900000
+//        -DENABLE_LED4_DISABLE_S1) -f "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wZCL.cfg"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\" -I
+//        "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\Source\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\Source\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\ZMain\TI2530DB\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\hal\include\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mac\include\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mt\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\osal\include\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\services\saddr\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\services\sdata\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\af\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\bdb\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\gp\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\sec\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\sys\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\zcl\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\zmac\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
+//        -Ohz --require_prototypes)
+//    Locale             =  Danish_DNK.1252
+//    List file          =  
+//        C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\EndDeviceEB\List\gp_proxyTbl.s51
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME gp_proxyTbl
+
+        RTMODEL "__SystemLibrary", "CLib"
+        RTMODEL "__calling_convention", "xdata_reentrant"
+        RTMODEL "__code_model", "banked"
+        RTMODEL "__core", "plain"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__dptr_size", "16"
+        RTMODEL "__extended_stack", "disabled"
+        RTMODEL "__location_for_constants", "data"
+        RTMODEL "__number_of_dptrs", "1"
+        RTMODEL "__register_banks", "*"
+        RTMODEL "__rt_version", "1"
+
+        RSEG DOVERLAY:DATA:NOROOT(0)
+        RSEG IOVERLAY:IDATA:NOROOT(0)
+        RSEG ISTACK:IDATA:NOROOT(0)
+        RSEG PSTACK:XDATA:NOROOT(0)
+        RSEG XSTACK:XDATA:NOROOT(0)
+
+
+        END
+// C:\Texas Instruments\Z-Stack 3.0.2\Components\stack\GP\gp_proxyTbl.c
+//    1 /**************************************************************************************************
+//    2   Filename:       gp_proxyTbl.c
+//    3   Revised:        $Date: 2016-02-25 11:51:49 -0700 (Thu, 25 Feb 2016) $
+//    4   Revision:       $Revision: - $
+//    5 
+//    6   Description:    This file contains the implementation of the cGP stub.
+//    7 
+//    8 
+//    9   Copyright 2006-2015 Texas Instruments Incorporated. All rights reserved.
+//   10 
+//   11   IMPORTANT: Your use of this Software is limited to those specific rights
+//   12   granted under the terms of a software license agreement between the user
+//   13   who downloaded the software, his/her employer (which must be your employer)
+//   14   and Texas Instruments Incorporated (the "License").  You may not use this
+//   15   Software unless you agree to abide by the terms of the License. The License
+//   16   limits your use, and you acknowledge, that the Software may not be modified,
+//   17   copied or distributed unless embedded on a Texas Instruments microcontroller
+//   18   or used solely and exclusively in conjunction with a Texas Instruments radio
+//   19   frequency transceiver, which is integrated into your product.  Other than for
+//   20   the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+//   21   works of, modify, distribute, perform, display or sell this Software and/or
+//   22   its documentation for any purpose.
+//   23 
+//   24   YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+//   25   PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+//   26   INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
+//   27   NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+//   28   TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+//   29   NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+//   30   LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+//   31   INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+//   32   OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+//   33   OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+//   34   (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+//   35 
+//   36   Should you have any questions regarding your right to use this Software,
+//   37   contact Texas Instruments Incorporated at www.TI.com.
+//   38 **************************************************************************************************/
+//   39 
+//   40 
+//   41 
+//   42 /*********************************************************************
+//   43  * INCLUDES
+//   44  */
+//   45    
+//   46 #include "ZGlobals.h"
+//   47 #include "ZDObject.h"
+//   48 #include "nwk_util.h"   
+//   49 #include "ZComDef.h"
+//   50 #include "cGP_stub.h"
+//   51 #include "gp_common.h"
+//   52 #include "gp_interface.h"
+//   53 #include "zcl_green_power.h"
+//   54 #include "OSAL.h"
+//   55 
+//   56 #if !defined (DISABLE_GREENPOWER_BASIC_PROXY) && (ZG_BUILD_RTR_TYPE)
+//   57    
+//   58  /*********************************************************************
+//   59  * MACROS
+//   60  */ 
+//   61 
+//   62  /*********************************************************************
+//   63  * CONSTANTS
+//   64  */
+//   65 
+//   66 /*********************************************************************
+//   67  * TYPEDEFS
+//   68  */
+//   69    
+//   70  /*********************************************************************
+//   71  * GLOBAL VARIABLES
+//   72  */
+//   73 ZDO_DeviceAnnce_t aliasConflictAnnce;
+//   74 
+//   75  /*********************************************************************
+//   76  * EXTERNAL VARIABLES
+//   77  */
+//   78 
+//   79 /*********************************************************************
+//   80  * EXTERNAL FUNCTIONS
+//   81  */
+//   82 
+//   83 /*********************************************************************
+//   84  * LOCAL VARIABLES
+//   85  */
+//   86 
+//   87  /*********************************************************************
+//   88  * LOCAL FUNCTIONS
+//   89  */
+//   90 static void gp_PopulateProxyTblEntry( uint8* pData, uint8 size, uint8* pTblEntryVector, uint8* vectorLen );
+//   91 static uint8 pt_getAlias( uint8* pNew );
+//   92 static uint8 pt_getSecurity( uint8* pNew );
+//   93 static uint8 pt_getSecFrameCounterCapabilities( uint8* pNew );
+//   94 static uint8 pt_updateLightweightUnicastSink( uint8* pNew, uint8* pCurr, uint8 addSink );
+//   95 static uint8 pt_addSinkGroup( uint8* pNew, uint8* pCurr );
+//   96 static uint8 pt_lookForGpd( uint16 currProxyEntryId, uint8* pNew );
+//   97 
+//   98 /*********************************************************************
+//   99  * PUBLIC FUNCTIONS
+//  100  *********************************************************************/
+//  101 
+//  102 /*********************************************************************
+//  103  * @fn          pt_ZclReadGetProxyEntry
+//  104  *
+//  105  * @brief       Populate the given item data
+//  106  *
+//  107  * @param       nvId - NV entry to read
+//  108  *              pData - Pointer to OTA message payload
+//  109  *              len - Lenght of the payload
+//  110  *
+//  111  * @return
+//  112  */
+//  113 uint8 pt_ZclReadGetProxyEntry( uint16 nvId, uint8* pData, uint8* len )
+//  114 {
+//  115   uint8  freeSinkEntry[LSINK_ADDR_LEN] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
+//  116   uint8  currEntry[PROXY_TBL_ENTRY_LEN];
+//  117   uint8  gpdEntry[PROXY_TBL_ENTRY_LEN];
+//  118   uint8  gpdEntryLen = 0;
+//  119   uint8  status;
+//  120   uint16 options;
+//  121 
+//  122   status = gp_getProxyTableByIndex( nvId, currEntry );
+//  123 
+//  124   // if FAIL or Empty
+//  125   if ( ( status == NV_OPER_FAILED ) || ( status == NV_INVALID_DATA ) )
+//  126   {
+//  127     // FAIL
+//  128     return status;
+//  129   }
+//  130 
+//  131   osal_memcpy( &gpdEntry[gpdEntryLen], &currEntry[PROXY_TBL_ENTRY_OPT], sizeof ( uint16 ) );
+//  132   osal_memcpy( &options, &currEntry[PROXY_TBL_ENTRY_OPT], sizeof ( uint16 ) );
+//  133   gpdEntryLen += sizeof ( uint16 );
+//  134   
+//  135   // Options bitfield
+//  136   // If Application Id bitfield is 0b000
+//  137   if( GP_IS_APPLICATION_ID_GPD( options ) )
+//  138   {        
+//  139     // Populate GPD ID
+//  140     gp_PopulateProxyTblEntry( ( uint8* )&currEntry[PROXY_TBL_ENTRY_GPD_ID + 4], sizeof ( uint32 ), gpdEntry, &gpdEntryLen );
+//  141   }
+//  142   // If Application Id bitfield is 0b010
+//  143   else if( GP_IS_APPLICATION_ID_IEEE( options ) )
+//  144   {   
+//  145     gp_PopulateProxyTblEntry( ( uint8* )&currEntry[PROXY_TBL_ENTRY_GPD_ID], Z_EXTADDR_LEN, gpdEntry, &gpdEntryLen );
+//  146     gp_PopulateProxyTblEntry( ( uint8* )&currEntry[PROXY_TBL_ENTRY_GPD_EP], sizeof ( uint8 ), gpdEntry, &gpdEntryLen );
+//  147   }
+//  148   
+//  149   if ( PROXY_TBL_GET_ASSIGNED_ALIAS( currEntry[PROXY_TBL_ENTRY_OPT + 1] ) )
+//  150   {
+//  151     gp_PopulateProxyTblEntry( ( uint8* )&currEntry[PROXY_TBL_ENTRY_ALIAS], sizeof ( uint16 ), gpdEntry, &gpdEntryLen );
+//  152   }
+//  153   
+//  154   if ( PROXY_TBL_GET_SEC_USE( currEntry[PROXY_TBL_ENTRY_OPT + 1] ) )
+//  155   {
+//  156     gp_PopulateProxyTblEntry( ( uint8* )&currEntry[PROXY_TBL_ENTRY_SEC_OPT], sizeof ( uint8 ), gpdEntry, &gpdEntryLen );
+//  157   }
+//  158   
+//  159   if ( ( PROXY_TBL_GET_SEC_USE( currEntry[PROXY_TBL_ENTRY_OPT + 1] ) || ( PROXY_TBL_GET_SEC_CAP( currEntry[PROXY_TBL_ENTRY_OPT] ) ) ) )
+//  160   {
+//  161     gp_PopulateProxyTblEntry( ( uint8* )&currEntry[PROXY_TBL_ENTRY_SEC_FRAME], sizeof ( uint32 ), gpdEntry, &gpdEntryLen );
+//  162   }
+//  163   
+//  164   if ( PROXY_TBL_GET_SEC_USE( currEntry[PROXY_TBL_ENTRY_OPT + 1] ) )
+//  165   {
+//  166     gp_PopulateProxyTblEntry( ( uint8* )&currEntry[PROXY_TBL_ENTRY_GPD_KEY], SEC_KEY_LEN, gpdEntry, &gpdEntryLen );
+//  167   }
+//  168   
+//  169   if ( PROXY_TBL_GET_LIGHTWIGHT_UNICAST( currEntry[PROXY_TBL_ENTRY_OPT] ) )
+//  170   {
+//  171     uint8 sinkCount = 0;
+//  172     uint8 sinkCountByte = gpdEntryLen;
+//  173     
+//  174     gpdEntryLen += sizeof ( sinkCountByte );
+//  175     
+//  176     if ( !osal_memcmp( freeSinkEntry, &currEntry[PROXY_TBL_ENTRY_1ST_LSINK_ADDR], LSINK_ADDR_LEN ) )
+//  177     {
+//  178       sinkCount += 1;
+//  179       osal_memcpy( &gpdEntry[sinkCountByte], &sinkCount, sizeof ( uint8 ) );
+//  180       gp_PopulateProxyTblEntry( ( uint8* )&currEntry[PROXY_TBL_ENTRY_1ST_LSINK_ADDR], LSINK_ADDR_LEN, gpdEntry, &gpdEntryLen );
+//  181     }
+//  182     if ( !osal_memcmp( freeSinkEntry, &currEntry[PROXY_TBL_ENTRY_2ND_LSINK_ADDR], LSINK_ADDR_LEN ) )
+//  183     {
+//  184       sinkCount += 1;
+//  185       osal_memcpy( &gpdEntry[sinkCountByte], &sinkCount, sizeof ( uint8 ) );
+//  186       gp_PopulateProxyTblEntry( ( uint8* )&currEntry[PROXY_TBL_ENTRY_2ND_LSINK_ADDR], LSINK_ADDR_LEN, gpdEntry, &gpdEntryLen );
+//  187     }
+//  188   }
+//  189      
+//  190   if ( PROXY_TBL_GET_CGROUP( currEntry[PROXY_TBL_ENTRY_OPT + 1] ) )
+//  191   {
+//  192     uint8 groupCount = 0;
+//  193     uint8 groupCountByte = gpdEntryLen;
+//  194     
+//  195     gpdEntryLen++;
+//  196     
+//  197     if ( GET_BIT( &currEntry[PROXY_TBL_ENTRY_GRP_TBL_ENTRIES], PROXY_TBL_ENTRY_1ST_GRP_BIT ) )
+//  198     {
+//  199       groupCount += 1;
+//  200       osal_memcpy( &gpdEntry[groupCountByte], &groupCount, sizeof ( uint8 ) );
+//  201       gp_PopulateProxyTblEntry( ( uint8* )&currEntry[PROXY_TBL_ENTRY_1ST_GRP_ADDR], sizeof ( uint32 ), gpdEntry, &gpdEntryLen );
+//  202     }
+//  203     if ( GET_BIT( &currEntry[PROXY_TBL_ENTRY_GRP_TBL_ENTRIES], PROXY_TBL_ENTRY_2ND_GRP_BIT ) )
+//  204     {
+//  205       groupCount += 1;
+//  206       osal_memcpy( &gpdEntry[groupCountByte], &groupCount, sizeof( uint8 ) );
+//  207       gp_PopulateProxyTblEntry( ( uint8* )&currEntry[PROXY_TBL_ENTRY_2ND_GRP_ADDR], sizeof ( uint32 ), gpdEntry, &gpdEntryLen );
+//  208     }
+//  209   }
+//  210   
+//  211   gp_PopulateProxyTblEntry( ( uint8* )&currEntry[PROXY_TBL_ENTRY_GRP_RAD], sizeof ( uint8 ), gpdEntry, &gpdEntryLen );
+//  212   
+//  213   if ( ( PROXY_TBL_GET_ENTRY_ACTIVE( currEntry[PROXY_TBL_ENTRY_OPT] ) == 0 ) || ( PROXY_TBL_GET_ENTRY_VALID( currEntry[PROXY_TBL_ENTRY_OPT] ) == 0 ) )
+//  214   {
+//  215     gp_PopulateProxyTblEntry( ( uint8* )&currEntry[PROXY_TBL_ENTRY_SEARCH_COUNTER], sizeof ( uint8 ), gpdEntry, &gpdEntryLen );
+//  216   }
+//  217   
+//  218   if ( pData != NULL )
+//  219   {
+//  220     uint8 sinkEntryLen;
+//  221     uint16 totalLen;
+//  222     
+//  223     sinkEntryLen = gpdEntryLen;
+//  224     if ( *len != 0 )
+//  225     {
+//  226     gpdEntryLen -= sizeof ( uint16 );
+//  227     }
+//  228     totalLen = gpdEntryLen;
+//  229     totalLen += *len;
+//  230     osal_memcpy( pData, &totalLen, sizeof ( uint16 ) );
+//  231     if ( *len == 0 )
+//  232     {
+//  233       pData += sizeof ( uint16 );
+//  234     }
+//  235     gpdEntryLen += sizeof ( uint16 );
+//  236     
+//  237     pData += *len;
+//  238     osal_memcpy( pData, gpdEntry, sinkEntryLen );
+//  239     if ( *len != 0 )
+//  240     {
+//  241       *len = totalLen;
+//  242       return status;
+//  243     }
+//  244     *len += gpdEntryLen;
+//  245     return status;
+//  246   }
+//  247   else
+//  248   {
+//  249     if ( *len == 0 )
+//  250     {
+//  251       gpdEntryLen += sizeof ( uint16 );
+//  252     }
+//  253     *len += gpdEntryLen;
+//  254     return status;
+//  255   }
+//  256 }
+//  257 
+//  258 /*********************************************************************
+//  259  * @fn      zclGpp_ReadWriteAttrCB
+//  260  *
+//  261  * @brief   Handle Diagnostics attributes.
+//  262  *
+//  263  * @param   clusterId - cluster that attribute belongs to
+//  264  * @param   attrId - attribute to be read or written
+//  265  * @param   oper - ZCL_OPER_LEN, ZCL_OPER_READ, or ZCL_OPER_WRITE
+//  266  * @param   pValue - pointer to attribute value, OTA endian
+//  267  * @param   pLen - length of attribute value read, native endian
+//  268  *
+//  269  * @return  status
+//  270  */
+//  271 ZStatus_t zclGpp_ReadWriteAttrCB( uint16 clusterId, uint16 attrId, uint8 oper,
+//  272                                          uint8 *pValue, uint16 *pLen )
+//  273 {
+//  274   ZStatus_t status = ZSuccess;
+//  275   uint16 proxyTableIndex;
+//  276   uint8 i;
+//  277 
+//  278   switch ( oper )
+//  279   {
+//  280     case ZCL_OPER_LEN:
+//  281     case ZCL_OPER_READ:
+//  282       if ( attrId == ATTRID_GP_PROXY_TABLE )
+//  283       { 
+//  284         for ( i = 0; i <= GPP_MAX_PROXY_TABLE_ENTRIES ; i++ )
+//  285         {
+//  286           proxyTableIndex = ZCD_NV_PROXY_TABLE_START + i;
+//  287           
+//  288           status = pt_ZclReadGetProxyEntry ( proxyTableIndex, pValue, (uint8*)pLen );
+//  289           if ( status != ZSuccess )
+//  290           {
+//  291             status = ZFailure;
+//  292             break;
+//  293           }
+//  294         }
+//  295         
+//  296       }
+//  297       break;
+//  298 
+//  299     case ZCL_OPER_WRITE:
+//  300       status = ZFailure;
+//  301       break;
+//  302   }
+//  303 
+//  304   return ( status );
+//  305 }
+//  306 
+//  307  /*********************************************************************
+//  308  * @fn          gp_pairingSetProxyTblOptions
+//  309  *
+//  310  * @brief       Function to fill the options pramenter in a Proxy Table entry
+//  311  *              from a GP Pairing Command
+//  312  *
+//  313  * @param       pBitField - pointer to the bit field.
+//  314  *              bit       - position of the bit to set in the given bitfield.
+//  315  *
+//  316  * @return      
+//  317  */
+//  318 static uint16 gp_pairingSetProxyTblOptions ( uint32 pairingOpt )
+//  319 {
+//  320   uint8  proxyOpt[2] = {0x00, 0x00};
+//  321   uint16 opt = 0; 
+//  322   
+//  323   PAIRING_PROXY_TBL_SET_APPLICATION_ID(( uint8* )&proxyOpt[0], pairingOpt);
+//  324   PROXY_TBL_SET_ENTRY_ACTIVE( &proxyOpt[0] );
+//  325   PROXY_TBL_SET_ENTRY_VALID( &proxyOpt[0] );
+//  326   PAIRING_PROXY_TBL_SET_MAC_SEQ_CAP(( uint16* )&proxyOpt, pairingOpt);
+//  327   
+//  328   if ( GP_IS_COMMUNICATION_MODE_LIGHT_UNICAST( pairingOpt ) )
+//  329   {
+//  330     PROXY_TBL_SET_LIGHTWIGHT_UNICAST( &proxyOpt[0] );
+//  331   }
+//  332   else
+//  333   {
+//  334     PROXY_TBL_CLR_LIGHTWIGHT_UNICAST( &proxyOpt[0] );
+//  335   }
+//  336   if ( GP_IS_COMMUNICATION_MODE_GRPCAST_DGROUP_ID( pairingOpt ) )
+//  337   {
+//  338     PROXY_TBL_SET_DGROUP( &proxyOpt[0] );
+//  339   }
+//  340   else
+//  341   {
+//  342     PROXY_TBL_CLR_DGROUP( &proxyOpt[0] );
+//  343   }
+//  344   if ( GP_IS_COMMUNICATION_MODE_GRPCAST_GROUP_ID( pairingOpt ) )
+//  345   {
+//  346     PROXY_TBL_SET_CGROUP( &proxyOpt[1] );
+//  347   }
+//  348   else
+//  349   {
+//  350     PROXY_TBL_CLR_CGROUP( &proxyOpt[1] );
+//  351   }
+//  352   
+//  353   // FALSE by default
+//  354   PROXY_TBL_CLR_FIRST_TO_FORWARD( &proxyOpt[1] );
+//  355   
+//  356   // The InRange sub-field, if set to 0b1, indicates that this GPD is in range 
+//  357   // of this proxy. The default value is FALSE
+//  358   PROXY_TBL_CLR_IN_RANGE( &proxyOpt[1] );
+//  359   // The GPDfixed sub-field, if set to 0b1, indicates portability capabilities 
+//  360   if ( GP_GET_GPD_FIXED_BIT( pairingOpt ) )
+//  361   {
+//  362     PROXY_TBL_SET_GPD_FIXED( &proxyOpt[1] );
+//  363   }
+//  364   else
+//  365   {
+//  366     PROXY_TBL_CLR_GPD_FIXED( &proxyOpt[1] );
+//  367   }
+//  368   
+//  369   if ( GP_IS_COMMUNICATION_MODE_FULL_UNICAST( pairingOpt ) )
+//  370   {
+//  371     PROXY_TBL_SET_HAS_ALL_ROUTES( &proxyOpt[1] );
+//  372   }
+//  373   else
+//  374   {
+//  375     PROXY_TBL_CLR_HAS_ALL_ROUTES( &proxyOpt[1] );
+//  376   }
+//  377   if ( (GP_ALIAS ( pairingOpt )) && (!GP_IS_COMMUNICATION_MODE_GRPCAST_GROUP_ID( pairingOpt )) )
+//  378   {
+//  379     PROXY_TBL_SET_ASSIGNED_ALIAS( &proxyOpt[1] );
+//  380   }
+//  381   else
+//  382   {
+//  383     PROXY_TBL_CLR_ASSIGNED_ALIAS( &proxyOpt[1]);
+//  384   }
+//  385   if ( GP_GET_SEC_LEVEL( pairingOpt ) > 1 )
+//  386   {
+//  387     PROXY_TBL_SET_SEC_USE( &proxyOpt[1] );
+//  388   }
+//  389   else
+//  390   {
+//  391     PROXY_TBL_CLR_SEC_USE( &proxyOpt[1] );
+//  392   }
+//  393   PROXY_TBL_SET_OPT_EXT( &proxyOpt[1] );
+//  394   PROXY_TBL_CLR_OPT_EXT( &proxyOpt[1] );
+//  395   
+//  396   opt |= ( ( proxyOpt[0] ) & 0x00FF );
+//  397   opt |= ( ( ( proxyOpt[1] ) <<  8 ) & 0xFF00 );
+//  398     
+//  399   return opt;
+//  400 }
+//  401 
+//  402 /*********************************************************************
+//  403  * @fn          gp_PairingUpdateProxyTlb
+//  404  *
+//  405  * @brief       General function fill the proxy table vector
+//  406  *
+//  407  * @param       
+//  408  *
+//  409  * @return      
+//  410  */
+//  411 void gp_PairingUpdateProxyTlb( gpPairingCmd_t* payload )
+//  412 {
+//  413   uint8  entryVector[PROXY_TBL_ENTRY_LEN];
+//  414   uint8  entryLen = 0;
+//  415   uint8  addSink;
+//  416   uint8  newSinkGroup = 0;
+//  417   uint16 entryOptions = 0;
+//  418   uint8  securityOpt = 0;
+//  419   uint8  searchCounter = 0x0A;
+//  420   uint16 invalidAlias = 0xFFFF;
+//  421   
+//  422   gp_ResetProxyBasicTblEntry(entryVector);
+//  423   
+//  424   addSink = GP_ADD_SINK( payload->options );
+//  425   
+//  426   entryOptions = gp_pairingSetProxyTblOptions( payload->options );
+//  427   gp_PopulateProxyTblEntry( ( uint8* )&entryOptions, sizeof( entryOptions ), entryVector, &entryLen );
+//  428     
+//  429   // Options bitfield
+//  430   // If Application Id bitfield is 0b000
+//  431   if( GP_IS_APPLICATION_ID_GPD( payload->options ) )
+//  432   {        
+//  433     // Populate GPD ID
+//  434     entryLen += sizeof( uint32 );
+//  435     gp_PopulateProxyTblEntry( ( uint8* )&payload->gpdId, sizeof( payload->gpdId ), entryVector, &entryLen );
+//  436   }
+//  437   // If Application Id bitfield is 0b010
+//  438   else if( GP_IS_APPLICATION_ID_IEEE( payload->options ) )
+//  439   {   
+//  440     gp_PopulateProxyTblEntry( payload->gpdIEEE, Z_EXTADDR_LEN, entryVector, &entryLen );
+//  441   }
+//  442   
+//  443    gp_PopulateProxyTblEntry( ( uint8* )&payload->ep, sizeof( payload->ep ), entryVector, &entryLen );
+//  444 
+//  445   if( !GP_IS_COMMUNICATION_MODE_GRPCAST_GROUP_ID( payload->options ) )
+//  446   {
+//  447     gp_PopulateProxyTblEntry( ( uint8* )&payload->assignedAlias, sizeof( payload->assignedAlias ), entryVector, &entryLen );
+//  448   }
+//  449   else
+//  450   {
+//  451     gp_PopulateProxyTblEntry( ( uint8* )&invalidAlias, sizeof( uint16 ), entryVector, &entryLen );
+//  452   }
+//  453 
+//  454 
+//  455   //Security options
+//  456   securityOpt |= GP_GET_SEC_LEVEL( payload->options );
+//  457   securityOpt |= GP_GET_SEC_KEY_TYPE (payload->options ) << GP_OPT_SEC_LEVEL_LEN;
+//  458   osal_memcpy( &entryVector[entryLen], &securityOpt, sizeof ( uint8 ) );
+//  459   entryLen += sizeof ( uint8 );
+//  460 
+//  461   gp_PopulateProxyTblEntry( ( uint8* )&payload->gpdSecCounter, sizeof( payload->gpdSecCounter ), entryVector, &entryLen );
+//  462   gp_PopulateProxyTblEntry( ( uint8* )&payload->gpdKey, SEC_KEY_LEN, entryVector, &entryLen );
+//  463   
+//  464   gp_PopulateProxyTblEntry( payload->sinkIEEE, Z_EXTADDR_LEN, entryVector, &entryLen );
+//  465   gp_PopulateProxyTblEntry( ( uint8* )&payload->sinkNwkAddr, sizeof( payload->sinkNwkAddr ), entryVector, &entryLen );
+//  466   // to add the invalid entries
+//  467   osal_memset ( &payload->sinkIEEE, 0xFF, Z_EXTADDR_LEN );
+//  468   payload->sinkNwkAddr = 0xFFFF;
+//  469   gp_PopulateProxyTblEntry( payload->sinkIEEE, Z_EXTADDR_LEN, entryVector, &entryLen );
+//  470   gp_PopulateProxyTblEntry( ( uint8* )&payload->sinkNwkAddr, sizeof( payload->sinkNwkAddr ), entryVector, &entryLen );
+//  471   
+//  472   newSinkGroup = PROXY_TBL_GET_DGROUP( entryOptions & 0x00FF );
+//  473   newSinkGroup |= PROXY_TBL_GET_CGROUP( ( entryOptions & 0xFF00 ) >> 8 );
+//  474   osal_memset( &entryVector[entryLen], newSinkGroup, sizeof ( uint8 ) );
+//  475   entryLen++;
+//  476   
+//  477   gp_PopulateProxyTblEntry( ( uint8* )&payload->sinkGroupID, sizeof( payload->sinkGroupID ), entryVector, &entryLen );
+//  478   if( GP_IS_COMMUNICATION_MODE_GRPCAST_GROUP_ID( payload->options ) || GP_IS_COMMUNICATION_MODE_GRPCAST_DGROUP_ID( payload->options ) )
+//  479   {
+//  480     gp_PopulateProxyTblEntry( ( uint8* )&payload->assignedAlias, sizeof( payload->assignedAlias ), entryVector, &entryLen );
+//  481   }
+//  482   else
+//  483   {
+//  484     gp_PopulateProxyTblEntry( ( uint8* )&invalidAlias, sizeof ( uint16 ), entryVector, &entryLen );
+//  485   }
+//  486   // to add the invalid entries
+//  487   payload->sinkGroupID = 0xFFFF;
+//  488   gp_PopulateProxyTblEntry( ( uint8* )&payload->sinkGroupID, sizeof( payload->sinkGroupID ), entryVector, &entryLen );
+//  489   gp_PopulateProxyTblEntry( ( uint8* )&invalidAlias, sizeof ( uint16 ), entryVector, &entryLen );
+//  490 
+//  491   
+//  492   gp_PopulateProxyTblEntry( &payload->forwardingRadius, sizeof( payload->forwardingRadius ), entryVector, &entryLen );
+//  493  
+//  494   if ( ( PROXY_TBL_GET_ENTRY_ACTIVE( entryVector[0] ) == 0 ) && ( PROXY_TBL_GET_ENTRY_VALID( entryVector[0] ) == 0) )
+//  495   {
+//  496     osal_memcpy( &entryVector[entryLen], &searchCounter, sizeof ( uint8 ) );
+//  497   }
+//  498   else
+//  499   {
+//  500     searchCounter = 0xFF;
+//  501     osal_memcpy( &entryVector[entryLen], &searchCounter, sizeof ( uint8 ) );
+//  502   }
+//  503   // Update the proxy table
+//  504   gp_UpdateProxyTlb( entryVector, addSink );
+//  505 }
+//  506 
+//  507 /*********************************************************************
+//  508  * @fn          gp_UpdateProxyTlb
+//  509  *
+//  510  * @brief       To update the proxy table NV vectors
+//  511  *
+//  512  * @param       pNpEntryew - New entry array to be added
+//  513  *
+//  514  * @return
+//  515  */
+//  516 uint8 gp_UpdateProxyTlb( uint8* pEntry, uint8 addSink )
+//  517 {
+//  518   uint8 i;
+//  519   uint8 newEntry[PROXY_TBL_ENTRY_LEN];
+//  520   uint8 currEntry[PROXY_TBL_ENTRY_LEN];
+//  521   uint16 proxyTableIndex;
+//  522   uint8 status;
+//  523   
+//  524   // Copy the new entry pointer to array
+//  525   osal_memcpy( &newEntry, pEntry, PROXY_TBL_ENTRY_LEN );
+//  526 
+//  527   for ( i = 0; i <= GPP_MAX_PROXY_TABLE_ENTRIES ; i++ )
+//  528   {
+//  529     proxyTableIndex = ZCD_NV_PROXY_TABLE_START + i;
+//  530     status = gp_getProxyTableByIndex( proxyTableIndex, currEntry );
+//  531 
+//  532     if ( status == NV_OPER_FAILED )
+//  533     {
+//  534       // FAIL
+//  535       return status;
+//  536     }
+//  537     
+//  538     // if the entry is empty
+//  539     if ( ( status == NV_INVALID_DATA ) && ( addSink == TRUE ) )
+//  540     {
+//  541       // Save new entry
+//  542       status = osal_nv_write( proxyTableIndex, 0,
+//  543                            PROXY_TBL_ENTRY_LEN, newEntry );
+//  544       
+//  545       if ( osal_memcmp( &_NIB.nwkDevAddress, &newEntry[PROXY_TBL_ENTRY_ALIAS], sizeof( uint16 ) )        ||
+//  546            osal_memcmp( &_NIB.nwkDevAddress, &newEntry[PROXY_TBL_ENTRY_1ST_GRP_ADDR], sizeof( uint16 ) ) ||
+//  547            osal_memcmp( &_NIB.nwkDevAddress, &newEntry[PROXY_TBL_ENTRY_2ND_GRP_ADDR], sizeof( uint16 ) )   )
+//  548       {
+//  549         NLME_ReportAddressConflict( _NIB.nwkDevAddress, TRUE );  
+//  550       }
+//  551       return status;
+//  552     }
+//  553     
+//  554     if ( pt_lookForGpd( proxyTableIndex, newEntry ) )
+//  555     {
+//  556       // Entry found
+//  557       break;
+//  558     }
+//  559     
+//  560     if ( i >= GPP_MAX_PROXY_TABLE_ENTRIES )
+//  561     {
+//  562       // No space for new entries
+//  563       return FAILURE;
+//  564     }
+//  565   }
+//  566   
+//  567   // Remove the entry
+//  568   if ( addSink == FALSE )
+//  569   {
+//  570     gp_ResetProxyBasicTblEntry( currEntry );
+//  571     
+//  572     status = osal_nv_write( proxyTableIndex, 0,
+//  573                      PROXY_TBL_ENTRY_LEN, currEntry );
+//  574     return status;
+//  575   }
+//  576 
+//  577   if ( PROXY_TBL_GET_LIGHTWIGHT_UNICAST( newEntry[PROXY_TBL_ENTRY_OPT] ) )
+//  578   {
+//  579     if ( ( !pt_updateLightweightUnicastSink( newEntry, currEntry, addSink ) ) )
+//  580     {
+//  581       // The entry is full
+//  582       return NV_BAD_ITEM_LEN;
+//  583     }
+//  584   }
+//  585   else if ( PROXY_TBL_GET_CGROUP( newEntry[PROXY_TBL_ENTRY_OPT + 1] ) )
+//  586   {
+//  587     if ( ( !pt_addSinkGroup( newEntry, currEntry ) ) )
+//  588     {
+//  589       // The entry is full
+//  590       return NV_BAD_ITEM_LEN;
+//  591     }
+//  592   }
+//  593 
+//  594   if ( pt_getAlias( newEntry ) )
+//  595   {
+//  596     osal_memcpy( &currEntry[PROXY_TBL_ENTRY_ALIAS], &newEntry[PROXY_TBL_ENTRY_ALIAS], sizeof ( uint16 ) );
+//  597   }
+//  598     
+//  599   if ( pt_getSecurity( newEntry ) )
+//  600   {
+//  601     PROXY_TBL_SET_SEC_USE( &currEntry[PROXY_TBL_ENTRY_OPT + 1] );
+//  602     osal_memcpy( &currEntry[PROXY_TBL_ENTRY_SEC_OPT], &newEntry[PROXY_TBL_ENTRY_SEC_OPT], sizeof ( uint8 ) );
+//  603     osal_memcpy( &currEntry[PROXY_TBL_ENTRY_GPD_KEY], &newEntry[PROXY_TBL_ENTRY_GPD_KEY], SEC_KEY_LEN );
+//  604   }
+//  605          
+//  606   if ( pt_getSecFrameCounterCapabilities( newEntry ) )
+//  607   {
+//  608     PROXY_TBL_SET_SEC_CAP( &currEntry[PROXY_TBL_ENTRY_OPT] );
+//  609   }
+//  610   
+//  611   osal_memcpy( &currEntry[PROXY_TBL_ENTRY_SEC_FRAME], &newEntry[PROXY_TBL_ENTRY_SEC_FRAME], sizeof ( uint32 ) );
+//  612 
+//  613   currEntry[PROXY_TBL_ENTRY_GRP_RAD] = newEntry[PROXY_TBL_ENTRY_GRP_RAD];
+//  614     
+//  615   currEntry[PROXY_TBL_ENTRY_SEARCH_COUNTER] = newEntry[PROXY_TBL_ENTRY_SEARCH_COUNTER];
+//  616    
+//  617   status = osal_nv_write( proxyTableIndex, 0,
+//  618                      PROXY_TBL_ENTRY_LEN, currEntry );
+//  619   
+//  620   if ( osal_memcmp( &_NIB.nwkDevAddress, &currEntry[PROXY_TBL_ENTRY_ALIAS], sizeof( uint16 ) )        ||
+//  621        osal_memcmp( &_NIB.nwkDevAddress, &currEntry[PROXY_TBL_ENTRY_1ST_GRP_ADDR], sizeof( uint16 ) ) ||
+//  622        osal_memcmp( &_NIB.nwkDevAddress, &currEntry[PROXY_TBL_ENTRY_2ND_GRP_ADDR], sizeof( uint16 ) )   )
+//  623   {
+//  624     NLME_ReportAddressConflict( _NIB.nwkDevAddress, TRUE );  
+//  625   }
+//  626   
+//  627   return status;
+//  628 }
+//  629 
+//  630 /*********************************************************************
+//  631  * @fn          gp_CheckAnnouncedDevice
+//  632  *
+//  633  * @brief       General function to check if it has the announced device 
+//  634  *              listed in the SinkAddressList and look for address conflict
+//  635  *              resolution.
+//  636  *
+//  637  * @param       
+//  638  *
+//  639  * @return      
+//  640  */
+//  641 uint8 gp_CheckAnnouncedDevice ( uint8 *sinkIEEE, uint16 sinkNwkAddr )
+//  642 {
+//  643   uint8 i;
+//  644   uint8 status;
+//  645   uint8 annceDelay;
+//  646   uint8 ProxyTableEntry[PROXY_TBL_ENTRY_LEN];
+//  647 
+//  648   for ( i = 0; i <= GPP_MAX_PROXY_TABLE_ENTRIES ; i++ )
+//  649   {
+//  650     status = gp_getProxyTableByIndex( ( ZCD_NV_PROXY_TABLE_START + i ), ProxyTableEntry );
+//  651 
+//  652     if ( status == NV_OPER_FAILED )
+//  653     {
+//  654       // FAIL
+//  655 
+//  656       return ZFailure;
+//  657     }
+//  658     
+//  659     // if the entry is empty
+//  660     if ( status == NV_INVALID_DATA )
+//  661     {
+//  662       continue;
+//  663     }
+//  664     
+//  665     // Compare for nwk alias address conflict
+//  666     if ( osal_memcmp( &sinkNwkAddr, &ProxyTableEntry[PROXY_TBL_ENTRY_ALIAS], sizeof( uint16 ) )        ||
+//  667          osal_memcmp( &sinkNwkAddr, &ProxyTableEntry[PROXY_TBL_ENTRY_1ST_GRP_ADDR], sizeof( uint16 ) ) ||
+//  668          osal_memcmp( &sinkNwkAddr, &ProxyTableEntry[PROXY_TBL_ENTRY_2ND_GRP_ADDR], sizeof( uint16 ) )   )
+//  669     {
+//  670       // Do address conflict resolution
+//  671       NLME_SendNetworkStatus( NWK_BROADCAST_SHORTADDR_DEVRXON,
+//  672                          sinkNwkAddr, NWKSTAT_ADDRESS_CONFLICT, TRUE );
+//  673       
+//  674       aliasConflictAnnce.nwkAddr = sinkNwkAddr;
+//  675       osal_memset( aliasConflictAnnce.extAddr, 0xFF, Z_EXTADDR_LEN );
+//  676       aliasConflictAnnce.capabilities = 0;
+//  677       
+//  678       annceDelay = ( osal_rand()/650 ) + 5; // ( 65535/650 = 100 ) + 5 
+//  679       // where:
+//  680       // 100 is Dmax
+//  681       // 5   is Dmin
+//  682       osal_start_timerEx( gp_TaskID, GP_PROXY_ALIAS_CONFLICT_TIMEOUT, annceDelay );
+//  683     }
+//  684 
+//  685     if( sinkIEEE )
+//  686     {
+//  687       //Check if one of the Sink IEEE is the same
+//  688       if ( osal_memcmp( sinkIEEE, &ProxyTableEntry[PROXY_TBL_ENTRY_1ST_LSINK_ADDR], Z_EXTADDR_LEN ) )
+//  689       {
+//  690         // If Nwk address is different, then update the new address
+//  691         if ( !osal_memcmp( &sinkNwkAddr, &ProxyTableEntry[PROXY_TBL_ENTRY_1ST_LSINK_ADDR + Z_EXTADDR_LEN], sizeof( uint16 ) ) )
+//  692         {
+//  693           osal_memcpy( &ProxyTableEntry[PROXY_TBL_ENTRY_1ST_LSINK_ADDR + Z_EXTADDR_LEN], &sinkNwkAddr, sizeof( uint16 ) );
+//  694         }
+//  695       }
+//  696       else if ( osal_memcmp( sinkIEEE, &ProxyTableEntry[PROXY_TBL_ENTRY_2ND_LSINK_ADDR], Z_EXTADDR_LEN ) )
+//  697       {
+//  698         // If Nwk address is different, then update the new address
+//  699         if ( !osal_memcmp( &sinkNwkAddr, &ProxyTableEntry[PROXY_TBL_ENTRY_2ND_LSINK_ADDR + Z_EXTADDR_LEN], sizeof( uint16 ) ) )
+//  700         {
+//  701           osal_memcpy( &ProxyTableEntry[PROXY_TBL_ENTRY_2ND_LSINK_ADDR + Z_EXTADDR_LEN], &sinkNwkAddr, sizeof( uint16 ) );
+//  702         }
+//  703       }
+//  704     }
+//  705   }
+//  706     
+//  707   return ZSuccess;
+//  708 }
+//  709 
+//  710  /*********************************************************************
+//  711  * PRIVATE FUNCTIONS
+//  712  *********************************************************************/
+//  713 
+//  714 /*********************************************************************
+//  715  * @fn          gp_PopulateProxyTblEntry
+//  716  *
+//  717  * @brief       Populate the given item data
+//  718  *
+//  719  * @param       pData - Pointer to the new data
+//  720  *              size - size of the new data
+//  721  *              pTblEntryVector - Pointer to the new vector
+//  722  *              vectorLen - Position in the vector to write the data
+//  723  *
+//  724  * @return
+//  725  */
+//  726 static void gp_PopulateProxyTblEntry( uint8* pData, uint8 size, uint8* pTblEntryVector, uint8* vectorLen )
+//  727 {
+//  728   pTblEntryVector += *(uint8*)vectorLen;
+//  729   
+//  730   osal_memcpy( pTblEntryVector, pData, size );
+//  731   *(uint8*)vectorLen += size;
+//  732 }
+//  733 
+//  734 /*********************************************************************
+//  735  * @fn          pt_getAlias
+//  736  *
+//  737  * @brief       Get Bit to update assigned alias field or not
+//  738  *
+//  739  * @param       pNew - New entry array to be added
+//  740  *
+//  741  * @return      newAlias - TRUE if assigned alias bit is set
+//  742  */
+//  743 static uint8 pt_getAlias( uint8* pNew )
+//  744 {
+//  745   bool newAlias;
+//  746   
+//  747   newAlias = PROXY_TBL_GET_ASSIGNED_ALIAS( pNew[PROXY_TBL_ENTRY_OPT + 1] );
+//  748   
+//  749   return newAlias;
+//  750 }
+//  751 
+//  752 /*********************************************************************
+//  753  * @fn          pt_getSecurity
+//  754  *
+//  755  * @brief       Get Bit to update security options field or not
+//  756  *
+//  757  * @param       pNew - New entry array to be added
+//  758  *
+//  759  * @return      secUse - TRUE if security use bit is set
+//  760  */
+//  761 static uint8 pt_getSecurity( uint8* pNew )
+//  762 {
+//  763   bool secUse;
+//  764   
+//  765   secUse = PROXY_TBL_GET_SEC_USE( pNew[PROXY_TBL_ENTRY_OPT + 1] );
+//  766 
+//  767   return secUse;
+//  768 }
+//  769 
+//  770 /*********************************************************************
+//  771  * @fn          pt_getSecFrameCounterCapabilities
+//  772  *
+//  773  * @brief       Get Bit to update security frame counter capabilities
+//  774  *
+//  775  * @param       pNew - New entry array to be added
+//  776  *
+//  777  * @return      secCap - TRUE if security frame counter capabilities bit is set
+//  778  */
+//  779 static uint8 pt_getSecFrameCounterCapabilities( uint8* pNew )
+//  780 {
+//  781   bool secCap;
+//  782   
+//  783   secCap = PROXY_TBL_GET_SEC_CAP( pNew[PROXY_TBL_ENTRY_OPT] );
+//  784   
+//  785   return secCap;
+//  786 }
+//  787 
+//  788 /*********************************************************************
+//  789  * @fn          pt_updateLightweightUnicastSink
+//  790  *
+//  791  * @brief       To add new sink entry
+//  792  *
+//  793  * @param       pNew - New entry array to be added
+//  794  *              pCurr - The current entry array in the proxy table
+//  795  *
+//  796  * @return      TRUE new entry added, FALSE if not
+//  797  */
+//  798 static uint8 pt_updateLightweightUnicastSink( uint8* pNew, uint8* pCurr, uint8 addSink )
+//  799 {
+//  800   uint8 newEntry[PROXY_TBL_ENTRY_LEN];
+//  801   uint8 currEntry[PROXY_TBL_ENTRY_LEN];
+//  802   uint8 freeSinkEntry[LSINK_ADDR_LEN] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
+//  803   
+//  804   osal_memcpy( &newEntry, pNew, PROXY_TBL_ENTRY_LEN );
+//  805   osal_memcpy( &currEntry, pCurr, PROXY_TBL_ENTRY_LEN );
+//  806   
+//  807   
+//  808   // if addSink is TRUE then add the sink to current entry
+//  809   if ( addSink ) 
+//  810   {
+//  811     // if the incomming Sink entry is different to the current entry
+//  812     if ( !osal_memcmp( &currEntry[PROXY_TBL_ENTRY_1ST_LSINK_ADDR], &newEntry[PROXY_TBL_ENTRY_1ST_LSINK_ADDR], LSINK_ADDR_LEN ) )
+//  813     {
+//  814       // add the sink entry in the next slot if empty
+//  815       if ( osal_memcmp( freeSinkEntry, &currEntry[PROXY_TBL_ENTRY_2ND_LSINK_ADDR], LSINK_ADDR_LEN ) )
+//  816       {
+//  817         osal_memcpy( &currEntry[PROXY_TBL_ENTRY_2ND_LSINK_ADDR], &newEntry[PROXY_TBL_ENTRY_1ST_LSINK_ADDR], LSINK_ADDR_LEN );
+//  818         osal_memcpy( pCurr, &currEntry, PROXY_TBL_ENTRY_LEN );
+//  819         return TRUE;
+//  820       }
+//  821     }
+//  822     else 
+//  823     {
+//  824       osal_memcpy( pCurr, &currEntry, PROXY_TBL_ENTRY_LEN );
+//  825      return TRUE;
+//  826     }
+//  827     // if the incomming Sink entry is different to the current entry
+//  828     if ( !osal_memcmp( &currEntry[PROXY_TBL_ENTRY_2ND_LSINK_ADDR], &newEntry[PROXY_TBL_ENTRY_1ST_LSINK_ADDR], LSINK_ADDR_LEN ) )
+//  829     {
+//  830       return FALSE;
+//  831     }
+//  832   }
+//  833   else
+//  834   {
+//  835     // if the incomming Sink entry is the same to the current entry
+//  836     if ( osal_memcmp( &currEntry[PROXY_TBL_ENTRY_1ST_LSINK_ADDR], &newEntry[PROXY_TBL_ENTRY_1ST_LSINK_ADDR], LSINK_ADDR_LEN ) )
+//  837     {
+//  838       // Move the next sink entry to current
+//  839       osal_memcpy( &currEntry[PROXY_TBL_ENTRY_1ST_LSINK_ADDR], &currEntry[PROXY_TBL_ENTRY_2ND_LSINK_ADDR], LSINK_ADDR_LEN );
+//  840       // Invalidate the sink entry
+//  841       osal_memcpy( &currEntry[PROXY_TBL_ENTRY_2ND_LSINK_ADDR], freeSinkEntry, LSINK_ADDR_LEN );
+//  842       
+//  843       // if the sink entry is empty then remove the proxy table entry
+//  844       if ( osal_memcmp( freeSinkEntry, &currEntry[PROXY_TBL_ENTRY_1ST_LSINK_ADDR], LSINK_ADDR_LEN ) )
+//  845       {
+//  846         gp_ResetProxyBasicTblEntry( currEntry );
+//  847       }
+//  848       osal_memcpy( pCurr, &currEntry, PROXY_TBL_ENTRY_LEN );
+//  849       return TRUE;
+//  850     }
+//  851     // if the incomming Sink entry is the same to the current entry
+//  852     else if ( osal_memcmp( &currEntry[PROXY_TBL_ENTRY_2ND_LSINK_ADDR], &newEntry[PROXY_TBL_ENTRY_1ST_LSINK_ADDR], LSINK_ADDR_LEN ) )
+//  853     {
+//  854       // Invalidate the sink entry
+//  855       osal_memcpy( &currEntry[PROXY_TBL_ENTRY_2ND_LSINK_ADDR], freeSinkEntry, LSINK_ADDR_LEN );
+//  856       osal_memcpy( pCurr, &currEntry, PROXY_TBL_ENTRY_LEN );
+//  857       return TRUE;
+//  858     }
+//  859   }
+//  860   return FALSE;
+//  861 }
+//  862 
+//  863 /*********************************************************************
+//  864  * @fn          pt_addSinkGroup
+//  865  *
+//  866  * @brief       To add new sink group entry
+//  867  *
+//  868  * @param       pNew - New entry array to be added
+//  869  *              pCurr - The current entry array in the proxy table
+//  870  *
+//  871  * @return      TRUE new entry added, FALSE if not
+//  872  */
+//  873 static uint8 pt_addSinkGroup( uint8* pNew, uint8* pCurr )
+//  874 {
+//  875   bool newSinkGroup;
+//  876   uint8 newEntry[PROXY_TBL_ENTRY_LEN];
+//  877   uint8 currEntry[PROXY_TBL_ENTRY_LEN];
+//  878   
+//  879   osal_memcpy( &newEntry, pNew, PROXY_TBL_ENTRY_LEN );
+//  880   osal_memcpy( &currEntry, pCurr, PROXY_TBL_ENTRY_LEN );
+//  881   
+//  882   newSinkGroup = PROXY_TBL_GET_DGROUP( newEntry[PROXY_TBL_ENTRY_OPT] );
+//  883   newSinkGroup = PROXY_TBL_GET_CGROUP( newEntry[PROXY_TBL_ENTRY_OPT + 1] );
+//  884   
+//  885   if ( newSinkGroup )
+//  886   {
+//  887     if ( !GET_BIT( &currEntry[PROXY_TBL_ENTRY_GRP_TBL_ENTRIES], PROXY_TBL_ENTRY_2ND_GRP_BIT ) )
+//  888     {
+//  889       if ( !GET_BIT( &currEntry[PROXY_TBL_ENTRY_GRP_TBL_ENTRIES], PROXY_TBL_ENTRY_1ST_GRP_BIT ) )
+//  890       {
+//  891         osal_memcpy( &currEntry[PROXY_TBL_ENTRY_1ST_GRP_ADDR], &newEntry[PROXY_TBL_ENTRY_1ST_GRP_ADDR], sizeof ( uint32 ) );
+//  892         SET_BIT( &currEntry[PROXY_TBL_ENTRY_GRP_TBL_ENTRIES], PROXY_TBL_ENTRY_1ST_GRP_BIT );
+//  893         osal_memcpy( pCurr, &currEntry, PROXY_TBL_ENTRY_LEN );
+//  894         return TRUE;
+//  895       }
+//  896       else
+//  897       {
+//  898         osal_memcpy( &currEntry[PROXY_TBL_ENTRY_2ND_GRP_ADDR], &newEntry[PROXY_TBL_ENTRY_1ST_GRP_ADDR], sizeof ( uint32 ) );
+//  899         SET_BIT( &currEntry[PROXY_TBL_ENTRY_GRP_TBL_ENTRIES], PROXY_TBL_ENTRY_2ND_GRP_BIT );
+//  900         osal_memcpy( pCurr, &currEntry, PROXY_TBL_ENTRY_LEN );
+//  901         return TRUE;
+//  902       }
+//  903     }
+//  904   }
+//  905   return FALSE;
+//  906 }
+//  907 
+//  908 /*********************************************************************
+//  909  * @fn          pt_lookForGpd
+//  910  *
+//  911  * @brief       To see if the GPD id is in this NV entry
+//  912  *
+//  913  * @param       currProxyEntryId - NV ID of the proxy table
+//  914  *              pNew - New tabble entry array to be added
+//  915  *
+//  916  * @return      TRUE if the GPD has an entry in current NV vector
+//  917  */
+//  918 static uint8 pt_lookForGpd( uint16 currProxyEntryId, uint8* pNew )
+//  919 {
+//  920   uint8 rtrn;
+//  921 
+//  922   uint8 newEntry[PROXY_TBL_ENTRY_LEN];
+//  923   uint8 currEntry[PROXY_TBL_ENTRY_LEN];
+//  924 
+//  925   osal_memcpy( &newEntry, pNew, PROXY_TBL_ENTRY_LEN );
+//  926   
+//  927   rtrn = osal_nv_read( currProxyEntryId, 0,
+//  928                              PROXY_TBL_ENTRY_LEN, currEntry );
+//  929   
+//  930   if ( rtrn != SUCCESS )
+//  931   {
+//  932     return FALSE;
+//  933   }
+//  934 
+//  935   if ( PROXY_TBL_COMP_APPLICTION_ID( newEntry[PROXY_TBL_ENTRY_OPT], currEntry[PROXY_TBL_ENTRY_OPT] ) )
+//  936   {
+//  937     if ( osal_memcmp( &newEntry[PROXY_TBL_ENTRY_GPD_ID], &currEntry[PROXY_TBL_ENTRY_GPD_ID], Z_EXTADDR_LEN ) )
+//  938     {
+//  939     return TRUE;
+//  940     }
+//  941   }
+//  942   return FALSE;
+//  943 }
+//  944 
+//  945 #endif
+//  946 /*********************************************************************
+//  947 *********************************************************************/
+//  948 
+// 
+//
+// 
+//
+//
+//Errors: none
+//Warnings: none

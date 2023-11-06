@@ -1,0 +1,950 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V10.30.1.6000 for 8051              22/Sep/2023  19:42:31
+// Copyright 2004-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for 8051
+//
+//    Core               =  plain
+//    Code model         =  banked
+//    Data model         =  large
+//    Calling convention =  xdata reentrant
+//    Constant location  =  data_rom
+//    Dptr setup         =  1,16
+//                          
+//    Source file        =  
+//        C:\Texas Instruments\Z-Stack
+//        3.0.2\Components\hal\target\CC2530EB\hal_adc.c
+//    Command line       =  
+//        -f C:\Users\Flemming\AppData\Local\Temp\EW7AFE.tmp ("C:\Texas
+//        Instruments\Z-Stack 3.0.2\Components\hal\target\CC2530EB\hal_adc.c"
+//        -D SECURE=1 -D TC_LINKKEY_JOIN -D NV_INIT -D NV_RESTORE -D
+//        xPOWER_SAVING -D NWK_AUTO_POLL -D xZTOOL_P1 -D xMT_TASK -D
+//        xMT_APP_FUNC -D xMT_SYS_FUNC -D xMT_ZDO_FUNC -D xMT_ZDO_MGMT -D
+//        xMT_APP_CNF_FUNC -D xLEGACY_LCD_DEBUG -D xLCD_SUPPORTED=DEBUG -D
+//        MULTICAST_ENABLED=FALSE -D ZCL_READ -D ZCL_WRITE -D ZCL_BASIC -D
+//        ZCL_IDENTIFY -D xZCL_SCENES -D xZCL_GROUPS -D ZCL_ON_OFF -D
+//        xZCL_DISCOVER -lC "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\EndDeviceEB\List"
+//        -lA "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\EndDeviceEB\List"
+//        --diag_suppress Pe001,Pa010 -o "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\EndDeviceEB\Obj"
+//        -e --debug --core=plain --dptr=16,1 --data_model=large
+//        --code_model=banked --calling_convention=xdata_reentrant
+//        --place_constants=data_rom --nr_virtual_regs 16 -f "C:\Texas
+//        Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
+//        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3
+//        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f "C:\Texas
+//        Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
+//        (-DZIGBEEPRO -DSECURE=1 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
+//        -DDEFAULT_CHANLIST=0x00000800 -DZDAPP_CONFIG_PAN_ID=0xFFFF
+//        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
+//        -DBEACON_REQUEST_DELAY=100 -DBEACON_REQ_DELAY_MASK=0x00FF
+//        -DLINK_STATUS_JITTER_MASK=0x007F -DROUTE_EXPIRY_TIME=30
+//        -DAPSC_ACK_WAIT_DURATION_POLLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7
+//        -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3
+//        -DNWK_MAX_DATA_RETRIES=2 -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9
+//        -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40 -DNWK_MAX_BINDING_ENTRIES=4
+//        -DMAX_BINDING_CLUSTER_IDS=4 -DDEFAULT_KEY={0}
+//        -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
+//        "-DCONST=const __code" -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE
+//        -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100
+//        -DREJOIN_POLL_RATE=440 -DREJOIN_BACKOFF=900000 -DREJOIN_SCAN=900000
+//        -DENABLE_LED4_DISABLE_S1) -f "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wZCL.cfg"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\" -I
+//        "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\Source\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\Source\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\ZMain\TI2530DB\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\hal\include\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mac\include\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mt\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\osal\include\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\services\saddr\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\services\sdata\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\af\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\bdb\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\gp\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\sec\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\sys\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\zcl\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\zmac\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
+//        -Ohz --require_prototypes)
+//    Locale             =  Danish_DNK.1252
+//    List file          =  
+//        C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\EndDeviceEB\List\hal_adc.s51
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME hal_adc
+
+        RTMODEL "__SystemLibrary", "CLib"
+        RTMODEL "__calling_convention", "xdata_reentrant"
+        RTMODEL "__code_model", "banked"
+        RTMODEL "__core", "plain"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__dptr_size", "16"
+        RTMODEL "__extended_stack", "disabled"
+        RTMODEL "__location_for_constants", "data"
+        RTMODEL "__number_of_dptrs", "1"
+        RTMODEL "__register_banks", "*"
+        RTMODEL "__rt_version", "1"
+
+        RSEG DOVERLAY:DATA:NOROOT(0)
+        RSEG IOVERLAY:IDATA:NOROOT(0)
+        RSEG ISTACK:IDATA:NOROOT(0)
+        RSEG PSTACK:XDATA:NOROOT(0)
+        RSEG XSTACK:XDATA:NOROOT(0)
+
+        EXTERN ?V0
+        EXTERN ?V1
+        EXTERN ?BANKED_ENTER_XDATA
+        EXTERN ?BANKED_LEAVE_XDATA
+        EXTERN ?BDISPATCH
+        EXTERN ?BRET
+        EXTERN ?SS_SHR
+        EXTERN __INIT_XDATA_Z
+
+        PUBLIC `??HalAdcCheckVdd::?relay`
+        FUNCTION `??HalAdcCheckVdd::?relay`,0203H
+        PUBLIC `??HalAdcCheckVddRaw::?relay`
+        FUNCTION `??HalAdcCheckVddRaw::?relay`,0203H
+        PUBLIC `??HalAdcInit::?relay`
+        FUNCTION `??HalAdcInit::?relay`,0203H
+        PUBLIC `??HalAdcRead::?relay`
+        FUNCTION `??HalAdcRead::?relay`,0203H
+        PUBLIC `??HalAdcSetReference::?relay`
+        FUNCTION `??HalAdcSetReference::?relay`,0203H
+        PUBWEAK ADCCFG
+        PUBWEAK ADCCON1
+        PUBWEAK ADCCON3
+        PUBWEAK ADCH
+        PUBWEAK ADCL
+        PUBLIC HalAdcCheckVdd
+        FUNCTION HalAdcCheckVdd,0203H
+        ARGFRAME XSTACK, 0, STACK
+        PUBLIC HalAdcCheckVddRaw
+        FUNCTION HalAdcCheckVddRaw,0203H
+        ARGFRAME XSTACK, 0, STACK
+        PUBLIC HalAdcInit
+        FUNCTION HalAdcInit,0203H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME ISTACK, 2, STACK
+        PUBLIC HalAdcRead
+        FUNCTION HalAdcRead,080203H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME XSTACK, 10, STACK
+        PUBLIC HalAdcSetReference
+        FUNCTION HalAdcSetReference,0203H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME ISTACK, 2, STACK
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA_SP SP IDATA
+          CFI StackFrame CFA_PSP16 PSP16 XDATA
+          CFI StackFrame CFA_XSP16 XSP16 XDATA
+          CFI StaticOverlayFrame CFA_IOVERLAY IOVERLAY
+          CFI StaticOverlayFrame CFA_DOVERLAY DOVERLAY
+          CFI Resource `PSW.CY`:1, `B.BR0`:1, `B.BR1`:1, `B.BR2`:1, `B.BR3`:1
+          CFI Resource `B.BR4`:1, `B.BR5`:1, `B.BR6`:1, `B.BR7`:1, `VB.BR8`:1
+          CFI Resource `VB.BR9`:1, `VB.BR10`:1, `VB.BR11`:1, `VB.BR12`:1
+          CFI Resource `VB.BR13`:1, `VB.BR14`:1, `VB.BR15`:1, VB:8, B:8, A:8
+          CFI Resource PSW:8, DPL0:8, DPH0:8, R0:8, R1:8, R2:8, R3:8, R4:8, R5:8
+          CFI Resource R6:8, R7:8, V0:8, V1:8, V2:8, V3:8, V4:8, V5:8, V6:8, V7:8
+          CFI Resource V8:8, V9:8, V10:8, V11:8, V12:8, V13:8, V14:8, V15:8, SP:8
+          CFI Resource PSPH:8, PSPL:8, PSP16:16, XSPH:8, XSPL:8, XSP16:16
+          CFI VirtualResource ?RET:24
+          CFI Resource ?BRET_EXT:8
+          CFI VirtualResource ?RET_HIGH:8, ?RET_LOW:8
+          CFI ResourceParts PSP16 PSPH, PSPL
+          CFI ResourceParts XSP16 XSPH, XSPL
+          CFI ResourceParts ?RET ?BRET_EXT, ?RET_HIGH, ?RET_LOW
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 1
+          CFI DataAlign -1
+          CFI ReturnAddress ?RET CODE
+          CFI CFA_DOVERLAY Used
+          CFI CFA_IOVERLAY Used
+          CFI CFA_SP SP+-3
+          CFI CFA_PSP16 PSP16+0
+          CFI CFA_XSP16 XSP16+0
+          CFI `PSW.CY` SameValue
+          CFI `B.BR0` SameValue
+          CFI `B.BR1` SameValue
+          CFI `B.BR2` SameValue
+          CFI `B.BR3` SameValue
+          CFI `B.BR4` SameValue
+          CFI `B.BR5` SameValue
+          CFI `B.BR6` SameValue
+          CFI `B.BR7` SameValue
+          CFI `VB.BR8` SameValue
+          CFI `VB.BR9` SameValue
+          CFI `VB.BR10` SameValue
+          CFI `VB.BR11` SameValue
+          CFI `VB.BR12` SameValue
+          CFI `VB.BR13` SameValue
+          CFI `VB.BR14` SameValue
+          CFI `VB.BR15` SameValue
+          CFI VB SameValue
+          CFI B Undefined
+          CFI A Undefined
+          CFI PSW SameValue
+          CFI DPL0 SameValue
+          CFI DPH0 SameValue
+          CFI R0 Undefined
+          CFI R1 Undefined
+          CFI R2 Undefined
+          CFI R3 Undefined
+          CFI R4 Undefined
+          CFI R5 Undefined
+          CFI R6 SameValue
+          CFI R7 SameValue
+          CFI V0 SameValue
+          CFI V1 SameValue
+          CFI V2 SameValue
+          CFI V3 SameValue
+          CFI V4 SameValue
+          CFI V5 SameValue
+          CFI V6 SameValue
+          CFI V7 SameValue
+          CFI V8 SameValue
+          CFI V9 SameValue
+          CFI V10 SameValue
+          CFI V11 SameValue
+          CFI V12 SameValue
+          CFI V13 SameValue
+          CFI V14 SameValue
+          CFI V15 SameValue
+          CFI PSPH Undefined
+          CFI PSPL Undefined
+          CFI XSPH Undefined
+          CFI XSPL Undefined
+          CFI ?RET Concat
+          CFI ?BRET_EXT Frame(CFA_SP, 3)
+          CFI ?RET_HIGH Frame(CFA_SP, 2)
+          CFI ?RET_LOW Frame(CFA_SP, 1)
+          CFI EndCommon cfiCommon0
+        
+HalAdcCheckVdd      SYMBOL "HalAdcCheckVdd"
+`??HalAdcCheckVdd::?relay` SYMBOL "?relay", HalAdcCheckVdd
+HalAdcCheckVddRaw   SYMBOL "HalAdcCheckVddRaw"
+`??HalAdcCheckVddRaw::?relay` SYMBOL "?relay", HalAdcCheckVddRaw
+HalAdcInit          SYMBOL "HalAdcInit"
+`??HalAdcInit::?relay` SYMBOL "?relay", HalAdcInit
+HalAdcRead          SYMBOL "HalAdcRead"
+`??HalAdcRead::?relay` SYMBOL "?relay", HalAdcRead
+HalAdcSetReference  SYMBOL "HalAdcSetReference"
+`??HalAdcSetReference::?relay` SYMBOL "?relay", HalAdcSetReference
+
+// C:\Texas Instruments\Z-Stack 3.0.2\Components\hal\target\CC2530EB\hal_adc.c
+//    1 /**************************************************************************************************
+//    2   Filename:       hal_adc.c
+//    3   Revised:        $Date: 2010-03-12 16:10:36 -0800 (Fri, 12 Mar 2010) $
+//    4   Revision:       $Revision: 21910 $
+//    5 
+//    6   Description:    This file contains the interface to the HAL ADC.
+//    7 
+//    8 
+//    9   Copyright 2006-2010 Texas Instruments Incorporated. All rights reserved.
+//   10 
+//   11   IMPORTANT: Your use of this Software is limited to those specific rights
+//   12   granted under the terms of a software license agreement between the user
+//   13   who downloaded the software, his/her employer (which must be your employer)
+//   14   and Texas Instruments Incorporated (the "License").  You may not use this
+//   15   Software unless you agree to abide by the terms of the License. The License
+//   16   limits your use, and you acknowledge, that the Software may not be modified,
+//   17   copied or distributed unless embedded on a Texas Instruments microcontroller
+//   18   or used solely and exclusively in conjunction with a Texas Instruments radio
+//   19   frequency transceiver, which is integrated into your product.  Other than for
+//   20   the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+//   21   works of, modify, distribute, perform, display or sell this Software and/or
+//   22   its documentation for any purpose.
+//   23 
+//   24   YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+//   25   PROVIDED “AS IS?WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+//   26   INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
+//   27   NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+//   28   TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+//   29   NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+//   30   LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+//   31   INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+//   32   OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+//   33   OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+//   34   (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+//   35 
+//   36   Should you have any questions regarding your right to use this Software,
+//   37   contact Texas Instruments Incorporated at www.TI.com.
+//   38 **************************************************************************************************/
+//   39 
+//   40 /**************************************************************************************************
+//   41  *                                           INCLUDES
+//   42  **************************************************************************************************/
+//   43 
+//   44 #include  "hal_adc.h"
+
+        ASEGN SFR_AN:DATA:NOROOT,0b4H
+// unsigned char volatile __sfr ADCCON1
+ADCCON1:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0b6H
+// unsigned char volatile __sfr ADCCON3
+ADCCON3:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0baH
+// unsigned char volatile __sfr ADCL
+ADCL:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0bbH
+// unsigned char volatile __sfr ADCH
+ADCH:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0f2H
+// unsigned char volatile __sfr ADCCFG
+ADCCFG:
+        DATA8
+        DS 1
+//   45 #include  "hal_defs.h"
+//   46 #include  "hal_mcu.h"
+//   47 #include  "hal_types.h"
+//   48 #include <math.h>
+//   49 
+//   50 /**************************************************************************************************
+//   51  *                                            CONSTANTS
+//   52  **************************************************************************************************/
+//   53 #define HAL_ADC_EOC         0x80    /* End of Conversion bit */
+//   54 #define HAL_ADC_START       0x40    /* Starts Conversion */
+//   55 
+//   56 #define HAL_ADC_STSEL_EXT   0x00    /* External Trigger */
+//   57 #define HAL_ADC_STSEL_FULL  0x10    /* Full Speed, No Trigger */
+//   58 #define HAL_ADC_STSEL_T1C0  0x20    /* Timer1, Channel 0 Compare Event Trigger */
+//   59 #define HAL_ADC_STSEL_ST    0x30    /* ADCCON1.ST =1 Trigger */
+//   60 
+//   61 #define HAL_ADC_RAND_NORM   0x00    /* Normal Operation */
+//   62 #define HAL_ADC_RAND_LFSR   0x04    /* Clock LFSR */
+//   63 #define HAL_ADC_RAND_SEED   0x08    /* Seed Modulator */
+//   64 #define HAL_ADC_RAND_STOP   0x0c    /* Stop Random Generator */
+//   65 #define HAL_ADC_RAND_BITS   0x0c    /* Bits [3:2] */
+//   66 
+//   67 #define HAL_ADC_DEC_064     0x00    /* Decimate by 64 : 8-bit resolution */
+//   68 #define HAL_ADC_DEC_128     0x10    /* Decimate by 128 : 10-bit resolution */
+//   69 #define HAL_ADC_DEC_256     0x20    /* Decimate by 256 : 12-bit resolution */
+//   70 #define HAL_ADC_DEC_512     0x30    /* Decimate by 512 : 14-bit resolution */
+//   71 #define HAL_ADC_DEC_BITS    0x30    /* Bits [5:4] */
+//   72 
+//   73 #define HAL_ADC_STSEL       HAL_ADC_STSEL_ST
+//   74 #define HAL_ADC_RAND_GEN    HAL_ADC_RAND_STOP
+//   75 #define HAL_ADC_REF_VOLT    HAL_ADC_REF_AVDD
+//   76 #define HAL_ADC_DEC_RATE    HAL_ADC_DEC_064
+//   77 #define HAL_ADC_SCHN        HAL_ADC_CHN_VDD3
+//   78 #define HAL_ADC_ECHN        HAL_ADC_CHN_GND
+//   79 
+//   80 #ifdef ADC_CAL
+//   81 #define INFO_CAL_H              (*((uint8 *)0x7826)) //calibration values stored here
+//   82 #define INFO_CAL_L              (*((uint8 *)0x7827))
+//   83 #endif //ADC_CAL
+//   84 
+//   85 /* ------------------------------------------------------------------------------------------------
+//   86  *                                       Local Variables
+//   87  * ------------------------------------------------------------------------------------------------
+//   88  */
+//   89 
+//   90 #if (HAL_ADC == TRUE)
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//   91 static uint8 adcRef;
+adcRef:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+//   92 #endif
+//   93 
+//   94 #ifdef ADC_CAL
+//   95 uint32 IDEAL_VDD3_CODE = 1780; // this is ideal value for Vdd/3 at 3.0V input and 1.15V V_ref at 12 bit resolution
+//   96 uint16 vdd3InfoPg;
+//   97 int16 compensation;
+//   98 #endif //ADC_CAL
+//   99 
+//  100 /***************************************************************************************************
+//  101  *                                            LOCAL FUNCTION
+//  102  ***************************************************************************************************/
+//  103 #ifdef ADC_CAL
+//  104 static uint16 HalAdcCompensate ( uint16 rawAdcVal, uint8 resolution );
+//  105 #endif //ADC_CAL
+//  106 
+//  107 /**************************************************************************************************
+//  108  * @fn      HalAdcInit
+//  109  *
+//  110  * @brief   Initialize ADC Service
+//  111  *
+//  112  * @param   None
+//  113  *
+//  114  * @return  None
+//  115  **************************************************************************************************/
+
+        RSEG BANKED_CODE:HUGECODE:NOROOT(0)
+//  116 void HalAdcInit(void)
+HalAdcInit:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function HalAdcInit
+        CODE
+//  117 {
+        PUSH      DPL
+          CFI DPL0 Frame(CFA_SP, 4)
+          CFI CFA_SP SP+-4
+        PUSH      DPH
+          CFI DPH0 Frame(CFA_SP, 5)
+          CFI CFA_SP SP+-5
+        ; Saved register size: 2
+        ; Auto size: 0
+//  118 #if (HAL_ADC == TRUE)
+//  119   adcRef = HAL_ADC_REF_VOLT;
+        MOV       DPTR,#adcRef
+        MOV       A,#-0x80
+          CFI EndBlock cfiBlock0
+        REQUIRE ?Subroutine0
+        ; // Fall through to label ?Subroutine0
+//  120 #ifdef ADC_CAL
+//  121   {
+//  122     vdd3InfoPg = ((INFO_CAL_H << 8) | INFO_CAL_L) >> 4;
+//  123     compensation = IDEAL_VDD3_CODE - vdd3InfoPg;
+//  124    }
+//  125 #endif //ADC_CAL
+//  126 #endif
+//  127 }
+
+        RSEG BANKED_CODE:HUGECODE:NOROOT(0)
+?Subroutine0:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI NoFunction
+          CFI CFA_SP SP+-5
+          CFI DPL0 Frame(CFA_SP, 4)
+          CFI DPH0 Frame(CFA_SP, 5)
+        MOVX      @DPTR,A
+        POP       DPH
+          CFI CFA_SP SP+-4
+          CFI DPH0 SameValue
+        POP       DPL
+          CFI CFA_SP SP+-3
+          CFI DPL0 SameValue
+        LJMP      ?BRET
+          CFI EndBlock cfiBlock1
+//  128 
+//  129 #ifdef ADC_CAL
+//  130 /**************************************************************************************************
+//  131  * @fn      HalAdcRead
+//  132  *
+//  133  * @brief   Compensate a raw ADC value
+//  134  *
+//  135  * @param   rawAdcVal - channel where ADC will be read
+//  136  *
+//  137  * @param   voltValue - Pointer that will be set to the converted voltage value
+//  138 *                      Note: Pass NULL if convertion to voltage is not needed
+//  139  *
+//  140  * @param   resolution - Resolution of the rawAdcVal, only needed if converting
+//  141  *                       to voltageValue
+//  142  *
+//  143  * @return  16 bit value of the Compensated ADC value.
+//  144  *
+//  145  *          
+//  146  **************************************************************************************************/
+//  147 uint16 HalAdcCompensate ( uint16 rawAdcVal, uint8 resolution )
+//  148 {
+//  149 {
+//  150   uint16 compAdcVal;
+//  151   int16 comp ;
+//  152   
+//  153   switch (resolution)
+//  154   {
+//  155     case HAL_ADC_RESOLUTION_8:
+//  156       comp = compensation >> 4;
+//  157       break;
+//  158     case HAL_ADC_RESOLUTION_10:
+//  159       comp = compensation >> 2;
+//  160       break;
+//  161     case HAL_ADC_RESOLUTION_14:    
+//  162       comp = compensation << 2;
+//  163       break;
+//  164     case HAL_ADC_RESOLUTION_12:
+//  165     default:
+//  166       break;
+//  167   }
+//  168   compAdcVal = rawAdcVal + comp;
+//  169 
+//  170   return compAdcVal;
+//  171 }
+//  172 #endif //ADC_CAL
+//  173 
+//  174 /**************************************************************************************************
+//  175  * @fn      HalAdcRead
+//  176  *
+//  177  * @brief   Read the ADC based on given channel and resolution
+//  178  *
+//  179  * @param   channel - channel where ADC will be read
+//  180  * @param   resolution - the resolution of the value
+//  181  *
+//  182  * @return  16 bit value of the ADC in offset binary format.
+//  183  *
+//  184  *          Note that the ADC is "bipolar", which means the GND (0V) level is mid-scale.
+//  185  *          Note2: This function assumes that ADCCON3 contains the voltage reference.
+//  186  **************************************************************************************************/
+
+        RSEG BANKED_CODE:HUGECODE:NOROOT(0)
+//  187 uint16 HalAdcRead (uint8 channel, uint8 resolution)
+HalAdcRead:
+          CFI Block cfiBlock2 Using cfiCommon0
+          CFI Function HalAdcRead
+        CODE
+//  188 {
+        REQUIRE ?V0
+        REQUIRE ?V1
+        MOV       A,#-0xa
+        LCALL     ?BANKED_ENTER_XDATA
+          CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI VB load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+          CFI CFA_SP SP+0
+          CFI CFA_XSP16 add(XSP16, 10)
+        ; Saved register size: 10
+        ; Auto size: 0
+        MOV       A,R1
+        MOV       R4,A
+        MOV       A,R2
+        MOV       R5,A
+//  189   int16  reading = 0;
+//  190 
+//  191 #if (HAL_ADC == TRUE)
+//  192   uint8   i, resbits;
+//  193   uint8  adcChannel = 1;
+        MOV       R1,#0x1
+//  194 
+//  195   /*
+//  196    * If Analog input channel is AIN0..AIN7, make sure corresponing P0 I/O pin is enabled.  The code
+//  197    * does NOT disable the pin at the end of this function.  I think it is better to leave the pin
+//  198    * enabled because the results will be more accurate.  Because of the inherent capacitance on the
+//  199    * pin, it takes time for the voltage on the pin to charge up to its steady-state level.  If
+//  200    * HalAdcRead() has to turn on the pin for every conversion, the results may show a lower voltage
+//  201    * than actuality because the pin did not have time to fully charge.
+//  202    */
+//  203   if (channel < 8)
+        MOV       A,R4
+        CLR       C
+        SUBB      A,#0x8
+        JNC       ??HalAdcRead_0
+//  204   {
+//  205     for (i=0; i < channel; i++)
+        MOV       R0,#0x0
+        SJMP      ??HalAdcRead_1
+//  206     {
+//  207       adcChannel <<= 1;
+??HalAdcRead_2:
+        MOV       A,R1
+        CLR       C
+        RLC       A
+        MOV       R1,A
+//  208     }
+        INC       R0
+??HalAdcRead_1:
+        MOV       A,R0
+        CLR       C
+        SUBB      A,R4
+        JC        ??HalAdcRead_2
+//  209   }
+//  210 
+//  211   /* Enable channel */
+//  212   ADCCFG |= adcChannel;
+??HalAdcRead_0:
+        MOV       A,R1
+        ORL       0xf2,A
+//  213 
+//  214   /* Convert resolution to decimation rate */
+//  215   switch (resolution)
+        MOV       A,R2
+        DEC       A
+        JZ        ??HalAdcRead_3
+        DEC       A
+        JZ        ??HalAdcRead_4
+        DEC       A
+        JZ        ??HalAdcRead_5
+        SJMP      ??HalAdcRead_6
+//  216   {
+//  217     case HAL_ADC_RESOLUTION_8:
+//  218       resbits = HAL_ADC_DEC_064;
+??HalAdcRead_3:
+        MOV       R0,#0x0
+//  219       break;
+        SJMP      ??HalAdcRead_7
+//  220     case HAL_ADC_RESOLUTION_10:
+//  221       resbits = HAL_ADC_DEC_128;
+??HalAdcRead_4:
+        MOV       R0,#0x10
+//  222       break;
+        SJMP      ??HalAdcRead_7
+//  223     case HAL_ADC_RESOLUTION_12:
+//  224       resbits = HAL_ADC_DEC_256;
+??HalAdcRead_5:
+        MOV       R0,#0x20
+//  225       break;
+        SJMP      ??HalAdcRead_7
+//  226     case HAL_ADC_RESOLUTION_14:
+//  227     default:
+//  228       resbits = HAL_ADC_DEC_512;
+??HalAdcRead_6:
+        MOV       R0,#0x30
+//  229       break;
+//  230   }
+//  231 
+//  232   /* writing to this register starts the extra conversion */
+//  233   ADCCON3 = channel | resbits | adcRef;
+??HalAdcRead_7:
+        MOV       DPTR,#adcRef
+        MOVX      A,@DPTR
+        MOV       R2,A
+        MOV       A,R4
+        ORL       A,R0
+        ORL       A,R2
+        MOV       0xb6,A
+//  234 
+//  235   /* Wait for the conversion to be done */
+//  236   while (!(ADCCON1 & HAL_ADC_EOC));
+??HalAdcRead_8:
+        MOV       A,0xb4
+        MOV       C,0xE0 /* A   */.7
+        JNC       ??HalAdcRead_8
+//  237 
+//  238   /* Disable channel after done conversion */
+//  239   ADCCFG &= (adcChannel ^ 0xFF);
+        MOV       A,#-0x1
+        XRL       A,R1
+        ANL       0xf2,A
+//  240 
+//  241   /* Read the result */
+//  242   reading = (int16) (ADCL);
+        MOV       A,0xba+0x0
+//  243   reading |= (int16) (ADCH << 8);
+        MOV       R2,A
+        MOV       R1,0xbb
+        MOV       A,R1
+        MOV       R3,A
+//  244 
+//  245   /* Treat small negative as 0 */
+//  246   if (reading < 0)
+        CLR       C
+        SUBB      A,#0x0
+        MOV       C,0xD0 /* PSW */.2
+        XRL       A,PSW
+        RLC       A
+        JNC       ??HalAdcRead_9
+//  247     reading = 0;
+        MOV       R2,#0x0
+        MOV       R3,#0x0
+//  248 
+//  249   switch (resolution)
+??HalAdcRead_9:
+        MOV       A,R5
+        DEC       A
+        JZ        ??HalAdcRead_10
+        DEC       A
+        JZ        ??HalAdcRead_11
+        DEC       A
+        JZ        ??HalAdcRead_12
+        SJMP      ??HalAdcRead_13
+//  250   {
+//  251     case HAL_ADC_RESOLUTION_8:
+//  252       reading >>= 8;
+??HalAdcRead_10:
+        MOV       ?V0,R2
+        MOV       ?V1,R3
+        MOV       A,#0x8
+        SJMP      ??HalAdcRead_14
+//  253       break;
+//  254     case HAL_ADC_RESOLUTION_10:
+//  255       reading >>= 6;
+??HalAdcRead_11:
+        MOV       ?V0,R2
+        MOV       ?V1,R3
+        MOV       A,#0x6
+        SJMP      ??HalAdcRead_14
+//  256       break;
+//  257     case HAL_ADC_RESOLUTION_12:
+//  258       reading >>= 4;
+??HalAdcRead_12:
+        MOV       ?V0,R2
+        MOV       ?V1,R3
+        MOV       A,#0x4
+        SJMP      ??HalAdcRead_14
+//  259       break;
+//  260     case HAL_ADC_RESOLUTION_14:
+//  261     default:
+//  262       reading >>= 2;
+??HalAdcRead_13:
+        MOV       ?V0,R2
+        MOV       ?V1,R3
+        MOV       A,#0x2
+??HalAdcRead_14:
+        MOV       R0,#?V0
+        LCALL     ?SS_SHR
+        MOV       R2,?V0
+        MOV       R3,?V1
+//  263     break;
+//  264   }
+//  265   
+//  266 
+//  267 #else
+//  268   // unused arguments
+//  269   (void) channel;
+//  270   (void) resolution;
+//  271 #endif
+//  272 
+//  273   return ((uint16)reading);
+        MOV       R7,#0x2
+        LJMP      ?BANKED_LEAVE_XDATA
+          CFI EndBlock cfiBlock2
+        REQUIRE ADCCFG
+        REQUIRE ADCCON3
+        REQUIRE ADCCON1
+        REQUIRE ADCL
+        REQUIRE ADCH
+//  274 }
+//  275 
+//  276 /**************************************************************************************************
+//  277  * @fn      HalAdcSetReference
+//  278  *
+//  279  * @brief   Sets the reference voltage for the ADC and initializes the service
+//  280  *
+//  281  * @param   reference - the reference voltage to be used by the ADC
+//  282  *
+//  283  * @return  none
+//  284  *
+//  285  **************************************************************************************************/
+
+        RSEG BANKED_CODE:HUGECODE:NOROOT(0)
+//  286 void HalAdcSetReference ( uint8 reference )
+HalAdcSetReference:
+          CFI Block cfiBlock3 Using cfiCommon0
+          CFI Function HalAdcSetReference
+        CODE
+//  287 {
+        PUSH      DPL
+          CFI DPL0 Frame(CFA_SP, 4)
+          CFI CFA_SP SP+-4
+        PUSH      DPH
+          CFI DPH0 Frame(CFA_SP, 5)
+          CFI CFA_SP SP+-5
+        ; Saved register size: 2
+        ; Auto size: 0
+//  288 #if (HAL_ADC == TRUE)
+//  289   adcRef = reference;
+        MOV       A,R1
+        MOV       DPTR,#adcRef
+        LJMP      ?Subroutine0 & 0xFFFF
+//  290 #endif
+//  291 }
+          CFI EndBlock cfiBlock3
+//  292 
+//  293 /*********************************************************************
+//  294  * @fn      HalAdcCheckVdd
+//  295  *
+//  296  * @brief   Check for minimum Vdd specified.
+//  297  *
+//  298  * @param   vdd - The board-specific Vdd reading to check for.
+//  299  *
+//  300  * @return  TRUE if the Vdd measured is greater than the 'vdd' minimum parameter;
+//  301  *          FALSE if not.
+//  302  *
+//  303  *********************************************************************/
+
+        RSEG BANKED_CODE:HUGECODE:NOROOT(0)
+//  304 bool HalAdcCheckVdd(uint8 vdd)
+HalAdcCheckVdd:
+          CFI Block cfiBlock4 Using cfiCommon0
+          CFI Function HalAdcCheckVdd
+        CODE
+//  305 {
+        ; Saved register size: 0
+        ; Auto size: 0
+//  306 #ifdef ADC_CAL
+//  307   uint16 compAdcVal;  
+//  308 #endif //ADC_CAL
+//  309   
+//  310   ADCCON3 = 0x0F;
+        MOV       0xb6,#0xf
+//  311   while (!(ADCCON1 & 0x80));
+??HalAdcCheckVdd_0:
+        MOV       A,0xb4
+        MOV       C,0xE0 /* A   */.7
+        JNC       ??HalAdcCheckVdd_0
+//  312   
+//  313 #ifdef ADC_CAL
+//  314   compAdcVal = HalAdcCompensate (ADCH, HAL_ADC_RESOLUTION_8);
+//  315   return (compAdcVal > vdd);
+//  316 #else
+//  317   return (ADCH > vdd);
+        MOV       A,R1
+        CLR       C
+        SUBB      A,0xbb
+        JNC       ??HalAdcCheckVdd_1
+        MOV       R1,#0x1
+        SJMP      ??HalAdcCheckVdd_2
+??HalAdcCheckVdd_1:
+        MOV       R1,#0x0
+??HalAdcCheckVdd_2:
+        LJMP      ?BRET
+          CFI EndBlock cfiBlock4
+        REQUIRE ADCCON3
+        REQUIRE ADCCON1
+        REQUIRE ADCH
+//  318 #endif //ADC_CAL
+//  319 }
+//  320 
+//  321 /*********************************************************************
+//  322  * @fn      HalAdcCheckVddRaw
+//  323  *
+//  324  * @brief   Check Vdd.
+//  325  *
+//  326  * @param   none.
+//  327  *
+//  328  * @return  value measured
+//  329  *
+//  330  *********************************************************************/
+
+        RSEG BANKED_CODE:HUGECODE:NOROOT(0)
+//  331 uint8 HalAdcCheckVddRaw( void )
+HalAdcCheckVddRaw:
+          CFI Block cfiBlock5 Using cfiCommon0
+          CFI Function HalAdcCheckVddRaw
+        CODE
+//  332 {
+        ; Saved register size: 0
+        ; Auto size: 0
+//  333 #ifdef ADC_CAL
+//  334   uint16 compAdcVal;  
+//  335 #endif //ADC_CAL
+//  336   
+//  337   ADCCON3 = 0x0F;
+        MOV       0xb6,#0xf
+//  338   while (!(ADCCON1 & 0x80));
+??HalAdcCheckVddRaw_0:
+        MOV       A,0xb4
+        MOV       C,0xE0 /* A   */.7
+        JNC       ??HalAdcCheckVddRaw_0
+//  339   
+//  340 #ifdef ADC_CAL
+//  341   compAdcVal = HalAdcCompensate (ADCH, HAL_ADC_RESOLUTION_8);
+//  342   return compAdcVal;
+//  343 #else
+//  344   return ADCH;
+        MOV       A,0xbb
+        MOV       R1,A
+        LJMP      ?BRET
+          CFI EndBlock cfiBlock5
+        REQUIRE ADCCON3
+        REQUIRE ADCCON1
+        REQUIRE ADCH
+//  345 #endif
+//  346 }
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+`??HalAdcInit::?relay`:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    HalAdcInit
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+`??HalAdcRead::?relay`:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    HalAdcRead
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+`??HalAdcSetReference::?relay`:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    HalAdcSetReference
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+`??HalAdcCheckVdd::?relay`:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    HalAdcCheckVdd
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+`??HalAdcCheckVddRaw::?relay`:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    HalAdcCheckVddRaw
+
+        END
+//  347 
+//  348 /**************************************************************************************************
+//  349 **************************************************************************************************/
+// 
+// 225 bytes in segment BANKED_CODE
+//  30 bytes in segment BANK_RELAYS
+//   5 bytes in segment SFR_AN
+//   1 byte  in segment XDATA_Z
+// 
+//  30 bytes of CODE     memory
+//   0 bytes of DATA     memory (+ 5 bytes shared)
+// 225 bytes of HUGECODE memory
+//   1 byte  of XDATA    memory
+//
+//Errors: none
+//Warnings: none

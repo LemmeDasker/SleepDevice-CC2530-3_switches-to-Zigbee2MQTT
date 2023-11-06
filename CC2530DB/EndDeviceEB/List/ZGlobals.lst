@@ -1,0 +1,2568 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V10.30.1.6000 for 8051               22/Sep/2023  19:42:46
+# Copyright 2004-2018 IAR Systems AB.
+# PC-locked license - IAR Embedded Workbench for 8051
+#
+#    Core               =  plain
+#    Code model         =  banked
+#    Data model         =  large
+#    Calling convention =  xdata reentrant
+#    Constant location  =  data_rom
+#    Dptr setup         =  1,16
+#                          
+#    Source file        =  
+#        C:\Texas Instruments\Z-Stack 3.0.2\Components\stack\sys\ZGlobals.c
+#    Command line       =  
+#        -f C:\Users\Flemming\AppData\Local\Temp\EWB4FD.tmp ("C:\Texas
+#        Instruments\Z-Stack 3.0.2\Components\stack\sys\ZGlobals.c" -D SECURE=1
+#        -D TC_LINKKEY_JOIN -D NV_INIT -D NV_RESTORE -D xPOWER_SAVING -D
+#        NWK_AUTO_POLL -D xZTOOL_P1 -D xMT_TASK -D xMT_APP_FUNC -D xMT_SYS_FUNC
+#        -D xMT_ZDO_FUNC -D xMT_ZDO_MGMT -D xMT_APP_CNF_FUNC -D
+#        xLEGACY_LCD_DEBUG -D xLCD_SUPPORTED=DEBUG -D MULTICAST_ENABLED=FALSE
+#        -D ZCL_READ -D ZCL_WRITE -D ZCL_BASIC -D ZCL_IDENTIFY -D xZCL_SCENES
+#        -D xZCL_GROUPS -D ZCL_ON_OFF -D xZCL_DISCOVER -lC "C:\Texas
+#        Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\EndDeviceEB\List"
+#        -lA "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\EndDeviceEB\List"
+#        --diag_suppress Pe001,Pa010 -o "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\EndDeviceEB\Obj"
+#        -e --debug --core=plain --dptr=16,1 --data_model=large
+#        --code_model=banked --calling_convention=xdata_reentrant
+#        --place_constants=data_rom --nr_virtual_regs 16 -f "C:\Texas
+#        Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
+#        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3
+#        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f "C:\Texas
+#        Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
+#        (-DZIGBEEPRO -DSECURE=1 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
+#        -DDEFAULT_CHANLIST=0x00000800 -DZDAPP_CONFIG_PAN_ID=0xFFFF
+#        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
+#        -DBEACON_REQUEST_DELAY=100 -DBEACON_REQ_DELAY_MASK=0x00FF
+#        -DLINK_STATUS_JITTER_MASK=0x007F -DROUTE_EXPIRY_TIME=30
+#        -DAPSC_ACK_WAIT_DURATION_POLLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7
+#        -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3
+#        -DNWK_MAX_DATA_RETRIES=2 -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9
+#        -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40 -DNWK_MAX_BINDING_ENTRIES=4
+#        -DMAX_BINDING_CLUSTER_IDS=4 -DDEFAULT_KEY={0} -DMAC_MAX_FRAME_SIZE=116
+#        -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const __code"
+#        -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000
+#        -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100 -DREJOIN_POLL_RATE=440
+#        -DREJOIN_BACKOFF=900000 -DREJOIN_SCAN=900000 -DENABLE_LED4_DISABLE_S1)
+#        -f "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wZCL.cfg"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\" -I
+#        "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\Source\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\Source\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\ZMain\TI2530DB\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\hal\include\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mac\include\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mt\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\osal\include\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\services\saddr\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\services\sdata\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\af\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\bdb\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\gp\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\sec\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\sys\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\zcl\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\zmac\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
+#        -Ohz --require_prototypes)
+#    Locale             =  Danish_DNK.1252
+#    List file          =  
+#        C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\EndDeviceEB\List\ZGlobals.lst
+#    Object file        =  
+#        C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\EndDeviceEB\Obj\ZGlobals.r51
+#
+###############################################################################
+
+C:\Texas Instruments\Z-Stack 3.0.2\Components\stack\sys\ZGlobals.c
+      1          /**************************************************************************************************
+      2            Filename:       ZGlobals.c
+      3            Revised:        $Date: 2015-10-05 14:56:09 -0700 (Mon, 05 Oct 2015) $
+      4            Revision:       $Revision: 44517 $
+      5          
+      6            Description:    User definable Z-Stack parameters.
+      7          
+      8          
+      9            Copyright 2007-2015 Texas Instruments Incorporated. All rights reserved.
+     10          
+     11            IMPORTANT: Your use of this Software is limited to those specific rights
+     12            granted under the terms of a software license agreement between the user
+     13            who downloaded the software, his/her employer (which must be your employer)
+     14            and Texas Instruments Incorporated (the "License").  You may not use this
+     15            Software unless you agree to abide by the terms of the License. The License
+     16            limits your use, and you acknowledge, that the Software may not be modified,
+     17            copied or distributed unless embedded on a Texas Instruments microcontroller
+     18            or used solely and exclusively in conjunction with a Texas Instruments radio
+     19            frequency transceiver, which is integrated into your product. Other than for
+     20            the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+     21            works of, modify, distribute, perform, display or sell this Software and/or
+     22            its documentation for any purpose.
+     23          
+     24            YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+     25            PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+     26            INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
+     27            NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+     28            TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+     29            NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+     30            LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+     31            INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+     32            OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+     33            OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+     34            (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+     35          
+     36            Should you have any questions regarding your right to use this Software,
+     37            contact Texas Instruments Incorporated at www.TI.com.
+     38          **************************************************************************************************/
+     39          
+     40          /*********************************************************************
+     41           * INCLUDES
+     42           */
+     43          
+     44          #include "ZComDef.h"
+     45          #include "OSAL_Nv.h"
+     46          #include "ZDObject.h"
+     47          #include "ZGlobals.h"
+     48          #include "ZDNwkMgr.h"
+     49          #include "OnBoard.h"
+     50          #include "ZDSecMgr.h"
+     51          #include "bdb.h"
+     52          
+     53          /*********************************************************************
+     54           * MACROS
+     55           */
+     56          
+     57          /*********************************************************************
+     58           * CONSTANTS
+     59           */
+     60          
+     61          /*********************************************************************
+     62           * TYPEDEFS
+     63           */
+     64          
+     65          typedef struct zgItem
+     66          {
+     67            uint16 id;
+     68            uint16 len;
+     69            void *buf;
+     70          } zgItem_t;
+     71          
+     72          /*********************************************************************
+     73           * NWK GLOBAL VARIABLES
+     74           */
+     75          
+     76          // Polling values
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+     77          uint32 zgPollRate = POLL_RATE;
+   \                     zgPollRate:
+   \   000000                DS 4
+   \   000004                REQUIRE `?<Initializer for zgPollRate>`
+   \   000004                REQUIRE __INIT_XDATA_I
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+     78          uint32 zgSavedPollRate = POLL_RATE;
+   \                     zgSavedPollRate:
+   \   000000                DS 4
+   \   000004                REQUIRE `?<Initializer for zgSavedPollRate>`
+   \   000004                REQUIRE __INIT_XDATA_I
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+     79          uint16 zgQueuedPollRate = QUEUED_POLL_RATE;
+   \                     zgQueuedPollRate:
+   \   000000                DS 2
+   \   000002                REQUIRE `?<Initializer for zgQueuedPollRate>`
+   \   000002                REQUIRE __INIT_XDATA_I
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+     80          uint16 zgResponsePollRate = RESPONSE_POLL_RATE;
+   \                     zgResponsePollRate:
+   \   000000                DS 2
+   \   000002                REQUIRE `?<Initializer for zgResponsePollRate>`
+   \   000002                REQUIRE __INIT_XDATA_I
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+     81          uint16 zgRejoinPollRate = REJOIN_POLL_RATE;
+   \                     zgRejoinPollRate:
+   \   000000                DS 2
+   \   000002                REQUIRE `?<Initializer for zgRejoinPollRate>`
+   \   000002                REQUIRE __INIT_XDATA_I
+     82          
+     83          // Rejoin backoff (silent period ) duration
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+     84          uint32 zgDefaultRejoinBackoff = REJOIN_BACKOFF;
+   \                     zgDefaultRejoinBackoff:
+   \   000000                DS 4
+   \   000004                REQUIRE `?<Initializer for zgDefaultRejoinBackoff>`
+   \   000004                REQUIRE __INIT_XDATA_I
+     85          
+     86          // Rejoin scan duration
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+     87          uint32 zgDefaultRejoinScan = REJOIN_SCAN ;
+   \                     zgDefaultRejoinScan:
+   \   000000                DS 4
+   \   000004                REQUIRE `?<Initializer for zgDefaultRejoinScan>`
+   \   000004                REQUIRE __INIT_XDATA_I
+     88          
+     89          // Transmission retries numbers
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+     90          uint8 zgMaxDataRetries = NWK_MAX_DATA_RETRIES;
+   \                     zgMaxDataRetries:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for zgMaxDataRetries>`
+   \   000001                REQUIRE __INIT_XDATA_I
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+     91          uint8 zgMaxPollFailureRetries = MAX_POLL_FAILURE_RETRIES;
+   \                     zgMaxPollFailureRetries:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for zgMaxPollFailureRetries>`
+   \   000001                REQUIRE __INIT_XDATA_I
+     92          
+     93          // Default channel list
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     94          uint32 zgDefaultChannelList = 0;
+   \                     zgDefaultChannelList:
+   \   000000                DS 4
+   \   000004                REQUIRE __INIT_XDATA_Z
+     95          
+     96          // Stack profile Id
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+     97          uint8 zgStackProfile = STACK_PROFILE_ID;
+   \                     zgStackProfile:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for zgStackProfile>`
+   \   000001                REQUIRE __INIT_XDATA_I
+     98          
+     99          // Default indirect message holding timeout
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    100          uint8 zgIndirectMsgTimeout = NWK_INDIRECT_MSG_TIMEOUT;
+   \                     zgIndirectMsgTimeout:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for zgIndirectMsgTimeout>`
+   \   000001                REQUIRE __INIT_XDATA_I
+    101          
+    102          // Security mode
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    103          uint8 zgSecurityMode = ZG_SECURITY_MODE;
+   \                     zgSecurityMode:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for zgSecurityMode>`
+   \   000001                REQUIRE __INIT_XDATA_I
+    104          
+    105          // Secure permit join
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    106          uint8 zgSecurePermitJoin = TRUE;
+   \                     zgSecurePermitJoin:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for zgSecurePermitJoin>`
+   \   000001                REQUIRE __INIT_XDATA_I
+    107          
+    108          // trustcenter allows rejoins using well known or default keys 
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    109          uint8 zgAllowRejoins = FALSE;   // FALSE by default
+   \                     zgAllowRejoins:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+    110          
+    111          //if zgAllowRejoins is set to FALSE, the rejoining device will receive a rejoin rsp success and also a leave command.
+    112          //The leave command will have set the rejoin parameter = 'zgAllowRejoinsOptions' value.
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    113          uint8 zgAllowRejoinsOptions = FALSE;  //FALSE by default
+   \                     zgAllowRejoinsOptions:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+    114          
+    115          //allowInstallCodes
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    116          uint8 zgAllowInstallCodes = ZG_IC_SUPPORTED_NOT_REQUIRED;
+   \                     zgAllowInstallCodes:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for zgAllowInstallCodes>`
+   \   000001                REQUIRE __INIT_XDATA_I
+    117          //Allow other devices in the network to change the TC permit joining policy
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    118          uint8 zgAllowRemoteTCPolicyChange = TRUE;
+   \                     zgAllowRemoteTCPolicyChange:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for zgAllowRemoteTCPolicyChange>`
+   \   000001                REQUIRE __INIT_XDATA_I
+    119          
+    120          //Change these policies to FALSE is not supported
+    121          //uint8 zgAllowTrustCenterLinkKeyRequest = TRUE;
+    122          //uint8 zgAllowApplicationKeyRequests = TRUE;
+    123          
+    124          
+    125          // Trust center address
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    126          uint8 zgApsTrustCenterAddr[Z_EXTADDR_LEN] = { 0 };
+   \                     zgApsTrustCenterAddr:
+   \   000000                DS 8
+   \   000008                REQUIRE __INIT_XDATA_Z
+    127          
+    128          
+    129          // Route Discovery Time - amount of time that a route request lasts
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    130          uint8 zgRouteDiscoveryTime = ROUTE_DISCOVERY_TIME;
+   \                     zgRouteDiscoveryTime:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for zgRouteDiscoveryTime>`
+   \   000001                REQUIRE __INIT_XDATA_I
+    131          
+    132          // Route expiry
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    133          uint8 zgRouteExpiryTime = ROUTE_EXPIRY_TIME;
+   \                     zgRouteExpiryTime:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for zgRouteExpiryTime>`
+   \   000001                REQUIRE __INIT_XDATA_I
+    134          
+    135          // Extended PAN Id
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    136          uint8 zgExtendedPANID[Z_EXTADDR_LEN];
+   \                     zgExtendedPANID:
+   \   000000                DS 8
+   \   000008                REQUIRE __INIT_XDATA_Z
+    137          
+    138          // Broadcast parameters
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    139          uint8 zgMaxBcastRetires   = MAX_BCAST_RETRIES;
+   \                     zgMaxBcastRetires:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for zgMaxBcastRetires>`
+   \   000001                REQUIRE __INIT_XDATA_I
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    140          uint8 zgPassiveAckTimeout = PASSIVE_ACK_TIMEOUT;
+   \                     zgPassiveAckTimeout:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for zgPassiveAckTimeout>`
+   \   000001                REQUIRE __INIT_XDATA_I
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    141          uint8 zgBcastDeliveryTime = BCAST_DELIVERY_TIME;
+   \                     zgBcastDeliveryTime:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for zgBcastDeliveryTime>`
+   \   000001                REQUIRE __INIT_XDATA_I
+    142          
+    143          // Network mode
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    144          uint8 zgNwkMode = NWK_MODE;
+   \                     zgNwkMode:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for zgNwkMode>`
+   \   000001                REQUIRE __INIT_XDATA_I
+    145          
+    146          // Many-to-one values
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    147          uint8 zgConcentratorEnable = CONCENTRATOR_ENABLE;
+   \                     zgConcentratorEnable:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    148          uint8 zgConcentratorDiscoveryTime = CONCENTRATOR_DISCOVERY_TIME;
+   \                     zgConcentratorDiscoveryTime:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    149          uint8 zgConcentratorRadius = CONCENTRATOR_RADIUS;
+   \                     zgConcentratorRadius:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for zgConcentratorRadius>`
+   \   000001                REQUIRE __INIT_XDATA_I
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    150          uint8 zgConcentratorRC = CONCENTRATOR_ROUTE_CACHE;   // concentrator with route cache (no memory constraints)
+   \                     zgConcentratorRC:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    151          uint8 zgNwkSrcRtgExpiryTime = SRC_RTG_EXPIRY_TIME;
+   \                     zgNwkSrcRtgExpiryTime:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for zgNwkSrcRtgExpiryTime>`
+   \   000001                REQUIRE __INIT_XDATA_I
+    152          
+    153          // Cleanup Child Table according to routing traffic
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    154          uint8 zgRouterOffAssocCleanup = FALSE;
+   \                     zgRouterOffAssocCleanup:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+    155          
+    156          // Determines whether or not a remote NWK leave request command frame received
+    157          // by the local device is accepted .
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    158          uint8 zgNwkLeaveRequestAllowed = TRUE;
+   \                     zgNwkLeaveRequestAllowed:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for zgNwkLeaveRequestAllowed>`
+   \   000001                REQUIRE __INIT_XDATA_I
+    159          
+    160          
+    161          
+    162          // Enable or disable processing a leave request confirm generated by local
+    163          // device when it sends a leave request to a remote device. 
+    164          // NOTE: This is only used for testing purposes, do not disable 
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    165          uint8 zgNwkProcessLocalLeaveCnf = TRUE;
+   \                     zgNwkProcessLocalLeaveCnf:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for zgNwkProcessLocalLeaveCnf>`
+   \   000001                REQUIRE __INIT_XDATA_I
+    166          
+    167          
+    168          //=======    Child Aging PARENT ROUTER (ZR/ZC) configuration   ========
+    169          // You can setup a router to support Child Table Aging in 1 of 2 modes of
+    170          // operation.  The first mode is NWK_PARENT_INFO_ORPHAN_NOTIFICATION and it
+    171          // expects end devices to use orphan scan periodically as a means of a keep-alive
+    172          // notification to the parent.  The other mode is NWK_PARENT_INFO_MAC_DATA_POLL
+    173          // which uses the end device's MAC POLL request as the keep-alive notification.
+    174          // The first method is preferred for new devices, where the end devices provide
+    175          // support for it (which will be manditory in future Zigbee Home Automation
+    176          // Specifications).
+    177          // The second method is compatible with older end devices without the need for
+    178          // specific child aging support.
+    179          //
+    180          // The method supported by the router (or coordinator) is determined at build time
+    181          // by setting zgNwkParentInformation to either NWK_PARENT_INFO_ORPHAN_NOTIFICATION
+    182          // or NWK_PARENT_INFO_MAC_DATA_POLL.
+    183          //
+    184          // End device built with Child Table Aging support both methods, the method is
+    185          // determined by the parent and communicated at run-time.
+    186          #if ( ZG_BUILD_RTR_TYPE )
+    187          uint8 zgNwkParentInformation = NWK_PARENT_INFO_MAC_DATA_POLL;
+    188          #else
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    189          uint8 zgNwkParentInformation = NWK_PARENT_INFO_UNDEFINED;
+   \                     zgNwkParentInformation:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+    190          #endif
+    191          
+    192          // This is an index into table Requested Timeout Enumerated Values.
+    193          // It is used by the parent router, it indicates the default timeout value
+    194          // for any end device that does not negotiate a different timeout value
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    195          uint8 zgNwkEndDeviceTimeoutDefault = NWK_END_DEV_TIMEOUT_DEFAULT;
+   \                     zgNwkEndDeviceTimeoutDefault:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for zgNwkEndDeviceTimeoutDefault`
+   \   000001                REQUIRE __INIT_XDATA_I
+    196          
+    197          // Index into table Requested Timeout Enumerated Values.
+    198          // Used to keep the leave message into MAC queue for child devices that has expired
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    199          uint8 zgNwkEndDeviceLeaveTimeoutDefault = NWK_END_DEVICE_LEAVE_TIMEOUT;
+   \                     zgNwkEndDeviceLeaveTimeoutDefault:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for zgNwkEndDeviceLeaveTimeoutDe`
+   \   000001                REQUIRE __INIT_XDATA_I
+    200          //=====================================================================
+    201          
+    202          //==========    Child Aging END DEVICE configuration    ===============
+    203          // Values used by End Device when sending End Device Timeout Request
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    204          uint8 zgEndDeviceTimeoutValue  = END_DEV_TIMEOUT_VALUE;
+   \                     zgEndDeviceTimeoutValue:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for zgEndDeviceTimeoutValue>`
+   \   000001                REQUIRE __INIT_XDATA_I
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    205          uint8 zgEndDeviceConfiguration = END_DEV_CONFIGURATION;
+   \                     zgEndDeviceConfiguration:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+    206          
+    207          
+    208          //=====================================================================
+    209          
+    210          // Determines if the Child Aging Table Management process is active or not.
+    211          // This feature is optional and it is disabled by default.
+    212          //
+    213          // NOTICE:  Before enabling Child Aging make sure to review all the related
+    214          // definitions in this file, especially zgNwkParentInformation.
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    215          uint8 zgChildAgingEnable = TRUE;
+   \                     zgChildAgingEnable:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for zgChildAgingEnable>`
+   \   000001                REQUIRE __INIT_XDATA_I
+    216          
+    217          //==========    TouchLink NWK configuration    ===============
+    218          // Values used by Router when starts a network as initiator
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    219          uint8 zTouchLinkNwkStartRtr = FALSE;
+   \                     zTouchLinkNwkStartRtr:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+    220          
+    221          /*********************************************************************
+    222           * APS GLOBAL VARIABLES
+    223           */
+    224          
+    225          // The maximum number of retries allowed after a transmission failure
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    226          uint8 zgApscMaxFrameRetries = APSC_MAX_FRAME_RETRIES;
+   \                     zgApscMaxFrameRetries:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for zgApscMaxFrameRetries>`
+   \   000001                REQUIRE __INIT_XDATA_I
+    227          
+    228          // The maximum number of seconds (milliseconds) to wait for an
+    229          // acknowledgement to a transmitted frame.
+    230          
+    231          // This number is used by polled devices.
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    232          uint16 zgApscAckWaitDurationPolled = APSC_ACK_WAIT_DURATION_POLLED;
+   \                     zgApscAckWaitDurationPolled:
+   \   000000                DS 2
+   \   000002                REQUIRE `?<Initializer for zgApscAckWaitDurationPolled>`
+   \   000002                REQUIRE __INIT_XDATA_I
+    233          
+    234          // This number is used by non-polled devices in the following formula:
+    235          //   (100 mSec) * (_NIB.MaxDepth * zgApsAckWaitMultiplier)
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    236          uint8 zgApsAckWaitMultiplier = 2;
+   \                     zgApsAckWaitMultiplier:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for zgApsAckWaitMultiplier>`
+   \   000001                REQUIRE __INIT_XDATA_I
+    237          
+    238          // The maximum number of milliseconds for the end device binding
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    239          uint16 zgApsDefaultMaxBindingTime = APS_DEFAULT_MAXBINDING_TIME;
+   \                     zgApsDefaultMaxBindingTime:
+   \   000000                DS 2
+   \   000002                REQUIRE `?<Initializer for zgApsDefaultMaxBindingTime>`
+   \   000002                REQUIRE __INIT_XDATA_I
+    240          
+    241          // The 64-big identifier of the network to join or form.
+    242          // Default set to all zeros
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    243          uint8 zgApsUseExtendedPANID[Z_EXTADDR_LEN] = {00,00,00,00,00,00,00,00};
+   \                     zgApsUseExtendedPANID:
+   \   000000                DS 8
+   \   000008                REQUIRE __INIT_XDATA_Z
+    244          
+    245          // A boolean flag that indicates whether it is OK to use insecure join
+    246          // on startup. Default set to TRUE
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    247          uint8 zgApsUseInsecureJoin = TRUE;
+   \                     zgApsUseInsecureJoin:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for zgApsUseInsecureJoin>`
+   \   000001                REQUIRE __INIT_XDATA_I
+    248          
+    249          // The radius of broadcast multicast transmissions
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    250          uint8 zgApsNonMemberRadius = APS_DEFAULT_NONMEMBER_RADIUS;
+   \                     zgApsNonMemberRadius:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for zgApsNonMemberRadius>`
+   \   000001                REQUIRE __INIT_XDATA_I
+    251          
+    252          // Commissioned Network Address
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    253          uint16 zgNwkCommissionedNwkAddr = INVALID_NODE_ADDR;
+   \                     zgNwkCommissionedNwkAddr:
+   \   000000                DS 2
+   \   000002                REQUIRE `?<Initializer for zgNwkCommissionedNwkAddr>`
+   \   000002                REQUIRE __INIT_XDATA_I
+    254          
+    255          // APS Duplication Rejection table variables
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    256          uint16 zgApscDupRejTimeoutInc = DEFAULT_APS_DUP_REJ_TIMEOUT_INCREMENT;
+   \                     zgApscDupRejTimeoutInc:
+   \   000000                DS 2
+   \   000002                REQUIRE `?<Initializer for zgApscDupRejTimeoutInc>`
+   \   000002                REQUIRE __INIT_XDATA_I
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    257          uint8  zgApscDupRejTimeoutCount = DEFAULT_APS_DUP_REJ_TIMEOUT;
+   \                     zgApscDupRejTimeoutCount:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for zgApscDupRejTimeoutCount>`
+   \   000001                REQUIRE __INIT_XDATA_I
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    258          uint16 zgApsMinDupRejTableSize = APS_DUP_REJ_ENTRIES;
+   \                     zgApsMinDupRejTableSize:
+   \   000000                DS 2
+   \   000002                REQUIRE `?<Initializer for zgApsMinDupRejTableSize>`
+   \   000002                REQUIRE __INIT_XDATA_I
+    259          
+    260          
+    261          
+    262          /*********************************************************************
+    263           * SECURITY GLOBAL VARIABLES
+    264           */
+    265          
+    266          // If TRUE, preConfigKey should be configured on all devices on the network
+    267          // If false, it is configured only on the coordinator and sent to other
+    268          // devices upon joining.
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    269          uint8 zgPreConfigKeys = FALSE;
+   \                     zgPreConfigKeys:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+    270          
+    271          // The type of link key in use.  This will determine the security
+    272          // policies associated with sending and receiving APS messages.
+    273          // If ZG_GLOBAL_LINK_KEY APS TCLK security may be used for specific APS commands
+    274          // If ZG_UNIQUE_LINK_KEY APS TCLK security is required for specific APS commands
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    275          uint8 zgApsLinkKeyType = ZG_GLOBAL_LINK_KEY;
+   \                     zgApsLinkKeyType:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for zgApsLinkKeyType>`
+   \   000001                REQUIRE __INIT_XDATA_I
+    276          
+    277          // With changes introduced in R20 of the ZigBee specification,
+    278          // boolean value of zgUseDefaultTCLK is set depending on zgApsLinkKeyType value.
+    279          //
+    280          // For zgApsLinkKeyType = ZG_GLOBAL_LINK_KEY, zgUseDefaultTCLK = TRUE
+    281          // For zgApsLinkKeyType = ZG_UNIQUE_LINK_KEY, different devices have
+    282          // different value:
+    283          //      ZC should have             zgUseDefaultTCLK = FALSE
+    284          //      Other devices should have  zgUseDefaultTCLK = TRUE
+    285          // This is initialized in zgInitItems()
+    286          // If ZG_UNIQUE_LINK_KEY, individual trust center link key between each device
+    287          // and the trust center should be manually configured via MT_SYS_OSAL_NV_WRITE
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    288          uint8 zgUseDefaultTCLK;
+   \                     zgUseDefaultTCLK:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+    289          
+    290          #if defined ( APP_TP2_TEST_MODE )
+    291          uint8 guTxApsSecON = TP_GU_BOTH;
+    292          uint8 guEnforceRxApsSec = TP_GU_ALL;
+    293          #endif
+    294          
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    295          uint8 zgApsAllowR19Sec = FALSE;
+   \                     zgApsAllowR19Sec:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    296          uint8 zgSwitchCoordKey = FALSE;
+   \                     zgSwitchCoordKey:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    297          uint8 zgSwitchCoordKeyIndex = 0;
+   \                     zgSwitchCoordKeyIndex:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+    298          
+    299          /*********************************************************************
+    300           * ZDO GLOBAL VARIABLES
+    301           */
+    302          
+    303          // Configured PAN ID
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    304          uint16 zgConfigPANID = ZDAPP_CONFIG_PAN_ID;
+   \                     zgConfigPANID:
+   \   000000                DS 2
+   \   000002                REQUIRE `?<Initializer for zgConfigPANID>`
+   \   000002                REQUIRE __INIT_XDATA_I
+    305          
+    306          // Device Logical Type
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    307          uint8 zgDeviceLogicalType = DEVICE_LOGICAL_TYPE;
+   \                     zgDeviceLogicalType:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for zgDeviceLogicalType>`
+   \   000001                REQUIRE __INIT_XDATA_I
+    308          
+    309          // Startup Delay
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    310          uint8 zgStartDelay = START_DELAY;
+   \                     zgStartDelay:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for zgStartDelay>`
+   \   000001                REQUIRE __INIT_XDATA_I
+    311          
+    312          #if !defined MT_TASK
+    313          // Flag to use verbose (i.e. "cc2480-style") direct MT callbacks in ZDProfile.c, ZDP_IncomingData().
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    314          uint8 zgZdoDirectCB = TRUE;
+   \                     zgZdoDirectCB:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for zgZdoDirectCB>`
+   \   000001                REQUIRE __INIT_XDATA_I
+    315          #endif
+    316          
+    317          // Min number of attempted transmissions for Channel Interference detection
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    318          uint8 zgNwkMgrMinTransmissions = ZDNWKMGR_MIN_TRANSMISSIONS;
+   \                     zgNwkMgrMinTransmissions:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for zgNwkMgrMinTransmissions>`
+   \   000001                REQUIRE __INIT_XDATA_I
+    319          
+    320          /*********************************************************************
+    321           * APPLICATION GLOBAL VARIABLES
+    322           */
+    323          
+    324          // Network Manager Mode
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    325          uint8 zgNwkMgrMode = ZDNWKMGR_ENABLE;
+   \                     zgNwkMgrMode:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for zgNwkMgrMode>`
+   \   000001                REQUIRE __INIT_XDATA_I
+    326          
+    327          /*********************************************************************
+    328           * NON-STANDARD GLOBAL VARIABLES
+    329           */
+    330          
+    331          // Simple API Endpoint
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    332          uint8 zgSapiEndpoint = SAPI_ENDPOINT;
+   \                     zgSapiEndpoint:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for zgSapiEndpoint>`
+   \   000001                REQUIRE __INIT_XDATA_I
+    333          
+    334          /*********************************************************************
+    335           * LOCAL VARIABLES
+    336           */
+    337          
+    338          /*********************************************************************
+    339           * ZGlobal Item Table
+    340           */
+
+   \                                 In  segment CODE_C, align 1
+    341          static CONST zgItem_t zgItemTable[] =
+   \                     zgItemTable:
+   \   000000   8F00         DW 143
+   \   000002   0100         DW 1
+   \   000004   ....         DW zgZdoDirectCB
+   \   000006   8700         DW 135
+   \   000008   0100         DW 1
+   \   00000A   ....         DW zgDeviceLogicalType
+   \   00000C   3500         DW 53
+   \   00000E   0400         DW 4
+   \   000010   ....         DW zgPollRate
+   \   000012   2500         DW 37
+   \   000014   0200         DW 2
+   \   000016   ....         DW zgQueuedPollRate
+   \   000018   2600         DW 38
+   \   00001A   0200         DW 2
+   \   00001C   ....         DW zgResponsePollRate
+   \   00001E   2700         DW 39
+   \   000020   0200         DW 2
+   \   000022   ....         DW zgRejoinPollRate
+   \   000024   2800         DW 40
+   \   000026   0100         DW 1
+   \   000028   ....         DW zgMaxDataRetries
+   \   00002A   2900         DW 41
+   \   00002C   0100         DW 1
+   \   00002E   ....         DW zgMaxPollFailureRetries
+   \   000030   8400         DW 132
+   \   000032   0400         DW 4
+   \   000034   ....         DW zgDefaultChannelList
+   \   000036   8600         DW 134
+   \   000038   0100         DW 1
+   \   00003A   ....         DW bdbAttributes + 0DH
+   \   00003C   2A00         DW 42
+   \   00003E   0100         DW 1
+   \   000040   ....         DW zgStackProfile
+   \   000042   2B00         DW 43
+   \   000044   0100         DW 1
+   \   000046   ....         DW zgIndirectMsgTimeout
+   \   000048   2C00         DW 44
+   \   00004A   0100         DW 1
+   \   00004C   ....         DW zgRouteExpiryTime
+   \   00004E   2D00         DW 45
+   \   000050   0800         DW 8
+   \   000052   ....         DW zgExtendedPANID
+   \   000054   2E00         DW 46
+   \   000056   0100         DW 1
+   \   000058   ....         DW zgMaxBcastRetires
+   \   00005A   2F00         DW 47
+   \   00005C   0100         DW 1
+   \   00005E   ....         DW zgPassiveAckTimeout
+   \   000060   3000         DW 48
+   \   000062   0100         DW 1
+   \   000064   ....         DW zgBcastDeliveryTime
+   \   000066   3100         DW 49
+   \   000068   0100         DW 1
+   \   00006A   ....         DW zgNwkMode
+   \   00006C   3200         DW 50
+   \   00006E   0100         DW 1
+   \   000070   ....         DW zgConcentratorEnable
+   \   000072   3300         DW 51
+   \   000074   0100         DW 1
+   \   000076   ....         DW zgConcentratorDiscoveryTime
+   \   000078   3400         DW 52
+   \   00007A   0100         DW 1
+   \   00007C   ....         DW zgConcentratorRadius
+   \   00007E   3600         DW 54
+   \   000080   0100         DW 1
+   \   000082   ....         DW zgConcentratorRC
+   \   000084   3800         DW 56
+   \   000086   0100         DW 1
+   \   000088   ....         DW zgNwkSrcRtgExpiryTime
+   \   00008A   3900         DW 57
+   \   00008C   0100         DW 1
+   \   00008E   ....         DW zgRouteDiscoveryTime
+   \   000090   8300         DW 131
+   \   000092   0200         DW 2
+   \   000094   ....         DW zgConfigPANID
+   \   000096   6300         DW 99
+   \   000098   0100         DW 1
+   \   00009A   ....         DW zgPreConfigKeys
+   \   00009C   6400         DW 100
+   \   00009E   0100         DW 1
+   \   0000A0   ....         DW zgSecurityMode
+   \   0000A2   6500         DW 101
+   \   0000A4   0100         DW 1
+   \   0000A6   ....         DW zgSecurePermitJoin
+   \   0000A8   6D00         DW 109
+   \   0000AA   0100         DW 1
+   \   0000AC   ....         DW zgUseDefaultTCLK
+   \   0000AE   7100         DW 113
+   \   0000B0   0800         DW 8
+   \   0000B2   ....         DW zgApsTrustCenterAddr
+   \   0000B4   6600         DW 102
+   \   0000B6   0100         DW 1
+   \   0000B8   ....         DW zgApsLinkKeyType
+   \   0000BA   4300         DW 67
+   \   0000BC   0100         DW 1
+   \   0000BE   ....         DW zgApscMaxFrameRetries
+   \   0000C0   4400         DW 68
+   \   0000C2   0200         DW 2
+   \   0000C4   ....         DW zgApscAckWaitDurationPolled
+   \   0000C6   4500         DW 69
+   \   0000C8   0100         DW 1
+   \   0000CA   ....         DW zgApsAckWaitMultiplier
+   \   0000CC   4600         DW 70
+   \   0000CE   0200         DW 2
+   \   0000D0   ....         DW zgApsDefaultMaxBindingTime
+   \   0000D2   4700         DW 71
+   \   0000D4   0800         DW 8
+   \   0000D6   ....         DW zgApsUseExtendedPANID
+   \   0000D8   4800         DW 72
+   \   0000DA   0100         DW 1
+   \   0000DC   ....         DW zgApsUseInsecureJoin
+   \   0000DE   4B00         DW 75
+   \   0000E0   0100         DW 1
+   \   0000E2   ....         DW zgApsNonMemberRadius
+   \   0000E4   0400         DW 4
+   \   0000E6   0100         DW 1
+   \   0000E8   ....         DW zgStartDelay
+   \   0000EA   A100         DW 161
+   \   0000EC   0100         DW 1
+   \   0000EE   ....         DW zgSapiEndpoint
+   \   0000F0   3700         DW 55
+   \   0000F2   0100         DW 1
+   \   0000F4   ....         DW zgNwkMgrMode
+   \   0000F6   8800         DW 136
+   \   0000F8   0100         DW 1
+   \   0000FA   ....         DW zgNwkMgrMinTransmissions
+   \   0000FC   3C00         DW 60
+   \   0000FE   0100         DW 1
+   \   000100   ....         DW zgRouterOffAssocCleanup
+   \   000102   3D00         DW 61
+   \   000104   0100         DW 1
+   \   000106   ....         DW zgNwkLeaveRequestAllowed
+   \   000108   4900         DW 73
+   \   00010A   0200         DW 2
+   \   00010C   ....         DW zgNwkCommissionedNwkAddr
+   \   00010E   6700         DW 103
+   \   000110   0100         DW 1
+   \   000112   ....         DW zgApsAllowR19Sec
+   \   000114   4D00         DW 77
+   \   000116   0200         DW 2
+   \   000118   ....         DW zgApscDupRejTimeoutInc
+   \   00011A   4E00         DW 78
+   \   00011C   0100         DW 1
+   \   00011E   ....         DW zgApscDupRejTimeoutCount
+   \   000120   4F00         DW 79
+   \   000122   0200         DW 2
+   \   000124   ....         DW zgApsMinDupRejTableSize
+   \   000126   3E00         DW 62
+   \   000128   0100         DW 1
+   \   00012A   ....         DW zgChildAgingEnable
+   \   00012C   5100         DW 81
+   \   00012E   0100         DW 1
+   \   000130   ....         DW zgNwkParentInformation
+   \   000132   5200         DW 82
+   \   000134   0100         DW 1
+   \   000136   ....         DW zgNwkEndDeviceTimeoutDefault
+   \   000138   5300         DW 83
+   \   00013A   0100         DW 1
+   \   00013C   ....         DW zgEndDeviceTimeoutValue
+   \   00013E   5400         DW 84
+   \   000140   0100         DW 1
+   \   000142   ....         DW zgEndDeviceConfiguration
+   \   000144   0000         DW 0
+   \   000146   0000         DW 0
+   \   000148   0000         DW 0H
+    342          {
+    343          #if defined ( NV_INIT )
+    344          #if !defined MT_TASK
+    345            {
+    346              ZCD_NV_ZDO_DIRECT_CB, sizeof(zgZdoDirectCB), &zgZdoDirectCB
+    347            },
+    348          #endif
+    349            {
+    350              ZCD_NV_LOGICAL_TYPE, sizeof(zgDeviceLogicalType), &zgDeviceLogicalType
+    351            },
+    352            {
+    353              ZCD_NV_POLL_RATE, sizeof(zgPollRate), &zgPollRate
+    354            },
+    355            {
+    356              ZCD_NV_QUEUED_POLL_RATE, sizeof(zgQueuedPollRate), &zgQueuedPollRate
+    357            },
+    358            {
+    359              ZCD_NV_RESPONSE_POLL_RATE, sizeof(zgResponsePollRate), &zgResponsePollRate
+    360            },
+    361            {
+    362              ZCD_NV_REJOIN_POLL_RATE, sizeof(zgRejoinPollRate), &zgRejoinPollRate
+    363            },
+    364            {
+    365              ZCD_NV_DATA_RETRIES, sizeof(zgMaxDataRetries), &zgMaxDataRetries
+    366            },
+    367            {
+    368              ZCD_NV_POLL_FAILURE_RETRIES, sizeof(zgMaxPollFailureRetries), &zgMaxPollFailureRetries
+    369            },
+    370            {
+    371              ZCD_NV_CHANLIST, sizeof(zgDefaultChannelList), &zgDefaultChannelList
+    372            },
+    373            {
+    374              ZCD_NV_SCAN_DURATION, sizeof(zgDefaultStartingScanDuration), &zgDefaultStartingScanDuration
+    375            },
+    376            {
+    377              ZCD_NV_STACK_PROFILE, sizeof(zgStackProfile), &zgStackProfile
+    378            },
+    379            {
+    380              ZCD_NV_INDIRECT_MSG_TIMEOUT, sizeof(zgIndirectMsgTimeout), &zgIndirectMsgTimeout
+    381            },
+    382            {
+    383              ZCD_NV_ROUTE_EXPIRY_TIME, sizeof(zgRouteExpiryTime), &zgRouteExpiryTime
+    384            },
+    385            {
+    386              ZCD_NV_EXTENDED_PAN_ID, Z_EXTADDR_LEN, zgExtendedPANID
+    387            },
+    388            {
+    389              ZCD_NV_BCAST_RETRIES, sizeof(zgMaxBcastRetires), &zgMaxBcastRetires
+    390            },
+    391            {
+    392              ZCD_NV_PASSIVE_ACK_TIMEOUT, sizeof(zgPassiveAckTimeout), &zgPassiveAckTimeout
+    393            },
+    394            {
+    395              ZCD_NV_BCAST_DELIVERY_TIME, sizeof(zgBcastDeliveryTime), &zgBcastDeliveryTime
+    396            },
+    397            {
+    398              ZCD_NV_NWK_MODE, sizeof(zgNwkMode), &zgNwkMode
+    399            },
+    400            {
+    401              ZCD_NV_CONCENTRATOR_ENABLE, sizeof(zgConcentratorEnable), &zgConcentratorEnable
+    402            },
+    403            {
+    404              ZCD_NV_CONCENTRATOR_DISCOVERY, sizeof(zgConcentratorDiscoveryTime), &zgConcentratorDiscoveryTime
+    405            },
+    406            {
+    407              ZCD_NV_CONCENTRATOR_RADIUS, sizeof(zgConcentratorRadius), &zgConcentratorRadius
+    408            },
+    409            {
+    410              ZCD_NV_CONCENTRATOR_RC, sizeof(zgConcentratorRC), &zgConcentratorRC
+    411            },
+    412            {
+    413              ZCD_NV_SRC_RTG_EXPIRY_TIME, sizeof(zgNwkSrcRtgExpiryTime), &zgNwkSrcRtgExpiryTime
+    414            },
+    415            {
+    416              ZCD_NV_ROUTE_DISCOVERY_TIME, sizeof(zgRouteDiscoveryTime), &zgRouteDiscoveryTime
+    417            },
+    418          #ifndef NONWK
+    419            {
+    420              ZCD_NV_PANID, sizeof(zgConfigPANID), &zgConfigPANID
+    421            },
+    422            {
+    423              ZCD_NV_PRECFGKEYS_ENABLE, sizeof(zgPreConfigKeys), &zgPreConfigKeys
+    424            },
+    425            {
+    426              ZCD_NV_SECURITY_MODE, sizeof(zgSecurityMode), &zgSecurityMode
+    427            },
+    428            {
+    429              ZCD_NV_SECURE_PERMIT_JOIN, sizeof(zgSecurePermitJoin), &zgSecurePermitJoin
+    430            },
+    431            {
+    432              ZCD_NV_USE_DEFAULT_TCLK, sizeof(zgUseDefaultTCLK), &zgUseDefaultTCLK
+    433            },
+    434            {
+    435              ZCD_NV_TRUSTCENTER_ADDR, Z_EXTADDR_LEN, zgApsTrustCenterAddr
+    436            },
+    437            {
+    438              ZCD_NV_APS_LINK_KEY_TYPE, sizeof(zgApsLinkKeyType), &zgApsLinkKeyType
+    439            },
+    440          #endif // NONWK
+    441            {
+    442              ZCD_NV_APS_FRAME_RETRIES, sizeof(zgApscMaxFrameRetries), &zgApscMaxFrameRetries
+    443            },
+    444            {
+    445              ZCD_NV_APS_ACK_WAIT_DURATION, sizeof(zgApscAckWaitDurationPolled), &zgApscAckWaitDurationPolled
+    446            },
+    447            {
+    448              ZCD_NV_APS_ACK_WAIT_MULTIPLIER, sizeof(zgApsAckWaitMultiplier), &zgApsAckWaitMultiplier
+    449            },
+    450            {
+    451              ZCD_NV_BINDING_TIME, sizeof(zgApsDefaultMaxBindingTime), &zgApsDefaultMaxBindingTime
+    452            },
+    453            {
+    454              ZCD_NV_APS_USE_EXT_PANID, Z_EXTADDR_LEN, zgApsUseExtendedPANID
+    455            },
+    456            {
+    457              ZCD_NV_APS_USE_INSECURE_JOIN, sizeof(zgApsUseInsecureJoin), &zgApsUseInsecureJoin
+    458            },
+    459            {
+    460              ZCD_NV_APS_NONMEMBER_RADIUS, sizeof(zgApsNonMemberRadius), &zgApsNonMemberRadius
+    461            },
+    462            {
+    463              ZCD_NV_START_DELAY, sizeof(zgStartDelay), &zgStartDelay
+    464            },
+    465            {
+    466              ZCD_NV_SAPI_ENDPOINT, sizeof(zgSapiEndpoint), &zgSapiEndpoint
+    467            },
+    468            {
+    469              ZCD_NV_NWK_MGR_MODE, sizeof(zgNwkMgrMode), &zgNwkMgrMode
+    470            },
+    471            {
+    472              ZCD_NV_NWKMGR_MIN_TX, sizeof(zgNwkMgrMinTransmissions), &zgNwkMgrMinTransmissions
+    473            },
+    474            {
+    475              ZCD_NV_ROUTER_OFF_ASSOC_CLEANUP, sizeof(zgRouterOffAssocCleanup), &zgRouterOffAssocCleanup
+    476            },
+    477            {
+    478              ZCD_NV_NWK_LEAVE_REQ_ALLOWED, sizeof(zgNwkLeaveRequestAllowed), &zgNwkLeaveRequestAllowed
+    479            },
+    480            {
+    481              ZCD_NV_COMMISSIONED_NWK_ADDR, sizeof(zgNwkCommissionedNwkAddr), &zgNwkCommissionedNwkAddr
+    482            },
+    483            {
+    484              ZCD_NV_APS_ALLOW_R19_SECURITY, sizeof(zgApsAllowR19Sec), &zgApsAllowR19Sec
+    485            },
+    486            {
+    487              ZCD_NV_APS_DUPREJ_TIMEOUT_INC, sizeof(zgApscDupRejTimeoutInc), &zgApscDupRejTimeoutInc
+    488            },
+    489            {
+    490              ZCD_NV_APS_DUPREJ_TIMEOUT_COUNT, sizeof(zgApscDupRejTimeoutCount), &zgApscDupRejTimeoutCount
+    491            },
+    492            {
+    493              ZCD_NV_APS_DUPREJ_TABLE_SIZE, sizeof(zgApsMinDupRejTableSize), &zgApsMinDupRejTableSize
+    494            },
+    495            {
+    496              ZCD_NV_NWK_CHILD_AGE_ENABLE, sizeof(zgChildAgingEnable), &zgChildAgingEnable
+    497            },
+    498            {
+    499              ZCD_NV_NWK_PARENT_INFO, sizeof(zgNwkParentInformation), &zgNwkParentInformation
+    500            },
+    501            {
+    502              ZCD_NV_NWK_ENDDEV_TIMEOUT_DEF, sizeof(zgNwkEndDeviceTimeoutDefault), &zgNwkEndDeviceTimeoutDefault
+    503            },
+    504            {
+    505              ZCD_NV_END_DEV_TIMEOUT_VALUE, sizeof(zgEndDeviceTimeoutValue), &zgEndDeviceTimeoutValue
+    506            },
+    507            {
+    508              ZCD_NV_END_DEV_CONFIGURATION, sizeof(zgEndDeviceConfiguration), &zgEndDeviceConfiguration
+    509            },
+    510          #endif // NV_INIT
+    511            // Last item -- DO NOT MOVE IT!
+    512            {
+    513              0x00, 0, NULL
+    514            }
+    515          };
+    516          
+    517          /*********************************************************************
+    518           * LOCAL FUNCTIONS
+    519           */
+    520          
+    521          static uint8 zgItemInit( uint16 id, uint16 len, void *buf, uint8 setDefault );
+    522          
+    523          static void zgUpgradeNVItems( void );
+    524          
+    525          #ifndef NONWK
+    526          static uint8 zgPreconfigKeyInit( uint8 setDefault );
+    527          #endif
+    528          
+    529          #ifdef UPGRADE_SECURITY_NV_ITEMS
+    530          static void zgUpgradeSecurityNVItems( void );
+    531          #endif // UPGRADE_SECURITY_NV_ITEMS
+    532          /*********************************************************************
+    533           * @fn       zgItemInit()
+    534           *
+    535           * @brief
+    536           *
+    537           *   Initialize a global item. If the item doesn't exist in NV memory,
+    538           *   write the system default (value passed in) into NV memory. But if
+    539           *   it exists, set the item to the value stored in NV memory.
+    540           *
+    541           *   Also, if setDefault is TRUE and the item exists, we will write
+    542           *   the default value to NV space.
+    543           *
+    544           * @param   id - item id
+    545           * @param   len - item len
+    546           * @param   buf - pointer to the item
+    547           * @param   setDefault - TRUE to set default, not read
+    548           *
+    549           * @return  ZSUCCESS if successful, NV_ITEM_UNINIT if item did not
+    550           *          exist in NV, NV_OPER_FAILED if failure.
+    551           */
+    552          static uint8 zgItemInit( uint16 id, uint16 len, void *buf, uint8 setDefault )
+    553          {
+    554            uint8 status;
+    555          
+    556            // If the item doesn't exist in NV memory, create and initialize
+    557            // it with the value passed in.
+    558            status = osal_nv_item_init( id, len, buf );
+    559            if ( status == ZSUCCESS )
+    560            {
+    561              if ( setDefault )
+    562              {
+    563                // Write the default value back to NV
+    564                status = osal_nv_write( id, 0, len, buf );
+    565              }
+    566              else
+    567              {
+    568                // The item exists in NV memory, read it from NV memory
+    569                status = osal_nv_read( id, 0, len, buf );
+    570              }
+    571            }
+    572          
+    573            return (status);
+    574          }
+    575          
+    576          /*********************************************************************
+    577           * API FUNCTIONS
+    578           */
+    579          
+    580          /*********************************************************************
+    581           * @fn          zgInit
+    582           *
+    583           * @brief
+    584           *
+    585           *   Initialize the Z-Stack Globals. If an item doesn't exist in
+    586           *   NV memory, write the system default into NV memory. But if
+    587           *   it exists, set the item to the value stored in NV memory.
+    588           *
+    589           * NOTE: The Startup Options (ZCD_NV_STARTUP_OPTION) indicate
+    590           *       that the Config state items (zgItemTable) need to be
+    591           *       set to defaults (ZCD_STARTOPT_DEFAULT_CONFIG_STATE). The
+    592           *
+    593           * @param       none
+    594           *
+    595           * @return      ZSUCCESS if successful, NV_ITEM_UNINIT if item did not
+    596           *              exist in NV, NV_OPER_FAILED if failure.
+    597           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    598          uint8 zgInit( void )
+   \                     zgInit:
+    599          {
+   \   000000                REQUIRE ?V0
+   \   000000                REQUIRE ?V1
+   \   000000                REQUIRE ?V2
+   \   000000                REQUIRE ?V3
+   \   000000   74F4         MOV       A,#-0xc
+   \   000002   12....       LCALL     ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 12
+   \   000005                ; Auto size: 18
+   \   000005   74EE         MOV       A,#-0x12
+   \   000007   12....       LCALL     ?ALLOC_XSTACK8
+    600            uint8  setDefault = FALSE;
+   \   00000A   7E00         MOV       R6,#0x0
+    601            uint8  status;
+    602            
+    603          #ifdef NV_RESTORE
+    604            // Do we want to default the Config state values
+    605            if ( zgReadStartupOptions() & ZCD_STARTOPT_DEFAULT_CONFIG_STATE )
+   \   00000C                ; Setup parameters for call to function zgReadStartupOptions
+   \   00000C   12....       LCALL     `??zgReadStartupOptions::?relay`; Banked call to: zgReadStartupOptions
+   \   00000F   E9           MOV       A,R1
+   \   000010   F8           MOV       R0,A
+   \   000011   A2E0         MOV       C,0xE0 /* A   */.0
+   \   000013   5002         JNC       ??zgInit_0
+    606            {
+    607              setDefault = TRUE;
+   \   000015   7E01         MOV       R6,#0x1
+    608            }
+    609          #else
+    610              setDefault = TRUE;
+    611          #endif
+    612            
+    613            status = osal_nv_item_init(ZCD_NV_BDBNODEISONANETWORK,sizeof(bdbAttributes.bdbNodeIsOnANetwork),&bdbAttributes.bdbNodeIsOnANetwork);
+    614          
+    615            //Force to reset state if device is forced to FN
+    616            if((status == SUCCESS) && setDefault)
+   \                     ??zgInit_0:
+   \   000017                ; Setup parameters for call to function osal_nv_item_init
+   \   000017   75....       MOV       ?V0,#(bdbAttributes + 14) & 0xff
+   \   00001A   75....       MOV       ?V1,#((bdbAttributes + 14) >> 8) & 0xff
+   \   00001D   78..         MOV       R0,#?V0
+   \   00001F   12....       LCALL     ?PUSH_XSTACK_I_TWO
+   \   000022   7C01         MOV       R4,#0x1
+   \   000024   7D00         MOV       R5,#0x0
+   \   000026   7A55         MOV       R2,#0x55
+   \   000028   12....       LCALL     ?Subroutine2 & 0xFFFF
+   \                     ??CrossCallReturnLabel_0:
+   \   00002B   12....       LCALL     ?DEALLOC_XSTACK8
+   \   00002E   E9           MOV       A,R1
+   \   00002F   700A         JNZ       ??zgInit_1
+   \   000031   EE           MOV       A,R6
+   \   000032   A2E0         MOV       C,0xE0 /* A   */.0
+   \   000034   5005         JNC       ??zgInit_1
+    617            {
+    618              bdb_setNodeIsOnANetwork(false);
+   \   000036                ; Setup parameters for call to function bdb_setNodeIsOnANetwork
+   \   000036   7900         MOV       R1,#0x0
+   \   000038   12....       LCALL     `??bdb_setNodeIsOnANetwork::?relay`; Banked call to: bdb_setNodeIsOnANetwork
+    619            }
+    620            
+    621          #if defined (FEATURE_SYSTEM_STATS) 
+    622            {
+    623              // This sections tracks the number of resets
+    624              uint16 bootCnt = 0;
+    625          
+    626              // Update the Boot Counter
+    627              if ( osal_nv_item_init( ZCD_NV_BOOTCOUNTER, sizeof(bootCnt), &bootCnt ) == ZSUCCESS )
+    628              {
+    629                // Get the old value from NV memory
+    630                osal_nv_read( ZCD_NV_BOOTCOUNTER, 0, sizeof(bootCnt), &bootCnt );
+    631              }
+    632          
+    633              // Increment the Boot Counter and store it into NV memory
+    634              if ( setDefault )
+    635              {
+    636                bootCnt = 0;
+    637              }
+    638              else
+    639              {
+    640                bootCnt++;
+    641              }
+    642          
+    643              osal_nv_write( ZCD_NV_BOOTCOUNTER, 0, sizeof(bootCnt), &bootCnt );
+    644            }
+    645          #endif  // FEATURE_SYSTEM_STATS
+    646          
+    647            zgUpgradeNVItems();
+   \                     ??zgInit_1:
+   \   00003B                ; Setup parameters for call to function osal_nv_item_len
+   \   00003B   7A24         MOV       R2,#0x24
+   \   00003D   7B00         MOV       R3,#0x0
+   \   00003F   12....       LCALL     `??osal_nv_item_len::?relay`; Banked call to: osal_nv_item_len
+   \   000042   8A..         MOV       ?V0,R2
+   \   000044   8B..         MOV       ?V1,R3
+   \   000046                ; Setup parameters for call to function osal_nv_item_len
+   \   000046   7A35         MOV       R2,#0x35
+   \   000048   7B00         MOV       R3,#0x0
+   \   00004A   12....       LCALL     `??osal_nv_item_len::?relay`; Banked call to: osal_nv_item_len
+   \   00004D   EA           MOV       A,R2
+   \   00004E   4B           ORL       A,R3
+   \   00004F   706A         JNZ       ??zgInit_2
+   \   000051   7402         MOV       A,#0x2
+   \   000053   65..         XRL       A,?V0
+   \   000055   45..         ORL       A,?V1
+   \   000057   7062         JNZ       ??zgInit_2
+   \   000059                ; Setup parameters for call to function osal_nv_read
+   \   000059   A8..         MOV       R0,?XSP + 0
+   \   00005B   A9..         MOV       R1,?XSP + 1
+   \   00005D   88..         MOV       ?V0,R0
+   \   00005F   89..         MOV       ?V1,R1
+   \   000061   78..         MOV       R0,#?V0
+   \   000063   12....       LCALL     ?PUSH_XSTACK_I_TWO
+   \   000066   75..02       MOV       ?V0,#0x2
+   \   000069   75..00       MOV       ?V1,#0x0
+   \   00006C   78..         MOV       R0,#?V0
+   \   00006E   12....       LCALL     ?PUSH_XSTACK_I_TWO
+   \   000071   7C00         MOV       R4,#0x0
+   \   000073   7D00         MOV       R5,#0x0
+   \   000075   7A24         MOV       R2,#0x24
+   \   000077   7B00         MOV       R3,#0x0
+   \   000079   12....       LCALL     `??osal_nv_read::?relay`; Banked call to: osal_nv_read
+   \   00007C   7404         MOV       A,#0x4
+   \   00007E   12....       LCALL     ?DEALLOC_XSTACK8
+   \   000081   85..82       MOV       DPL,?XSP + 0
+   \   000084   85..83       MOV       DPH,?XSP + 1
+   \   000087   E0           MOVX      A,@DPTR
+   \   000088   F8           MOV       R0,A
+   \   000089   A3           INC       DPTR
+   \   00008A   E0           MOVX      A,@DPTR
+   \   00008B   F9           MOV       R1,A
+   \   00008C   90....       MOV       DPTR,#zgPollRate
+   \   00008F   E8           MOV       A,R0
+   \   000090   F0           MOVX      @DPTR,A
+   \   000091   A3           INC       DPTR
+   \   000092   E9           MOV       A,R1
+   \   000093   F0           MOVX      @DPTR,A
+   \   000094   A3           INC       DPTR
+   \   000095   E4           CLR       A
+   \   000096   F0           MOVX      @DPTR,A
+   \   000097   A3           INC       DPTR
+   \   000098   F0           MOVX      @DPTR,A
+   \   000099                ; Setup parameters for call to function osal_nv_item_init
+   \   000099   75....       MOV       ?V0,#zgPollRate & 0xff
+   \   00009C   75....       MOV       ?V1,#(zgPollRate >> 8) & 0xff
+   \   00009F   78..         MOV       R0,#?V0
+   \   0000A1   12....       LCALL     ?PUSH_XSTACK_I_TWO
+   \   0000A4   7C04         MOV       R4,#0x4
+   \   0000A6   7D00         MOV       R5,#0x0
+   \   0000A8   7A35         MOV       R2,#0x35
+   \   0000AA   12....       LCALL     ?Subroutine2 & 0xFFFF
+   \                     ??CrossCallReturnLabel_1:
+   \   0000AD   12....       LCALL     ?DEALLOC_XSTACK8
+   \   0000B0                ; Setup parameters for call to function osal_nv_delete
+   \   0000B0   7C02         MOV       R4,#0x2
+   \   0000B2   7D00         MOV       R5,#0x0
+   \   0000B4   7A24         MOV       R2,#0x24
+   \   0000B6   7B00         MOV       R3,#0x0
+   \   0000B8   12....       LCALL     `??osal_nv_delete::?relay`; Banked call to: osal_nv_delete
+    648          
+    649            // Initialize the Extended PAN ID as my own extended address
+    650            ZMacGetReq( ZMacExtAddr, zgExtendedPANID );
+   \                     ??zgInit_2:
+   \   0000BB                ; Setup parameters for call to function ZMacGetReq
+   \   0000BB   7A..         MOV       R2,#zgExtendedPANID & 0xff
+   \   0000BD   7B..         MOV       R3,#(zgExtendedPANID >> 8) & 0xff
+   \   0000BF   79E2         MOV       R1,#-0x1e
+   \   0000C1   12....       LCALL     `??ZMacGetReq::?relay`; Banked call to: ZMacGetReq
+    651          
+    652            // Initialize the items table
+    653            zgInitItems( setDefault );
+   \   0000C4                ; Setup parameters for call to function zgInitItems
+   \   0000C4   EE           MOV       A,R6
+   \   0000C5   F9           MOV       R1,A
+   \   0000C6   12....       LCALL     `??zgInitItems::?relay`; Banked call to: zgInitItems
+    654          
+    655          #ifndef NONWK
+    656            if ( ZG_SECURE_ENABLED )
+    657            {
+    658              // Initialize the Pre-Configured Key to the default key
+    659              zgPreconfigKeyInit( setDefault );
+   \   0000C9                ; Setup parameters for call to function osal_memset
+   \   0000C9   7C10         MOV       R4,#0x10
+   \   0000CB   7D00         MOV       R5,#0x0
+   \   0000CD   7900         MOV       R1,#0x0
+   \   0000CF   7402         MOV       A,#0x2
+   \   0000D1   12....       LCALL     ?XSTACK_DISP101_8
+   \   0000D4   12....       LCALL     `??osal_memset::?relay`; Banked call to: osal_memset
+   \   0000D7                ; Setup parameters for call to function osal_nv_item_init
+   \   0000D7   7402         MOV       A,#0x2
+   \   0000D9   12....       LCALL     ?XSTACK_DISP100_8
+   \   0000DC   88..         MOV       ?V0,R0
+   \   0000DE   89..         MOV       ?V1,R1
+   \   0000E0   78..         MOV       R0,#?V0
+   \   0000E2   12....       LCALL     ?PUSH_XSTACK_I_TWO
+   \   0000E5   7C10         MOV       R4,#0x10
+   \   0000E7   7D00         MOV       R5,#0x0
+   \   0000E9   7A62         MOV       R2,#0x62
+   \   0000EB   12....       LCALL     ?Subroutine2 & 0xFFFF
+   \                     ??CrossCallReturnLabel_2:
+   \   0000EE   12....       LCALL     ?DEALLOC_XSTACK8
+   \   0000F1   E9           MOV       A,R1
+   \   0000F2   7025         JNZ       ??zgInit_3
+   \   0000F4   EE           MOV       A,R6
+   \   0000F5   A2E0         MOV       C,0xE0 /* A   */.0
+   \   0000F7   5020         JNC       ??zgInit_3
+   \   0000F9                ; Setup parameters for call to function osal_nv_write
+   \   0000F9   78..         MOV       R0,#?V0
+   \   0000FB   12....       LCALL     ?PUSH_XSTACK_I_TWO
+   \   0000FE   75..10       MOV       ?V0,#0x10
+   \   000101   75..00       MOV       ?V1,#0x0
+   \   000104   78..         MOV       R0,#?V0
+   \   000106   12....       LCALL     ?PUSH_XSTACK_I_TWO
+   \   000109   7C00         MOV       R4,#0x0
+   \   00010B   7D00         MOV       R5,#0x0
+   \   00010D   7A62         MOV       R2,#0x62
+   \   00010F   7B00         MOV       R3,#0x0
+   \   000111   12....       LCALL     `??osal_nv_write::?relay`; Banked call to: osal_nv_write
+   \   000114   7404         MOV       A,#0x4
+   \   000116   12....       LCALL     ?DEALLOC_XSTACK8
+   \                     ??zgInit_3:
+   \   000119                ; Setup parameters for call to function osal_memset
+   \   000119   7C10         MOV       R4,#0x10
+   \   00011B   7D00         MOV       R5,#0x0
+   \   00011D   7900         MOV       R1,#0x0
+   \   00011F   7402         MOV       A,#0x2
+   \   000121   12....       LCALL     ?XSTACK_DISP101_8
+   \   000124   12....       LCALL     `??osal_memset::?relay`; Banked call to: osal_memset
+    660          
+    661              // Initialize NV items for all Keys: NWK, APS, TCLK and Master
+    662              ZDSecMgrInitNVKeyTables( setDefault );
+   \   000127                ; Setup parameters for call to function ZDSecMgrInitNVKeyTables
+   \   000127   EE           MOV       A,R6
+   \   000128   F9           MOV       R1,A
+   \   000129   12....       LCALL     `??ZDSecMgrInitNVKeyTables::?relay`; Banked call to: ZDSecMgrInitNVKeyTables
+    663            }
+    664          #endif // NONWK
+    665          
+    666          #ifdef UPGRADE_SECURITY_NV_ITEMS
+    667            zgUpgradeSecurityNVItems();
+    668          #endif // UPGRADE_SECURITY_NV_ITEMS
+    669            
+    670            // Clear the Config State default
+    671            if ( setDefault )
+   \   00012C   EE           MOV       A,R6
+   \   00012D   A2E0         MOV       C,0xE0 /* A   */.0
+   \   00012F   5007         JNC       ??zgInit_4
+    672            {
+    673              zgWriteStartupOptions( ZG_STARTUP_CLEAR, ZCD_STARTOPT_DEFAULT_CONFIG_STATE );
+   \   000131                ; Setup parameters for call to function zgWriteStartupOptions
+   \   000131   7A01         MOV       R2,#0x1
+   \   000133   7900         MOV       R1,#0x0
+   \   000135   12....       LCALL     `??zgWriteStartupOptions::?relay`; Banked call to: zgWriteStartupOptions
+    674            }
+    675            
+    676            return ( ZSUCCESS );
+   \                     ??zgInit_4:
+   \   000138   7900         MOV       R1,#0x0
+   \   00013A   7412         MOV       A,#0x12
+   \   00013C   12....       LCALL     ?DEALLOC_XSTACK8
+   \   00013F   7F04         MOV       R7,#0x4
+   \   000141   02....       LJMP      ?BANKED_LEAVE_XDATA
+    677          }
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine2:
+   \   000000   7B00         MOV       R3,#0x0
+   \   000002                REQUIRE ??Subroutine3_0
+   \   000002                ; // Fall through to label ??Subroutine3_0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ??Subroutine3_0:
+   \   000000   12....       LCALL     `??osal_nv_item_init::?relay`; Banked call to: osal_nv_item_init
+   \   000003   7402         MOV       A,#0x2
+   \   000005   22           RET
+    678          
+    679          /*********************************************************************
+    680           * @fn          zgInitItems
+    681           *
+    682           * @brief       Initializes RAM variables from NV.  If NV items don't
+    683           *              exist, then the NV is initialize with what is in RAM
+    684           *              variables.
+    685           *
+    686           * @param       none
+    687           *
+    688           * @return      none
+    689           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    690          void zgInitItems( uint8 setDefault )
+   \                     zgInitItems:
+    691          {
+   \   000000                REQUIRE ?V0
+   \   000000                REQUIRE ?V1
+   \   000000                REQUIRE ?V2
+   \   000000                REQUIRE ?V3
+   \   000000                REQUIRE ?V4
+   \   000000                REQUIRE ?V5
+   \   000000   74F2         MOV       A,#-0xe
+   \   000002   12....       LCALL     ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 14
+   \   000005                ; Auto size: 0
+   \   000005   89..         MOV       ?V5,R1
+    692            uint8  i = 0;
+   \   000007   75..00       MOV       ?V4,#0x0
+    693          
+    694            if ( ZG_BUILD_COORDINATOR_TYPE && ( zgApsLinkKeyType == ZG_UNIQUE_LINK_KEY ) )
+    695            {
+    696              zgUseDefaultTCLK = FALSE;
+    697            }
+    698            else
+    699            {
+    700              // Most of the time default TCLK will be used
+    701              zgUseDefaultTCLK = TRUE;
+   \   00000A   90....       MOV       DPTR,#zgUseDefaultTCLK
+   \   00000D   7401         MOV       A,#0x1
+   \   00000F   F0           MOVX      @DPTR,A
+   \   000010   801A         SJMP      ??zgInitItems_0
+    702            }
+    703          
+    704            while ( zgItemTable[i].id != 0x00 )
+    705            {
+   \                     ??zgInitItems_1:
+   \   000012                ; Setup parameters for call to function osal_nv_read
+   \   000012   12....       LCALL     ?PUSH_XSTACK_I_TWO
+   \   000015   78..         MOV       R0,#?V0
+   \   000017   12....       LCALL     ?PUSH_XSTACK_I_TWO
+   \   00001A   7C00         MOV       R4,#0x0
+   \   00001C   7D00         MOV       R5,#0x0
+   \   00001E   EE           MOV       A,R6
+   \   00001F   FA           MOV       R2,A
+   \   000020   EF           MOV       A,R7
+   \   000021   FB           MOV       R3,A
+   \   000022   12....       LCALL     `??osal_nv_read::?relay`; Banked call to: osal_nv_read
+   \                     ??zgInitItems_2:
+   \   000025   7404         MOV       A,#0x4
+   \   000027   12....       LCALL     ?DEALLOC_XSTACK8
+    706              // Initialize the item
+    707              zgItemInit( zgItemTable[i].id, zgItemTable[i].len, zgItemTable[i].buf, setDefault  );
+    708          
+    709              // Move on to the next item
+    710              i++;
+   \                     ??zgInitItems_3:
+   \   00002A   05..         INC       ?V4
+   \                     ??zgInitItems_0:
+   \   00002C   E5..         MOV       A,?V4
+   \   00002E   75F006       MOV       B,#0x6
+   \   000031   A4           MUL       AB
+   \   000032   F8           MOV       R0,A
+   \   000033   A9F0         MOV       R1,B
+   \   000035   74..         MOV       A,#zgItemTable & 0xff
+   \   000037   28           ADD       A,R0
+   \   000038   F8           MOV       R0,A
+   \   000039   74..         MOV       A,#(zgItemTable >> 8) & 0xff
+   \   00003B   39           ADDC      A,R1
+   \   00003C   F9           MOV       R1,A
+   \   00003D   8882         MOV       DPL,R0
+   \   00003F   F583         MOV       DPH,A
+   \   000041   E4           CLR       A
+   \   000042   93           MOVC      A,@A+DPTR
+   \   000043   FA           MOV       R2,A
+   \   000044   7401         MOV       A,#0x1
+   \   000046   93           MOVC      A,@A+DPTR
+   \   000047   FB           MOV       R3,A
+   \   000048   EA           MOV       A,R2
+   \   000049   4B           ORL       A,R3
+   \   00004A   606C         JZ        ??zgInitItems_4
+   \   00004C   A3           INC       DPTR
+   \   00004D   A3           INC       DPTR
+   \   00004E   A3           INC       DPTR
+   \   00004F   A3           INC       DPTR
+   \   000050   E4           CLR       A
+   \   000051   93           MOVC      A,@A+DPTR
+   \   000052   F5..         MOV       ?V2,A
+   \   000054   7401         MOV       A,#0x1
+   \   000056   93           MOVC      A,@A+DPTR
+   \   000057   F5..         MOV       ?V3,A
+   \   000059   8882         MOV       DPL,R0
+   \   00005B   8983         MOV       DPH,R1
+   \   00005D   A3           INC       DPTR
+   \   00005E   A3           INC       DPTR
+   \   00005F   E4           CLR       A
+   \   000060   93           MOVC      A,@A+DPTR
+   \   000061   C0E0         PUSH      A
+   \   000063   7401         MOV       A,#0x1
+   \   000065   93           MOVC      A,@A+DPTR
+   \   000066   F583         MOV       DPH,A
+   \   000068   D082         POP       DPL
+   \   00006A   8582..       MOV       ?V0,DPL
+   \   00006D   8583..       MOV       ?V1,DPH
+   \   000070   8882         MOV       DPL,R0
+   \   000072   8983         MOV       DPH,R1
+   \   000074   E4           CLR       A
+   \   000075   93           MOVC      A,@A+DPTR
+   \   000076   C0E0         PUSH      A
+   \   000078   7401         MOV       A,#0x1
+   \   00007A   93           MOVC      A,@A+DPTR
+   \   00007B   F583         MOV       DPH,A
+   \   00007D   D082         POP       DPL
+   \   00007F   AE82         MOV       R6,DPL
+   \   000081   AF83         MOV       R7,DPH
+   \   000083                ; Setup parameters for call to function osal_nv_item_init
+   \   000083   78..         MOV       R0,#?V2
+   \   000085   12....       LCALL     ?PUSH_XSTACK_I_TWO
+   \   000088   AC..         MOV       R4,?V0
+   \   00008A   AD..         MOV       R5,?V1
+   \   00008C   EE           MOV       A,R6
+   \   00008D   FA           MOV       R2,A
+   \   00008E   EF           MOV       A,R7
+   \   00008F   FB           MOV       R3,A
+   \   000090   12....       LCALL     ??Subroutine3_0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_4:
+   \   000093   12....       LCALL     ?DEALLOC_XSTACK8
+   \   000096   E9           MOV       A,R1
+   \   000097   7091         JNZ       ??zgInitItems_3
+   \   000099   E5..         MOV       A,?V5
+   \   00009B   78..         MOV       R0,#?V2
+   \   00009D   7003         JNZ       $+5
+   \   00009F   02....       LJMP      ??zgInitItems_1 & 0xFFFF
+   \   0000A2                ; Setup parameters for call to function osal_nv_write
+   \   0000A2   12....       LCALL     ?PUSH_XSTACK_I_TWO
+   \   0000A5   78..         MOV       R0,#?V0
+   \   0000A7   12....       LCALL     ?PUSH_XSTACK_I_TWO
+   \   0000AA   7C00         MOV       R4,#0x0
+   \   0000AC   7D00         MOV       R5,#0x0
+   \   0000AE   EE           MOV       A,R6
+   \   0000AF   FA           MOV       R2,A
+   \   0000B0   EF           MOV       A,R7
+   \   0000B1   FB           MOV       R3,A
+   \   0000B2   12....       LCALL     `??osal_nv_write::?relay`; Banked call to: osal_nv_write
+   \   0000B5   02....       LJMP      ??zgInitItems_2 & 0xFFFF
+    711            }
+    712          }
+   \                     ??zgInitItems_4:
+   \   0000B8   7F06         MOV       R7,#0x6
+   \   0000BA   02....       LJMP      ?BANKED_LEAVE_XDATA
+    713          
+    714          /*********************************************************************
+    715           * @fn          zgReadStartupOptions
+    716           *
+    717           * @brief       Reads the ZCD_NV_STARTUP_OPTION NV Item.
+    718           *
+    719           * @param       none
+    720           *
+    721           * @return      the ZCD_NV_STARTUP_OPTION NV item
+    722           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    723          uint8 zgReadStartupOptions( void )
+   \                     zgReadStartupOptions:
+    724          {
+   \   000000                REQUIRE ?V0
+   \   000000                REQUIRE ?V1
+   \   000000   74F6         MOV       A,#-0xa
+   \   000002   12....       LCALL     ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 10
+   \   000005                ; Auto size: 1
+   \   000005   74FF         MOV       A,#-0x1
+   \   000007   12....       LCALL     ?ALLOC_XSTACK8
+    725            // Default to Use Config State and Use Network State
+    726            uint8 startupOption = 0;
+   \   00000A   12....       LCALL     ?Subroutine1 & 0xFFFF
+    727          
+    728            // This should have been done in ZMain.c, but just in case.
+    729            if ( osal_nv_item_init( ZCD_NV_STARTUP_OPTION,
+    730                                        sizeof(startupOption),
+    731                                        &startupOption ) == ZSUCCESS )
+   \                     ??CrossCallReturnLabel_5:
+   \   00000D   12....       LCALL     ?PUSH_XSTACK_I_TWO
+   \   000010   7C01         MOV       R4,#0x1
+   \   000012   7D00         MOV       R5,#0x0
+   \   000014   7A03         MOV       R2,#0x3
+   \   000016   12....       LCALL     ?Subroutine2 & 0xFFFF
+   \                     ??CrossCallReturnLabel_3:
+   \   000019   12....       LCALL     ?DEALLOC_XSTACK8
+   \   00001C   E9           MOV       A,R1
+   \   00001D   7020         JNZ       ??zgReadStartupOptions_0
+    732            {
+    733              // Read saved startup control
+    734              osal_nv_read( ZCD_NV_STARTUP_OPTION,
+    735                            0,
+    736                            sizeof( startupOption ),
+    737                            &startupOption);
+   \   00001F                ; Setup parameters for call to function osal_nv_read
+   \   00001F   78..         MOV       R0,#?V0
+   \   000021   12....       LCALL     ?PUSH_XSTACK_I_TWO
+   \   000024   75..01       MOV       ?V0,#0x1
+   \   000027   75..00       MOV       ?V1,#0x0
+   \   00002A   78..         MOV       R0,#?V0
+   \   00002C   12....       LCALL     ?PUSH_XSTACK_I_TWO
+   \   00002F   7C00         MOV       R4,#0x0
+   \   000031   7D00         MOV       R5,#0x0
+   \   000033   7A03         MOV       R2,#0x3
+   \   000035   7B00         MOV       R3,#0x0
+   \   000037   12....       LCALL     `??osal_nv_read::?relay`; Banked call to: osal_nv_read
+   \   00003A   7404         MOV       A,#0x4
+   \   00003C   12....       LCALL     ?DEALLOC_XSTACK8
+    738            }
+    739            return ( startupOption );
+   \                     ??zgReadStartupOptions_0:
+   \   00003F   85..82       MOV       DPL,?XSP + 0
+   \   000042   85..83       MOV       DPH,?XSP + 1
+   \   000045   E0           MOVX      A,@DPTR
+   \   000046   F9           MOV       R1,A
+   \   000047                REQUIRE ?Subroutine0
+   \   000047                ; // Fall through to label ?Subroutine0
+    740          }
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   7401         MOV       A,#0x1
+   \   000002   12....       LCALL     ?DEALLOC_XSTACK8
+   \   000005   7F02         MOV       R7,#0x2
+   \   000007   02....       LJMP      ?BANKED_LEAVE_XDATA
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine1:
+   \   000000   85..82       MOV       DPL,?XSP + 0
+   \   000003   85..83       MOV       DPH,?XSP + 1
+   \   000006   E4           CLR       A
+   \   000007                REQUIRE ??Subroutine4_0
+   \   000007                ; // Fall through to label ??Subroutine4_0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ??Subroutine4_0:
+   \   000000   F0           MOVX      @DPTR,A
+   \   000001                ; Setup parameters for call to function osal_nv_item_init
+   \   000001                ; Setup parameters for call to function osal_nv_read
+   \   000001                ; Setup parameters for call to function osal_nv_write
+   \   000001   A8..         MOV       R0,?XSP + 0
+   \   000003   A9..         MOV       R1,?XSP + 1
+   \   000005   88..         MOV       ?V0,R0
+   \   000007   89..         MOV       ?V1,R1
+   \   000009   78..         MOV       R0,#?V0
+   \   00000B   22           RET
+    741          
+    742          /*********************************************************************
+    743           * @fn          zgWriteStartupOptions
+    744           *
+    745           * @brief       Writes bits into the ZCD_NV_STARTUP_OPTION NV Item.
+    746           *
+    747           * @param       action - ZG_STARTUP_SET set bit, ZG_STARTUP_CLEAR to
+    748           *               clear bit. The set bit is an OR operation, and the
+    749           *               clear bit is an AND ~(bitOptions) operation.
+    750           *
+    751           * @param       bitOptions - which bits to perform action on:
+    752           *                      ZCD_STARTOPT_DEFAULT_CONFIG_STATE
+    753           *                      ZCD_STARTOPT_DEFAULT_NETWORK_STATE
+    754           *
+    755           * @return      ZSUCCESS if successful
+    756           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    757          uint8 zgWriteStartupOptions( uint8 action, uint8 bitOptions )
+   \                     zgWriteStartupOptions:
+    758          {
+   \   000000                REQUIRE ?V0
+   \   000000                REQUIRE ?V1
+   \   000000   74F6         MOV       A,#-0xa
+   \   000002   12....       LCALL     ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 10
+   \   000005                ; Auto size: 1
+   \   000005   74FF         MOV       A,#-0x1
+   \   000007   12....       LCALL     ?ALLOC_XSTACK8
+   \   00000A   E9           MOV       A,R1
+   \   00000B   FE           MOV       R6,A
+   \   00000C   EA           MOV       A,R2
+   \   00000D   FF           MOV       R7,A
+    759            uint8 status;
+    760            uint8 startupOptions = 0;
+   \   00000E   12....       LCALL     ?Subroutine1 & 0xFFFF
+    761          
+    762            status = osal_nv_read( ZCD_NV_STARTUP_OPTION,
+    763                          0,
+    764                          sizeof( startupOptions ),
+    765                          &startupOptions );
+   \                     ??CrossCallReturnLabel_6:
+   \   000011   12....       LCALL     ?PUSH_XSTACK_I_TWO
+   \   000014   75..01       MOV       ?V0,#0x1
+   \   000017   75..00       MOV       ?V1,#0x0
+   \   00001A   78..         MOV       R0,#?V0
+   \   00001C   12....       LCALL     ?PUSH_XSTACK_I_TWO
+   \   00001F   7C00         MOV       R4,#0x0
+   \   000021   7D00         MOV       R5,#0x0
+   \   000023   7A03         MOV       R2,#0x3
+   \   000025   7B00         MOV       R3,#0x0
+   \   000027   12....       LCALL     `??osal_nv_read::?relay`; Banked call to: osal_nv_read
+   \   00002A   7404         MOV       A,#0x4
+   \   00002C   12....       LCALL     ?DEALLOC_XSTACK8
+   \   00002F   E9           MOV       A,R1
+   \   000030   F9           MOV       R1,A
+    766          
+    767            if ( status == ZSUCCESS )
+   \   000031   703E         JNZ       ??zgWriteStartupOptions_0
+    768            {
+    769              if ( action == ZG_STARTUP_SET )
+   \   000033   74FF         MOV       A,#-0x1
+   \   000035   6E           XRL       A,R6
+   \   000036   700A         JNZ       ??zgWriteStartupOptions_1
+    770              {
+    771                // Set bits
+    772                startupOptions |= bitOptions;
+   \   000038   85..82       MOV       DPL,?XSP + 0
+   \   00003B   85..83       MOV       DPH,?XSP + 1
+   \   00003E   E0           MOVX      A,@DPTR
+   \   00003F   4F           ORL       A,R7
+   \   000040   800C         SJMP      ??zgWriteStartupOptions_2
+    773              }
+    774              else
+    775              {
+    776                // Clear bits
+    777                startupOptions &= (bitOptions ^ 0xFF);
+   \                     ??zgWriteStartupOptions_1:
+   \   000042   74FF         MOV       A,#-0x1
+   \   000044   6F           XRL       A,R7
+   \   000045   F8           MOV       R0,A
+   \   000046   85..82       MOV       DPL,?XSP + 0
+   \   000049   85..83       MOV       DPH,?XSP + 1
+   \   00004C   E0           MOVX      A,@DPTR
+   \   00004D   58           ANL       A,R0
+    778              }
+    779          
+    780              // Changed?
+    781              status = osal_nv_write( ZCD_NV_STARTUP_OPTION,
+    782                           0,
+    783                           sizeof( startupOptions ),
+    784                           &startupOptions );
+    785            }
+   \                     ??zgWriteStartupOptions_2:
+   \   00004E   12....       LCALL     ??Subroutine4_0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_7:
+   \   000051   12....       LCALL     ?PUSH_XSTACK_I_TWO
+   \   000054   75..01       MOV       ?V0,#0x1
+   \   000057   75..00       MOV       ?V1,#0x0
+   \   00005A   78..         MOV       R0,#?V0
+   \   00005C   12....       LCALL     ?PUSH_XSTACK_I_TWO
+   \   00005F   7C00         MOV       R4,#0x0
+   \   000061   7D00         MOV       R5,#0x0
+   \   000063   7A03         MOV       R2,#0x3
+   \   000065   7B00         MOV       R3,#0x0
+   \   000067   12....       LCALL     `??osal_nv_write::?relay`; Banked call to: osal_nv_write
+   \   00006A   7404         MOV       A,#0x4
+   \   00006C   12....       LCALL     ?DEALLOC_XSTACK8
+   \   00006F   E9           MOV       A,R1
+   \   000070   F9           MOV       R1,A
+    786          
+    787            return ( status );
+   \                     ??zgWriteStartupOptions_0:
+   \   000071   02....       LJMP      ?Subroutine0 & 0xFFFF
+    788          }
+    789          
+    790          /*********************************************************************
+    791           * @fn          zgSetItem
+    792           *
+    793           * @brief       Set RAM variables from set-NV, if it exist in the zgItemTable
+    794           *
+    795           * @param       id - NV ID
+    796           *              len - NV item length
+    797           *              buf - pointer to the input buffer
+    798           *
+    799           * @return      none
+    800           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    801          void zgSetItem( uint16 id, uint16 len, void *buf )
+   \                     zgSetItem:
+    802          {
+   \   000000                REQUIRE ?V0
+   \   000000                REQUIRE ?V1
+   \   000000                REQUIRE ?V2
+   \   000000   74F5         MOV       A,#-0xb
+   \   000002   12....       LCALL     ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 11
+   \   000005                ; Auto size: 0
+    803          
+    804            uint8  i = 0;
+   \   000005   75..00       MOV       ?V0,#0x0
+   \   000008   8002         SJMP      ??zgSetItem_0
+    805          
+    806            // Look up the NV item table
+    807            while ( zgItemTable[i].id != 0x00 )
+    808            {
+    809              if( zgItemTable[i].id == id )
+    810              {
+    811                if ( zgItemTable[i].len == len )
+    812                {
+    813                  osal_memcpy( zgItemTable[i].buf, buf, len );
+    814                }
+    815                break;
+    816              }
+    817              // Move on to the next item
+    818              i++;
+   \                     ??zgSetItem_1:
+   \   00000A   05..         INC       ?V0
+   \                     ??zgSetItem_0:
+   \   00000C   E5..         MOV       A,?V0
+   \   00000E   75F006       MOV       B,#0x6
+   \   000011   A4           MUL       AB
+   \   000012   F8           MOV       R0,A
+   \   000013   A9F0         MOV       R1,B
+   \   000015   74..         MOV       A,#zgItemTable & 0xff
+   \   000017   28           ADD       A,R0
+   \   000018   F8           MOV       R0,A
+   \   000019   74..         MOV       A,#(zgItemTable >> 8) & 0xff
+   \   00001B   39           ADDC      A,R1
+   \   00001C   F9           MOV       R1,A
+   \   00001D   E8           MOV       A,R0
+   \   00001E   FE           MOV       R6,A
+   \   00001F   E9           MOV       A,R1
+   \   000020   FF           MOV       R7,A
+   \   000021   8882         MOV       DPL,R0
+   \   000023   F583         MOV       DPH,A
+   \   000025   E4           CLR       A
+   \   000026   93           MOVC      A,@A+DPTR
+   \   000027   C0E0         PUSH      A
+   \   000029   7401         MOV       A,#0x1
+   \   00002B   93           MOVC      A,@A+DPTR
+   \   00002C   F583         MOV       DPH,A
+   \   00002E   D082         POP       DPL
+   \   000030   A882         MOV       R0,DPL
+   \   000032   A983         MOV       R1,DPH
+   \   000034   E8           MOV       A,R0
+   \   000035   49           ORL       A,R1
+   \   000036   6048         JZ        ??zgSetItem_2
+   \   000038   EA           MOV       A,R2
+   \   000039   68           XRL       A,R0
+   \   00003A   7002         JNZ       ??zgSetItem_3
+   \   00003C   EB           MOV       A,R3
+   \   00003D   69           XRL       A,R1
+   \                     ??zgSetItem_3:
+   \   00003E   70CA         JNZ       ??zgSetItem_1
+   \   000040   8E82         MOV       DPL,R6
+   \   000042   8F83         MOV       DPH,R7
+   \   000044   A3           INC       DPTR
+   \   000045   A3           INC       DPTR
+   \   000046   E4           CLR       A
+   \   000047   93           MOVC      A,@A+DPTR
+   \   000048   F8           MOV       R0,A
+   \   000049   7401         MOV       A,#0x1
+   \   00004B   93           MOVC      A,@A+DPTR
+   \   00004C   F9           MOV       R1,A
+   \   00004D   EC           MOV       A,R4
+   \   00004E   68           XRL       A,R0
+   \   00004F   7002         JNZ       ??zgSetItem_4
+   \   000051   ED           MOV       A,R5
+   \   000052   69           XRL       A,R1
+   \                     ??zgSetItem_4:
+   \   000053   702B         JNZ       ??zgSetItem_2
+   \   000055                ; Setup parameters for call to function osal_memcpy
+   \   000055   740B         MOV       A,#0xb
+   \   000057   12....       LCALL     ?XSTACK_DISP0_8
+   \   00005A   E0           MOVX      A,@DPTR
+   \   00005B   F5..         MOV       ?V0,A
+   \   00005D   A3           INC       DPTR
+   \   00005E   E0           MOVX      A,@DPTR
+   \   00005F   F5..         MOV       ?V1,A
+   \   000061   75..00       MOV       ?V2,#0x0
+   \   000064   78..         MOV       R0,#?V0
+   \   000066   12....       LCALL     ?PUSH_XSTACK_I_THREE
+   \   000069   8E82         MOV       DPL,R6
+   \   00006B   8F83         MOV       DPH,R7
+   \   00006D   A3           INC       DPTR
+   \   00006E   A3           INC       DPTR
+   \   00006F   A3           INC       DPTR
+   \   000070   A3           INC       DPTR
+   \   000071   E4           CLR       A
+   \   000072   93           MOVC      A,@A+DPTR
+   \   000073   FA           MOV       R2,A
+   \   000074   7401         MOV       A,#0x1
+   \   000076   93           MOVC      A,@A+DPTR
+   \   000077   FB           MOV       R3,A
+   \   000078   12....       LCALL     `??osal_memcpy::?relay`; Banked call to: osal_memcpy
+   \   00007B   7403         MOV       A,#0x3
+   \   00007D   12....       LCALL     ?DEALLOC_XSTACK8
+    819            }
+    820          }
+   \                     ??zgSetItem_2:
+   \   000080   7F03         MOV       R7,#0x3
+   \   000082   02....       LJMP      ?BANKED_LEAVE_XDATA
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgPollRate>`:
+   \   000000   E8030000     DD 1000
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgSavedPollRate>`:
+   \   000000   E8030000     DD 1000
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgQueuedPollRate>`:
+   \   000000   6400         DW 100
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgResponsePollRate>`:
+   \   000000   6400         DW 100
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgRejoinPollRate>`:
+   \   000000   B801         DW 440
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgDefaultRejoinBackoff>`:
+   \   000000   A0BB0D00     DD 900000
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgDefaultRejoinScan>`:
+   \   000000   A0BB0D00     DD 900000
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgMaxDataRetries>`:
+   \   000000   02           DB 2
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgMaxPollFailureRetries>`:
+   \   000000   02           DB 2
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgStackProfile>`:
+   \   000000   02           DB 2
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgIndirectMsgTimeout>`:
+   \   000000   07           DB 7
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgSecurityMode>`:
+   \   000000   04           DB 4
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgSecurePermitJoin>`:
+   \   000000   01           DB 1
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgAllowInstallCodes>`:
+   \   000000   01           DB 1
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgAllowRemoteTCPolicyChange>`:
+   \   000000   01           DB 1
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgRouteDiscoveryTime>`:
+   \   000000   05           DB 5
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgRouteExpiryTime>`:
+   \   000000   1E           DB 30
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgMaxBcastRetires>`:
+   \   000000   02           DB 2
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgPassiveAckTimeout>`:
+   \   000000   05           DB 5
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgBcastDeliveryTime>`:
+   \   000000   1E           DB 30
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgNwkMode>`:
+   \   000000   02           DB 2
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgConcentratorRadius>`:
+   \   000000   0A           DB 10
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgNwkSrcRtgExpiryTime>`:
+   \   000000   0A           DB 10
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgNwkLeaveRequestAllowed>`:
+   \   000000   01           DB 1
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgNwkProcessLocalLeaveCnf>`:
+   \   000000   01           DB 1
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgNwkEndDeviceTimeoutDefault`:
+   \   000000   08           DB 8
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgNwkEndDeviceLeaveTimeoutDe`:
+   \   000000   09           DB 9
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgEndDeviceTimeoutValue>`:
+   \   000000   08           DB 8
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgChildAgingEnable>`:
+   \   000000   01           DB 1
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgApscMaxFrameRetries>`:
+   \   000000   03           DB 3
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgApscAckWaitDurationPolled>`:
+   \   000000   B80B         DW 3000
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgApsAckWaitMultiplier>`:
+   \   000000   02           DB 2
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgApsDefaultMaxBindingTime>`:
+   \   000000   803E         DW 16000
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgApsUseInsecureJoin>`:
+   \   000000   01           DB 1
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgApsNonMemberRadius>`:
+   \   000000   02           DB 2
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgNwkCommissionedNwkAddr>`:
+   \   000000   FEFF         DW 65534
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgApscDupRejTimeoutInc>`:
+   \   000000   E803         DW 1000
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgApscDupRejTimeoutCount>`:
+   \   000000   0A           DB 10
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgApsMinDupRejTableSize>`:
+   \   000000   0500         DW 5
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgApsLinkKeyType>`:
+   \   000000   01           DB 1
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgConfigPANID>`:
+   \   000000   FFFF         DW 65535
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgDeviceLogicalType>`:
+   \   000000   02           DB 2
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgStartDelay>`:
+   \   000000   0A           DB 10
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgZdoDirectCB>`:
+   \   000000   01           DB 1
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgNwkMgrMinTransmissions>`:
+   \   000000   14           DB 20
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgNwkMgrMode>`:
+   \   000000   01           DB 1
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgSapiEndpoint>`:
+   \   000000   E0           DB 224
+    821          
+    822          #ifndef NONWK
+    823          /*********************************************************************
+    824           * @fn       zgPreconfigKeyInit()
+    825           *
+    826           * @brief
+    827           *
+    828           *   Initialize ZCD_NV_PRECFGKEY NV item. If the item doesn't exist in NV memory,
+    829           *   write the system default (value passed in) into NV memory. But if
+    830           *   it exists do not overwrite it.
+    831           *
+    832           *   Also, if setDefault is TRUE and the item exists, we will write
+    833           *   the default value to NV space.
+    834           *
+    835           * @param   setDefault - TRUE to set default
+    836           *
+    837           * @return  ZSUCCESS if successful, NV_ITEM_UNINIT if item did not
+    838           *          exist in NV, NV_OPER_FAILED if failure.
+    839           */
+    840          static uint8 zgPreconfigKeyInit( uint8 setDefault )
+    841          {
+    842            uint8              zgPreConfigKey[SEC_KEY_LEN];
+    843            uint8              status;
+    844            
+    845            //NWK KEY
+    846            //if nwk key is set to zeros, then generate a random key and use it
+    847            osal_memset(zgPreConfigKey,0,SEC_KEY_LEN);
+    848            
+    849          #if (ZG_BUILD_RTR_TYPE)
+    850            if(ZG_DEVICE_RTR_TYPE)
+    851            {  
+    852              if(osal_memcmp(defaultKey, zgPreConfigKey,SEC_KEY_LEN))
+    853              {
+    854                ZDSecMgrGenerateRndKey(zgPreConfigKey);
+    855              }
+    856              else
+    857              {
+    858                // Initialize the Pre-Configured Key to the default key
+    859                osal_memcpy( zgPreConfigKey, defaultKey, SEC_KEY_LEN );
+    860              }
+    861            }
+    862          #endif
+    863            
+    864            
+    865            // If the item doesn't exist in NV memory, create and initialize it
+    866            status = osal_nv_item_init( ZCD_NV_PRECFGKEY, SEC_KEY_LEN, zgPreConfigKey );
+    867            if ( status == ZSUCCESS )
+    868            {
+    869              if ( setDefault )
+    870              {
+    871                // Write the default value back to NV
+    872                status =  osal_nv_write( ZCD_NV_PRECFGKEY, 0, SEC_KEY_LEN, zgPreConfigKey );
+    873              }
+    874            }
+    875            
+    876            // clear local copy of default key
+    877            osal_memset(zgPreConfigKey, 0x00, SEC_KEY_LEN);
+    878          
+    879            return (status);
+    880          }
+    881          #endif
+    882          
+    883          /*********************************************************************
+    884           * @fn       zgUpgradeNVItems()
+    885           *
+    886           * @brief
+    887           *
+    888           *   Function that upgrades NV Items that have changed.
+    889           *
+    890           * @param   none
+    891           *
+    892           * @return  none
+    893           */
+    894          static void zgUpgradeNVItems( void )
+    895          {
+    896          #if defined ( ZCD_NV_POLL_RATE_OLD16 )
+    897            {
+    898              // This conversion will only happen if the old poll rate exists and
+    899              // the new poll rate doesn't exist.  It will read the old poll rate,
+    900              // convert it to the new poll rate, create the new poll rate NV item,
+    901              // then delete the old poll rate NV item.
+    902              uint16 oldNvLen;
+    903              uint16 newNvLen;
+    904          
+    905              // Use the length of the NV items to determine if they exist
+    906              oldNvLen = osal_nv_item_len( ZCD_NV_POLL_RATE_OLD16 );
+    907              newNvLen = osal_nv_item_len( ZCD_NV_POLL_RATE );
+    908              if ( (newNvLen == 0) && (oldNvLen == sizeof ( uint16 )) )
+    909              {
+    910                // The old poll rate exists, so read it and convert to the new 32 bit poll rate
+    911                uint16 oldPollRate;
+    912                osal_nv_read( ZCD_NV_POLL_RATE_OLD16, 0, sizeof(uint16), &oldPollRate );
+    913                zgPollRate = (uint32)oldPollRate;
+    914                osal_nv_item_init( ZCD_NV_POLL_RATE, sizeof(zgPollRate), &zgPollRate );
+    915                osal_nv_delete( ZCD_NV_POLL_RATE_OLD16, oldNvLen );
+    916              }
+    917            }
+    918          #endif // ZCD_NV_POLL_RATE_OLD16
+    919          }
+    920          
+    921          /*********************************************************************
+    922           * @fn       zgUpgradeSecurityNVItems()
+    923           *
+    924           * @brief
+    925           *
+    926           *   Function that upgrades NV Items that have changed.
+    927           *
+    928           * @param   none
+    929           *
+    930           * @return  none
+    931           */
+    932          #ifdef UPGRADE_SECURITY_NV_ITEMS
+    933          static void zgUpgradeSecurityNVItems( void )
+    934          {
+    935            //Nv configuration to allow upgrade from HA1.2 to Z3.0
+    936          
+    937            uint8 isOnANetwork = 1;
+    938            //Read bdb attribute
+    939            if(osal_nv_read(ZCD_NV_BDBNODEISONANETWORK, 0, sizeof(uint8), &isOnANetwork) == SUCCESS)
+    940            {
+    941              //After upgrade, this parameter will be 0, then update properly as it is in a network.
+    942              //If the device was not in a network and is upgraded, the BDB will handle the network 
+    943              //configuration status and will performing FN reset.
+    944              
+    945              nwkSecMaterialDesc_t  nwkSecMaterialDesc;
+    946              nwkActiveKeyItems     keyItems;
+    947              uint8                 keyAttributes;
+    948              uint8                 tempKey[SEC_KEY_LEN];
+    949              
+    950              osal_memset(tempKey, 0x00, SEC_KEY_LEN);
+    951              
+    952              //Get the network frame counter from old NV item, also check if old key exists.
+    953              //if it doesn't, we can assume that this is factory new Z3.0 device instead of 
+    954              //upgraded ZHA 1.2 device
+    955              osal_nv_read( ZCD_NV_NWKKEY, 0, sizeof( nwkActiveKeyItems ),(void *)&keyItems );
+    956              
+    957              if( osal_memcmp(tempKey, keyItems.active.key, SEC_KEY_LEN) )
+    958              {
+    959                // device is factory new, don't do anything 
+    960              }
+    961              // else if node is not on a network currently and is not factory new Z3.0 device, 
+    962              // it must be ZHA 1.2 -> Z3.0.1 upgraded device
+    963              else if(!isOnANetwork)
+    964              {
+    965                //If none of these parameters can be configured by Nv operations BDB will be able to initialize or handle.
+    966                
+    967                //set bdbNodeIsOnANetwork attribute to 1 indicating that we need to resume our network state
+    968                isOnANetwork = 0x01;
+    969                osal_nv_write( ZCD_NV_BDBNODEISONANETWORK, 0, sizeof(uint8), &isOnANetwork );
+    970                
+    971                //Set the network frame counter in new NV item, frame counter will be incremented by 1000+250 in ZDApp_RestoreNwkSecMaterial() 
+    972                //to ensure that its outgoing packets can be used by devices in its previous network
+    973                nwkSecMaterialDesc.FrameCounter = keyItems.frameCounter; 
+    974                
+    975                //Retrieve Extended PANID from NIB in NV
+    976                osal_nv_read( ZCD_NV_NIB, osal_offsetof(nwkIB_t,extendedPANID), Z_EXTADDR_LEN, &nwkSecMaterialDesc.extendedPanID );
+    977                
+    978                //Set the BDB network security material, BDB state machine will restore network state if this is a valid entry
+    979                osal_nv_write( ZCD_NV_NWK_SEC_MATERIAL_TABLE_START, 0, sizeof(nwkSecMaterialDesc_t), &nwkSecMaterialDesc );  
+    980                
+    981                //indicate to BDB that our previous nwk was non-R21, so don't expect TC Link Key exchange
+    982                keyAttributes = ZG_NON_R21_NWK_JOINED;
+    983                osal_nv_write(ZCD_NV_TCLK_TABLE_START, osal_offsetof(APSME_TCLKDevEntry_t,keyAttributes), sizeof(uint8), &keyAttributes); 
+    984              }
+    985            }
+    986          }
+    987          #endif // UPGRADE_SECURITY_NV_ITEMS
+    988          /*********************************************************************
+    989          *********************************************************************/
+
+   Maximum stack usage in bytes:
+
+   XSTACK Function
+   ------ --------
+     34   zgInit
+       30   -> ZDSecMgrInitNVKeyTables
+       30   -> ZMacGetReq
+       30   -> bdb_setNodeIsOnANetwork
+       30   -> osal_memset
+       30   -> osal_nv_delete
+       32   -> osal_nv_item_init
+       30   -> osal_nv_item_len
+       34   -> osal_nv_read
+       34   -> osal_nv_write
+       30   -> zgInitItems
+       30   -> zgReadStartupOptions
+       30   -> zgWriteStartupOptions
+     48   zgInitItems
+       16   -> osal_nv_item_init
+       18   -> osal_nv_read
+       18   -> osal_nv_write
+     45   zgReadStartupOptions
+       13   -> osal_nv_item_init
+       15   -> osal_nv_read
+     16   zgSetItem
+       14   -> osal_memcpy
+     45   zgWriteStartupOptions
+       15   -> osal_nv_read
+       15   -> osal_nv_write
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       1  ?<Initializer for zgAllowInstallCodes>
+       1  ?<Initializer for zgAllowRemoteTCPolicyChange>
+       1  ?<Initializer for zgApsAckWaitMultiplier>
+       2  ?<Initializer for zgApsDefaultMaxBindingTime>
+       1  ?<Initializer for zgApsLinkKeyType>
+       2  ?<Initializer for zgApsMinDupRejTableSize>
+       1  ?<Initializer for zgApsNonMemberRadius>
+       1  ?<Initializer for zgApsUseInsecureJoin>
+       2  ?<Initializer for zgApscAckWaitDurationPolled>
+       1  ?<Initializer for zgApscDupRejTimeoutCount>
+       2  ?<Initializer for zgApscDupRejTimeoutInc>
+       1  ?<Initializer for zgApscMaxFrameRetries>
+       1  ?<Initializer for zgBcastDeliveryTime>
+       1  ?<Initializer for zgChildAgingEnable>
+       1  ?<Initializer for zgConcentratorRadius>
+       2  ?<Initializer for zgConfigPANID>
+       4  ?<Initializer for zgDefaultRejoinBackoff>
+       4  ?<Initializer for zgDefaultRejoinScan>
+       1  ?<Initializer for zgDeviceLogicalType>
+       1  ?<Initializer for zgEndDeviceTimeoutValue>
+       1  ?<Initializer for zgIndirectMsgTimeout>
+       1  ?<Initializer for zgMaxBcastRetires>
+       1  ?<Initializer for zgMaxDataRetries>
+       1  ?<Initializer for zgMaxPollFailureRetries>
+       2  ?<Initializer for zgNwkCommissionedNwkAddr>
+       1  ?<Initializer for zgNwkEndDeviceLeaveTimeoutDe
+       1  ?<Initializer for zgNwkEndDeviceTimeoutDefault
+       1  ?<Initializer for zgNwkLeaveRequestAllowed>
+       1  ?<Initializer for zgNwkMgrMinTransmissions>
+       1  ?<Initializer for zgNwkMgrMode>
+       1  ?<Initializer for zgNwkMode>
+       1  ?<Initializer for zgNwkProcessLocalLeaveCnf>
+       1  ?<Initializer for zgNwkSrcRtgExpiryTime>
+       1  ?<Initializer for zgPassiveAckTimeout>
+       4  ?<Initializer for zgPollRate>
+       2  ?<Initializer for zgQueuedPollRate>
+       2  ?<Initializer for zgRejoinPollRate>
+       2  ?<Initializer for zgResponsePollRate>
+       1  ?<Initializer for zgRouteDiscoveryTime>
+       1  ?<Initializer for zgRouteExpiryTime>
+       1  ?<Initializer for zgSapiEndpoint>
+       4  ?<Initializer for zgSavedPollRate>
+       1  ?<Initializer for zgSecurePermitJoin>
+       1  ?<Initializer for zgSecurityMode>
+       1  ?<Initializer for zgStackProfile>
+       1  ?<Initializer for zgStartDelay>
+       1  ?<Initializer for zgZdoDirectCB>
+       6  ??Subroutine3_0
+      12  ??Subroutine4_0
+      10  ?Subroutine0
+       7  ?Subroutine1
+       2  ?Subroutine2
+       1  zTouchLinkNwkStartRtr
+       1  zgAllowInstallCodes
+       1  zgAllowRejoins
+       1  zgAllowRejoinsOptions
+       1  zgAllowRemoteTCPolicyChange
+       1  zgApsAckWaitMultiplier
+       1  zgApsAllowR19Sec
+       2  zgApsDefaultMaxBindingTime
+       1  zgApsLinkKeyType
+       2  zgApsMinDupRejTableSize
+       1  zgApsNonMemberRadius
+       8  zgApsTrustCenterAddr
+       8  zgApsUseExtendedPANID
+       1  zgApsUseInsecureJoin
+       2  zgApscAckWaitDurationPolled
+       1  zgApscDupRejTimeoutCount
+       2  zgApscDupRejTimeoutInc
+       1  zgApscMaxFrameRetries
+       1  zgBcastDeliveryTime
+       1  zgChildAgingEnable
+       1  zgConcentratorDiscoveryTime
+       1  zgConcentratorEnable
+       1  zgConcentratorRC
+       1  zgConcentratorRadius
+       2  zgConfigPANID
+       4  zgDefaultChannelList
+       4  zgDefaultRejoinBackoff
+       4  zgDefaultRejoinScan
+       1  zgDeviceLogicalType
+       1  zgEndDeviceConfiguration
+       1  zgEndDeviceTimeoutValue
+       8  zgExtendedPANID
+       1  zgIndirectMsgTimeout
+     324  zgInit
+     189  zgInitItems
+     330  zgItemTable
+       1  zgMaxBcastRetires
+       1  zgMaxDataRetries
+       1  zgMaxPollFailureRetries
+       2  zgNwkCommissionedNwkAddr
+       1  zgNwkEndDeviceLeaveTimeoutDefault
+       1  zgNwkEndDeviceTimeoutDefault
+       1  zgNwkLeaveRequestAllowed
+       1  zgNwkMgrMinTransmissions
+       1  zgNwkMgrMode
+       1  zgNwkMode
+       1  zgNwkParentInformation
+       1  zgNwkProcessLocalLeaveCnf
+       1  zgNwkSrcRtgExpiryTime
+       1  zgPassiveAckTimeout
+       4  zgPollRate
+       1  zgPreConfigKeys
+       2  zgQueuedPollRate
+      71  zgReadStartupOptions
+       2  zgRejoinPollRate
+       2  zgResponsePollRate
+       1  zgRouteDiscoveryTime
+       1  zgRouteExpiryTime
+       1  zgRouterOffAssocCleanup
+       1  zgSapiEndpoint
+       4  zgSavedPollRate
+       1  zgSecurePermitJoin
+       1  zgSecurityMode
+     133  zgSetItem
+       1  zgStackProfile
+       1  zgStartDelay
+       1  zgSwitchCoordKey
+       1  zgSwitchCoordKeyIndex
+       1  zgUseDefaultTCLK
+     116  zgWriteStartupOptions
+       1  zgZdoDirectCB
+      30  -- Other
+
+ 
+ 870 bytes in segment BANKED_CODE
+  30 bytes in segment BANK_RELAYS
+ 330 bytes in segment CODE_C
+  68 bytes in segment XDATA_I
+  68 bytes in segment XDATA_ID
+  42 bytes in segment XDATA_Z
+ 
+ 428 bytes of CODE     memory
+ 870 bytes of HUGECODE memory
+ 110 bytes of XDATA    memory
+
+Errors: none
+Warnings: none
