@@ -21,7 +21,9 @@ xZCL_DISCOVER
 
 And in the file: f8wConfig.cfg
 Change -DRFD_RCVC_ALWAYS_ON=TRUE
+
 to
+
 -DRFD_RCVC_ALWAYS_ON=FALSE.
 
 
