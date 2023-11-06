@@ -12,6 +12,7 @@ It is programmed as an End Device with Power Saving enabled and is intended as a
 
 ## Compiling
 Make sure you use these compile flags in the IAR compiler:
+
 SECURE=1, TC_LINKKEY_JOIN, NV_INIT, NV_RESTORE, POWER_SAVING, NWK_AUTO_POLL
 xZTOOL_P1, xMT_TASK, xMT_APP_FUNC, xMT_SYS_FUNC, xMT_ZDO_FUNC, xMT_ZDO_MGMT
 xMT_APP_CNF_FUNC, xLEGACY_LCD_DEBUG, xLCD_SUPPORTED=DEBUG, MULTICAST_ENABLED=FALSE
@@ -19,7 +20,10 @@ ZCL_READ, ZCL_WRITE, ZCL_BASIC, ZCL_IDENTIFY, xZCL_SCENES, xZCL_GROUPS, ZCL_ON_O
 xZCL_DISCOVER
 
 And in the file: f8wConfig.cfg
-Change -DRFD_RCVC_ALWAYS_ON=TRUE to -DRFD_RCVC_ALWAYS_ON=FALSE.
+Change -DRFD_RCVC_ALWAYS_ON=TRUE
+to
+-DRFD_RCVC_ALWAYS_ON=FALSE.
+
 
 ## Using the device
 You will first have to connect two switches to pin P2.0, P0.1. The pins are interrupt enabled.
