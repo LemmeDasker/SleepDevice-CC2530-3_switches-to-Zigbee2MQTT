@@ -447,10 +447,10 @@ static void zclGenericApp_HandleKeys( byte shift, byte keys )
   {
       // Send switch on/off command
     if (isToggleSet1) {
-        //HAL_TURN_ON_LED1();
+        //HAL_TURN_ON_LED2();
         zclGeneral_SendOnOff_CmdOn( GENERICAPP_ENDPOINT, &zclGenericApp_DstAddr, FALSE, bdb_getZCLFrameCounter() );
     } else {
-        //HAL_TURN_OFF_LED1();
+        //HAL_TURN_OFF_LED2();
         zclGeneral_SendOnOff_CmdOff( GENERICAPP_ENDPOINT, &zclGenericApp_DstAddr, FALSE, bdb_getZCLFrameCounter() );
     }
       // Skift tilstanden
@@ -459,7 +459,7 @@ static void zclGenericApp_HandleKeys( byte shift, byte keys )
   if ( keys & HAL_KEY_SW_5 )
   {
     // Send switch toggle command
-    //HAL_TOGGLE_LED1();
+    //HAL_TOGGLE_LED3();
     //zclGeneral_SendOnOff_CmdToggle( GENERICAPP_ENDPOINT, &zclGenericApp_DstAddr, FALSE, bdb_getZCLFrameCounter() );
   } 
 }
