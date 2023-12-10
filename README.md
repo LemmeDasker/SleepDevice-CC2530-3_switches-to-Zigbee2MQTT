@@ -12,7 +12,7 @@ It is programmed as an End Device with Power Saving enabled and is intended as a
 
 
 ## Compiling
-The compile flags are embedded in the IAR project file. But they can also be ssen in the Compile-flags.txt file.
+The compile flags are embedded in the IAR project file. But they can also be seen in the Compile-flags.txt file.
 
 
 ## Connecting the device
