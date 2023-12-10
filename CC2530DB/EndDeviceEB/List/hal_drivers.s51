@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// IAR C/C++ Compiler V10.30.1.6000 for 8051              22/Sep/2023  19:42:31
+// IAR C/C++ Compiler V10.30.1.6000 for 8051              10/Dec/2023  13:11:45
 // Copyright 2004-2018 IAR Systems AB.
 // PC-locked license - IAR Embedded Workbench for 8051
 //
@@ -15,29 +15,30 @@
 //        C:\Texas Instruments\Z-Stack
 //        3.0.2\Components\hal\common\hal_drivers.c
 //    Command line       =  
-//        -f C:\Users\Flemming\AppData\Local\Temp\EW7C78.tmp ("C:\Texas
+//        -f C:\Users\Flemming\AppData\Local\Temp\EWA607.tmp ("C:\Texas
 //        Instruments\Z-Stack 3.0.2\Components\hal\common\hal_drivers.c" -D
-//        SECURE=1 -D TC_LINKKEY_JOIN -D NV_INIT -D NV_RESTORE -D xPOWER_SAVING
+//        SECURE=1 -D TC_LINKKEY_JOIN -D NV_INIT -D NV_RESTORE -D POWER_SAVING
 //        -D NWK_AUTO_POLL -D xZTOOL_P1 -D xMT_TASK -D xMT_APP_FUNC -D
 //        xMT_SYS_FUNC -D xMT_ZDO_FUNC -D xMT_ZDO_MGMT -D xMT_APP_CNF_FUNC -D
 //        xLEGACY_LCD_DEBUG -D xLCD_SUPPORTED=DEBUG -D MULTICAST_ENABLED=FALSE
 //        -D ZCL_READ -D ZCL_WRITE -D ZCL_BASIC -D ZCL_IDENTIFY -D xZCL_SCENES
-//        -D xZCL_GROUPS -D ZCL_ON_OFF -D xZCL_DISCOVER -lC "C:\Texas
-//        Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\EndDeviceEB\List"
+//        -D xZCL_GROUPS -D ZCL_ON_OFF -D xZCL_DISCOVER -D ZCL_REPORTING_DEVICE
+//        -D ISR_KEYINTERRUPT -D HAL_LCD=FALSE -D HAL_UARTE=FALSE -D
+//        HAL_SPI=FALSE -D HAL_HID=FALSE -lC "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\EndDeviceEB\List"
 //        -lA "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\EndDeviceEB\List"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\EndDeviceEB\List"
 //        --diag_suppress Pe001,Pa010 -o "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\EndDeviceEB\Obj"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\EndDeviceEB\Obj"
 //        -e --debug --core=plain --dptr=16,1 --data_model=large
 //        --code_model=banked --calling_convention=xdata_reentrant
 //        --place_constants=data_rom --nr_virtual_regs 16 -f "C:\Texas
 //        Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
 //        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3
 //        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f "C:\Texas
 //        Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
 //        (-DZIGBEEPRO -DSECURE=1 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
 //        -DDEFAULT_CHANLIST=0x00000800 -DZDAPP_CONFIG_PAN_ID=0xFFFF
 //        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
@@ -53,62 +54,62 @@
 //        -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100
 //        -DREJOIN_POLL_RATE=440 -DREJOIN_BACKOFF=900000 -DREJOIN_SCAN=900000
 //        -DENABLE_LED4_DISABLE_S1) -f "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wZCL.cfg"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\Tools\CC2530DB\f8wZCL.cfg"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\" -I
-//        "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\Source\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\Source\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\Source\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\ZMain\TI2530DB\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\Source\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\hal\include\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\ZMain\TI2530DB\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\hal\include\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mac\include\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mac\include\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mt\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\osal\include\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mt\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\services\saddr\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\osal\include\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\services\sdata\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\services\saddr\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\af\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\services\sdata\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\bdb\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\af\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\gp\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\bdb\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\gp\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\sec\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\sys\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\sec\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\zcl\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\sys\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\zcl\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\zmac\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\zmac\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
 //        -Ohz --require_prototypes)
 //    Locale             =  Danish_DNK.1252
 //    List file          =  
 //        C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\EndDeviceEB\List\hal_drivers.s51
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\EndDeviceEB\List\hal_drivers.s51
 //
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -138,6 +139,8 @@
         EXTERN ?BANKED_LEAVE_XDATA
         EXTERN ?BDISPATCH
         EXTERN ?BRET
+        EXTERN ?DEALLOC_XSTACK8
+        EXTERN ?PUSH_XSTACK8_X_FOUR
         EXTERN __INIT_XDATA_Z
 
         PUBLIC `??HalDriverInit::?relay`
@@ -159,11 +162,12 @@
         PUBLIC Hal_ProcessEvent
         FUNCTION Hal_ProcessEvent,0a1203H
         ARGFRAME XSTACK, 0, STACK
-        LOCFRAME XSTACK, 10, STACK
+        LOCFRAME XSTACK, 14, STACK
         PUBLIC Hal_ProcessPoll
         FUNCTION Hal_ProcessPoll,0203H
         ARGFRAME XSTACK, 0, STACK
         PUBLIC Hal_TaskID
+        PUBWEAK __Constant_64
         
           CFI Names cfiNames0
           CFI StackFrame CFA_SP SP IDATA
@@ -263,16 +267,24 @@ HalKeyInit          SYMBOL "HalKeyInit"
 `??HalKeyInit::?relay` SYMBOL "?relay", HalKeyInit
 HalKeyPoll          SYMBOL "HalKeyPoll"
 `??HalKeyPoll::?relay` SYMBOL "?relay", HalKeyPoll
-HalLcdInit          SYMBOL "HalLcdInit"
-`??HalLcdInit::?relay` SYMBOL "?relay", HalLcdInit
 HalLedInit          SYMBOL "HalLedInit"
 `??HalLedInit::?relay` SYMBOL "?relay", HalLedInit
 HalLedUpdate        SYMBOL "HalLedUpdate"
 `??HalLedUpdate::?relay` SYMBOL "?relay", HalLedUpdate
+halRestoreSleepLevel SYMBOL "halRestoreSleepLevel"
+`??halRestoreSleepLevel::?relay` SYMBOL "?relay", halRestoreSleepLevel
+osal_clear_event    SYMBOL "osal_clear_event"
+`??osal_clear_event::?relay` SYMBOL "?relay", osal_clear_event
 osal_msg_deallocate SYMBOL "osal_msg_deallocate"
 `??osal_msg_deallocate::?relay` SYMBOL "?relay", osal_msg_deallocate
 osal_msg_receive    SYMBOL "osal_msg_receive"
 `??osal_msg_receive::?relay` SYMBOL "?relay", osal_msg_receive
+osal_pwrmgr_task_state SYMBOL "osal_pwrmgr_task_state"
+`??osal_pwrmgr_task_state::?relay` SYMBOL "?relay", osal_pwrmgr_task_state
+osal_start_timerEx  SYMBOL "osal_start_timerEx"
+`??osal_start_timerEx::?relay` SYMBOL "?relay", osal_start_timerEx
+osal_stop_timerEx   SYMBOL "osal_stop_timerEx"
+`??osal_stop_timerEx::?relay` SYMBOL "?relay", osal_stop_timerEx
 HalDriverInit       SYMBOL "HalDriverInit"
 `??HalDriverInit::?relay` SYMBOL "?relay", HalDriverInit
 Hal_Init            SYMBOL "Hal_Init"
@@ -292,16 +304,24 @@ Hal_ProcessPoll     SYMBOL "Hal_ProcessPoll"
         FUNCTION `??HalKeyInit::?relay`,00H
         EXTERN `??HalKeyPoll::?relay`
         FUNCTION `??HalKeyPoll::?relay`,00H
-        EXTERN `??HalLcdInit::?relay`
-        FUNCTION `??HalLcdInit::?relay`,00H
         EXTERN `??HalLedInit::?relay`
         FUNCTION `??HalLedInit::?relay`,00H
         EXTERN `??HalLedUpdate::?relay`
         FUNCTION `??HalLedUpdate::?relay`,00H
+        EXTERN `??halRestoreSleepLevel::?relay`
+        FUNCTION `??halRestoreSleepLevel::?relay`,00H
+        EXTERN `??osal_clear_event::?relay`
+        FUNCTION `??osal_clear_event::?relay`,00H
         EXTERN `??osal_msg_deallocate::?relay`
         FUNCTION `??osal_msg_deallocate::?relay`,00H
         EXTERN `??osal_msg_receive::?relay`
         FUNCTION `??osal_msg_receive::?relay`,00H
+        EXTERN `??osal_pwrmgr_task_state::?relay`
+        FUNCTION `??osal_pwrmgr_task_state::?relay`,00H
+        EXTERN `??osal_start_timerEx::?relay`
+        FUNCTION `??osal_start_timerEx::?relay`,00H
+        EXTERN `??osal_stop_timerEx::?relay`
+        FUNCTION `??osal_stop_timerEx::?relay`,00H
         EXTERN HalAdcInit
         FUNCTION HalAdcInit,0202H
         ARGFRAME ISTACK, 2, STACK
@@ -337,13 +357,6 @@ Hal_ProcessPoll     SYMBOL "Hal_ProcessPoll"
         ARGFRAME XSTACK, 10, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
-        EXTERN HalLcdInit
-        FUNCTION HalLcdInit,0202H
-        ARGFRAME ISTACK, 2, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 0, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
         EXTERN HalLedInit
         FUNCTION HalLedInit,0202H
         ARGFRAME ISTACK, 2, STACK
@@ -358,6 +371,22 @@ Hal_ProcessPoll     SYMBOL "Hal_ProcessPoll"
         ARGFRAME XSTACK, 10, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN Hal_KeyIntEnable
+        EXTERN halRestoreSleepLevel
+        FUNCTION halRestoreSleepLevel,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 10, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN halSleepPconValue
+        EXTERN osal_clear_event
+        FUNCTION osal_clear_event,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 10, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
         EXTERN osal_msg_deallocate
         FUNCTION osal_msg_deallocate,0202H
         ARGFRAME ISTACK, 0, STACK
@@ -367,6 +396,27 @@ Hal_ProcessPoll     SYMBOL "Hal_ProcessPoll"
         ARGFRAME DOVERLAY, 0, STATIC
         EXTERN osal_msg_receive
         FUNCTION osal_msg_receive,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 10, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN osal_pwrmgr_task_state
+        FUNCTION osal_pwrmgr_task_state,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 10, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN osal_start_timerEx
+        FUNCTION osal_start_timerEx,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 14, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN osal_stop_timerEx
+        FUNCTION osal_stop_timerEx,0202H
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
         ARGFRAME XSTACK, 10, STACK
@@ -567,17 +617,6 @@ HalDriverInit:
         ARGFRAME XSTACK, 0, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL HalDriverInit, HalLcdInit
-        LOCFRAME ISTACK, 2, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 0, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 2, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 0, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
         FUNCALL HalDriverInit, HalLedInit
         LOCFRAME ISTACK, 2, STACK
         LOCFRAME PSTACK, 0, STACK
@@ -637,8 +676,6 @@ HalDriverInit:
 //  133   /* LCD */
 //  134 #if (defined HAL_LCD) && (HAL_LCD == TRUE)
 //  135   HalLcdInit();
-        ; Setup parameters for call to function HalLcdInit
-        LCALL     `??HalLcdInit::?relay`; Banked call to: HalLcdInit
 //  136 #endif
 //  137 
 //  138   /* LED */
@@ -746,6 +783,72 @@ Hal_ProcessEvent:
         ARGFRAME XSTACK, 10, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL Hal_ProcessEvent, osal_start_timerEx
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 14, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 14, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL Hal_ProcessEvent, halRestoreSleepLevel
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 10, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 10, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL Hal_ProcessEvent, osal_pwrmgr_task_state
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 10, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 10, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL Hal_ProcessEvent, osal_stop_timerEx
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 10, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 10, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL Hal_ProcessEvent, osal_clear_event
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 10, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 10, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL Hal_ProcessEvent, osal_pwrmgr_task_state
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 10, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 10, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
         REQUIRE ?V0
         REQUIRE ?V1
         MOV       A,#-0xa
@@ -806,7 +909,7 @@ Hal_ProcessEvent:
         MOV       R2,A
         MOV       A,R7
         XRL       A,#0x80
-        SJMP      ??Hal_ProcessEvent_3
+        LJMP      ??Hal_ProcessEvent_3 & 0xFFFF
 //  194   }
 //  195 
 //  196 #if (defined HAL_BUZZER) && (HAL_BUZZER == TRUE)
@@ -855,51 +958,116 @@ Hal_ProcessEvent:
         LCALL     `??HalKeyPoll::?relay`; Banked call to: HalKeyPoll
 //  225 
 //  226     /* if interrupt disabled, do next polling */
-//  227 //    if (!Hal_KeyIntEnable)
-//  228 //    {
-//  229 //      osal_start_timerEx( Hal_TaskID, HAL_KEY_EVENT, 100);
-//  230 //    }
+//  227     if (!Hal_KeyIntEnable)
+        MOV       DPTR,#Hal_KeyIntEnable
+        MOVX      A,@DPTR
+        JNZ       ??Hal_ProcessEvent_7
+//  228     {
+//  229       osal_start_timerEx( Hal_TaskID, HAL_KEY_EVENT, 100);
+        ; Setup parameters for call to function osal_start_timerEx
+        MOV       DPTR,#__Constant_64
+        LCALL     ?PUSH_XSTACK8_X_FOUR
+          CFI CFA_XSP16 add(XSP16, 14)
+        MOV       R2,#0x10
+        MOV       R3,#0x0
+        MOV       DPTR,#Hal_TaskID
+        MOVX      A,@DPTR
+        MOV       R1,A
+        LCALL     `??osal_start_timerEx::?relay`; Banked call to: osal_start_timerEx
+        MOV       A,#0x4
+        LCALL     ?DEALLOC_XSTACK8
+          CFI CFA_XSP16 add(XSP16, 10)
+//  230     }
 //  231 #endif
 //  232     return events ^ HAL_KEY_EVENT;
+??Hal_ProcessEvent_7:
         MOV       A,R6
         XRL       A,#0x10
+        SJMP      ??Hal_ProcessEvent_5
+//  233   }
+//  234 
+//  235 #if defined POWER_SAVING
+//  236   if ( events & HAL_SLEEP_TIMER_EVENT )
+??Hal_ProcessEvent_6:
+        MOV       A,R2
+        ANL       A,#0x4
+        JZ        ??Hal_ProcessEvent_8
+//  237   {
+//  238     halRestoreSleepLevel();
+        ; Setup parameters for call to function halRestoreSleepLevel
+        LCALL     `??halRestoreSleepLevel::?relay`; Banked call to: halRestoreSleepLevel
+//  239     return events ^ HAL_SLEEP_TIMER_EVENT;
+        MOV       A,R6
+        XRL       A,#0x4
+        SJMP      ??Hal_ProcessEvent_5
+//  240   }
+//  241 
+//  242   if ( events & HAL_PWRMGR_HOLD_EVENT )
+??Hal_ProcessEvent_8:
+        MOV       A,R2
+        ANL       A,#0x2
+        JZ        ??Hal_ProcessEvent_9
+//  243   {
+//  244     (void)osal_pwrmgr_task_state(Hal_TaskID, PWRMGR_HOLD);
+        ; Setup parameters for call to function osal_pwrmgr_task_state
+        MOV       R2,#0x1
+        MOV       DPTR,#Hal_TaskID
+        MOVX      A,@DPTR
+        MOV       R1,A
+        LCALL     `??osal_pwrmgr_task_state::?relay`; Banked call to: osal_pwrmgr_task_state
+//  245 
+//  246     (void)osal_stop_timerEx(Hal_TaskID, HAL_PWRMGR_CONSERVE_EVENT);
+        ; Setup parameters for call to function osal_stop_timerEx
+        MOV       R2,#0x1
+        MOV       R3,#0x0
+        MOV       DPTR,#Hal_TaskID
+        MOVX      A,@DPTR
+        MOV       R1,A
+        LCALL     `??osal_stop_timerEx::?relay`; Banked call to: osal_stop_timerEx
+//  247     (void)osal_clear_event(Hal_TaskID, HAL_PWRMGR_CONSERVE_EVENT);
+        ; Setup parameters for call to function osal_clear_event
+        MOV       R2,#0x1
+        MOV       R3,#0x0
+        MOV       DPTR,#Hal_TaskID
+        MOVX      A,@DPTR
+        MOV       R1,A
+        LCALL     `??osal_clear_event::?relay`; Banked call to: osal_clear_event
+//  248 
+//  249     return (events & ~(HAL_PWRMGR_HOLD_EVENT | HAL_PWRMGR_CONSERVE_EVENT));
+        MOV       A,R6
+        ANL       A,#0xfc
+        SJMP      ??Hal_ProcessEvent_5
+//  250   }
+//  251 
+//  252   if ( events & HAL_PWRMGR_CONSERVE_EVENT )
+??Hal_ProcessEvent_9:
+        MOV       A,R2
+        MOV       C,0xE0 /* A   */.0
+        MOV       R2,#0x0
+        JNC       ??Hal_ProcessEvent_10
+//  253   {
+//  254     (void)osal_pwrmgr_task_state(Hal_TaskID, PWRMGR_CONSERVE);
+        ; Setup parameters for call to function osal_pwrmgr_task_state
+        MOV       DPTR,#Hal_TaskID
+        MOVX      A,@DPTR
+        MOV       R1,A
+        LCALL     `??osal_pwrmgr_task_state::?relay`; Banked call to: osal_pwrmgr_task_state
+//  255     return events ^ HAL_PWRMGR_CONSERVE_EVENT;
+        MOV       A,R6
+        XRL       A,#0x1
 ??Hal_ProcessEvent_5:
         MOV       R2,A
         MOV       A,R7
 ??Hal_ProcessEvent_3:
         MOV       R3,A
-        SJMP      ??Hal_ProcessEvent_7
-//  233   }
-//  234 
-//  235 #if defined POWER_SAVING
-//  236   if ( events & HAL_SLEEP_TIMER_EVENT )
-//  237   {
-//  238     halRestoreSleepLevel();
-//  239     return events ^ HAL_SLEEP_TIMER_EVENT;
-//  240   }
-//  241 
-//  242   if ( events & HAL_PWRMGR_HOLD_EVENT )
-//  243   {
-//  244     (void)osal_pwrmgr_task_state(Hal_TaskID, PWRMGR_HOLD);
-//  245 
-//  246     (void)osal_stop_timerEx(Hal_TaskID, HAL_PWRMGR_CONSERVE_EVENT);
-//  247     (void)osal_clear_event(Hal_TaskID, HAL_PWRMGR_CONSERVE_EVENT);
-//  248 
-//  249     return (events & ~(HAL_PWRMGR_HOLD_EVENT | HAL_PWRMGR_CONSERVE_EVENT));
-//  250   }
-//  251 
-//  252   if ( events & HAL_PWRMGR_CONSERVE_EVENT )
-//  253   {
-//  254     (void)osal_pwrmgr_task_state(Hal_TaskID, PWRMGR_CONSERVE);
-//  255     return events ^ HAL_PWRMGR_CONSERVE_EVENT;
+        SJMP      ??Hal_ProcessEvent_11
 //  256   }
 //  257 #endif
 //  258 
 //  259   return 0;
-??Hal_ProcessEvent_6:
-        MOV       R2,#0x0
+??Hal_ProcessEvent_10:
         MOV       R3,#0x0
-??Hal_ProcessEvent_7:
+??Hal_ProcessEvent_11:
         MOV       R7,#0x2
         LJMP      ?BANKED_LEAVE_XDATA
 //  260 }
@@ -927,6 +1095,7 @@ Hal_ProcessPoll:
 //  273 #if defined( POWER_SAVING )
 //  274   /* Allow sleep before the next OSAL event loop */
 //  275   ALLOW_SLEEP_MODE();
+        MOV       halSleepPconValue,#0x1
 //  276 #endif
 //  277   
 //  278   /* UART Poll */
@@ -947,6 +1116,11 @@ Hal_ProcessPoll:
 //  293 }
         LJMP      ?BRET
           CFI EndBlock cfiBlock4
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA32
+__Constant_64:
+        DD 100
 
         RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
 `??Hal_Init::?relay`:
@@ -982,12 +1156,14 @@ Hal_ProcessPoll:
 //  296 **************************************************************************************************/
 //  297 
 // 
-// 118 bytes in segment BANKED_CODE
+// 223 bytes in segment BANKED_CODE
 //  24 bytes in segment BANK_RELAYS
+//   4 bytes in segment XDATA_ROM_C
 //   1 byte  in segment XDATA_Z
 // 
 //  24 bytes of CODE     memory
-// 118 bytes of HUGECODE memory
+//   0 bytes of CONST    memory (+ 4 bytes shared)
+// 223 bytes of HUGECODE memory
 //   1 byte  of XDATA    memory
 //
 //Errors: none

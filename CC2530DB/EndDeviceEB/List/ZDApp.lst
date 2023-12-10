@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR C/C++ Compiler V10.30.1.6000 for 8051               22/Sep/2023  19:42:44
+# IAR C/C++ Compiler V10.30.1.6000 for 8051               10/Dec/2023  13:12:00
 # Copyright 2004-2018 IAR Systems AB.
 # PC-locked license - IAR Embedded Workbench for 8051
 #
@@ -14,29 +14,30 @@
 #    Source file        =  
 #        C:\Texas Instruments\Z-Stack 3.0.2\Components\stack\zdo\ZDApp.c
 #    Command line       =  
-#        -f C:\Users\Flemming\AppData\Local\Temp\EWA789.tmp ("C:\Texas
+#        -f C:\Users\Flemming\AppData\Local\Temp\EWD9F1.tmp ("C:\Texas
 #        Instruments\Z-Stack 3.0.2\Components\stack\zdo\ZDApp.c" -D SECURE=1 -D
-#        TC_LINKKEY_JOIN -D NV_INIT -D NV_RESTORE -D xPOWER_SAVING -D
+#        TC_LINKKEY_JOIN -D NV_INIT -D NV_RESTORE -D POWER_SAVING -D
 #        NWK_AUTO_POLL -D xZTOOL_P1 -D xMT_TASK -D xMT_APP_FUNC -D xMT_SYS_FUNC
 #        -D xMT_ZDO_FUNC -D xMT_ZDO_MGMT -D xMT_APP_CNF_FUNC -D
 #        xLEGACY_LCD_DEBUG -D xLCD_SUPPORTED=DEBUG -D MULTICAST_ENABLED=FALSE
 #        -D ZCL_READ -D ZCL_WRITE -D ZCL_BASIC -D ZCL_IDENTIFY -D xZCL_SCENES
-#        -D xZCL_GROUPS -D ZCL_ON_OFF -D xZCL_DISCOVER -lC "C:\Texas
-#        Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\EndDeviceEB\List"
+#        -D xZCL_GROUPS -D ZCL_ON_OFF -D xZCL_DISCOVER -D ZCL_REPORTING_DEVICE
+#        -D ISR_KEYINTERRUPT -D HAL_LCD=FALSE -D HAL_UARTE=FALSE -D
+#        HAL_SPI=FALSE -D HAL_HID=FALSE -lC "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\EndDeviceEB\List"
 #        -lA "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\EndDeviceEB\List"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\EndDeviceEB\List"
 #        --diag_suppress Pe001,Pa010 -o "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\EndDeviceEB\Obj"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\EndDeviceEB\Obj"
 #        -e --debug --core=plain --dptr=16,1 --data_model=large
 #        --code_model=banked --calling_convention=xdata_reentrant
 #        --place_constants=data_rom --nr_virtual_regs 16 -f "C:\Texas
 #        Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
 #        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3
 #        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f "C:\Texas
 #        Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
 #        (-DZIGBEEPRO -DSECURE=1 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
 #        -DDEFAULT_CHANLIST=0x00000800 -DZDAPP_CONFIG_PAN_ID=0xFFFF
 #        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
@@ -52,65 +53,65 @@
 #        -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100 -DREJOIN_POLL_RATE=440
 #        -DREJOIN_BACKOFF=900000 -DREJOIN_SCAN=900000 -DENABLE_LED4_DISABLE_S1)
 #        -f "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wZCL.cfg"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\Tools\CC2530DB\f8wZCL.cfg"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\" -I
-#        "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\Source\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\Source\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\Source\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\ZMain\TI2530DB\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\Source\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\hal\include\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\ZMain\TI2530DB\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\hal\include\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mac\include\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mac\include\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mt\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\osal\include\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mt\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\services\saddr\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\osal\include\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\services\sdata\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\services\saddr\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\af\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\services\sdata\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\bdb\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\af\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\gp\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\bdb\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\gp\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\sec\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\sys\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\sec\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\zcl\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\sys\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\zcl\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\zmac\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\zmac\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
 #        -Ohz --require_prototypes)
 #    Locale             =  Danish_DNK.1252
 #    List file          =  
 #        C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\EndDeviceEB\List\ZDApp.lst
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\EndDeviceEB\List\ZDApp.lst
 #    Object file        =  
 #        C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\EndDeviceEB\Obj\ZDApp.r51
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\EndDeviceEB\Obj\ZDApp.r51
 #
 ###############################################################################
 
@@ -2158,7 +2159,7 @@ C:\Texas Instruments\Z-Stack 3.0.2\Components\stack\zdo\ZDApp.c
    \   000004   90....       MOV       DPTR,#devState
    \   000007   E0           MOVX      A,@DPTR
    \   000008   6405         XRL       A,#0x5
-   \   00000A   702C         JNZ       ??ZDApp_DeviceAuthEvt_0
+   \   00000A   7031         JNZ       ??ZDApp_DeviceAuthEvt_0
    1028            {
    1029              // Stop the reset timer so it doesn't reset
    1030              ZDApp_ResetTimerCancel();
@@ -2173,6 +2174,9 @@ C:\Texas Instruments\Z-Stack 3.0.2\Components\stack\zdo\ZDApp.c
    1034              // Set the Power Manager Device
    1035          #if defined ( POWER_SAVING )
    1036              osal_pwrmgr_device( PWRMGR_BATTERY );
+   \   000014                ; Setup parameters for call to function osal_pwrmgr_device
+   \   000014   7901         MOV       R1,#0x1
+   \   000016   12....       LCALL     `??osal_pwrmgr_device::?relay`; Banked call to: osal_pwrmgr_device
    1037          #endif
    1038          
    1039              if ( ZSTACK_ROUTER_BUILD )
@@ -2186,49 +2190,49 @@ C:\Texas Instruments\Z-Stack 3.0.2\Components\stack\zdo\ZDApp.c
    1047          
    1048              // Notify to save info into NV
    1049              ZDApp_NVUpdate();
-   \   000014                ; Setup parameters for call to function ZDApp_NVUpdate
-   \   000014   12....       LCALL     `??ZDApp_NVUpdate::?relay`; Banked call to: ZDApp_NVUpdate
+   \   000019                ; Setup parameters for call to function ZDApp_NVUpdate
+   \   000019   12....       LCALL     `??ZDApp_NVUpdate::?relay`; Banked call to: ZDApp_NVUpdate
    1050          
    1051              // Save off the security
    1052              ZDApp_SaveNwkKey();
-   \   000017                ; Setup parameters for call to function ZDApp_SaveNwkKey
-   \   000017   12....       LCALL     `??ZDApp_SaveNwkKey::?relay`; Banked call to: ZDApp_SaveNwkKey
+   \   00001C                ; Setup parameters for call to function ZDApp_SaveNwkKey
+   \   00001C   12....       LCALL     `??ZDApp_SaveNwkKey::?relay`; Banked call to: ZDApp_SaveNwkKey
    1053          
    1054              ZDApp_AnnounceNewAddress();
-   \   00001A                ; Setup parameters for call to function ZDApp_AnnounceNewAddress
-   \   00001A   12....       LCALL     `??ZDApp_AnnounceNewAddress::?relay`; Banked call to: ZDApp_AnnounceNewAddress
+   \   00001F                ; Setup parameters for call to function ZDApp_AnnounceNewAddress
+   \   00001F   12....       LCALL     `??ZDApp_AnnounceNewAddress::?relay`; Banked call to: ZDApp_AnnounceNewAddress
    1055          
    1056              if ( ( (ZDO_Config_Node_Descriptor.CapabilityFlags & CAPINFO_RCVR_ON_IDLE) == 0 )
    1057                  || ( (ZDO_Config_Node_Descriptor.CapabilityFlags & CAPINFO_RCVR_ON_IDLE)
    1058                    && (zgChildAgingEnable == TRUE) ) )
-   \   00001D   90....       MOV       DPTR,#ZDO_Config_Node_Descriptor + 2
-   \   000020   E0           MOVX      A,@DPTR
-   \   000021   A2E3         MOV       C,0xE0 /* A   */.3
-   \   000023   5008         JNC       ??ZDApp_DeviceAuthEvt_1
-   \   000025   90....       MOV       DPTR,#zgChildAgingEnable
-   \   000028   E0           MOVX      A,@DPTR
-   \   000029   6401         XRL       A,#0x1
-   \   00002B   700E         JNZ       ??ZDApp_DeviceAuthEvt_2
+   \   000022   90....       MOV       DPTR,#ZDO_Config_Node_Descriptor + 2
+   \   000025   E0           MOVX      A,@DPTR
+   \   000026   A2E3         MOV       C,0xE0 /* A   */.3
+   \   000028   5008         JNC       ??ZDApp_DeviceAuthEvt_1
+   \   00002A   90....       MOV       DPTR,#zgChildAgingEnable
+   \   00002D   E0           MOVX      A,@DPTR
+   \   00002E   6401         XRL       A,#0x1
+   \   000030   700E         JNZ       ??ZDApp_DeviceAuthEvt_2
    1059              {
    1060                NLME_SetPollRate( ZDApp_SavedPollRate );
    \                     ??ZDApp_DeviceAuthEvt_1:
-   \   00002D                ; Setup parameters for call to function NLME_SetPollRate
-   \   00002D   90....       MOV       DPTR,#ZDApp_SavedPollRate
-   \   000030   12....       LCALL     ?XLOAD_R2345
-   \   000033   12....       LCALL     `??NLME_SetPollRate::?relay`; Banked call to: NLME_SetPollRate
-   \   000036   8003         SJMP      ??ZDApp_DeviceAuthEvt_2
+   \   000032                ; Setup parameters for call to function NLME_SetPollRate
+   \   000032   90....       MOV       DPTR,#ZDApp_SavedPollRate
+   \   000035   12....       LCALL     ?XLOAD_R2345
+   \   000038   12....       LCALL     `??NLME_SetPollRate::?relay`; Banked call to: NLME_SetPollRate
+   \   00003B   8003         SJMP      ??ZDApp_DeviceAuthEvt_2
    1061              }
    1062            }
    1063            else
    1064            {
    1065              ZDApp_NVUpdate();
    \                     ??ZDApp_DeviceAuthEvt_0:
-   \   000038                ; Setup parameters for call to function ZDApp_NVUpdate
-   \   000038   12....       LCALL     `??ZDApp_NVUpdate::?relay`; Banked call to: ZDApp_NVUpdate
+   \   00003D                ; Setup parameters for call to function ZDApp_NVUpdate
+   \   00003D   12....       LCALL     `??ZDApp_NVUpdate::?relay`; Banked call to: ZDApp_NVUpdate
    1066            }
    1067          }
    \                     ??ZDApp_DeviceAuthEvt_2:
-   \   00003B   02....       LJMP      ??Subroutine62_0 & 0xFFFF
+   \   000040   02....       LJMP      ??Subroutine62_0 & 0xFFFF
    1068          
    1069          /*********************************************************************
    1070           * @fn      ZDApp_SaveNetworkStateEvt()
@@ -3229,19 +3233,19 @@ C:\Texas Instruments\Z-Stack 3.0.2\Components\stack\zdo\ZDApp.c
    \   00000B   600F         JZ        ??ZDApp_ProcessNetworkJoin_0
    \   00000D   E0           MOVX      A,@DPTR
    \   00000E   640A         XRL       A,#0xa
-   \   000010   7051         JNZ       ??ZDApp_ProcessNetworkJoin_1
+   \   000010   7056         JNZ       ??ZDApp_ProcessNetworkJoin_1
    \   000012   90....       MOV       DPTR,#ZDO_Config_Node_Descriptor
    \   000015   E0           MOVX      A,@DPTR
    \   000016   5407         ANL       A,#0x7
    \   000018   6401         XRL       A,#0x1
-   \   00001A   705E         JNZ       ??ZDApp_ProcessNetworkJoin_2
+   \   00001A   7063         JNZ       ??ZDApp_ProcessNetworkJoin_2
    1565            {
    1566              // Result of a Join attempt by this device.
    1567              if ( nwkStatus == ZSuccess )
    \                     ??ZDApp_ProcessNetworkJoin_0:
    \   00001C   90....       MOV       DPTR,#nwkStatus
    \   00001F   E0           MOVX      A,@DPTR
-   \   000020   7039         JNZ       ??ZDApp_ProcessNetworkJoin_3
+   \   000020   703E         JNZ       ??ZDApp_ProcessNetworkJoin_3
    1568              {
    1569                osal_set_event( ZDAppTaskID, ZDO_STATE_CHANGE_EVT );
    \   000022                ; Setup parameters for call to function osal_set_event
@@ -3249,30 +3253,33 @@ C:\Texas Instruments\Z-Stack 3.0.2\Components\stack\zdo\ZDApp.c
    1570          
    1571          #if defined ( POWER_SAVING )
    1572                osal_pwrmgr_device( PWRMGR_BATTERY );
+   \                     ??CrossCallReturnLabel_119:
+   \   000025                ; Setup parameters for call to function osal_pwrmgr_device
+   \   000025   7901         MOV       R1,#0x1
+   \   000027   12....       LCALL     `??osal_pwrmgr_device::?relay`; Banked call to: osal_pwrmgr_device
    1573          #endif
    1574          
    1575                if ( ZG_SECURE_ENABLED && ( ZDApp_RestoreNwkKey( TRUE ) == false ) )
-   \                     ??CrossCallReturnLabel_119:
-   \   000025                ; Setup parameters for call to function ZDApp_RestoreNwkKey
-   \   000025   7901         MOV       R1,#0x1
-   \   000027   12....       LCALL     `??ZDApp_RestoreNwkKey::?relay`; Banked call to: ZDApp_RestoreNwkKey
-   \   00002A   E9           MOV       A,R1
-   \   00002B   7007         JNZ       ??ZDApp_ProcessNetworkJoin_4
+   \   00002A                ; Setup parameters for call to function ZDApp_RestoreNwkKey
+   \   00002A   7901         MOV       R1,#0x1
+   \   00002C   12....       LCALL     `??ZDApp_RestoreNwkKey::?relay`; Banked call to: ZDApp_RestoreNwkKey
+   \   00002F   E9           MOV       A,R1
+   \   000030   7007         JNZ       ??ZDApp_ProcessNetworkJoin_4
    1576                {
    1577                  if ( ZSTACK_END_DEVICE_BUILD )
    1578                  {
    1579                    NLME_SetPollRate( zgRejoinPollRate );
-   \   00002D                ; Setup parameters for call to function NLME_SetPollRate
-   \   00002D   12....       LCALL     ?Subroutine18 & 0xFFFF
+   \   000032                ; Setup parameters for call to function NLME_SetPollRate
+   \   000032   12....       LCALL     ?Subroutine18 & 0xFFFF
    1580                  }
    1581                  // wait for auth from trust center
    1582                  ZDApp_ChangeState( DEV_END_DEVICE_UNAUTH );
    1583                  
    1584                  bdb_nwkAssocAttemt(TRUE);
    \                     ??CrossCallReturnLabel_12:
-   \   000030                ; Setup parameters for call to function bdb_nwkAssocAttemt
-   \   000030   7901         MOV       R1,#0x1
-   \   000032   8029         SJMP      ??ZDApp_ProcessNetworkJoin_5
+   \   000035                ; Setup parameters for call to function bdb_nwkAssocAttemt
+   \   000035   7901         MOV       R1,#0x1
+   \   000037   8029         SJMP      ??ZDApp_ProcessNetworkJoin_5
    1585                }
    1586                else
    1587                {
@@ -3288,40 +3295,40 @@ C:\Texas Instruments\Z-Stack 3.0.2\Components\stack\zdo\ZDApp.c
    1597          
    1598                  if ( devState == DEV_NWK_JOINING )
    \                     ??ZDApp_ProcessNetworkJoin_4:
-   \   000034   90....       MOV       DPTR,#devState
-   \   000037   E0           MOVX      A,@DPTR
-   \   000038   6403         XRL       A,#0x3
-   \   00003A   7017         JNZ       ??ZDApp_ProcessNetworkJoin_6
+   \   000039   90....       MOV       DPTR,#devState
+   \   00003C   E0           MOVX      A,@DPTR
+   \   00003D   6403         XRL       A,#0x3
+   \   00003F   7017         JNZ       ??ZDApp_ProcessNetworkJoin_6
    1599                  {
    1600                    ZDApp_AnnounceNewAddress();
-   \   00003C                ; Setup parameters for call to function ZDApp_AnnounceNewAddress
-   \   00003C   12....       LCALL     `??ZDApp_AnnounceNewAddress::?relay`; Banked call to: ZDApp_AnnounceNewAddress
+   \   000041                ; Setup parameters for call to function ZDApp_AnnounceNewAddress
+   \   000041   12....       LCALL     `??ZDApp_AnnounceNewAddress::?relay`; Banked call to: ZDApp_AnnounceNewAddress
    1601                    if( bdbCommissioningProcedureState.bdbCommissioningState == BDB_COMMISSIONING_STATE_TL )
-   \   00003F   90....       MOV       DPTR,#bdbCommissioningProcedureState
-   \   000042   E0           MOVX      A,@DPTR
-   \   000043   6402         XRL       A,#0x2
-   \   000045   700C         JNZ       ??ZDApp_ProcessNetworkJoin_6
+   \   000044   90....       MOV       DPTR,#bdbCommissioningProcedureState
+   \   000047   E0           MOVX      A,@DPTR
+   \   000048   6402         XRL       A,#0x2
+   \   00004A   700C         JNZ       ??ZDApp_ProcessNetworkJoin_6
    1602                    {
    1603                      bdb_setNodeIsOnANetwork(TRUE);
-   \   000047                ; Setup parameters for call to function bdb_setNodeIsOnANetwork
-   \   000047   7901         MOV       R1,#0x1
-   \   000049   12....       LCALL     `??bdb_setNodeIsOnANetwork::?relay`; Banked call to: bdb_setNodeIsOnANetwork
+   \   00004C                ; Setup parameters for call to function bdb_setNodeIsOnANetwork
+   \   00004C   7901         MOV       R1,#0x1
+   \   00004E   12....       LCALL     `??bdb_setNodeIsOnANetwork::?relay`; Banked call to: bdb_setNodeIsOnANetwork
    1604                      bdb_reportCommissioningState( BDB_COMMISSIONING_STATE_TL, TRUE );
-   \   00004C                ; Setup parameters for call to function bdb_reportCommissioningState
-   \   00004C   7A01         MOV       R2,#0x1
-   \   00004E   7902         MOV       R1,#0x2
-   \   000050   12....       LCALL     `??bdb_reportCommissioningState::?relay`; Banked call to: bdb_reportCommissioningState
+   \   000051                ; Setup parameters for call to function bdb_reportCommissioningState
+   \   000051   7A01         MOV       R2,#0x1
+   \   000053   7902         MOV       R1,#0x2
+   \   000055   12....       LCALL     `??bdb_reportCommissioningState::?relay`; Banked call to: bdb_reportCommissioningState
    1605                    }
    1606                  }
    1607          
    1608                  ZDApp_ChangeState( DEV_END_DEVICE );
    \                     ??ZDApp_ProcessNetworkJoin_6:
-   \   000053                ; Setup parameters for call to function ZDApp_ChangeState
-   \   000053   7906         MOV       R1,#0x6
-   \   000055   12....       LCALL     `??ZDApp_ChangeState::?relay`; Banked call to: ZDApp_ChangeState
+   \   000058                ; Setup parameters for call to function ZDApp_ChangeState
+   \   000058   7906         MOV       R1,#0x6
+   \   00005A   12....       LCALL     `??ZDApp_ChangeState::?relay`; Banked call to: ZDApp_ChangeState
    1609          
    1610                  if ( ZSTACK_ROUTER_BUILD )
-   \   000058   02....       LJMP      ??CrossCallReturnLabel_120 & 0xFFFF
+   \   00005D   02....       LJMP      ??CrossCallReturnLabel_120 & 0xFFFF
    1611                  {
    1612                    // NOTE: first two parameters are not used, see NLMEDE.h for details
    1613                    if ( ZDO_Config_Node_Descriptor.LogicalType != NODETYPE_DEVICE )
@@ -3336,11 +3343,11 @@ C:\Texas Instruments\Z-Stack 3.0.2\Components\stack\zdo\ZDApp.c
    1622          
    1623                bdb_nwkAssocAttemt(FALSE);
    \                     ??ZDApp_ProcessNetworkJoin_3:
-   \   00005B                ; Setup parameters for call to function bdb_nwkAssocAttemt
-   \   00005B   7900         MOV       R1,#0x0
+   \   000060                ; Setup parameters for call to function bdb_nwkAssocAttemt
+   \   000060   7900         MOV       R1,#0x0
    \                     ??ZDApp_ProcessNetworkJoin_5:
-   \   00005D   12....       LCALL     `??bdb_nwkAssocAttemt::?relay`; Banked call to: bdb_nwkAssocAttemt
-   \   000060   02....       LJMP      ??CrossCallReturnLabel_120 & 0xFFFF
+   \   000062   12....       LCALL     `??bdb_nwkAssocAttemt::?relay`; Banked call to: bdb_nwkAssocAttemt
+   \   000065   02....       LJMP      ??CrossCallReturnLabel_120 & 0xFFFF
    1624              }
    1625            }
    1626            else if ( devState == DEV_NWK_ORPHAN ||
@@ -3349,46 +3356,46 @@ C:\Texas Instruments\Z-Stack 3.0.2\Components\stack\zdo\ZDApp.c
    1629                      devState == DEV_NWK_TC_REJOIN_ALL_CHANNEL ||
    1630                      devState == DEV_NWK_SEC_REJOIN_ALL_CHANNEL )
    \                     ??ZDApp_ProcessNetworkJoin_1:
-   \   000063   E0           MOVX      A,@DPTR
-   \   000064   6404         XRL       A,#0x4
-   \   000066   6012         JZ        ??ZDApp_ProcessNetworkJoin_2
    \   000068   E0           MOVX      A,@DPTR
-   \   000069   640E         XRL       A,#0xe
-   \   00006B   600D         JZ        ??ZDApp_ProcessNetworkJoin_2
+   \   000069   6404         XRL       A,#0x4
+   \   00006B   6012         JZ        ??ZDApp_ProcessNetworkJoin_2
    \   00006D   E0           MOVX      A,@DPTR
-   \   00006E   640F         XRL       A,#0xf
-   \   000070   6008         JZ        ??ZDApp_ProcessNetworkJoin_2
+   \   00006E   640E         XRL       A,#0xe
+   \   000070   600D         JZ        ??ZDApp_ProcessNetworkJoin_2
    \   000072   E0           MOVX      A,@DPTR
-   \   000073   640D         XRL       A,#0xd
-   \   000075   6003         JZ        $+5
-   \   000077   02....       LJMP      ??ZDApp_ProcessNetworkJoin_7 & 0xFFFF
+   \   000073   640F         XRL       A,#0xf
+   \   000075   6008         JZ        ??ZDApp_ProcessNetworkJoin_2
+   \   000077   E0           MOVX      A,@DPTR
+   \   000078   640D         XRL       A,#0xd
+   \   00007A   6003         JZ        $+5
+   \   00007C   02....       LJMP      ??ZDApp_ProcessNetworkJoin_7 & 0xFFFF
    1631            {
    1632              // results of an orphaning attempt by this device
    1633              if (nwkStatus == ZSuccess)
    \                     ??ZDApp_ProcessNetworkJoin_2:
-   \   00007A   90....       MOV       DPTR,#nwkStatus
-   \   00007D   E0           MOVX      A,@DPTR
-   \   00007E   7050         JNZ       ??ZDApp_ProcessNetworkJoin_8
+   \   00007F   90....       MOV       DPTR,#nwkStatus
+   \   000082   E0           MOVX      A,@DPTR
+   \   000083   7055         JNZ       ??ZDApp_ProcessNetworkJoin_8
    1634              {
    1635                //When the device has successfully rejoined then reset retryCnt
    1636                retryCnt = 0;
-   \   000080   90....       MOV       DPTR,#retryCnt
-   \   000083   E4           CLR       A
-   \   000084   F0           MOVX      @DPTR,A
+   \   000085   90....       MOV       DPTR,#retryCnt
+   \   000088   E4           CLR       A
+   \   000089   F0           MOVX      @DPTR,A
    1637          
    1638                // Verify NWK key is available before sending Device_annce
    1639                if ( ZG_SECURE_ENABLED && ( ZDApp_RestoreNwkKey( TRUE ) == false ) )
-   \   000085                ; Setup parameters for call to function ZDApp_RestoreNwkKey
-   \   000085   7901         MOV       R1,#0x1
-   \   000087   12....       LCALL     `??ZDApp_RestoreNwkKey::?relay`; Banked call to: ZDApp_RestoreNwkKey
-   \   00008A   E9           MOV       A,R1
-   \   00008B   700D         JNZ       ??ZDApp_ProcessNetworkJoin_9
+   \   00008A                ; Setup parameters for call to function ZDApp_RestoreNwkKey
+   \   00008A   7901         MOV       R1,#0x1
+   \   00008C   12....       LCALL     `??ZDApp_RestoreNwkKey::?relay`; Banked call to: ZDApp_RestoreNwkKey
+   \   00008F   E9           MOV       A,R1
+   \   000090   700D         JNZ       ??ZDApp_ProcessNetworkJoin_9
    1640                {
    1641                  if ( ZSTACK_END_DEVICE_BUILD )
    1642                  {
    1643                    NLME_SetPollRate( zgRejoinPollRate );
-   \   00008D                ; Setup parameters for call to function NLME_SetPollRate
-   \   00008D   12....       LCALL     ?Subroutine18 & 0xFFFF
+   \   000092                ; Setup parameters for call to function NLME_SetPollRate
+   \   000092   12....       LCALL     ?Subroutine18 & 0xFFFF
    1644                  }
    1645                  // wait for auth from trust center
    1646                  ZDApp_ChangeState( DEV_END_DEVICE_UNAUTH );
@@ -3396,60 +3403,63 @@ C:\Texas Instruments\Z-Stack 3.0.2\Components\stack\zdo\ZDApp.c
    1648                  // Start the reset timer for MAX UNAUTH time
    1649                  ZDApp_ResetTimerStart( MAX_DEVICE_UNAUTH_TIMEOUT );
    \                     ??CrossCallReturnLabel_13:
-   \   000090                ; Setup parameters for call to function ZDApp_ResetTimerStart
-   \   000090   7A10         MOV       R2,#0x10
-   \   000092   7B27         MOV       R3,#0x27
-   \   000094   12....       LCALL     `??ZDApp_ResetTimerStart::?relay`; Banked call to: ZDApp_ResetTimerStart
-   \   000097   02....       LJMP      ??CrossCallReturnLabel_120 & 0xFFFF
+   \   000095                ; Setup parameters for call to function ZDApp_ResetTimerStart
+   \   000095   7A10         MOV       R2,#0x10
+   \   000097   7B27         MOV       R3,#0x27
+   \   000099   12....       LCALL     `??ZDApp_ResetTimerStart::?relay`; Banked call to: ZDApp_ResetTimerStart
+   \   00009C   02....       LJMP      ??CrossCallReturnLabel_120 & 0xFFFF
    1650                }
    1651                else
    1652                {
    1653                  ZDApp_ChangeState( DEV_END_DEVICE );
    \                     ??ZDApp_ProcessNetworkJoin_9:
-   \   00009A                ; Setup parameters for call to function ZDApp_ChangeState
-   \   00009A   7906         MOV       R1,#0x6
-   \   00009C   12....       LCALL     `??ZDApp_ChangeState::?relay`; Banked call to: ZDApp_ChangeState
+   \   00009F                ; Setup parameters for call to function ZDApp_ChangeState
+   \   00009F   7906         MOV       R1,#0x6
+   \   0000A1   12....       LCALL     `??ZDApp_ChangeState::?relay`; Banked call to: ZDApp_ChangeState
    1654          
    1655                  osal_stop_timerEx( ZDAppTaskID, ZDO_REJOIN_BACKOFF );
-   \   00009F                ; Setup parameters for call to function osal_stop_timerEx
-   \   00009F   7A00         MOV       R2,#0x0
-   \   0000A1   7B20         MOV       R3,#0x20
-   \   0000A3   12....       LCALL     ?Subroutine26 & 0xFFFF
+   \   0000A4                ; Setup parameters for call to function osal_stop_timerEx
+   \   0000A4   7A00         MOV       R2,#0x0
+   \   0000A6   7B20         MOV       R3,#0x20
+   \   0000A8   12....       LCALL     ?Subroutine26 & 0xFFFF
    1656          
    1657                  // setup Power Manager Device
    1658          #if defined ( POWER_SAVING )
    1659                  osal_pwrmgr_device( PWRMGR_BATTERY );
+   \                     ??CrossCallReturnLabel_63:
+   \   0000AB                ; Setup parameters for call to function osal_pwrmgr_device
+   \   0000AB   7901         MOV       R1,#0x1
+   \   0000AD   12....       LCALL     `??osal_pwrmgr_device::?relay`; Banked call to: osal_pwrmgr_device
    1660          #endif
    1661          
    1662                  // The receiver is on, turn network layer polling off.
    1663                  if ( ZDO_Config_Node_Descriptor.CapabilityFlags & CAPINFO_RCVR_ON_IDLE )
-   \                     ??CrossCallReturnLabel_63:
-   \   0000A6   90....       MOV       DPTR,#ZDO_Config_Node_Descriptor + 2
-   \   0000A9   E0           MOVX      A,@DPTR
-   \   0000AA   A2E3         MOV       C,0xE0 /* A   */.3
-   \   0000AC   501D         JNC       ??ZDApp_ProcessNetworkJoin_10
+   \   0000B0   90....       MOV       DPTR,#ZDO_Config_Node_Descriptor + 2
+   \   0000B3   E0           MOVX      A,@DPTR
+   \   0000B4   A2E3         MOV       C,0xE0 /* A   */.3
+   \   0000B6   501D         JNC       ??ZDApp_ProcessNetworkJoin_10
    1664                  {
    1665                    // if Child Table Management process is not enabled
    1666                    if ( zgChildAgingEnable == FALSE )
-   \   0000AE   90....       MOV       DPTR,#zgChildAgingEnable
-   \   0000B1   E0           MOVX      A,@DPTR
-   \   0000B2   7017         JNZ       ??ZDApp_ProcessNetworkJoin_10
+   \   0000B8   90....       MOV       DPTR,#zgChildAgingEnable
+   \   0000BB   E0           MOVX      A,@DPTR
+   \   0000BC   7017         JNZ       ??ZDApp_ProcessNetworkJoin_10
    1667                    {
    1668                      NLME_SetPollRate( 0 );
-   \   0000B4                ; Setup parameters for call to function NLME_SetPollRate
-   \   0000B4   90....       MOV       DPTR,#__Constant_0
-   \   0000B7   12....       LCALL     ?XLOAD_R2345
-   \   0000BA   12....       LCALL     `??NLME_SetPollRate::?relay`; Banked call to: NLME_SetPollRate
+   \   0000BE                ; Setup parameters for call to function NLME_SetPollRate
+   \   0000BE   90....       MOV       DPTR,#__Constant_0
+   \   0000C1   12....       LCALL     ?XLOAD_R2345
+   \   0000C4   12....       LCALL     `??NLME_SetPollRate::?relay`; Banked call to: NLME_SetPollRate
    1669                      NLME_SetQueuedPollRate( 0 );
-   \   0000BD                ; Setup parameters for call to function NLME_SetQueuedPollRate
-   \   0000BD   7A00         MOV       R2,#0x0
-   \   0000BF   7B00         MOV       R3,#0x0
-   \   0000C1   12....       LCALL     `??NLME_SetQueuedPollRate::?relay`; Banked call to: NLME_SetQueuedPollRate
+   \   0000C7                ; Setup parameters for call to function NLME_SetQueuedPollRate
+   \   0000C7   7A00         MOV       R2,#0x0
+   \   0000C9   7B00         MOV       R3,#0x0
+   \   0000CB   12....       LCALL     `??NLME_SetQueuedPollRate::?relay`; Banked call to: NLME_SetQueuedPollRate
    1670                      NLME_SetResponseRate( 0 );
-   \   0000C4                ; Setup parameters for call to function NLME_SetResponseRate
-   \   0000C4   7A00         MOV       R2,#0x0
-   \   0000C6   7B00         MOV       R3,#0x0
-   \   0000C8   12....       LCALL     `??NLME_SetResponseRate::?relay`; Banked call to: NLME_SetResponseRate
+   \   0000CE                ; Setup parameters for call to function NLME_SetResponseRate
+   \   0000CE   7A00         MOV       R2,#0x0
+   \   0000D0   7B00         MOV       R3,#0x0
+   \   0000D2   12....       LCALL     `??NLME_SetResponseRate::?relay`; Banked call to: NLME_SetResponseRate
    1671                    }
    1672                  }
    1673          
@@ -3464,131 +3474,131 @@ C:\Texas Instruments\Z-Stack 3.0.2\Components\stack\zdo\ZDApp.c
    1682          
    1683                  ZDApp_AnnounceNewAddress();
    \                     ??ZDApp_ProcessNetworkJoin_10:
-   \   0000CB                ; Setup parameters for call to function ZDApp_AnnounceNewAddress
-   \   0000CB   12....       LCALL     `??ZDApp_AnnounceNewAddress::?relay`; Banked call to: ZDApp_AnnounceNewAddress
-   \   0000CE   807B         SJMP      ??CrossCallReturnLabel_120
+   \   0000D5                ; Setup parameters for call to function ZDApp_AnnounceNewAddress
+   \   0000D5   12....       LCALL     `??ZDApp_AnnounceNewAddress::?relay`; Banked call to: ZDApp_AnnounceNewAddress
+   \   0000D8   807B         SJMP      ??CrossCallReturnLabel_120
    1684                }
    1685              }
    1686              else
    1687              {
    1688                if ( devStartMode == MODE_RESUME )
    \                     ??ZDApp_ProcessNetworkJoin_8:
-   \   0000D0   90....       MOV       DPTR,#devStartMode
-   \   0000D3   E0           MOVX      A,@DPTR
-   \   0000D4   6401         XRL       A,#0x1
-   \   0000D6   7037         JNZ       ??ZDApp_ProcessNetworkJoin_11
+   \   0000DA   90....       MOV       DPTR,#devStartMode
+   \   0000DD   E0           MOVX      A,@DPTR
+   \   0000DE   6401         XRL       A,#0x1
+   \   0000E0   7037         JNZ       ??ZDApp_ProcessNetworkJoin_11
    1689                {
    1690                  if ( ++retryCnt <= MAX_RESUME_RETRY )
-   \   0000D8   90....       MOV       DPTR,#retryCnt
-   \   0000DB   E0           MOVX      A,@DPTR
-   \   0000DC   04           INC       A
-   \   0000DD   F0           MOVX      @DPTR,A
-   \   0000DE   C3           CLR       C
-   \   0000DF   9404         SUBB      A,#0x4
-   \   0000E1   501F         JNC       ??ZDApp_ProcessNetworkJoin_12
+   \   0000E2   90....       MOV       DPTR,#retryCnt
+   \   0000E5   E0           MOVX      A,@DPTR
+   \   0000E6   04           INC       A
+   \   0000E7   F0           MOVX      @DPTR,A
+   \   0000E8   C3           CLR       C
+   \   0000E9   9404         SUBB      A,#0x4
+   \   0000EB   501F         JNC       ??ZDApp_ProcessNetworkJoin_12
    1691                  {
    1692                    if ( _NIB.nwkPanId == 0xFFFF )
-   \   0000E3   90....       MOV       DPTR,#_NIB + 33
-   \   0000E6   E0           MOVX      A,@DPTR
-   \   0000E7   F4           CPL       A
-   \   0000E8   7003         JNZ       ??ZDApp_ProcessNetworkJoin_13
-   \   0000EA   A3           INC       DPTR
-   \   0000EB   E0           MOVX      A,@DPTR
-   \   0000EC   F4           CPL       A
+   \   0000ED   90....       MOV       DPTR,#_NIB + 33
+   \   0000F0   E0           MOVX      A,@DPTR
+   \   0000F1   F4           CPL       A
+   \   0000F2   7003         JNZ       ??ZDApp_ProcessNetworkJoin_13
+   \   0000F4   A3           INC       DPTR
+   \   0000F5   E0           MOVX      A,@DPTR
+   \   0000F6   F4           CPL       A
    \                     ??ZDApp_ProcessNetworkJoin_13:
-   \   0000ED   601B         JZ        ??ZDApp_ProcessNetworkJoin_14
+   \   0000F7   601B         JZ        ??ZDApp_ProcessNetworkJoin_14
    1693                      devStartMode = MODE_JOIN;
    1694                    else
    1695                    {
    1696                      devStartMode = MODE_REJOIN;
-   \   0000EF   90....       MOV       DPTR,#devStartMode
-   \   0000F2   7403         MOV       A,#0x3
-   \   0000F4   F0           MOVX      @DPTR,A
+   \   0000F9   90....       MOV       DPTR,#devStartMode
+   \   0000FC   7403         MOV       A,#0x3
+   \   0000FE   F0           MOVX      @DPTR,A
    1697                      _tmpRejoinState = true;
-   \   0000F5   90....       MOV       DPTR,#_tmpRejoinState
-   \   0000F8   7401         MOV       A,#0x1
-   \   0000FA   F0           MOVX      @DPTR,A
+   \   0000FF   90....       MOV       DPTR,#_tmpRejoinState
+   \   000102   7401         MOV       A,#0x1
+   \   000104   F0           MOVX      @DPTR,A
    1698                      prevDevState = DEV_NWK_SEC_REJOIN_CURR_CHANNEL;
-   \   0000FB   90....       MOV       DPTR,#prevDevState
-   \   0000FE   7404         MOV       A,#0x4
-   \   000100   801C         SJMP      ??ZDApp_ProcessNetworkJoin_15
+   \   000105   90....       MOV       DPTR,#prevDevState
+   \   000108   7404         MOV       A,#0x4
+   \   00010A   801C         SJMP      ??ZDApp_ProcessNetworkJoin_15
    1699                    }
    1700                  }
    1701                  // Do a normal join to the network after certain times of rejoin retries
    1702                  else if( AIB_apsUseInsecureJoin == true )
    \                     ??ZDApp_ProcessNetworkJoin_12:
-   \   000102   90....       MOV       DPTR,#AIB_apsUseInsecureJoin
-   \   000105   E0           MOVX      A,@DPTR
-   \   000106   6401         XRL       A,#0x1
-   \   000108   7015         JNZ       ??ZDApp_ProcessNetworkJoin_16
+   \   00010C   90....       MOV       DPTR,#AIB_apsUseInsecureJoin
+   \   00010F   E0           MOVX      A,@DPTR
+   \   000110   6401         XRL       A,#0x1
+   \   000112   7015         JNZ       ??ZDApp_ProcessNetworkJoin_16
    1703                  {
    1704                    devStartMode = MODE_JOIN;
    \                     ??ZDApp_ProcessNetworkJoin_14:
-   \   00010A   90....       MOV       DPTR,#devStartMode
-   \   00010D   800E         SJMP      ??ZDApp_ProcessNetworkJoin_17
+   \   000114   90....       MOV       DPTR,#devStartMode
+   \   000117   800E         SJMP      ??ZDApp_ProcessNetworkJoin_17
    1705                  }
    1706                }
    1707                else if(devStartMode == MODE_REJOIN)
    \                     ??ZDApp_ProcessNetworkJoin_11:
-   \   00010F   E0           MOVX      A,@DPTR
-   \   000110   6403         XRL       A,#0x3
-   \   000112   700B         JNZ       ??ZDApp_ProcessNetworkJoin_16
+   \   000119   E0           MOVX      A,@DPTR
+   \   00011A   6403         XRL       A,#0x3
+   \   00011C   700B         JNZ       ??ZDApp_ProcessNetworkJoin_16
    1708                {
    1709                  if ( ZSTACK_END_DEVICE_BUILD )
    1710                  {
    1711                    devStartMode = MODE_REJOIN;
    1712                    _tmpRejoinState = true;
-   \   000114   90....       MOV       DPTR,#_tmpRejoinState
-   \   000117   7401         MOV       A,#0x1
-   \   000119   F0           MOVX      @DPTR,A
+   \   00011E   90....       MOV       DPTR,#_tmpRejoinState
+   \   000121   7401         MOV       A,#0x1
+   \   000123   F0           MOVX      @DPTR,A
    1713                    _NIB.nwkState = NWK_INIT;
-   \   00011A   90....       MOV       DPTR,#_NIB + 35
+   \   000124   90....       MOV       DPTR,#_NIB + 35
    \                     ??ZDApp_ProcessNetworkJoin_17:
-   \   00011D   E4           CLR       A
+   \   000127   E4           CLR       A
    \                     ??ZDApp_ProcessNetworkJoin_15:
-   \   00011E   F0           MOVX      @DPTR,A
+   \   000128   F0           MOVX      @DPTR,A
    1714                  }
    1715                }
    1716          
    1717                // Clear the neighbor Table and network discovery tables.
    1718                nwkNeighborInitTable();
    \                     ??ZDApp_ProcessNetworkJoin_16:
-   \   00011F                ; Setup parameters for call to function nwkNeighborInitTable
-   \   00011F   12....       LCALL     `??nwkNeighborInitTable::?relay`; Banked call to: nwkNeighborInitTable
+   \   000129                ; Setup parameters for call to function nwkNeighborInitTable
+   \   000129   12....       LCALL     `??nwkNeighborInitTable::?relay`; Banked call to: nwkNeighborInitTable
    1719                NLME_NwkDiscTerm();
-   \   000122                ; Setup parameters for call to function NLME_NwkDiscTerm
-   \   000122   12....       LCALL     `??NLME_NwkDiscTerm::?relay`; Banked call to: NLME_NwkDiscTerm
+   \   00012C                ; Setup parameters for call to function NLME_NwkDiscTerm
+   \   00012C   12....       LCALL     `??NLME_NwkDiscTerm::?relay`; Banked call to: NLME_NwkDiscTerm
    1720          
    1721                if ( ( ( (ZDO_Config_Node_Descriptor.CapabilityFlags & CAPINFO_RCVR_ON_IDLE) == 0 )
    1722                  || ( (ZDO_Config_Node_Descriptor.CapabilityFlags & CAPINFO_RCVR_ON_IDLE)
    1723                    && (zgChildAgingEnable == TRUE) ) ) && (devStartMode == MODE_REJOIN) )
-   \   000125   90....       MOV       DPTR,#ZDO_Config_Node_Descriptor + 2
-   \   000128   E0           MOVX      A,@DPTR
-   \   000129   A2E3         MOV       C,0xE0 /* A   */.3
-   \   00012B   5008         JNC       ??ZDApp_ProcessNetworkJoin_18
-   \   00012D   90....       MOV       DPTR,#zgChildAgingEnable
-   \   000130   E0           MOVX      A,@DPTR
-   \   000131   6401         XRL       A,#0x1
-   \   000133   7016         JNZ       ??CrossCallReturnLabel_120
+   \   00012F   90....       MOV       DPTR,#ZDO_Config_Node_Descriptor + 2
+   \   000132   E0           MOVX      A,@DPTR
+   \   000133   A2E3         MOV       C,0xE0 /* A   */.3
+   \   000135   5008         JNC       ??ZDApp_ProcessNetworkJoin_18
+   \   000137   90....       MOV       DPTR,#zgChildAgingEnable
+   \   00013A   E0           MOVX      A,@DPTR
+   \   00013B   6401         XRL       A,#0x1
+   \   00013D   7016         JNZ       ??CrossCallReturnLabel_120
    \                     ??ZDApp_ProcessNetworkJoin_18:
-   \   000135   90....       MOV       DPTR,#devStartMode
-   \   000138   E0           MOVX      A,@DPTR
-   \   000139   6403         XRL       A,#0x3
-   \   00013B   700E         JNZ       ??CrossCallReturnLabel_120
+   \   00013F   90....       MOV       DPTR,#devStartMode
+   \   000142   E0           MOVX      A,@DPTR
+   \   000143   6403         XRL       A,#0x3
+   \   000145   700E         JNZ       ??CrossCallReturnLabel_120
    1724                {
    1725                  NLME_SetPollRate( zgRejoinPollRate );
-   \   00013D                ; Setup parameters for call to function NLME_SetPollRate
-   \   00013D   12....       LCALL     ?Subroutine40 & 0xFFFF
+   \   000147                ; Setup parameters for call to function NLME_SetPollRate
+   \   000147   12....       LCALL     ?Subroutine40 & 0xFFFF
    1726                }
    1727              }
    1728            }
    \                     ??CrossCallReturnLabel_44:
-   \   000140   8009         SJMP      ??CrossCallReturnLabel_120
+   \   00014A   8009         SJMP      ??CrossCallReturnLabel_120
    1729          #if defined ( ZIGBEEPRO )
    1730            else if ( devState != DEV_HOLD )
    \                     ??ZDApp_ProcessNetworkJoin_7:
-   \   000142   E0           MOVX      A,@DPTR
-   \   000143   6006         JZ        ??CrossCallReturnLabel_120
+   \   00014C   E0           MOVX      A,@DPTR
+   \   00014D   6006         JZ        ??CrossCallReturnLabel_120
    1731            {
    1732              #ifdef APP_TP2
    1733                if(devState == DEV_END_DEVICE_UNAUTH )
@@ -3601,18 +3611,18 @@ C:\Texas Instruments\Z-Stack 3.0.2\Components\stack\zdo\ZDApp.c
    1740          
    1741              // Notify the network
    1742              ZDApp_AnnounceNewAddress();
-   \   000145                ; Setup parameters for call to function ZDApp_AnnounceNewAddress
-   \   000145   12....       LCALL     `??ZDApp_AnnounceNewAddress::?relay`; Banked call to: ZDApp_AnnounceNewAddress
+   \   00014F                ; Setup parameters for call to function ZDApp_AnnounceNewAddress
+   \   00014F   12....       LCALL     `??ZDApp_AnnounceNewAddress::?relay`; Banked call to: ZDApp_AnnounceNewAddress
    1743          
    1744              // Notify apps
    1745              osal_set_event( ZDAppTaskID, ZDO_STATE_CHANGE_EVT );
-   \   000148                ; Setup parameters for call to function osal_set_event
-   \   000148   12....       LCALL     ?Subroutine15 & 0xFFFF
+   \   000152                ; Setup parameters for call to function osal_set_event
+   \   000152   12....       LCALL     ?Subroutine15 & 0xFFFF
    1746            }
    1747          #endif
    1748          }
    \                     ??CrossCallReturnLabel_120:
-   \   00014B   02....       LJMP      ??Subroutine50_0 & 0xFFFF
+   \   000155   02....       LJMP      ??Subroutine50_0 & 0xFFFF
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
    \                     ?Subroutine26:
@@ -9511,6 +9521,7 @@ C:\Texas Instruments\Z-Stack 3.0.2\Components\stack\zdo\ZDApp.c
         2      0   -> ZDApp_NVUpdate
         2      0   -> ZDApp_ResetTimerCancel
         2      0   -> ZDApp_SaveNwkKey
+        2      0   -> osal_pwrmgr_device
       0     16   ZDApp_DeviceConfigured
         0     16   -> osal_nv_read
       0     14   ZDApp_ForceConcentratorChange
@@ -9608,6 +9619,7 @@ C:\Texas Instruments\Z-Stack 3.0.2\Components\stack\zdo\ZDApp.c
         0     10   -> bdb_reportCommissioningState
         0     10   -> bdb_setNodeIsOnANetwork
         0     10   -> nwkNeighborInitTable
+        0     10   -> osal_pwrmgr_device
         0     10   -> osal_set_event
         0     10   -> osal_stop_timerEx
       0     24   ZDApp_ProcessOSALMsg
@@ -9903,7 +9915,7 @@ C:\Texas Instruments\Z-Stack 3.0.2\Components\stack\zdo\ZDApp.c
       11  ZDApp_ChangeMatchDescRespPermission
       22  ZDApp_ChangeState
       10  ZDApp_CoordStartPANIDConflictCB
-      62  ZDApp_DeviceAuthEvt
+      67  ZDApp_DeviceAuthEvt
       77  ZDApp_DeviceConfigured
      115  ZDApp_ForceConcentratorChange
       80  ZDApp_InMsgCB
@@ -9928,7 +9940,7 @@ C:\Texas Instruments\Z-Stack 3.0.2\Components\stack\zdo\ZDApp.c
      275  ZDApp_NwkDescListProcessing
       19  ZDApp_NwkStateUpdateCB
      104  ZDApp_ProcessMsgCBs
-     334  ZDApp_ProcessNetworkJoin
+     344  ZDApp_ProcessNetworkJoin
      148  ZDApp_ProcessOSALMsg
       92  ZDApp_ProcessSecEvent
       56  ZDApp_ProcessSecMsg
@@ -9999,7 +10011,7 @@ C:\Texas Instruments\Z-Stack 3.0.2\Components\stack\zdo\ZDApp.c
      450  -- Other
 
  
- 7 271 bytes in segment BANKED_CODE
+ 7 286 bytes in segment BANKED_CODE
    450 bytes in segment BANK_RELAYS
     13 bytes in segment XDATA_I
     13 bytes in segment XDATA_ID
@@ -10008,7 +10020,7 @@ C:\Texas Instruments\Z-Stack 3.0.2\Components\stack\zdo\ZDApp.c
  
    463 bytes of CODE     memory
     16 bytes of CONST    memory (+ 20 bytes shared)
- 7 271 bytes of HUGECODE memory
+ 7 286 bytes of HUGECODE memory
     78 bytes of XDATA    memory
 
 Errors: none

@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR C/C++ Compiler V10.30.1.6000 for 8051               22/Sep/2023  19:42:38
+# IAR C/C++ Compiler V10.30.1.6000 for 8051               10/Dec/2023  13:11:52
 # Copyright 2004-2018 IAR Systems AB.
 # PC-locked license - IAR Embedded Workbench for 8051
 #
@@ -13,32 +13,32 @@
 #                          
 #    Source file        =  
 #        C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\Source\OnBoard.c
+#        3.0.2\Projects\zstack\ZMain\TI2530DB\OnBoard.c
 #    Command line       =  
-#        -f C:\Users\Flemming\AppData\Local\Temp\EW9595.tmp ("C:\Texas
-#        Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\Source\OnBoard.c" -D
-#        SECURE=1 -D TC_LINKKEY_JOIN -D NV_INIT -D NV_RESTORE -D xPOWER_SAVING
+#        -f C:\Users\Flemming\AppData\Local\Temp\EWC435.tmp ("C:\Texas
+#        Instruments\Z-Stack 3.0.2\Projects\zstack\ZMain\TI2530DB\OnBoard.c" -D
+#        SECURE=1 -D TC_LINKKEY_JOIN -D NV_INIT -D NV_RESTORE -D POWER_SAVING
 #        -D NWK_AUTO_POLL -D xZTOOL_P1 -D xMT_TASK -D xMT_APP_FUNC -D
 #        xMT_SYS_FUNC -D xMT_ZDO_FUNC -D xMT_ZDO_MGMT -D xMT_APP_CNF_FUNC -D
 #        xLEGACY_LCD_DEBUG -D xLCD_SUPPORTED=DEBUG -D MULTICAST_ENABLED=FALSE
 #        -D ZCL_READ -D ZCL_WRITE -D ZCL_BASIC -D ZCL_IDENTIFY -D xZCL_SCENES
-#        -D xZCL_GROUPS -D ZCL_ON_OFF -D xZCL_DISCOVER -lC "C:\Texas
-#        Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\EndDeviceEB\List"
+#        -D xZCL_GROUPS -D ZCL_ON_OFF -D xZCL_DISCOVER -D ZCL_REPORTING_DEVICE
+#        -D ISR_KEYINTERRUPT -D HAL_LCD=FALSE -D HAL_UARTE=FALSE -D
+#        HAL_SPI=FALSE -D HAL_HID=FALSE -lC "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\EndDeviceEB\List"
 #        -lA "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\EndDeviceEB\List"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\EndDeviceEB\List"
 #        --diag_suppress Pe001,Pa010 -o "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\EndDeviceEB\Obj"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\EndDeviceEB\Obj"
 #        -e --debug --core=plain --dptr=16,1 --data_model=large
 #        --code_model=banked --calling_convention=xdata_reentrant
 #        --place_constants=data_rom --nr_virtual_regs 16 -f "C:\Texas
 #        Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
 #        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3
 #        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f "C:\Texas
 #        Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
 #        (-DZIGBEEPRO -DSECURE=1 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
 #        -DDEFAULT_CHANLIST=0x00000800 -DZDAPP_CONFIG_PAN_ID=0xFFFF
 #        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
@@ -54,69 +54,69 @@
 #        -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100 -DREJOIN_POLL_RATE=440
 #        -DREJOIN_BACKOFF=900000 -DREJOIN_SCAN=900000 -DENABLE_LED4_DISABLE_S1)
 #        -f "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wZCL.cfg"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\Tools\CC2530DB\f8wZCL.cfg"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\" -I
-#        "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\Source\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\Source\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\Source\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\ZMain\TI2530DB\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\Source\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\hal\include\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\ZMain\TI2530DB\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\hal\include\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mac\include\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mac\include\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mt\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\osal\include\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mt\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\services\saddr\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\osal\include\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\services\sdata\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\services\saddr\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\af\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\services\sdata\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\bdb\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\af\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\gp\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\bdb\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\gp\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\sec\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\sys\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\sec\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\zcl\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\sys\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\zcl\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\zmac\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\zmac\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
 #        -Ohz --require_prototypes)
 #    Locale             =  Danish_DNK.1252
 #    List file          =  
 #        C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\EndDeviceEB\List\OnBoard.lst
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\EndDeviceEB\List\OnBoard.lst
 #    Object file        =  
 #        C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\EndDeviceEB\Obj\OnBoard.r51
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\EndDeviceEB\Obj\OnBoard.r51
 #
 ###############################################################################
 
-C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\Source\OnBoard.c
+C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\ZMain\TI2530DB\OnBoard.c
       1          /**************************************************************************************************
       2            Filename:       OnBoard.c
       3            Revised:        $Date: 2012-11-15 11:48:16 -0800 (Thu, 15 Nov 2012) $
@@ -206,114 +206,113 @@ C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\Sou
      72          // Minimum length RAM "pattern" for Stack check
      73          #define MIN_RAM_INIT 12
      74          
-     75          #define ISR_KEYINTERRUPT
-     76          /*********************************************************************
-     77           * GLOBAL VARIABLES
-     78           */
-     79          
-     80          #if defined MAKE_CRC_SHDW
-     81          #pragma location="CRC_SHDW"
-     82          const CODE uint16 _crcShdw = 0xFFFF;
-     83          #pragma required=_crcShdw
-     84          
-     85          #elif !defined MT_UBL_FUNC
-     86          
-     87          #pragma location="LOCK_BITS_ADDRESS_SPACE"
+     75          /*********************************************************************
+     76           * GLOBAL VARIABLES
+     77           */
+     78          
+     79          #if defined MAKE_CRC_SHDW
+     80          #pragma location="CRC_SHDW"
+     81          const CODE uint16 _crcShdw = 0xFFFF;
+     82          #pragma required=_crcShdw
+     83          
+     84          #elif !defined MT_UBL_FUNC
+     85          
+     86          #pragma location="LOCK_BITS_ADDRESS_SPACE"
 
    \                                 In  segment LOCK_BITS_ADDRESS_SPACE, align 1
-     88          __no_init uint8 _lockBits[16];
+     87          __no_init uint8 _lockBits[16];
    \                     _lockBits:
    \   000000                DS 16
-     89          #pragma required=_lockBits
-     90          
-     91          #if defined ZCL_KEY_ESTABLISH
-     92          #include "zcl_cert_data.c"
-     93          #else
-     94          #pragma location="IEEE_ADDRESS_SPACE"
+     88          #pragma required=_lockBits
+     89          
+     90          #if defined ZCL_KEY_ESTABLISH
+     91          #include "zcl_cert_data.c"
+     92          #else
+     93          #pragma location="IEEE_ADDRESS_SPACE"
 
    \                                 In  segment IEEE_ADDRESS_SPACE, align 1
-     95          __no_init uint8 _nvIEEE[Z_EXTADDR_LEN];
+     94          __no_init uint8 _nvIEEE[Z_EXTADDR_LEN];
    \                     _nvIEEE:
    \   000000                DS 8
    \   000008                REQUIRE _lockBits
-     96          #pragma required=_nvIEEE
-     97          #endif
-     98          
-     99          #pragma location="RESERVED_ADDRESS_SPACE"
+     95          #pragma required=_nvIEEE
+     96          #endif
+     97          
+     98          #pragma location="RESERVED_ADDRESS_SPACE"
 
    \                                 In  segment RESERVED_ADDRESS_SPACE, align 1
-    100          __no_init uint8 _reserved[1932];
+     99          __no_init uint8 _reserved[1932];
    \                     _reserved:
    \   000000                DS 1932
    \   00078C                REQUIRE _nvIEEE
-    101          #pragma required=_reserved
-    102          #endif
-    103          
-    104          // 64-bit Extended Address of this device
+    100          #pragma required=_reserved
+    101          #endif
+    102          
+    103          // 64-bit Extended Address of this device
 
    \                                 In  segment XDATA_Z, align 1, keep-with-next
-    105          uint8 aExtendedAddress[8];
+    104          uint8 aExtendedAddress[8];
    \                     aExtendedAddress:
    \   000000                DS 8
    \   000008                REQUIRE __INIT_XDATA_Z
    \   000008                REQUIRE _reserved
-    106          
-    107          /*********************************************************************
-    108           * LOCAL VARIABLES
-    109           */
-    110          
-    111          // Registered keys task ID, initialized to NOT USED.
+    105          
+    106          /*********************************************************************
+    107           * LOCAL VARIABLES
+    108           */
+    109          
+    110          // Registered keys task ID, initialized to NOT USED.
 
    \                                 In  segment XDATA_I, align 1, keep-with-next
-    112          static uint8 registeredKeysTaskID = NO_TASK_ID;
+    111          static uint8 registeredKeysTaskID = NO_TASK_ID;
    \                     registeredKeysTaskID:
    \   000000                DS 1
    \   000001                REQUIRE `?<Initializer for registeredKeysTaskID>`
    \   000001                REQUIRE __INIT_XDATA_I
-    113          
-    114          /*********************************************************************
-    115           * LOCAL FUNCTIONS
-    116           */
-    117          static void ChkReset( void );
-    118          // function pointer for low voltage warning callback
+    112          
+    113          /*********************************************************************
+    114           * LOCAL FUNCTIONS
+    115           */
+    116          static void ChkReset( void );
+    117          // function pointer for low voltage warning callback
 
    \                                 In  segment XDATA_Z, align 1, keep-with-next
-    119          static void (*gpLowVoltageWarning)( uint8 voltLevel ) = (void*) NULL;
+    118          static void (*gpLowVoltageWarning)( uint8 voltLevel ) = (void*) NULL;
    \                     gpLowVoltageWarning:
    \   000000                DS 2
    \   000002                REQUIRE __INIT_XDATA_Z
-    120          
-    121          /*********************************************************************
-    122           * @fn      InitBoard()
-    123           * @brief   Initialize the CC2420DB Board Peripherals
-    124           * @param   level: COLD,WARM,READY
-    125           * @return  None
-    126           */
+    119          
+    120          /*********************************************************************
+    121           * @fn      InitBoard()
+    122           * @brief   Initialize the CC2420DB Board Peripherals
+    123           * @param   level: COLD,WARM,READY
+    124           * @return  None
+    125           */
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
-    127          void InitBoard( uint8 level )
+    126          void InitBoard( uint8 level )
    \                     InitBoard:
-    128          {
+    127          {
    \   000000   74F7         MOV       A,#-0x9
    \   000002   12....       LCALL     ?BANKED_ENTER_XDATA
    \   000005                ; Saved register size: 9
    \   000005                ; Auto size: 0
    \   000005   E9           MOV       A,R1
-    129            if ( level == OB_COLD )
+    128            if ( level == OB_COLD )
    \   000006   7020         JNZ       ??InitBoard_0
-    130            {
-    131              // IAR does not zero-out this byte below the XSTACK.
-    132              *(uint8 *)0x0 = 0;
+    129            {
+    130              // IAR does not zero-out this byte below the XSTACK.
+    131              *(uint8 *)0x0 = 0;
    \   000008   900000       MOV       DPTR,#0x0
    \   00000B   E4           CLR       A
    \   00000C   F0           MOVX      @DPTR,A
-    133              // Interrupts off
-    134              osal_int_disable( INTS_ALL );
+    132              // Interrupts off
+    133              osal_int_disable( INTS_ALL );
    \   00000D                ; Setup parameters for call to function osal_int_disable
    \   00000D   79FF         MOV       R1,#-0x1
    \   00000F   12....       LCALL     `??osal_int_disable::?relay`; Banked call to: osal_int_disable
-    135              // Check for Brown-Out reset
-    136              ChkReset();
+    134              // Check for Brown-Out reset
+    135              ChkReset();
    \   000012   E59D         MOV       A,0x9d
    \   000014   5418         ANL       A,#0x18
    \   000016   F8           MOV       R0,A
@@ -327,23 +326,23 @@ C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\Sou
    \   000023                ; Setup parameters for call to function halAssertHandler
    \   000023   12....       LCALL     `??halAssertHandler::?relay`; Banked call to: halAssertHandler
    \   000026   8009         SJMP      ??InitBoard_1
-    137            }
-    138            else  // !OB_COLD
-    139            {
-    140              /* Initialize Key stuff */
-    141              #if defined (ISR_KEYINTERRUPT)
-    142              HalKeyConfig(HAL_KEY_INTERRUPT_ENABLE , OnBoard_KeyCallback);
+    136            }
+    137            else  // !OB_COLD
+    138            {
+    139              /* Initialize Key stuff */
+    140              #if defined (ISR_KEYINTERRUPT)
+    141              HalKeyConfig(HAL_KEY_INTERRUPT_ENABLE , OnBoard_KeyCallback);
    \                     ??InitBoard_0:
    \   000028                ; Setup parameters for call to function HalKeyConfig
    \   000028   7A..         MOV       R2,#`??OnBoard_KeyCallback::?relay` & 0xff
    \   00002A   7B..         MOV       R3,#(`??OnBoard_KeyCallback::?relay` >> 8) & 0xff
    \   00002C   7901         MOV       R1,#0x1
    \   00002E   12....       LCALL     `??HalKeyConfig::?relay`; Banked call to: HalKeyConfig
-    143              #else
-    144              HalKeyConfig(HAL_KEY_INTERRUPT_DISABLE, OnBoard_KeyCallback);
-    145              #endif
-    146            }
-    147          }
+    142              #else
+    143              HalKeyConfig(HAL_KEY_INTERRUPT_DISABLE, OnBoard_KeyCallback);
+    144              #endif
+    145            }
+    146          }
    \                     ??InitBoard_1:
    \   000031                REQUIRE ?Subroutine0
    \   000031                REQUIRE SLEEPSTA
@@ -353,105 +352,105 @@ C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\Sou
    \                     ?Subroutine0:
    \   000000   7F01         MOV       R7,#0x1
    \   000002   02....       LJMP      ?BANKED_LEAVE_XDATA
-    148          
-    149          /*********************************************************************
-    150           * @fn      ChkReset()
-    151           * @brief   Check reset bits - if reset cause is unknown, assume a
-    152           *          brown-out (low power), assume batteries are not reliable,
-    153           *          hang in a loop and sequence through the LEDs.
-    154           * @param   None
-    155           * @return  None
-    156           *********************************************************************/
-    157          void ChkReset( void )
-    158          {
-    159            uint8 rib;
-    160          
-    161            // Isolate reset indicator bits
-    162            rib = SLEEPSTA & LRESET;
-    163          
-    164            if ( rib == RESETPO )
-    165            {
-    166              // Put code here to handle Power-On reset
-    167            }
-    168            else if ( rib == RESETEX )
-    169            {
-    170              // Put code here to handle External reset
-    171            }
-    172            else if ( rib == RESETWD )
-    173            {
-    174              // Put code here to handle WatchDog reset
-    175            }
-    176            else  // Unknown reason - not expected.
-    177            {
-    178              HAL_ASSERT(0);
-    179            }
-    180          }
-    181          
-    182          /*********************************************************************
-    183           *                        "Keyboard" Support
-    184           *********************************************************************/
-    185          
-    186          /*********************************************************************
-    187           * Keyboard Register function
-    188           *
-    189           * The keyboard handler is setup to send all keyboard changes to
-    190           * one task (if a task is registered).
-    191           *
-    192           * If a task registers, it will get all the keys. You can change this
-    193           * to register for individual keys.
-    194           *********************************************************************/
+    147          
+    148          /*********************************************************************
+    149           * @fn      ChkReset()
+    150           * @brief   Check reset bits - if reset cause is unknown, assume a
+    151           *          brown-out (low power), assume batteries are not reliable,
+    152           *          hang in a loop and sequence through the LEDs.
+    153           * @param   None
+    154           * @return  None
+    155           *********************************************************************/
+    156          void ChkReset( void )
+    157          {
+    158            uint8 rib;
+    159          
+    160            // Isolate reset indicator bits
+    161            rib = SLEEPSTA & LRESET;
+    162          
+    163            if ( rib == RESETPO )
+    164            {
+    165              // Put code here to handle Power-On reset
+    166            }
+    167            else if ( rib == RESETEX )
+    168            {
+    169              // Put code here to handle External reset
+    170            }
+    171            else if ( rib == RESETWD )
+    172            {
+    173              // Put code here to handle WatchDog reset
+    174            }
+    175            else  // Unknown reason - not expected.
+    176            {
+    177              HAL_ASSERT(0);
+    178            }
+    179          }
+    180          
+    181          /*********************************************************************
+    182           *                        "Keyboard" Support
+    183           *********************************************************************/
+    184          
+    185          /*********************************************************************
+    186           * Keyboard Register function
+    187           *
+    188           * The keyboard handler is setup to send all keyboard changes to
+    189           * one task (if a task is registered).
+    190           *
+    191           * If a task registers, it will get all the keys. You can change this
+    192           * to register for individual keys.
+    193           *********************************************************************/
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
-    195          uint8 RegisterForKeys( uint8 task_id )
+    194          uint8 RegisterForKeys( uint8 task_id )
    \                     RegisterForKeys:
-    196          {
+    195          {
    \   000000   C082         PUSH      DPL
    \   000002   C083         PUSH      DPH
    \   000004                ; Saved register size: 2
    \   000004                ; Auto size: 0
-    197            // Allow only the first task
-    198            if ( registeredKeysTaskID == NO_TASK_ID )
+    196            // Allow only the first task
+    197            if ( registeredKeysTaskID == NO_TASK_ID )
    \   000004   90....       MOV       DPTR,#registeredKeysTaskID
    \   000007   E0           MOVX      A,@DPTR
    \   000008   F4           CPL       A
    \   000009   7006         JNZ       ??RegisterForKeys_0
-    199            {
-    200              registeredKeysTaskID = task_id;
+    198            {
+    199              registeredKeysTaskID = task_id;
    \   00000B   E9           MOV       A,R1
    \   00000C   F0           MOVX      @DPTR,A
-    201              return ( true );
+    200              return ( true );
    \   00000D   7901         MOV       R1,#0x1
    \   00000F   8002         SJMP      ??RegisterForKeys_1
-    202            }
-    203            else
-    204              return ( false );
+    201            }
+    202            else
+    203              return ( false );
    \                     ??RegisterForKeys_0:
    \   000011   7900         MOV       R1,#0x0
    \                     ??RegisterForKeys_1:
    \   000013   02....       LJMP      ?Subroutine1 & 0xFFFF
-    205          }
+    204          }
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
    \                     ?Subroutine1:
    \   000000   D083         POP       DPH
    \   000002   D082         POP       DPL
    \   000004   02....       LJMP      ?BRET
-    206          
-    207          /*********************************************************************
-    208           * @fn      OnBoard_SendKeys
-    209           *
-    210           * @brief   Send "Key Pressed" message to application.
-    211           *
-    212           * @param   keys  - keys that were pressed
-    213           *          state - shifted
-    214           *
-    215           * @return  status
-    216           *********************************************************************/
+    205          
+    206          /*********************************************************************
+    207           * @fn      OnBoard_SendKeys
+    208           *
+    209           * @brief   Send "Key Pressed" message to application.
+    210           *
+    211           * @param   keys  - keys that were pressed
+    212           *          state - shifted
+    213           *
+    214           * @return  status
+    215           *********************************************************************/
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
-    217          uint8 OnBoard_SendKeys( uint8 keys, uint8 state )
+    216          uint8 OnBoard_SendKeys( uint8 keys, uint8 state )
    \                     OnBoard_SendKeys:
-    218          {
+    217          {
    \   000000                REQUIRE ?V0
    \   000000                REQUIRE ?V1
    \   000000   74F6         MOV       A,#-0xa
@@ -462,36 +461,36 @@ C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\Sou
    \   000006   FE           MOV       R6,A
    \   000007   EA           MOV       A,R2
    \   000008   FF           MOV       R7,A
-    219            keyChange_t *msgPtr;
-    220          
-    221            if ( registeredKeysTaskID != NO_TASK_ID )
+    218            keyChange_t *msgPtr;
+    219          
+    220            if ( registeredKeysTaskID != NO_TASK_ID )
    \   000009   90....       MOV       DPTR,#registeredKeysTaskID
    \   00000C   E0           MOVX      A,@DPTR
    \   00000D   F4           CPL       A
    \   00000E   602B         JZ        ??OnBoard_SendKeys_0
-    222            {
-    223              // Send the address to the task
-    224              msgPtr = (keyChange_t *)osal_msg_allocate( sizeof(keyChange_t) );
+    221            {
+    222              // Send the address to the task
+    223              msgPtr = (keyChange_t *)osal_msg_allocate( sizeof(keyChange_t) );
    \   000010                ; Setup parameters for call to function osal_msg_allocate
    \   000010   7A04         MOV       R2,#0x4
    \   000012   7B00         MOV       R3,#0x0
    \   000014   12....       LCALL     `??osal_msg_allocate::?relay`; Banked call to: osal_msg_allocate
-    225              if ( msgPtr )
+    224              if ( msgPtr )
    \   000017   EA           MOV       A,R2
    \   000018   4B           ORL       A,R3
    \   000019   601C         JZ        ??OnBoard_SendKeys_1
-    226              {
-    227                msgPtr->hdr.event = KEY_CHANGE;
+    225              {
+    226                msgPtr->hdr.event = KEY_CHANGE;
    \   00001B   8A82         MOV       DPL,R2
    \   00001D   8B83         MOV       DPH,R3
    \   00001F   74C0         MOV       A,#-0x40
    \   000021   F0           MOVX      @DPTR,A
-    228                msgPtr->state = state;
+    227                msgPtr->state = state;
    \   000022   EF           MOV       A,R7
    \   000023   A3           INC       DPTR
    \   000024   A3           INC       DPTR
    \   000025   F0           MOVX      @DPTR,A
-    229                msgPtr->keys = keys;
+    228                msgPtr->keys = keys;
    \   000026   EE           MOV       A,R6
    \   000027   8A82         MOV       DPL,R2
    \   000029   8B83         MOV       DPH,R3
@@ -499,174 +498,174 @@ C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\Sou
    \   00002C   A3           INC       DPTR
    \   00002D   A3           INC       DPTR
    \   00002E   F0           MOVX      @DPTR,A
-    230          
-    231                osal_msg_send( registeredKeysTaskID, (uint8 *)msgPtr );
+    229          
+    230                osal_msg_send( registeredKeysTaskID, (uint8 *)msgPtr );
    \   00002F                ; Setup parameters for call to function osal_msg_send
    \   00002F   90....       MOV       DPTR,#registeredKeysTaskID
    \   000032   E0           MOVX      A,@DPTR
    \   000033   F9           MOV       R1,A
    \   000034   12....       LCALL     `??osal_msg_send::?relay`; Banked call to: osal_msg_send
-    232              }
-    233              return ( ZSuccess );
+    231              }
+    232              return ( ZSuccess );
    \                     ??OnBoard_SendKeys_1:
    \   000037   7900         MOV       R1,#0x0
    \   000039   8002         SJMP      ??OnBoard_SendKeys_2
-    234            }
-    235            else
-    236              return ( ZFailure );
+    233            }
+    234            else
+    235              return ( ZFailure );
    \                     ??OnBoard_SendKeys_0:
    \   00003B   7901         MOV       R1,#0x1
    \                     ??OnBoard_SendKeys_2:
    \   00003D   7F02         MOV       R7,#0x2
    \   00003F   02....       LJMP      ?BANKED_LEAVE_XDATA
-    237          }
-    238          
-    239          /*********************************************************************
-    240           * @fn      OnBoard_KeyCallback
-    241           *
-    242           * @brief   Callback service for keys
-    243           *
-    244           * @param   keys  - keys that were pressed
-    245           *          state - shifted
-    246           *
-    247           * @return  void
-    248           *********************************************************************/
+    236          }
+    237          
+    238          /*********************************************************************
+    239           * @fn      OnBoard_KeyCallback
+    240           *
+    241           * @brief   Callback service for keys
+    242           *
+    243           * @param   keys  - keys that were pressed
+    244           *          state - shifted
+    245           *
+    246           * @return  void
+    247           *********************************************************************/
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
-    249          void OnBoard_KeyCallback ( uint8 keys, uint8 state )
+    248          void OnBoard_KeyCallback ( uint8 keys, uint8 state )
    \                     OnBoard_KeyCallback:
-    250          {
+    249          {
    \   000000   74F7         MOV       A,#-0x9
    \   000002   12....       LCALL     ?BANKED_ENTER_XDATA
    \   000005                ; Saved register size: 9
    \   000005                ; Auto size: 0
    \   000005   E9           MOV       A,R1
-    251            uint8 shift;
-    252            (void)state;
-    253          
-    254            shift = (keys & HAL_KEY_SW_6) ? true : false;
-    255          
-    256            if ( OnBoard_SendKeys( keys, shift ) != ZSuccess )
+    250            uint8 shift;
+    251            (void)state;
+    252          
+    253            shift = (keys & HAL_KEY_SW_6) ? true : false;
+    254          
+    255            if ( OnBoard_SendKeys( keys, shift ) != ZSuccess )
    \   000006                ; Setup parameters for call to function OnBoard_SendKeys
    \   000006   A2E5         MOV       C,0xE0 /* A   */.5
    \   000008   E4           CLR       A
    \   000009   33           RLC       A
    \   00000A   FA           MOV       R2,A
    \   00000B   12....       LCALL     `??OnBoard_SendKeys::?relay`; Banked call to: OnBoard_SendKeys
-    257            {
-    258              // Process SW1 here
-    259              if ( keys & HAL_KEY_SW_1 )  // Switch 1
-    260              {
-    261              }
-    262              // Process SW2 here
-    263              if ( keys & HAL_KEY_SW_2 )  // Switch 2
-    264              {
-    265              }
-    266              // Process SW3 here
-    267              if ( keys & HAL_KEY_SW_3 )  // Switch 3
-    268              {
-    269              }
-    270              // Process SW4 here
-    271              if ( keys & HAL_KEY_SW_4 )  // Switch 4
-    272              {
-    273              }
-    274              // Process SW5 here
-    275              if ( keys & HAL_KEY_SW_5 )  // Switch 5
-    276              {
-    277              }
-    278              // Process SW6 here
-    279              if ( keys & HAL_KEY_SW_6 )  // Switch 6
-    280              {
-    281              }
-    282            }
-    283          }
+    256            {
+    257              // Process SW1 here
+    258              if ( keys & HAL_KEY_SW_1 )  // Switch 1
+    259              {
+    260              }
+    261              // Process SW2 here
+    262              if ( keys & HAL_KEY_SW_2 )  // Switch 2
+    263              {
+    264              }
+    265              // Process SW3 here
+    266              if ( keys & HAL_KEY_SW_3 )  // Switch 3
+    267              {
+    268              }
+    269              // Process SW4 here
+    270              if ( keys & HAL_KEY_SW_4 )  // Switch 4
+    271              {
+    272              }
+    273              // Process SW5 here
+    274              if ( keys & HAL_KEY_SW_5 )  // Switch 5
+    275              {
+    276              }
+    277              // Process SW6 here
+    278              if ( keys & HAL_KEY_SW_6 )  // Switch 6
+    279              {
+    280              }
+    281            }
+    282          }
    \   00000E   80..         SJMP      ?Subroutine0
-    284          
-    285          /*********************************************************************
-    286           *                  Low Voltage Protectiion Support
-    287           *********************************************************************/
-    288          
-    289          /*********************************************************************
-    290           * @fn      RegisterVoltageWarningCB
-    291           *
-    292           * @brief   Register Low Voltage Warning Callback
-    293           *
-    294           * @param   pVoltWarnCB - fundion pointer of the callback
-    295           *
-    296           * @return  none
-    297           *********************************************************************/
+    283          
+    284          /*********************************************************************
+    285           *                  Low Voltage Protectiion Support
+    286           *********************************************************************/
+    287          
+    288          /*********************************************************************
+    289           * @fn      RegisterVoltageWarningCB
+    290           *
+    291           * @brief   Register Low Voltage Warning Callback
+    292           *
+    293           * @param   pVoltWarnCB - fundion pointer of the callback
+    294           *
+    295           * @return  none
+    296           *********************************************************************/
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
-    298          void RegisterVoltageWarningCB( void (*pVoltWarnCB)(uint8) )
+    297          void RegisterVoltageWarningCB( void (*pVoltWarnCB)(uint8) )
    \                     RegisterVoltageWarningCB:
-    299          {
+    298          {
    \   000000   C082         PUSH      DPL
    \   000002   C083         PUSH      DPH
    \   000004                ; Saved register size: 2
    \   000004                ; Auto size: 0
-    300            gpLowVoltageWarning = pVoltWarnCB;
+    299            gpLowVoltageWarning = pVoltWarnCB;
    \   000004   90....       MOV       DPTR,#gpLowVoltageWarning
    \   000007   EA           MOV       A,R2
    \   000008   F0           MOVX      @DPTR,A
    \   000009   A3           INC       DPTR
    \   00000A   EB           MOV       A,R3
    \   00000B   F0           MOVX      @DPTR,A
-    301          }
+    300          }
    \   00000C   02....       LJMP      ?Subroutine1 & 0xFFFF
-    302          
-    303          /*********************************************************************
-    304           * @fn      OnBoard_CheckVoltage
-    305           *
-    306           * @brief   Check voltage and notify the callback of the status
-    307           *
-    308           * @param   none
-    309           *
-    310           * @return  TRUE  - The voltage is good for NV writing
-    311           *          FALSE - The voltage is not high enough for NV writing
-    312           *********************************************************************/
+    301          
+    302          /*********************************************************************
+    303           * @fn      OnBoard_CheckVoltage
+    304           *
+    305           * @brief   Check voltage and notify the callback of the status
+    306           *
+    307           * @param   none
+    308           *
+    309           * @return  TRUE  - The voltage is good for NV writing
+    310           *          FALSE - The voltage is not high enough for NV writing
+    311           *********************************************************************/
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
-    313          bool OnBoard_CheckVoltage( void )
+    312          bool OnBoard_CheckVoltage( void )
    \                     OnBoard_CheckVoltage:
-    314          {
+    313          {
    \   000000   74F7         MOV       A,#-0x9
    \   000002   12....       LCALL     ?BANKED_ENTER_XDATA
    \   000005                ; Saved register size: 9
    \   000005                ; Auto size: 0
-    315            uint8 voltageMeasured;
-    316            uint8 howGood;
-    317          
-    318            voltageMeasured = HalAdcCheckVddRaw();
+    314            uint8 voltageMeasured;
+    315            uint8 howGood;
+    316          
+    317            voltageMeasured = HalAdcCheckVddRaw();
    \   000005                ; Setup parameters for call to function HalAdcCheckVddRaw
    \   000005   12....       LCALL     `??HalAdcCheckVddRaw::?relay`; Banked call to: HalAdcCheckVddRaw
    \   000008   E9           MOV       A,R1
    \   000009   F8           MOV       R0,A
-    319          
-    320            if ( voltageMeasured > VDD_MIN_GOOD )
+    318          
+    319            if ( voltageMeasured > VDD_MIN_GOOD )
    \   00000A   C3           CLR       C
    \   00000B   9453         SUBB      A,#0x53
    \   00000D   5025         JNC       ??OnBoard_CheckVoltage_0
-    321            {
-    322              howGood = VOLT_LEVEL_GOOD;
-    323            }
-    324            else if ( voltageMeasured > VDD_MIN_NV )
+    320            {
+    321              howGood = VOLT_LEVEL_GOOD;
+    322            }
+    323            else if ( voltageMeasured > VDD_MIN_NV )
    \   00000F   E9           MOV       A,R1
    \   000010   C3           CLR       C
    \   000011   944F         SUBB      A,#0x4f
    \   000013   4004         JC        ??OnBoard_CheckVoltage_1
-    325            {
-    326              howGood = VOLT_LEVEL_CAUTIOUS;
+    324            {
+    325              howGood = VOLT_LEVEL_CAUTIOUS;
    \   000015   7E01         MOV       R6,#0x1
    \   000017   8002         SJMP      ??OnBoard_CheckVoltage_2
-    327            }
-    328            else
-    329            {
-    330              howGood = VOLT_LEVEL_BAD;
+    326            }
+    327            else
+    328            {
+    329              howGood = VOLT_LEVEL_BAD;
    \                     ??OnBoard_CheckVoltage_1:
    \   000019   7E00         MOV       R6,#0x0
-    331            }
-    332              
-    333            if ( gpLowVoltageWarning )
+    330            }
+    331              
+    332            if ( gpLowVoltageWarning )
    \                     ??OnBoard_CheckVoltage_2:
    \   00001B   90....       MOV       DPTR,#gpLowVoltageWarning
    \   00001E   E0           MOVX      A,@DPTR
@@ -677,10 +676,10 @@ C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\Sou
    \   000023   E8           MOV       A,R0
    \   000024   49           ORL       A,R1
    \   000025   600A         JZ        ??OnBoard_CheckVoltage_3
-    334            {
-    335              if ( howGood < VOLT_LEVEL_GOOD )
-    336              {
-    337                gpLowVoltageWarning( howGood );
+    333            {
+    334              if ( howGood < VOLT_LEVEL_GOOD )
+    335              {
+    336                gpLowVoltageWarning( howGood );
    \   000027                ; Setup parameters for indirect call
    \   000027   EE           MOV       A,R6
    \   000028   F9           MOV       R1,A
@@ -688,10 +687,10 @@ C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\Sou
    \   00002A   F583         MOV       DPH,A
    \   00002C   8882         MOV       DPL,R0
    \   00002E   12....       LCALL     ?CALL_IND
-    338              }
-    339            }
-    340          
-    341            return ( howGood > VOLT_LEVEL_BAD );
+    337              }
+    338            }
+    339          
+    340            return ( howGood > VOLT_LEVEL_BAD );
    \                     ??OnBoard_CheckVoltage_3:
    \   000031   EE           MOV       A,R6
    \   000032   6004         JZ        ??OnBoard_CheckVoltage_4
@@ -702,49 +701,49 @@ C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\Sou
    \   000038   7900         MOV       R1,#0x0
    \                     ??OnBoard_CheckVoltage_5:
    \   00003A   02....       LJMP      ?Subroutine0 & 0xFFFF
-    342          }
-    343          
-    344          /*********************************************************************
-    345           * @fn      OnBoard_stack_used
-    346           *
-    347           * @brief   Runs through the stack looking for touched memory.
-    348           *
-    349           * @param   none
-    350           *
-    351           * @return  Maximum number of bytes used by the stack.
-    352           *********************************************************************/
+    341          }
+    342          
+    343          /*********************************************************************
+    344           * @fn      OnBoard_stack_used
+    345           *
+    346           * @brief   Runs through the stack looking for touched memory.
+    347           *
+    348           * @param   none
+    349           *
+    350           * @return  Maximum number of bytes used by the stack.
+    351           *********************************************************************/
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
-    353          uint16 OnBoard_stack_used(void)
+    352          uint16 OnBoard_stack_used(void)
    \                     OnBoard_stack_used:
-    354          {
+    353          {
    \   000000   C082         PUSH      DPL
    \   000002   C083         PUSH      DPH
    \   000004                ; Saved register size: 2
    \   000004                ; Auto size: 0
-    355            uint8 const *ptr;
-    356            uint8 cnt = 0;
+    354            uint8 const *ptr;
+    355            uint8 cnt = 0;
    \   000004   7800         MOV       R0,#0x0
-    357          
-    358            for (ptr = CSTACK_END; ptr > CSTACK_BEG; ptr--)
+    356          
+    357            for (ptr = CSTACK_END; ptr > CSTACK_BEG; ptr--)
    \   000006   7582..       MOV       DPL,#(SFE(XSTACK) + 255) & 0xff
    \   000009   7583..       MOV       DPH,#((SFE(XSTACK) - 1) >> 8) & 0xff
    \   00000C   800E         SJMP      ??OnBoard_stack_used_0
-    359            {
-    360              if (STACK_INIT_VALUE == *ptr)
-    361              {
-    362                if (++cnt >= MIN_RAM_INIT)
-    363                {
-    364                  ptr += MIN_RAM_INIT;
-    365                  break;
-    366                }
-    367              }
-    368              else
-    369              {
-    370                cnt = 0;
+    358            {
+    359              if (STACK_INIT_VALUE == *ptr)
+    360              {
+    361                if (++cnt >= MIN_RAM_INIT)
+    362                {
+    363                  ptr += MIN_RAM_INIT;
+    364                  break;
+    365                }
+    366              }
+    367              else
+    368              {
+    369                cnt = 0;
    \                     ??OnBoard_stack_used_1:
    \   00000E   7800         MOV       R0,#0x0
-    371              }
+    370              }
    \                     ??OnBoard_stack_used_2:
    \   000010   E582         MOV       A,DPL
    \   000012   24FF         ADD       A,#-0x1
@@ -772,9 +771,9 @@ C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\Sou
    \   000037   F582         MOV       DPL,A
    \   000039   5002         JNC       ??OnBoard_stack_used_3
    \   00003B   0583         INC       DPH
-    372            }
-    373          
-    374            return (uint16)(CSTACK_END - ptr + 1);
+    371            }
+    372          
+    373            return (uint16)(CSTACK_END - ptr + 1);
    \                     ??OnBoard_stack_used_3:
    \   00003D   74..         MOV       A,#(SFE(XSTACK) + 255) & 0xff
    \   00003F   C3           CLR       C
@@ -791,25 +790,25 @@ C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\Sou
    \   00004E   FB           MOV       R3,A
    \   00004F                REQUIRE ?Subroutine1
    \   00004F                ; // Fall through to label ?Subroutine1
-    375          }
-    376          
-    377          /*********************************************************************
-    378           * @fn      _itoa
-    379           *
-    380           * @brief   convert a 16bit number to ASCII
-    381           *
-    382           * @param   num -
-    383           *          buf -
-    384           *          radix -
-    385           *
-    386           * @return  void
-    387           *
-    388           *********************************************************************/
+    374          }
+    375          
+    376          /*********************************************************************
+    377           * @fn      _itoa
+    378           *
+    379           * @brief   convert a 16bit number to ASCII
+    380           *
+    381           * @param   num -
+    382           *          buf -
+    383           *          radix -
+    384           *
+    385           * @return  void
+    386           *
+    387           *********************************************************************/
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
-    389          void _itoa(uint16 num, uint8 *buf, uint8 radix)
+    388          void _itoa(uint16 num, uint8 *buf, uint8 radix)
    \                     _itoa:
-    390          {
+    389          {
    \   000000                REQUIRE ?V0
    \   000000                REQUIRE ?V1
    \   000000                REQUIRE ?V2
@@ -829,21 +828,21 @@ C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\Sou
    \   00000C   EB           MOV       A,R3
    \   00000D   FF           MOV       R7,A
    \   00000E   89..         MOV       ?V3,R1
-    391            char c,i;
-    392            uint8 *p, rst[5];
-    393          
-    394            p = rst;
+    390            char c,i;
+    391            uint8 *p, rst[5];
+    392          
+    393            p = rst;
    \   000010   A8..         MOV       R0,?XSP + 0
    \   000012   A9..         MOV       R1,?XSP + 1
    \   000014   88..         MOV       ?V0,R0
    \   000016   89..         MOV       ?V1,R1
-    395            for ( i=0; i<5; i++,p++ )
+    394            for ( i=0; i<5; i++,p++ )
    \   000018   75..00       MOV       ?V2,#0x0
    \   00001B   E5..         MOV       A,?V3
    \   00001D   F5..         MOV       ?V4,A
    \   00001F   75..00       MOV       ?V5,#0x0
-    396            {
-    397              c = num % radix;  // Isolate a digit
+    395            {
+    396              c = num % radix;  // Isolate a digit
    \                     ??_itoa_0:
    \   000022   EE           MOV       A,R6
    \   000023   F8           MOV       R0,A
@@ -854,7 +853,7 @@ C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\Sou
    \   00002A   12....       LCALL     ?US_DIV_MOD
    \   00002D   EA           MOV       A,R2
    \   00002E   F8           MOV       R0,A
-    398              *p = c + (( c < 10 ) ? '0' : '7');  // Convert to Ascii
+    397              *p = c + (( c < 10 ) ? '0' : '7');  // Convert to Ascii
    \   00002F   940A         SUBB      A,#0xa
    \   000031   5004         JNC       ??_itoa_1
    \   000033   7930         MOV       R1,#0x30
@@ -867,7 +866,7 @@ C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\Sou
    \   00003B   85..82       MOV       DPL,?V0
    \   00003E   85..83       MOV       DPH,?V1
    \   000041   F0           MOVX      @DPTR,A
-    399              num /= radix;
+    398              num /= radix;
    \   000042   EE           MOV       A,R6
    \   000043   F8           MOV       R0,A
    \   000044   EF           MOV       A,R7
@@ -879,12 +878,12 @@ C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\Sou
    \   00004F   89..         MOV       ?V7,R1
    \   000051   AE..         MOV       R6,?V6
    \   000053   AF..         MOV       R7,?V7
-    400              if ( !num )
+    399              if ( !num )
    \   000055   E8           MOV       A,R0
    \   000056   4F           ORL       A,R7
    \   000057   600F         JZ        ??_itoa_3
-    401                break;
-    402            }
+    400                break;
+    401            }
    \   000059   05..         INC       ?V2
    \   00005B   A3           INC       DPTR
    \   00005C   8582..       MOV       ?V0,DPL
@@ -892,11 +891,11 @@ C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\Sou
    \   000062   E5..         MOV       A,?V2
    \   000064   9405         SUBB      A,#0x5
    \   000066   40BA         JC        ??_itoa_0
-    403          
-    404            for ( c=0 ; c<=i; c++ )
+    402          
+    403            for ( c=0 ; c<=i; c++ )
    \                     ??_itoa_3:
    \   000068   7800         MOV       R0,#0x0
-    405              *buf++ = *p--;  // Reverse character order
+    404              *buf++ = *p--;  // Reverse character order
    \                     ??_itoa_4:
    \   00006A   85..82       MOV       DPL,?V0
    \   00006D   85..83       MOV       DPH,?V1
@@ -918,69 +917,69 @@ C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\Sou
    \   00008A   C3           CLR       C
    \   00008B   98           SUBB      A,R0
    \   00008C   50DC         JNC       ??_itoa_4
-    406          
-    407            *buf = '\0';
+    405          
+    406            *buf = '\0';
    \   00008E   E4           CLR       A
    \   00008F   F0           MOVX      @DPTR,A
-    408          }
+    407          }
    \   000090   7405         MOV       A,#0x5
    \   000092   12....       LCALL     ?DEALLOC_XSTACK8
    \   000095   7F08         MOV       R7,#0x8
    \   000097   02....       LJMP      ?BANKED_LEAVE_XDATA
-    409          
-    410          /*********************************************************************
-    411           * @fn        Onboard_rand
-    412           *
-    413           * @brief    Random number generator
-    414           *
-    415           * @param   none
-    416           *
-    417           * @return  uint16 - new random number
-    418           *
-    419           *********************************************************************/
+    408          
+    409          /*********************************************************************
+    410           * @fn        Onboard_rand
+    411           *
+    412           * @brief    Random number generator
+    413           *
+    414           * @param   none
+    415           *
+    416           * @return  uint16 - new random number
+    417           *
+    418           *********************************************************************/
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
-    420          uint16 Onboard_rand( void )
+    419          uint16 Onboard_rand( void )
    \                     Onboard_rand:
-    421          {
+    420          {
    \   000000   C082         PUSH      DPL
    \   000002   C083         PUSH      DPH
    \   000004                ; Saved register size: 2
    \   000004                ; Auto size: 0
-    422            return ( MAC_RADIO_RANDOM_WORD() );
+    421            return ( MAC_RADIO_RANDOM_WORD() );
    \   000004                ; Setup parameters for call to function macMcuRandomWord
    \   000004   12....       LCALL     `??macMcuRandomWord::?relay`; Banked call to: macMcuRandomWord
    \   000007   02....       LJMP      ?Subroutine1 & 0xFFFF
-    423          }
-    424          
-    425          /*********************************************************************
-    426           * @fn        Onboard_wait
-    427           *
-    428           * @brief    Delay wait
-    429           *
-    430           * @param   uint16 - time to wait
-    431           *
-    432           * @return  none
-    433           *
-    434           *********************************************************************/
+    422          }
+    423          
+    424          /*********************************************************************
+    425           * @fn        Onboard_wait
+    426           *
+    427           * @brief    Delay wait
+    428           *
+    429           * @param   uint16 - time to wait
+    430           *
+    431           * @return  none
+    432           *
+    433           *********************************************************************/
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
-    435          void Onboard_wait( uint16 timeout )
+    434          void Onboard_wait( uint16 timeout )
    \                     Onboard_wait:
-    436          {
+    435          {
    \   000000                ; Saved register size: 0
    \   000000                ; Auto size: 0
    \   000000   8003         SJMP      ??Onboard_wait_0
-    437            while (timeout--)
-    438            {
-    439              asm("NOP");
+    436            while (timeout--)
+    437            {
+    438              asm("NOP");
    \                     ??Onboard_wait_1:
    \   000002   00           NOP
-    440              asm("NOP");
+    439              asm("NOP");
    \   000003   00           NOP
-    441              asm("NOP");
+    440              asm("NOP");
    \   000004   00           NOP
-    442            }
+    441            }
    \                     ??Onboard_wait_0:
    \   000005   EA           MOV       A,R2
    \   000006   F8           MOV       R0,A
@@ -995,155 +994,155 @@ C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\Sou
    \   000011   E8           MOV       A,R0
    \   000012   49           ORL       A,R1
    \   000013   70ED         JNZ       ??Onboard_wait_1
-    443          }
+    442          }
    \   000015   02....       LJMP      ?BRET
-    444          
-    445          /*********************************************************************
-    446           * @fn      Onboard_soft_reset
-    447           *
-    448           * @brief   Effect a soft reset.
-    449           *
-    450           * @param   none
-    451           *
-    452           * @return  none
-    453           *
-    454           *********************************************************************/
+    443          
+    444          /*********************************************************************
+    445           * @fn      Onboard_soft_reset
+    446           *
+    447           * @brief   Effect a soft reset.
+    448           *
+    449           * @param   none
+    450           *
+    451           * @return  none
+    452           *
+    453           *********************************************************************/
 
    \                                 In  segment NEAR_CODE, align 1, keep-with-next
-    455          __near_func void Onboard_soft_reset( void )
+    454          __near_func void Onboard_soft_reset( void )
    \                     Onboard_soft_reset:
-    456          {
+    455          {
    \   000000                ; Saved register size: 0
    \   000000                ; Auto size: 0
-    457            HAL_DISABLE_INTERRUPTS();
+    456            HAL_DISABLE_INTERRUPTS();
    \   000000   C2AF         CLR       0xa8.7
-    458            // Abort all DMA channels to insure that ongoing operations do not
-    459            // interfere with re-configuration.
-    460            DMAARM = 0x80 | 0x1F;
+    457            // Abort all DMA channels to insure that ongoing operations do not
+    458            // interfere with re-configuration.
+    459            DMAARM = 0x80 | 0x1F;
    \   000002   75D69F       MOV       0xd6,#-0x61
-    461            asm("LJMP 0x0");
+    460            asm("LJMP 0x0");
    \   000005   020000       LJMP 0x0
-    462          }
+    461          }
    \   000008   22           RET
    \   000009                REQUIRE _A_IEN0
    \   000009                REQUIRE DMAARM
-    463          
-    464          #if defined MT_UBL_FUNC
-    465          #if !defined UBL_RC_IMG_PG_BEG
-    466          #define UBL_RC_IMG_PG_BEG  (HAL_SB_CRC_ADDR / HAL_FLASH_PAGE_SIZE)
-    467          #endif
-    468          #if !defined UBL_MD_PG_OFFSET
-    469          #define UBL_MD_PG_OFFSET   (HAL_SB_CRC_ADDR % HAL_FLASH_PAGE_SIZE + 2)
-    470          #endif
-    471          #if !defined UBL_ADDR
-    472          #define UBL_MD_ADDR        (HAL_SB_CRC_ADDR + 2)
-    473          #endif
-    474          
-    475          /*********************************************************************
-    476           * @fn      MT_UblCommandProcessing
-    477           *
-    478           * @brief   Effect a soft reset.
-    479           *
-    480           * @param   pBuf - Pointer to the received MT buffer.
-    481           *
-    482           * @return  MT_RPC_ERR_COMMAND_ID if the MT command is not MT_UBL_ERASE.
-    483           *
-    484           *********************************************************************/
-    485          uint8 MT_UblCommandProcessing(uint8 *pBuf);
-    486          uint8 MT_UblCommandProcessing(uint8 *pBuf)
-    487          {
-    488            if (pBuf[MT_RPC_POS_CMD1] == MT_UBL_ERASE)
-    489            {
-    490              uint16 crc[2];
-    491              HalFlashRead(UBL_RC_IMG_PG_BEG, UBL_MD_PG_OFFSET, (uint8 *)(crc+1), 2);
-    492          
-    493              if (crc[1] != 0)
-    494              {
-    495                crc[1] ^= 0xFFFF;  // Only write to zero bits that are not already zero.
-    496                crc[0] = 0xFFFF;
-    497                HalFlashWrite((UBL_MD_ADDR - 2) / HAL_FLASH_WORD_SIZE, (uint8 *)crc, 1);
-    498              }
-    499          
-    500              Onboard_soft_reset();
-    501            }
-    502          
-    503            return MT_RPC_ERR_COMMAND_ID;
-    504          }
-    505          #endif
-    506          
-    507          /*********************************************************************
-    508           *                    EXTERNAL I/O FUNCTIONS
-    509           *
-    510           * User defined functions to control external devices. Add your code
-    511           * to the following functions to control devices wired to DB outputs.
-    512           *
-    513           *********************************************************************/
-    514          
+    462          
+    463          #if defined MT_UBL_FUNC
+    464          #if !defined UBL_RC_IMG_PG_BEG
+    465          #define UBL_RC_IMG_PG_BEG  (HAL_SB_CRC_ADDR / HAL_FLASH_PAGE_SIZE)
+    466          #endif
+    467          #if !defined UBL_MD_PG_OFFSET
+    468          #define UBL_MD_PG_OFFSET   (HAL_SB_CRC_ADDR % HAL_FLASH_PAGE_SIZE + 2)
+    469          #endif
+    470          #if !defined UBL_ADDR
+    471          #define UBL_MD_ADDR        (HAL_SB_CRC_ADDR + 2)
+    472          #endif
+    473          
+    474          /*********************************************************************
+    475           * @fn      MT_UblCommandProcessing
+    476           *
+    477           * @brief   Effect a soft reset.
+    478           *
+    479           * @param   pBuf - Pointer to the received MT buffer.
+    480           *
+    481           * @return  MT_RPC_ERR_COMMAND_ID if the MT command is not MT_UBL_ERASE.
+    482           *
+    483           *********************************************************************/
+    484          uint8 MT_UblCommandProcessing(uint8 *pBuf);
+    485          uint8 MT_UblCommandProcessing(uint8 *pBuf)
+    486          {
+    487            if (pBuf[MT_RPC_POS_CMD1] == MT_UBL_ERASE)
+    488            {
+    489              uint16 crc[2];
+    490              HalFlashRead(UBL_RC_IMG_PG_BEG, UBL_MD_PG_OFFSET, (uint8 *)(crc+1), 2);
+    491          
+    492              if (crc[1] != 0)
+    493              {
+    494                crc[1] ^= 0xFFFF;  // Only write to zero bits that are not already zero.
+    495                crc[0] = 0xFFFF;
+    496                HalFlashWrite((UBL_MD_ADDR - 2) / HAL_FLASH_WORD_SIZE, (uint8 *)crc, 1);
+    497              }
+    498          
+    499              Onboard_soft_reset();
+    500            }
+    501          
+    502            return MT_RPC_ERR_COMMAND_ID;
+    503          }
+    504          #endif
+    505          
+    506          /*********************************************************************
+    507           *                    EXTERNAL I/O FUNCTIONS
+    508           *
+    509           * User defined functions to control external devices. Add your code
+    510           * to the following functions to control devices wired to DB outputs.
+    511           *
+    512           *********************************************************************/
+    513          
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
-    515          void BigLight_On( void )
+    514          void BigLight_On( void )
    \                     BigLight_On:
-    516          {
+    515          {
    \   000000                ; Saved register size: 0
    \   000000                ; Auto size: 0
-    517            // Put code here to turn on an external light
-    518          }
+    516            // Put code here to turn on an external light
+    517          }
    \   000000   02....       LJMP      ?BRET
-    519          
+    518          
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
-    520          void BigLight_Off( void )
+    519          void BigLight_Off( void )
    \                     BigLight_Off:
-    521          {
+    520          {
    \   000000                ; Saved register size: 0
    \   000000                ; Auto size: 0
-    522            // Put code here to turn off an external light
-    523          }
+    521            // Put code here to turn off an external light
+    522          }
    \   000000   02....       LJMP      ?BRET
-    524          
+    523          
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
-    525          void BuzzerControl( uint8 on )
+    524          void BuzzerControl( uint8 on )
    \                     BuzzerControl:
-    526          {
+    525          {
    \   000000                ; Saved register size: 0
    \   000000                ; Auto size: 0
-    527            // Put code here to turn a buzzer on/off
-    528            (void)on;
-    529          }
+    526            // Put code here to turn a buzzer on/off
+    527            (void)on;
+    528          }
    \   000000   02....       LJMP      ?BRET
-    530          
+    529          
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
-    531          void Dimmer( uint8 lvl )
+    530          void Dimmer( uint8 lvl )
    \                     Dimmer:
-    532          {
+    531          {
    \   000000                ; Saved register size: 0
    \   000000                ; Auto size: 0
-    533            // Put code here to control a dimmer
-    534            (void)lvl;
-    535          }
+    532            // Put code here to control a dimmer
+    533            (void)lvl;
+    534          }
    \   000000   02....       LJMP      ?BRET
-    536          
-    537          // No dip switches on this board
+    535          
+    536          // No dip switches on this board
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
-    538          uint8 GetUserDipSw( void )
+    537          uint8 GetUserDipSw( void )
    \                     GetUserDipSw:
-    539          {
+    538          {
    \   000000                ; Saved register size: 0
    \   000000                ; Auto size: 0
-    540            return 0;
+    539            return 0;
    \   000000   7900         MOV       R1,#0x0
    \   000002   02....       LJMP      ?BRET
-    541          }
+    540          }
 
    \                                 In  segment XDATA_ID, align 1, keep-with-next
    \                     `?<Initializer for registeredKeysTaskID>`:
    \   000000   FF           DB 255
-    542          
-    543          /*********************************************************************
-    544          *********************************************************************/
+    541          
+    542          /*********************************************************************
+    543          *********************************************************************/
 
    Maximum stack usage in bytes:
 

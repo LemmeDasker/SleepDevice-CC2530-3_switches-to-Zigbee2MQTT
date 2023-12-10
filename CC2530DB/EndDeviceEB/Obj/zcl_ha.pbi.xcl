@@ -5,55 +5,55 @@
 -I
 C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\Source
 -I
-C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB
+C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB
 -I
-C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\Source
+C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\Source
 -I
-C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\Source
+C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\Source
 -I
-C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\ZMain\TI2530DB
+C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\ZMain\TI2530DB
 -I
-C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\hal\include
+C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\hal\include
 -I
-C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB
+C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB
 -I
-C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mac\include
+C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mac\include
 -I
-C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mac\high_level
+C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mac\high_level
 -I
-C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04
+C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04
 -I
-C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip
+C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip
 -I
-C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mt
+C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mt
 -I
-C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\osal\include
+C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\osal\include
 -I
-C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\services\saddr
+C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\services\saddr
 -I
-C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\services\sdata
+C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\services\sdata
 -I
-C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\af
+C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\af
 -I
-C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\bdb
+C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\bdb
 -I
-C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\gp
+C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\gp
 -I
-C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\nwk
+C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\nwk
 -I
-C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\sapi
+C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\sapi
 -I
-C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\sec
+C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\sec
 -I
-C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\sys
+C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\sys
 -I
-C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\zcl
+C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\zcl
 -I
-C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\zdo
+C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\zdo
 -I
-C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\zmac
+C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\zmac
 -I
-C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w
+C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\zmac\f8w
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\8051\inc
 -I
@@ -61,9 +61,9 @@ C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\8051\lib\dlib
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\8051\inc\clib
 -I
-C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB
+C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB
 -I
-C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\Source
+C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\Source
 -I
 C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\Source
 -I
@@ -439,7 +439,7 @@ C:\Texas Instruments\Z-Stack 3.0.2\Components\zmac\f8w
 -DTC_LINKKEY_JOIN=1
 -DNV_INIT=1
 -DNV_RESTORE=1
--DxPOWER_SAVING=1
+-DPOWER_SAVING=1
 -DNWK_AUTO_POLL=1
 -DxZTOOL_P1=1
 -DxMT_TASK=1
@@ -459,6 +459,12 @@ C:\Texas Instruments\Z-Stack 3.0.2\Components\zmac\f8w
 -DxZCL_GROUPS=1
 -DZCL_ON_OFF=1
 -DxZCL_DISCOVER=1
+-DZCL_REPORTING_DEVICE=1
+-DISR_KEYINTERRUPT=1
+-DHAL_LCD=FALSE
+-DHAL_UARTE=FALSE
+-DHAL_SPI=FALSE
+-DHAL_HID=FALSE
 -DCPU32MHZ=1
 -DROOT=__near_func
 -DMAC_CFG_TX_DATA_MAX=3

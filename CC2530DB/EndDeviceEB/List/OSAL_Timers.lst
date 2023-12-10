@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR C/C++ Compiler V10.30.1.6000 for 8051               22/Sep/2023  19:42:39
+# IAR C/C++ Compiler V10.30.1.6000 for 8051               10/Dec/2023  13:11:54
 # Copyright 2004-2018 IAR Systems AB.
 # PC-locked license - IAR Embedded Workbench for 8051
 #
@@ -15,29 +15,30 @@
 #        C:\Texas Instruments\Z-Stack
 #        3.0.2\Components\osal\common\OSAL_Timers.c
 #    Command line       =  
-#        -f C:\Users\Flemming\AppData\Local\Temp\EW9B88.tmp ("C:\Texas
+#        -f C:\Users\Flemming\AppData\Local\Temp\EWCB12.tmp ("C:\Texas
 #        Instruments\Z-Stack 3.0.2\Components\osal\common\OSAL_Timers.c" -D
-#        SECURE=1 -D TC_LINKKEY_JOIN -D NV_INIT -D NV_RESTORE -D xPOWER_SAVING
+#        SECURE=1 -D TC_LINKKEY_JOIN -D NV_INIT -D NV_RESTORE -D POWER_SAVING
 #        -D NWK_AUTO_POLL -D xZTOOL_P1 -D xMT_TASK -D xMT_APP_FUNC -D
 #        xMT_SYS_FUNC -D xMT_ZDO_FUNC -D xMT_ZDO_MGMT -D xMT_APP_CNF_FUNC -D
 #        xLEGACY_LCD_DEBUG -D xLCD_SUPPORTED=DEBUG -D MULTICAST_ENABLED=FALSE
 #        -D ZCL_READ -D ZCL_WRITE -D ZCL_BASIC -D ZCL_IDENTIFY -D xZCL_SCENES
-#        -D xZCL_GROUPS -D ZCL_ON_OFF -D xZCL_DISCOVER -lC "C:\Texas
-#        Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\EndDeviceEB\List"
+#        -D xZCL_GROUPS -D ZCL_ON_OFF -D xZCL_DISCOVER -D ZCL_REPORTING_DEVICE
+#        -D ISR_KEYINTERRUPT -D HAL_LCD=FALSE -D HAL_UARTE=FALSE -D
+#        HAL_SPI=FALSE -D HAL_HID=FALSE -lC "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\EndDeviceEB\List"
 #        -lA "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\EndDeviceEB\List"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\EndDeviceEB\List"
 #        --diag_suppress Pe001,Pa010 -o "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\EndDeviceEB\Obj"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\EndDeviceEB\Obj"
 #        -e --debug --core=plain --dptr=16,1 --data_model=large
 #        --code_model=banked --calling_convention=xdata_reentrant
 #        --place_constants=data_rom --nr_virtual_regs 16 -f "C:\Texas
 #        Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
 #        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3
 #        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f "C:\Texas
 #        Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
 #        (-DZIGBEEPRO -DSECURE=1 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
 #        -DDEFAULT_CHANLIST=0x00000800 -DZDAPP_CONFIG_PAN_ID=0xFFFF
 #        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
@@ -53,65 +54,65 @@
 #        -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100 -DREJOIN_POLL_RATE=440
 #        -DREJOIN_BACKOFF=900000 -DREJOIN_SCAN=900000 -DENABLE_LED4_DISABLE_S1)
 #        -f "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wZCL.cfg"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\Tools\CC2530DB\f8wZCL.cfg"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\" -I
-#        "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\Source\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\Source\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\Source\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\ZMain\TI2530DB\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\Source\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\hal\include\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\ZMain\TI2530DB\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\hal\include\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mac\include\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mac\include\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mt\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\osal\include\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mt\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\services\saddr\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\osal\include\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\services\sdata\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\services\saddr\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\af\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\services\sdata\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\bdb\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\af\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\gp\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\bdb\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\gp\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\sec\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\sys\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\sec\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\zcl\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\sys\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\zcl\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\zmac\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\zmac\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
 #        -Ohz --require_prototypes)
 #    Locale             =  Danish_DNK.1252
 #    List file          =  
 #        C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\EndDeviceEB\List\OSAL_Timers.lst
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\EndDeviceEB\List\OSAL_Timers.lst
 #    Object file        =  
 #        C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\EndDeviceEB\Obj\OSAL_Timers.r51
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\EndDeviceEB\Obj\OSAL_Timers.r51
 #
 ###############################################################################
 
@@ -258,20 +259,20 @@ C:\Texas Instruments\Z-Stack 3.0.2\Components\osal\common\OSAL_Timers.c
    \   000004                ; Auto size: 0
     119            osal_systemClock = 0;
    \   000004   90....       MOV       DPTR,#osal_systemClock
-   \   000007   12....       LCALL     ?Subroutine4 & 0xFFFF
+   \   000007   12....       LCALL     ?Subroutine6 & 0xFFFF
    \                     ??CrossCallReturnLabel_3:
    \   00000A   F0           MOVX      @DPTR,A
     120          }
    \   00000B   02....       LJMP      ?Subroutine0 & 0xFFFF
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
-   \                     ?Subroutine4:
+   \                     ?Subroutine6:
    \   000000   E4           CLR       A
-   \   000001                REQUIRE ??Subroutine5_0
-   \   000001                ; // Fall through to label ??Subroutine5_0
+   \   000001                REQUIRE ??Subroutine7_0
+   \   000001                ; // Fall through to label ??Subroutine7_0
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
-   \                     ??Subroutine5_0:
+   \                     ??Subroutine7_0:
    \   000000   F0           MOVX      @DPTR,A
    \   000001   A3           INC       DPTR
    \   000002   F0           MOVX      @DPTR,A
@@ -345,7 +346,7 @@ C:\Texas Instruments\Z-Stack 3.0.2\Components\osal\common\OSAL_Timers.c
    \   000024   12....       LCALL     ?L_MOV_TO_X
     145          
     146              return ( newTimer );
-   \   000027   806A         SJMP      ??osalAddTimer_1
+   \   000027   8067         SJMP      ??osalAddTimer_1
     147            }
     148            else
     149            {
@@ -360,7 +361,7 @@ C:\Texas Instruments\Z-Stack 3.0.2\Components\osal\common\OSAL_Timers.c
     153              if ( newTimer )
    \   000030   EA           MOV       A,R2
    \   000031   4B           ORL       A,R3
-   \   000032   605B         JZ        ??osalAddTimer_2
+   \   000032   6058         JZ        ??osalAddTimer_2
     154              {
     155                // Fill in new timer
     156                newTimer->task_id = task_id;
@@ -375,7 +376,7 @@ C:\Texas Instruments\Z-Stack 3.0.2\Components\osal\common\OSAL_Timers.c
    \   00003E   A3           INC       DPTR
    \   00003F   A3           INC       DPTR
    \   000040   E5..         MOV       A,?V0
-   \   000042   12....       LCALL     ?Subroutine3 & 0xFFFF
+   \   000042   12....       LCALL     ?Subroutine5 & 0xFFFF
     157                newTimer->event_flag = event_flag;
    \                     ??CrossCallReturnLabel_0:
    \   000045   EE           MOV       A,R6
@@ -396,23 +397,22 @@ C:\Texas Instruments\Z-Stack 3.0.2\Components\osal\common\OSAL_Timers.c
    \   000059   E4           CLR       A
    \   00005A   F0           MOVX      @DPTR,A
    \   00005B   A3           INC       DPTR
-   \   00005C   12....       LCALL     ?Subroutine3 & 0xFFFF
+   \   00005C   12....       LCALL     ?Subroutine5 & 0xFFFF
     160                newTimer->reloadTimeout = 0;
    \                     ??CrossCallReturnLabel_1:
    \   00005F   A3           INC       DPTR
    \   000060   A3           INC       DPTR
    \   000061   A3           INC       DPTR
-   \   000062   12....       LCALL     ??Subroutine5_0 & 0xFFFF
+   \   000062   12....       LCALL     ??Subroutine7_0 & 0xFFFF
    \                     ??CrossCallReturnLabel_2:
    \   000065   F0           MOVX      @DPTR,A
     161          
     162                // Does the timer list already exist
     163                if ( timerHead == NULL )
-   \   000066   90....       MOV       DPTR,#timerHead
-   \   000069   12....       LCALL     ??Subroutine6_0 & 0xFFFF
-   \                     ??CrossCallReturnLabel_5:
-   \   00006C   90....       MOV       DPTR,#timerHead
-   \   00006F   6017         JZ        ??osalAddTimer_3
+   \   000066   12....       LCALL     ?Subroutine4 & 0xFFFF
+   \                     ??CrossCallReturnLabel_14:
+   \   000069   90....       MOV       DPTR,#timerHead
+   \   00006C   6017         JZ        ??osalAddTimer_3
     164                {
     165                  // Start task list
     166                  timerHead = newTimer;
@@ -421,57 +421,62 @@ C:\Texas Instruments\Z-Stack 3.0.2\Components\osal\common\OSAL_Timers.c
     169                {
     170                  // Add it to the end of the timer list
     171                  srchTimer = timerHead;
+   \   00006E   E0           MOVX      A,@DPTR
+   \   00006F   FC           MOV       R4,A
+   \   000070   A3           INC       DPTR
    \   000071   E0           MOVX      A,@DPTR
-   \   000072   FC           MOV       R4,A
-   \   000073   A3           INC       DPTR
-   \   000074   E0           MOVX      A,@DPTR
-   \   000075   8003         SJMP      ??osalAddTimer_4
+   \   000072   8003         SJMP      ??osalAddTimer_4
     172          
     173                  // Stop at the last record
     174                  while ( srchTimer->next )
     175                    srchTimer = srchTimer->next;
    \                     ??osalAddTimer_5:
-   \   000077   E8           MOV       A,R0
-   \   000078   FC           MOV       R4,A
-   \   000079   E9           MOV       A,R1
+   \   000074   E8           MOV       A,R0
+   \   000075   FC           MOV       R4,A
+   \   000076   E9           MOV       A,R1
    \                     ??osalAddTimer_4:
-   \   00007A   FD           MOV       R5,A
-   \   00007B   8C82         MOV       DPL,R4
-   \   00007D   8D83         MOV       DPH,R5
-   \   00007F   12....       LCALL     ??Subroutine6_0 & 0xFFFF
-   \                     ??CrossCallReturnLabel_6:
-   \   000082   70F3         JNZ       ??osalAddTimer_5
+   \   000077   FD           MOV       R5,A
+   \   000078   8C82         MOV       DPL,R4
+   \   00007A   8D83         MOV       DPH,R5
+   \   00007C   12....       LCALL     ??Subroutine8_0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_5:
+   \   00007F   70F3         JNZ       ??osalAddTimer_5
     176          
     177                  // Add to the list
     178                  srchTimer->next = newTimer;
-   \   000084   8C82         MOV       DPL,R4
-   \   000086   8D83         MOV       DPH,R5
+   \   000081   8C82         MOV       DPL,R4
+   \   000083   8D83         MOV       DPH,R5
    \                     ??osalAddTimer_3:
-   \   000088   EA           MOV       A,R2
+   \   000085   EA           MOV       A,R2
+   \   000086   F0           MOVX      @DPTR,A
+   \   000087   A3           INC       DPTR
+   \   000088   EB           MOV       A,R3
    \   000089   F0           MOVX      @DPTR,A
-   \   00008A   A3           INC       DPTR
-   \   00008B   EB           MOV       A,R3
-   \   00008C   F0           MOVX      @DPTR,A
     179                }
     180          
     181                return ( newTimer );
-   \   00008D   8004         SJMP      ??osalAddTimer_1
+   \   00008A   8004         SJMP      ??osalAddTimer_1
     182              }
     183              else
     184              {
     185                return ( (osalTimerRec_t *)NULL );
    \                     ??osalAddTimer_2:
-   \   00008F   7A00         MOV       R2,#0x0
-   \   000091   7B00         MOV       R3,#0x0
-   \                     ??osalAddTimer_1:
-   \   000093   7F08         MOV       R7,#0x8
-   \   000095   02....       LJMP      ?BANKED_LEAVE_XDATA
+   \   00008C   7A00         MOV       R2,#0x0
+   \   00008E   7B00         MOV       R3,#0x0
     186              }
     187            }
+   \                     ??osalAddTimer_1:
+   \   000090                REQUIRE ?Subroutine1
+   \   000090                ; // Fall through to label ?Subroutine1
     188          }
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
-   \                     ?Subroutine3:
+   \                     ?Subroutine1:
+   \   000000   7F08         MOV       R7,#0x8
+   \   000002   02....       LJMP      ?BANKED_LEAVE_XDATA
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine5:
    \   000000   F0           MOVX      @DPTR,A
    \   000001   8A82         MOV       DPL,R2
    \   000003   8B83         MOV       DPH,R3
@@ -484,7 +489,13 @@ C:\Texas Instruments\Z-Stack 3.0.2\Components\osal\common\OSAL_Timers.c
    \   00000B   22           RET
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
-   \                     ??Subroutine6_0:
+   \                     ?Subroutine4:
+   \   000000   90....       MOV       DPTR,#timerHead
+   \   000003                REQUIRE ??Subroutine8_0
+   \   000003                ; // Fall through to label ??Subroutine8_0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ??Subroutine8_0:
    \   000000   E0           MOVX      A,@DPTR
    \   000001   F8           MOV       R0,A
    \   000002   A3           INC       DPTR
@@ -782,13 +793,13 @@ C:\Texas Instruments\Z-Stack 3.0.2\Components\osal\common\OSAL_Timers.c
    \                     ??osal_start_reload_timer_1:
    \   000046   7908         MOV       R1,#0x8
    \                     ??osal_start_reload_timer_2:
-   \   000048                REQUIRE ?Subroutine1
+   \   000048                REQUIRE ?Subroutine2
    \   000048                REQUIRE _A_IEN0
-   \   000048                ; // Fall through to label ?Subroutine1
+   \   000048                ; // Fall through to label ?Subroutine2
     307          }
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
-   \                     ?Subroutine1:
+   \                     ?Subroutine2:
    \   000000   7F06         MOV       R7,#0x6
    \   000002   02....       LJMP      ?BANKED_LEAVE_XDATA
     308          
@@ -861,10 +872,15 @@ C:\Texas Instruments\Z-Stack 3.0.2\Components\osal\common\OSAL_Timers.c
    \                     ??osal_stop_timerEx_1:
    \   00002C   7906         MOV       R1,#0x6
    \                     ??osal_stop_timerEx_2:
-   \   00002E   7F04         MOV       R7,#0x4
-   \   000030   02....       LJMP      ?BANKED_LEAVE_XDATA
-   \   000033                REQUIRE _A_IEN0
+   \   00002E                REQUIRE ?Subroutine3
+   \   00002E                REQUIRE _A_IEN0
+   \   00002E                ; // Fall through to label ?Subroutine3
     340          }
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine3:
+   \   000000   7F04         MOV       R7,#0x4
+   \   000002   02....       LJMP      ?BANKED_LEAVE_XDATA
     341          
     342          /*********************************************************************
     343           * @fn      osal_get_timeoutEx
@@ -935,7 +951,7 @@ C:\Texas Instruments\Z-Stack 3.0.2\Components\osal\common\OSAL_Timers.c
    \   000033   AB..         MOV       R3,?V1
    \   000035   AC..         MOV       R4,?V2
    \   000037   AD..         MOV       R5,?V3
-   \   000039   80..         SJMP      ?Subroutine1
+   \   000039   80..         SJMP      ?Subroutine2
    \   00003B                REQUIRE _A_IEN0
     370          }
     371          
@@ -1075,76 +1091,75 @@ C:\Texas Instruments\Z-Stack 3.0.2\Components\osal\common\OSAL_Timers.c
     426          
     427            // Look for open timer slot
     428            if ( timerHead != NULL )
-   \   000037   90....       MOV       DPTR,#timerHead
-   \   00003A   12....       LCALL     ??Subroutine6_0 & 0xFFFF
-   \                     ??CrossCallReturnLabel_7:
-   \   00003D   7003         JNZ       $+5
-   \   00003F   02....       LJMP      ??osalTimerUpdate_0 & 0xFFFF
+   \   000037   12....       LCALL     ?Subroutine4 & 0xFFFF
+   \                     ??CrossCallReturnLabel_15:
+   \   00003A   7003         JNZ       $+5
+   \   00003C   02....       LJMP      ??osalTimerUpdate_0 & 0xFFFF
     429            {
     430              // Add it to the end of the timer list
     431              srchTimer = timerHead;
-   \   000042   90....       MOV       DPTR,#timerHead
+   \   00003F   90....       MOV       DPTR,#timerHead
+   \   000042   E0           MOVX      A,@DPTR
+   \   000043   FE           MOV       R6,A
+   \   000044   A3           INC       DPTR
    \   000045   E0           MOVX      A,@DPTR
-   \   000046   FE           MOV       R6,A
-   \   000047   A3           INC       DPTR
-   \   000048   E0           MOVX      A,@DPTR
-   \   000049   FF           MOV       R7,A
+   \   000046   FF           MOV       R7,A
     432              prevTimer = (void *)NULL;
-   \   00004A   75..00       MOV       ?V8,#0x0
-   \   00004D   75..00       MOV       ?V9,#0x0
+   \   000047   75..00       MOV       ?V8,#0x0
+   \   00004A   75..00       MOV       ?V9,#0x0
     433          
     434              // Look for open timer slot
     435              while ( srchTimer )
     436              {
     437                osalTimerRec_t *freeTimer = NULL;
    \                     ??osalTimerUpdate_1:
-   \   000050   75..00       MOV       ?V2,#0x0
-   \   000053   75..00       MOV       ?V3,#0x0
+   \   00004D   75..00       MOV       ?V2,#0x0
+   \   000050   75..00       MOV       ?V3,#0x0
     438          
     439                HAL_ENTER_CRITICAL_SECTION( intState );  // Hold off interrupts.
-   \   000056   A2AF         MOV       C,0xa8.7
-   \   000058   E4           CLR       A
-   \   000059   33           RLC       A
-   \   00005A   F5..         MOV       ?V12,A
-   \   00005C   C2AF         CLR       0xa8.7
+   \   000053   A2AF         MOV       C,0xa8.7
+   \   000055   E4           CLR       A
+   \   000056   33           RLC       A
+   \   000057   F5..         MOV       ?V12,A
+   \   000059   C2AF         CLR       0xa8.7
     440          
     441                // To minimize time in this critical section, avoid 32-bit math
     442                if ((timeUnion.time16[1] == 0) && (timeUnion.time8[1] == 0))
-   \   00005E   EE           MOV       A,R6
-   \   00005F   2402         ADD       A,#0x2
-   \   000061   F5..         MOV       ?V0,A
-   \   000063   E4           CLR       A
-   \   000064   3F           ADDC      A,R7
-   \   000065   F5..         MOV       ?V1,A
-   \   000067   7402         MOV       A,#0x2
-   \   000069   12....       LCALL     ?XSTACK_DISP0_8
-   \   00006C   12....       LCALL     ??Subroutine6_0 & 0xFFFF
-   \                     ??CrossCallReturnLabel_8:
-   \   00006F   7020         JNZ       ??osalTimerUpdate_2
-   \   000071   7401         MOV       A,#0x1
-   \   000073   12....       LCALL     ?XSTACK_DISP0_8
-   \   000076   E0           MOVX      A,@DPTR
-   \   000077   7018         JNZ       ??osalTimerUpdate_2
+   \   00005B   EE           MOV       A,R6
+   \   00005C   2402         ADD       A,#0x2
+   \   00005E   F5..         MOV       ?V0,A
+   \   000060   E4           CLR       A
+   \   000061   3F           ADDC      A,R7
+   \   000062   F5..         MOV       ?V1,A
+   \   000064   7402         MOV       A,#0x2
+   \   000066   12....       LCALL     ?XSTACK_DISP0_8
+   \   000069   12....       LCALL     ??Subroutine8_0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_6:
+   \   00006C   7020         JNZ       ??osalTimerUpdate_2
+   \   00006E   7401         MOV       A,#0x1
+   \   000070   12....       LCALL     ?XSTACK_DISP0_8
+   \   000073   E0           MOVX      A,@DPTR
+   \   000074   7018         JNZ       ??osalTimerUpdate_2
     443                {
     444                  // If upper 24 bits are zero, check lower 8 bits for roll over
     445                  if (srchTimer->timeout.time8[0] >= timeUnion.time8[0])
-   \   000079   85..82       MOV       DPL,?XSP + 0
-   \   00007C   85..83       MOV       DPH,?XSP + 1
-   \   00007F   E0           MOVX      A,@DPTR
-   \   000080   F8           MOV       R0,A
-   \   000081   85..82       MOV       DPL,?V0
-   \   000084   85..83       MOV       DPH,?V1
-   \   000087   E0           MOVX      A,@DPTR
-   \   000088   C3           CLR       C
-   \   000089   98           SUBB      A,R0
-   \   00008A   4005         JC        ??osalTimerUpdate_2
+   \   000076   85..82       MOV       DPL,?XSP + 0
+   \   000079   85..83       MOV       DPH,?XSP + 1
+   \   00007C   E0           MOVX      A,@DPTR
+   \   00007D   F8           MOV       R0,A
+   \   00007E   85..82       MOV       DPL,?V0
+   \   000081   85..83       MOV       DPH,?V1
+   \   000084   E0           MOVX      A,@DPTR
+   \   000085   C3           CLR       C
+   \   000086   98           SUBB      A,R0
+   \   000087   4005         JC        ??osalTimerUpdate_2
     446                  {
     447                    // 8-bit math
     448                    srchTimer->timeout.time8[0] -= timeUnion.time8[0];
-   \   00008C   E0           MOVX      A,@DPTR
-   \   00008D   C3           CLR       C
-   \   00008E   98           SUBB      A,R0
-   \   00008F   8039         SJMP      ??CrossCallReturnLabel_4
+   \   000089   E0           MOVX      A,@DPTR
+   \   00008A   C3           CLR       C
+   \   00008B   98           SUBB      A,R0
+   \   00008C   8039         SJMP      ??CrossCallReturnLabel_4
     449                  }
     450                  else
     451                  {
@@ -1164,279 +1179,276 @@ C:\Texas Instruments\Z-Stack 3.0.2\Components\osal\common\OSAL_Timers.c
     465                    // 32-bit math
     466                  if (srchTimer->timeout.time32 > timeUnion.time32)
    \                     ??osalTimerUpdate_2:
-   \   000091   85..82       MOV       DPL,?V0
-   \   000094   85..83       MOV       DPH,?V1
-   \   000097   78..         MOV       R0,#?V4
-   \   000099   12....       LCALL     ?L_MOV_X
-   \   00009C   85..82       MOV       DPL,?XSP + 0
-   \   00009F   85..83       MOV       DPH,?XSP + 1
-   \   0000A2   78..         MOV       R0,#?V4
-   \   0000A4   12....       LCALL     ?UL_GT_X
-   \   0000A7   5018         JNC       ??osalTimerUpdate_3
+   \   00008E   85..82       MOV       DPL,?V0
+   \   000091   85..83       MOV       DPH,?V1
+   \   000094   78..         MOV       R0,#?V4
+   \   000096   12....       LCALL     ?L_MOV_X
+   \   000099   85..82       MOV       DPL,?XSP + 0
+   \   00009C   85..83       MOV       DPH,?XSP + 1
+   \   00009F   78..         MOV       R0,#?V4
+   \   0000A1   12....       LCALL     ?UL_GT_X
+   \   0000A4   5018         JNC       ??osalTimerUpdate_3
     467                  {
     468                    srchTimer->timeout.time32 -= timeUnion.time32;
-   \   0000A9   85..82       MOV       DPL,?XSP + 0
-   \   0000AC   85..83       MOV       DPH,?XSP + 1
-   \   0000AF   78..         MOV       R0,#?V4
-   \   0000B1   12....       LCALL     ?L_MOV_X
-   \   0000B4   85..82       MOV       DPL,?V0
-   \   0000B7   85..83       MOV       DPH,?V1
-   \   0000BA   78..         MOV       R0,#?V4
-   \   0000BC   12....       LCALL     ?L_SUB_FROM_X
-   \   0000BF   800A         SJMP      ??osalTimerUpdate_4
+   \   0000A6   85..82       MOV       DPL,?XSP + 0
+   \   0000A9   85..83       MOV       DPH,?XSP + 1
+   \   0000AC   78..         MOV       R0,#?V4
+   \   0000AE   12....       LCALL     ?L_MOV_X
+   \   0000B1   85..82       MOV       DPL,?V0
+   \   0000B4   85..83       MOV       DPH,?V1
+   \   0000B7   78..         MOV       R0,#?V4
+   \   0000B9   12....       LCALL     ?L_SUB_FROM_X
+   \   0000BC   800A         SJMP      ??osalTimerUpdate_4
     469                  }
     470                  else
     471                  {
     472                    srchTimer->timeout.time32 = 0;
    \                     ??osalTimerUpdate_3:
-   \   0000C1   85..82       MOV       DPL,?V0
-   \   0000C4   85..83       MOV       DPH,?V1
-   \   0000C7   12....       LCALL     ?Subroutine4 & 0xFFFF
+   \   0000BE   85..82       MOV       DPL,?V0
+   \   0000C1   85..83       MOV       DPH,?V1
+   \   0000C4   12....       LCALL     ?Subroutine6 & 0xFFFF
     473                  }
     474                }
    \                     ??CrossCallReturnLabel_4:
-   \   0000CA   F0           MOVX      @DPTR,A
+   \   0000C7   F0           MOVX      @DPTR,A
     475          
     476                // Check for reloading
     477                if ( (srchTimer->timeout.time16[0] == 0) && (srchTimer->timeout.time16[1] == 0) &&
     478                     (srchTimer->reloadTimeout) && (srchTimer->event_flag) )
    \                     ??osalTimerUpdate_4:
-   \   0000CB   EE           MOV       A,R6
-   \   0000CC   2406         ADD       A,#0x6
-   \   0000CE   F5..         MOV       ?V10,A
-   \   0000D0   E4           CLR       A
-   \   0000D1   3F           ADDC      A,R7
-   \   0000D2   F5..         MOV       ?V11,A
-   \   0000D4   EE           MOV       A,R6
-   \   0000D5   2404         ADD       A,#0x4
-   \   0000D7   F5..         MOV       ?V6,A
-   \   0000D9   E4           CLR       A
-   \   0000DA   3F           ADDC      A,R7
-   \   0000DB   F5..         MOV       ?V7,A
-   \   0000DD   12....       LCALL     ?Subroutine2 & 0xFFFF
-   \                     ??CrossCallReturnLabel_14:
-   \   0000E0   7054         JNZ       ??osalTimerUpdate_5
-   \   0000E2   85..82       MOV       DPL,?V6
-   \   0000E5   85..83       MOV       DPH,?V7
-   \   0000E8   12....       LCALL     ??Subroutine6_0 & 0xFFFF
-   \                     ??CrossCallReturnLabel_9:
-   \   0000EB   704E         JNZ       ??osalTimerUpdate_6
-   \   0000ED   EE           MOV       A,R6
-   \   0000EE   2409         ADD       A,#0x9
-   \   0000F0   F5..         MOV       ?V4,A
-   \   0000F2   E4           CLR       A
-   \   0000F3   3F           ADDC      A,R7
-   \   0000F4   F5..         MOV       ?V5,A
-   \   0000F6   85..82       MOV       DPL,?V4
-   \   0000F9   F583         MOV       DPH,A
-   \   0000FB   12....       LCALL     ?XLOAD_R0123
-   \   0000FE   E8           MOV       A,R0
-   \   0000FF   49           ORL       A,R1
-   \   000100   4A           ORL       A,R2
-   \   000101   4B           ORL       A,R3
-   \   000102   604D         JZ        ??osalTimerUpdate_7
-   \   000104   85..82       MOV       DPL,?V10
-   \   000107   85..83       MOV       DPH,?V11
-   \   00010A   E0           MOVX      A,@DPTR
-   \   00010B   FA           MOV       R2,A
-   \   00010C   A3           INC       DPTR
+   \   0000C8   EE           MOV       A,R6
+   \   0000C9   2406         ADD       A,#0x6
+   \   0000CB   F5..         MOV       ?V10,A
+   \   0000CD   E4           CLR       A
+   \   0000CE   3F           ADDC      A,R7
+   \   0000CF   F5..         MOV       ?V11,A
+   \   0000D1   EE           MOV       A,R6
+   \   0000D2   2404         ADD       A,#0x4
+   \   0000D4   F5..         MOV       ?V6,A
+   \   0000D6   E4           CLR       A
+   \   0000D7   3F           ADDC      A,R7
+   \   0000D8   F5..         MOV       ?V7,A
+   \   0000DA   85..82       MOV       DPL,?V0
+   \   0000DD   85..83       MOV       DPH,?V1
+   \   0000E0   12....       LCALL     ??Subroutine8_0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_7:
+   \   0000E3   7054         JNZ       ??osalTimerUpdate_5
+   \   0000E5   85..82       MOV       DPL,?V6
+   \   0000E8   85..83       MOV       DPH,?V7
+   \   0000EB   12....       LCALL     ??Subroutine8_0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_8:
+   \   0000EE   7054         JNZ       ??osalTimerUpdate_6
+   \   0000F0   EE           MOV       A,R6
+   \   0000F1   2409         ADD       A,#0x9
+   \   0000F3   F5..         MOV       ?V4,A
+   \   0000F5   E4           CLR       A
+   \   0000F6   3F           ADDC      A,R7
+   \   0000F7   F5..         MOV       ?V5,A
+   \   0000F9   85..82       MOV       DPL,?V4
+   \   0000FC   F583         MOV       DPH,A
+   \   0000FE   12....       LCALL     ?XLOAD_R0123
+   \   000101   E8           MOV       A,R0
+   \   000102   49           ORL       A,R1
+   \   000103   4A           ORL       A,R2
+   \   000104   4B           ORL       A,R3
+   \   000105   6053         JZ        ??osalTimerUpdate_7
+   \   000107   85..82       MOV       DPL,?V10
+   \   00010A   85..83       MOV       DPH,?V11
    \   00010D   E0           MOVX      A,@DPTR
-   \   00010E   FB           MOV       R3,A
-   \   00010F   EA           MOV       A,R2
-   \   000110   4B           ORL       A,R3
-   \   000111   603E         JZ        ??osalTimerUpdate_7
+   \   00010E   FA           MOV       R2,A
+   \   00010F   A3           INC       DPTR
+   \   000110   E0           MOVX      A,@DPTR
+   \   000111   FB           MOV       R3,A
+   \   000112   EA           MOV       A,R2
+   \   000113   4B           ORL       A,R3
+   \   000114   6044         JZ        ??osalTimerUpdate_7
     479                {
     480                  // Notify the task of a timeout
     481                  osal_set_event( srchTimer->task_id, srchTimer->event_flag );
-   \   000113                ; Setup parameters for call to function osal_set_event
-   \   000113   8E82         MOV       DPL,R6
-   \   000115   8F83         MOV       DPH,R7
-   \   000117   A3           INC       DPTR
-   \   000118   A3           INC       DPTR
-   \   000119   A3           INC       DPTR
+   \   000116                ; Setup parameters for call to function osal_set_event
+   \   000116   8E82         MOV       DPL,R6
+   \   000118   8F83         MOV       DPH,R7
    \   00011A   A3           INC       DPTR
    \   00011B   A3           INC       DPTR
    \   00011C   A3           INC       DPTR
    \   00011D   A3           INC       DPTR
    \   00011E   A3           INC       DPTR
-   \   00011F   E0           MOVX      A,@DPTR
-   \   000120   F9           MOV       R1,A
-   \   000121   12....       LCALL     `??osal_set_event::?relay`; Banked call to: osal_set_event
+   \   00011F   A3           INC       DPTR
+   \   000120   A3           INC       DPTR
+   \   000121   A3           INC       DPTR
+   \   000122   E0           MOVX      A,@DPTR
+   \   000123   F9           MOV       R1,A
+   \   000124   12....       LCALL     `??osal_set_event::?relay`; Banked call to: osal_set_event
     482          
     483                  // Reload the timer timeout value
     484                  srchTimer->timeout.time32 = srchTimer->reloadTimeout;
-   \   000124   85..82       MOV       DPL,?V4
-   \   000127   85..83       MOV       DPH,?V5
-   \   00012A   12....       LCALL     ?XLOAD_R0123
-   \   00012D   85..82       MOV       DPL,?V0
-   \   000130   85..83       MOV       DPH,?V1
-   \   000133   12....       LCALL     ?XSTORE_R0123
+   \   000127   85..82       MOV       DPL,?V4
+   \   00012A   85..83       MOV       DPH,?V5
+   \   00012D   12....       LCALL     ?XLOAD_R0123
+   \   000130   85..82       MOV       DPL,?V0
+   \   000133   85..83       MOV       DPH,?V1
+   \   000136   12....       LCALL     ?XSTORE_R0123
     485                }
     486          
     487                // When timeout or delete (event_flag == 0)
     488                if ( ((srchTimer->timeout.time16[0] == 0) && (srchTimer->timeout.time16[1] == 0)) ||
     489                      (srchTimer->event_flag == 0) )
    \                     ??osalTimerUpdate_5:
-   \   000136   12....       LCALL     ?Subroutine2 & 0xFFFF
-   \                     ??CrossCallReturnLabel_15:
-   \   000139   700B         JNZ       ??osalTimerUpdate_8
+   \   000139   85..82       MOV       DPL,?V0
+   \   00013C   85..83       MOV       DPH,?V1
+   \   00013F   12....       LCALL     ??Subroutine8_0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_9:
+   \   000142   700B         JNZ       ??osalTimerUpdate_8
    \                     ??osalTimerUpdate_6:
-   \   00013B   85..82       MOV       DPL,?V6
-   \   00013E   85..83       MOV       DPH,?V7
-   \   000141   12....       LCALL     ??Subroutine6_0 & 0xFFFF
+   \   000144   85..82       MOV       DPL,?V6
+   \   000147   85..83       MOV       DPH,?V7
+   \   00014A   12....       LCALL     ??Subroutine8_0 & 0xFFFF
    \                     ??CrossCallReturnLabel_10:
-   \   000144   600B         JZ        ??osalTimerUpdate_7
+   \   00014D   600B         JZ        ??osalTimerUpdate_7
    \                     ??osalTimerUpdate_8:
-   \   000146   85..82       MOV       DPL,?V10
-   \   000149   85..83       MOV       DPH,?V11
-   \   00014C   12....       LCALL     ??Subroutine6_0 & 0xFFFF
+   \   00014F   85..82       MOV       DPL,?V10
+   \   000152   85..83       MOV       DPH,?V11
+   \   000155   12....       LCALL     ??Subroutine8_0 & 0xFFFF
    \                     ??CrossCallReturnLabel_11:
-   \   00014F   7025         JNZ       ??osalTimerUpdate_9
+   \   000158   7025         JNZ       ??osalTimerUpdate_9
     490                {
     491                  // Take out of list
     492                  if ( prevTimer == NULL )
    \                     ??osalTimerUpdate_7:
-   \   000151   8E82         MOV       DPL,R6
-   \   000153   8F83         MOV       DPH,R7
-   \   000155   E0           MOVX      A,@DPTR
-   \   000156   F8           MOV       R0,A
-   \   000157   A3           INC       DPTR
-   \   000158   E0           MOVX      A,@DPTR
-   \   000159   F9           MOV       R1,A
-   \   00015A   E5..         MOV       A,?V8
-   \   00015C   45..         ORL       A,?V9
-   \   00015E   7005         JNZ       ??osalTimerUpdate_10
+   \   00015A   8E82         MOV       DPL,R6
+   \   00015C   8F83         MOV       DPH,R7
+   \   00015E   E0           MOVX      A,@DPTR
+   \   00015F   F8           MOV       R0,A
+   \   000160   A3           INC       DPTR
+   \   000161   E0           MOVX      A,@DPTR
+   \   000162   F9           MOV       R1,A
+   \   000163   E5..         MOV       A,?V8
+   \   000165   45..         ORL       A,?V9
+   \   000167   7005         JNZ       ??osalTimerUpdate_10
     493                  {
     494                    timerHead = srchTimer->next;
-   \   000160   90....       MOV       DPTR,#timerHead
-   \   000163   8006         SJMP      ??osalTimerUpdate_11
+   \   000169   90....       MOV       DPTR,#timerHead
+   \   00016C   8006         SJMP      ??osalTimerUpdate_11
     495                  }
     496                  else
     497                  {
     498                    prevTimer->next = srchTimer->next;
    \                     ??osalTimerUpdate_10:
-   \   000165   85..82       MOV       DPL,?V8
-   \   000168   85..83       MOV       DPH,?V9
+   \   00016E   85..82       MOV       DPL,?V8
+   \   000171   85..83       MOV       DPH,?V9
    \                     ??osalTimerUpdate_11:
-   \   00016B   E8           MOV       A,R0
-   \   00016C   F0           MOVX      @DPTR,A
-   \   00016D   A3           INC       DPTR
-   \   00016E   E9           MOV       A,R1
-   \   00016F   F0           MOVX      @DPTR,A
+   \   000174   E8           MOV       A,R0
+   \   000175   F0           MOVX      @DPTR,A
+   \   000176   A3           INC       DPTR
+   \   000177   E9           MOV       A,R1
+   \   000178   F0           MOVX      @DPTR,A
     499                  }
     500          
     501                  // Setup to free memory
     502                  freeTimer = srchTimer;
-   \   000170   8E..         MOV       ?V2,R6
-   \   000172   8F..         MOV       ?V3,R7
+   \   000179   8E..         MOV       ?V2,R6
+   \   00017B   8F..         MOV       ?V3,R7
     503          
     504                  // Next
     505                  srchTimer = srchTimer->next;
-   \   000174   8004         SJMP      ??osalTimerUpdate_12
+   \   00017D   8004         SJMP      ??osalTimerUpdate_12
     506                }
     507                else
     508                {
     509                  // Get next
     510                  prevTimer = srchTimer;
    \                     ??osalTimerUpdate_9:
-   \   000176   8E..         MOV       ?V8,R6
-   \   000178   8F..         MOV       ?V9,R7
+   \   00017F   8E..         MOV       ?V8,R6
+   \   000181   8F..         MOV       ?V9,R7
     511                  srchTimer = srchTimer->next;
    \                     ??osalTimerUpdate_12:
-   \   00017A   8E82         MOV       DPL,R6
-   \   00017C   8F83         MOV       DPH,R7
-   \   00017E   E0           MOVX      A,@DPTR
-   \   00017F   FE           MOV       R6,A
-   \   000180   A3           INC       DPTR
-   \   000181   E0           MOVX      A,@DPTR
-   \   000182   FF           MOV       R7,A
+   \   000183   8E82         MOV       DPL,R6
+   \   000185   8F83         MOV       DPH,R7
+   \   000187   E0           MOVX      A,@DPTR
+   \   000188   FE           MOV       R6,A
+   \   000189   A3           INC       DPTR
+   \   00018A   E0           MOVX      A,@DPTR
+   \   00018B   FF           MOV       R7,A
     512                }
     513          
     514                HAL_EXIT_CRITICAL_SECTION( intState );   // Re-enable interrupts.
-   \   000183   E5..         MOV       A,?V12
-   \   000185   A2E0         MOV       C,0xE0 /* A   */.0
-   \   000187   92AF         MOV       0xa8.7,C
+   \   00018C   E5..         MOV       A,?V12
+   \   00018E   A2E0         MOV       C,0xE0 /* A   */.0
+   \   000190   92AF         MOV       0xa8.7,C
     515          
     516                if ( freeTimer )
-   \   000189   E5..         MOV       A,?V2
-   \   00018B   45..         ORL       A,?V3
-   \   00018D   6047         JZ        ??osalTimerUpdate_13
+   \   000192   E5..         MOV       A,?V2
+   \   000194   45..         ORL       A,?V3
+   \   000196   6047         JZ        ??osalTimerUpdate_13
     517                {
     518                  if ( (freeTimer->timeout.time16[0] == 0) && (freeTimer->timeout.time16[1] == 0) )
-   \   00018F   85..82       MOV       DPL,?V2
-   \   000192   85..83       MOV       DPH,?V3
-   \   000195   A3           INC       DPTR
-   \   000196   A3           INC       DPTR
-   \   000197   12....       LCALL     ??Subroutine6_0 & 0xFFFF
+   \   000198   85..82       MOV       DPL,?V2
+   \   00019B   85..83       MOV       DPH,?V3
+   \   00019E   A3           INC       DPTR
+   \   00019F   A3           INC       DPTR
+   \   0001A0   12....       LCALL     ??Subroutine8_0 & 0xFFFF
    \                     ??CrossCallReturnLabel_12:
-   \   00019A   7033         JNZ       ??osalTimerUpdate_14
-   \   00019C   85..82       MOV       DPL,?V2
-   \   00019F   85..83       MOV       DPH,?V3
-   \   0001A2   A3           INC       DPTR
-   \   0001A3   A3           INC       DPTR
-   \   0001A4   A3           INC       DPTR
-   \   0001A5   A3           INC       DPTR
-   \   0001A6   12....       LCALL     ??Subroutine6_0 & 0xFFFF
+   \   0001A3   7033         JNZ       ??osalTimerUpdate_14
+   \   0001A5   85..82       MOV       DPL,?V2
+   \   0001A8   85..83       MOV       DPH,?V3
+   \   0001AB   A3           INC       DPTR
+   \   0001AC   A3           INC       DPTR
+   \   0001AD   A3           INC       DPTR
+   \   0001AE   A3           INC       DPTR
+   \   0001AF   12....       LCALL     ??Subroutine8_0 & 0xFFFF
    \                     ??CrossCallReturnLabel_13:
-   \   0001A9   7024         JNZ       ??osalTimerUpdate_14
+   \   0001B2   7024         JNZ       ??osalTimerUpdate_14
     519                  {
     520                    osal_set_event( freeTimer->task_id, freeTimer->event_flag );
-   \   0001AB                ; Setup parameters for call to function osal_set_event
-   \   0001AB   85..82       MOV       DPL,?V2
-   \   0001AE   85..83       MOV       DPH,?V3
-   \   0001B1   A3           INC       DPTR
-   \   0001B2   A3           INC       DPTR
-   \   0001B3   A3           INC       DPTR
-   \   0001B4   A3           INC       DPTR
-   \   0001B5   A3           INC       DPTR
-   \   0001B6   A3           INC       DPTR
-   \   0001B7   E0           MOVX      A,@DPTR
-   \   0001B8   FA           MOV       R2,A
-   \   0001B9   A3           INC       DPTR
-   \   0001BA   E0           MOVX      A,@DPTR
-   \   0001BB   FB           MOV       R3,A
-   \   0001BC   85..82       MOV       DPL,?V2
-   \   0001BF   85..83       MOV       DPH,?V3
+   \   0001B4                ; Setup parameters for call to function osal_set_event
+   \   0001B4   85..82       MOV       DPL,?V2
+   \   0001B7   85..83       MOV       DPH,?V3
+   \   0001BA   A3           INC       DPTR
+   \   0001BB   A3           INC       DPTR
+   \   0001BC   A3           INC       DPTR
+   \   0001BD   A3           INC       DPTR
+   \   0001BE   A3           INC       DPTR
+   \   0001BF   A3           INC       DPTR
+   \   0001C0   E0           MOVX      A,@DPTR
+   \   0001C1   FA           MOV       R2,A
    \   0001C2   A3           INC       DPTR
-   \   0001C3   A3           INC       DPTR
-   \   0001C4   A3           INC       DPTR
-   \   0001C5   A3           INC       DPTR
-   \   0001C6   A3           INC       DPTR
-   \   0001C7   A3           INC       DPTR
-   \   0001C8   A3           INC       DPTR
-   \   0001C9   A3           INC       DPTR
-   \   0001CA   E0           MOVX      A,@DPTR
-   \   0001CB   F9           MOV       R1,A
-   \   0001CC   12....       LCALL     `??osal_set_event::?relay`; Banked call to: osal_set_event
+   \   0001C3   E0           MOVX      A,@DPTR
+   \   0001C4   FB           MOV       R3,A
+   \   0001C5   85..82       MOV       DPL,?V2
+   \   0001C8   85..83       MOV       DPH,?V3
+   \   0001CB   A3           INC       DPTR
+   \   0001CC   A3           INC       DPTR
+   \   0001CD   A3           INC       DPTR
+   \   0001CE   A3           INC       DPTR
+   \   0001CF   A3           INC       DPTR
+   \   0001D0   A3           INC       DPTR
+   \   0001D1   A3           INC       DPTR
+   \   0001D2   A3           INC       DPTR
+   \   0001D3   E0           MOVX      A,@DPTR
+   \   0001D4   F9           MOV       R1,A
+   \   0001D5   12....       LCALL     `??osal_set_event::?relay`; Banked call to: osal_set_event
     521                  }
     522                  osal_mem_free( freeTimer );
    \                     ??osalTimerUpdate_14:
-   \   0001CF                ; Setup parameters for call to function osal_mem_free
-   \   0001CF   AA..         MOV       R2,?V2
-   \   0001D1   AB..         MOV       R3,?V3
-   \   0001D3   12....       LCALL     `??osal_mem_free::?relay`; Banked call to: osal_mem_free
+   \   0001D8                ; Setup parameters for call to function osal_mem_free
+   \   0001D8   AA..         MOV       R2,?V2
+   \   0001DA   AB..         MOV       R3,?V3
+   \   0001DC   12....       LCALL     `??osal_mem_free::?relay`; Banked call to: osal_mem_free
     523                }
     524              }
    \                     ??osalTimerUpdate_13:
-   \   0001D6   EE           MOV       A,R6
-   \   0001D7   4F           ORL       A,R7
-   \   0001D8   6003         JZ        $+5
-   \   0001DA   02....       LJMP      ??osalTimerUpdate_1 & 0xFFFF
+   \   0001DF   EE           MOV       A,R6
+   \   0001E0   4F           ORL       A,R7
+   \   0001E1   6003         JZ        $+5
+   \   0001E3   02....       LJMP      ??osalTimerUpdate_1 & 0xFFFF
     525            }
     526          }
    \                     ??osalTimerUpdate_0:
-   \   0001DD   7404         MOV       A,#0x4
-   \   0001DF   12....       LCALL     ?DEALLOC_XSTACK8
-   \   0001E2   7F0D         MOV       R7,#0xd
-   \   0001E4   02....       LJMP      ?BANKED_LEAVE_XDATA
-   \   0001E7                REQUIRE _A_IEN0
-
-   \                                 In  segment BANKED_CODE, align 1, keep-with-next
-   \                     ?Subroutine2:
-   \   000000   85..82       MOV       DPL,?V0
-   \   000003   85..83       MOV       DPH,?V1
-   \   000006                REQUIRE ??Subroutine6_0
-   \   000006                ; // Fall through to label ??Subroutine6_0
+   \   0001E6   7404         MOV       A,#0x4
+   \   0001E8   12....       LCALL     ?DEALLOC_XSTACK8
+   \   0001EB   7F0D         MOV       R7,#0xd
+   \   0001ED   02....       LJMP      ?BANKED_LEAVE_XDATA
+   \   0001F0                REQUIRE _A_IEN0
     527          
     528          #ifdef POWER_SAVING
     529          /*********************************************************************
@@ -1448,21 +1460,46 @@ C:\Texas Instruments\Z-Stack 3.0.2\Components\osal\common\OSAL_Timers.c
     535           *
     536           * @return  none
     537           *********************************************************************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
     538          void osal_adjust_timers( void )
+   \                     osal_adjust_timers:
     539          {
+   \   000000                REQUIRE ?V0
+   \   000000                REQUIRE ?V1
+   \   000000                REQUIRE ?V2
+   \   000000                REQUIRE ?V3
+   \   000000   74F4         MOV       A,#-0xc
+   \   000002   12....       LCALL     ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 12
+   \   000005                ; Auto size: 0
     540            uint32 eTime;
     541          
     542            if ( timerHead != NULL )
+   \   000005   12....       LCALL     ?Subroutine4 & 0xFFFF
+   \                     ??CrossCallReturnLabel_16:
+   \   000008   600C         JZ        ??osal_adjust_timers_0
     543            {
     544              // Compute elapsed time (msec)
     545              eTime = TimerElapsed() / TICK_COUNT;
+   \   00000A                ; Setup parameters for call to function TimerElapsed
+   \   00000A   12....       LCALL     `??TimerElapsed::?relay`; Banked call to: TimerElapsed
     546          
     547              if ( eTime )
+   \   00000D   EA           MOV       A,R2
+   \   00000E   4B           ORL       A,R3
+   \   00000F   4C           ORL       A,R4
+   \   000010   4D           ORL       A,R5
+   \   000011   6003         JZ        ??osal_adjust_timers_0
     548              {
     549                osalTimerUpdate( eTime );
+   \   000013                ; Setup parameters for call to function osalTimerUpdate
+   \   000013   12....       LCALL     `??osalTimerUpdate::?relay`; Banked call to: osalTimerUpdate
     550              }
     551            }
     552          }
+   \                     ??osal_adjust_timers_0:
+   \   000016   02....       LJMP      ?Subroutine3 & 0xFFFF
     553          #endif /* POWER_SAVING */
     554          
     555          #if defined POWER_SAVING || defined USE_ICALL
@@ -1478,35 +1515,105 @@ C:\Texas Instruments\Z-Stack 3.0.2\Components\osal\common\OSAL_Timers.c
     565           *
     566           * @return  none
     567           *********************************************************************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
     568          uint32 osal_next_timeout( void )
+   \                     osal_next_timeout:
     569          {
+   \   000000                REQUIRE ?V0
+   \   000000                REQUIRE ?V1
+   \   000000                REQUIRE ?V2
+   \   000000                REQUIRE ?V3
+   \   000000                REQUIRE ?V4
+   \   000000                REQUIRE ?V5
+   \   000000                REQUIRE ?V6
+   \   000000                REQUIRE ?V7
+   \   000000   74F0         MOV       A,#-0x10
+   \   000002   12....       LCALL     ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 16
+   \   000005                ; Auto size: 0
     570            uint32 nextTimeout;
     571            osalTimerRec_t *srchTimer;
     572          
     573            if ( timerHead != NULL )
+   \   000005   12....       LCALL     ?Subroutine4 & 0xFFFF
+   \                     ??CrossCallReturnLabel_17:
+   \   000008   6047         JZ        ??osal_next_timeout_0
     574            {
     575              // Head of the timer list
     576              srchTimer = timerHead;
+   \   00000A   90....       MOV       DPTR,#timerHead
+   \   00000D   E0           MOVX      A,@DPTR
+   \   00000E   FA           MOV       R2,A
+   \   00000F   A3           INC       DPTR
+   \   000010   E0           MOVX      A,@DPTR
+   \   000011   FB           MOV       R3,A
     577              nextTimeout = OSAL_TIMERS_MAX_TIMEOUT;
+   \   000012   75..8E       MOV       ?V0,#-0x72
+   \   000015   75..C2       MOV       ?V1,#-0x3e
+   \   000018   75..F5       MOV       ?V2,#-0xb
+   \   00001B   75..28       MOV       ?V3,#0x28
     578          
     579              // Look for the next timeout timer
     580              while ( srchTimer != NULL )
     581              {
     582                if (srchTimer->timeout.time32 < nextTimeout)
+   \                     ??osal_next_timeout_1:
+   \   00001E   8A82         MOV       DPL,R2
+   \   000020   8B83         MOV       DPH,R3
+   \   000022   A3           INC       DPTR
+   \   000023   A3           INC       DPTR
+   \   000024   78..         MOV       R0,#?V4
+   \   000026   12....       LCALL     ?L_MOV_X
+   \   000029   78..         MOV       R0,#?V0
+   \   00002B   79..         MOV       R1,#?V4
+   \   00002D   12....       LCALL     ?UL_GT
+   \   000030   500C         JNC       ??osal_next_timeout_2
     583                {
     584                  nextTimeout = srchTimer->timeout.time32;
+   \   000032   85....       MOV       ?V0,?V4
+   \   000035   85....       MOV       ?V1,?V5
+   \   000038   85....       MOV       ?V2,?V6
+   \   00003B   85....       MOV       ?V3,?V7
     585                }
     586                // Check next timer
     587                srchTimer = srchTimer->next;
+   \                     ??osal_next_timeout_2:
+   \   00003E   8A82         MOV       DPL,R2
+   \   000040   8B83         MOV       DPH,R3
+   \   000042   E0           MOVX      A,@DPTR
+   \   000043   F8           MOV       R0,A
+   \   000044   A3           INC       DPTR
+   \   000045   E0           MOVX      A,@DPTR
+   \   000046   F9           MOV       R1,A
+   \   000047   E8           MOV       A,R0
+   \   000048   FA           MOV       R2,A
+   \   000049   E9           MOV       A,R1
+   \   00004A   FB           MOV       R3,A
     588              }
+   \   00004B   E8           MOV       A,R0
+   \   00004C   4B           ORL       A,R3
+   \   00004D   600E         JZ        ??osal_next_timeout_3
+   \   00004F   80CD         SJMP      ??osal_next_timeout_1
     589            }
     590            else
     591            {
     592              // No timers
     593              nextTimeout = 0;
+   \                     ??osal_next_timeout_0:
+   \   000051   75..00       MOV       ?V0,#0x0
+   \   000054   75..00       MOV       ?V1,#0x0
+   \   000057   75..00       MOV       ?V2,#0x0
+   \   00005A   75..00       MOV       ?V3,#0x0
     594            }
     595          
     596            return ( nextTimeout );
+   \                     ??osal_next_timeout_3:
+   \   00005D   AA..         MOV       R2,?V0
+   \   00005F   AB..         MOV       R3,?V1
+   \   000061   AC..         MOV       R4,?V2
+   \   000063   AD..         MOV       R5,?V3
+   \   000065   02....       LJMP      ?Subroutine1 & 0xFFFF
     597          }
     598          #endif // POWER_SAVING || USE_ICALL
     599          
@@ -1547,12 +1654,16 @@ C:\Texas Instruments\Z-Stack 3.0.2\Components\osal\common\OSAL_Timers.c
       2     12   osalDeleteTimer
       2     16   osalFindTimer
       2      0   osalTimerInit
-      0     25   osalTimerUpdate
+      0     37   osalTimerUpdate
         0     25   -> osal_mem_free
         0     25   -> osal_set_event
       2      0   osal_GetSystemClock
+      0     12   osal_adjust_timers
+        0     12   -> TimerElapsed
+        0     12   -> osalTimerUpdate
       0     14   osal_get_timeoutEx
         0     14   -> osalFindTimer
+      0     16   osal_next_timeout
       0     22   osal_start_reload_timer
         0     18   -> osalAddTimer
       0     18   osal_start_timerEx
@@ -1567,38 +1678,42 @@ C:\Texas Instruments\Z-Stack 3.0.2\Components\osal\common\OSAL_Timers.c
 
    Bytes  Function/Label
    -----  --------------
-       7  ??Subroutine5_0
-       8  ??Subroutine6_0
+       7  ??Subroutine7_0
+       8  ??Subroutine8_0
        7  ?Subroutine0
        5  ?Subroutine1
-       6  ?Subroutine2
-      12  ?Subroutine3
-       1  ?Subroutine4
+       5  ?Subroutine2
+       5  ?Subroutine3
+       3  ?Subroutine4
+      12  ?Subroutine5
+       1  ?Subroutine6
        1  _A_IEN0
-     152  osalAddTimer
+     144  osalAddTimer
       22  osalDeleteTimer
       63  osalFindTimer
       14  osalTimerInit
-     487  osalTimerUpdate
+     496  osalTimerUpdate
       13  osal_GetSystemClock
+      25  osal_adjust_timers
       59  osal_get_timeoutEx
+     104  osal_next_timeout
       72  osal_start_reload_timer
       49  osal_start_timerEx
-      51  osal_stop_timerEx
+      46  osal_stop_timerEx
        4  osal_systemClock
       41  osal_timer_num_active
        2  timerHead
-      66  -- Other
+      78  -- Other
 
  
- 1 069 bytes in segment BANKED_CODE
-    66 bytes in segment BANK_RELAYS
+ 1 201 bytes in segment BANKED_CODE
+    78 bytes in segment BANK_RELAYS
      1 byte  in segment SFR_AN
      6 bytes in segment XDATA_Z
  
-    66 bytes of CODE     memory
+    78 bytes of CODE     memory
      0 bytes of DATA     memory (+ 1 byte shared)
- 1 069 bytes of HUGECODE memory
+ 1 201 bytes of HUGECODE memory
      6 bytes of XDATA    memory
 
 Errors: none

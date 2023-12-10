@@ -93,19 +93,11 @@
 const uint16 zclGenericApp_clusterRevision_all = 0x0001; 
 
 // Basic Cluster
-// Basic Cluster
-const uint8 zclGenericApp_ZCLVersion = GENERICAPP_ZCLVERSION;
-const uint8 zclGenericApp_AppVersion = GENERICAPP_APPVERSION;
-const uint8 zclGenericApp_StackVersion = GENERICAPP_STACKVERSION;
-const uint8 zclGenericApp_HWRevision = GENERICAPP_HWVERSION;
-const uint8 zclGenericApp_ManufacturerName[] = { 4, 'T','e','s','t' };
-const uint8 zclGenericApp_ModelId[] = { 4, 'F','M','G','C' };
-const uint8 zclGenericApp_DateCode[] = { 16, '2','0','2','3','0','8','2','7',' ',' ',' ',' ',' ',' ',' ',' ' };
+const uint8 zclGenericApp_ManufacturerName[] = { 9, 'S','L','E','E','P','-','S','W','3' };
+const uint8 zclGenericApp_ModelId[] = { 11, 'H','o','m','e','-','s','w','i','t','c','h' };
 const uint8 zclGenericApp_PowerSource = POWER_SOURCE_BATTERY;
-uint8 zclGenericApp_LocationDescription[] = { 16, 'H','O','M','E',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ' };
-uint8 zclGenericApp_PhysicalEnvironment = 0;
 uint8 zclGenericApp_DeviceEnable = DEVICE_ENABLED;
-uint8 zclGenericApp_SoftwareBuildID[] = { 7, 'N','U','M','B','E','R','1' };
+uint8 zclGenericApp_PowerConfiguration_BatteryPercentageRemaining = 0;
 
 // Identify Cluster
 uint16 zclGenericApp_IdentifyTime = 0;
@@ -138,19 +130,12 @@ CONST uint8 zclCmdsArraySize = ( sizeof(zclGenericApp_Cmds) / sizeof(zclGenericA
 CONST zclAttrRec_t zclGenericApp_Attrs[] =
 {
   // *** General Basic Cluster Attributes ***
-  {ZCL_CLUSTER_ID_GEN_BASIC, {ATTRID_BASIC_ZCL_VERSION, ZCL_DATATYPE_UINT8, ACCESS_CONTROL_READ, (void *)&zclGenericApp_ZCLVersion}},
-  {ZCL_CLUSTER_ID_GEN_BASIC, {ATTRID_BASIC_APPL_VERSION, ZCL_DATATYPE_UINT8, ACCESS_CONTROL_READ, (void *)&zclGenericApp_AppVersion}},
-  {ZCL_CLUSTER_ID_GEN_BASIC, {ATTRID_BASIC_STACK_VERSION, ZCL_DATATYPE_UINT8, ACCESS_CONTROL_READ, (void *)&zclGenericApp_StackVersion}},
-  {ZCL_CLUSTER_ID_GEN_BASIC, {ATTRID_BASIC_HW_VERSION, ZCL_DATATYPE_UINT8, ACCESS_CONTROL_READ, (void *)&zclGenericApp_HWRevision}},
   {ZCL_CLUSTER_ID_GEN_BASIC, {ATTRID_BASIC_MANUFACTURER_NAME, ZCL_DATATYPE_CHAR_STR, ACCESS_CONTROL_READ, (void *)zclGenericApp_ManufacturerName}},
   {ZCL_CLUSTER_ID_GEN_BASIC, {ATTRID_BASIC_MODEL_ID, ZCL_DATATYPE_CHAR_STR, ACCESS_CONTROL_READ,(void *)zclGenericApp_ModelId}},
-  {ZCL_CLUSTER_ID_GEN_BASIC, {ATTRID_BASIC_DATE_CODE, ZCL_DATATYPE_CHAR_STR, ACCESS_CONTROL_READ, (void *)zclGenericApp_DateCode}},
   {ZCL_CLUSTER_ID_GEN_BASIC, {ATTRID_BASIC_POWER_SOURCE, ZCL_DATATYPE_ENUM8, ACCESS_CONTROL_READ, (void *)&zclGenericApp_PowerSource}},
-  {ZCL_CLUSTER_ID_GEN_BASIC, {ATTRID_BASIC_LOCATION_DESC, ZCL_DATATYPE_CHAR_STR, (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE), (void *)zclGenericApp_LocationDescription}},
-  {ZCL_CLUSTER_ID_GEN_BASIC, {ATTRID_BASIC_PHYSICAL_ENV, ZCL_DATATYPE_ENUM8, (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE), (void *)&zclGenericApp_PhysicalEnvironment}},
   {ZCL_CLUSTER_ID_GEN_BASIC, {ATTRID_BASIC_DEVICE_ENABLED, ZCL_DATATYPE_BOOLEAN, (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE), (void *)&zclGenericApp_DeviceEnable}},
-  {ZCL_CLUSTER_ID_GEN_BASIC, {ATTRID_BASIC_SW_BUILD_ID, ZCL_DATATYPE_CHAR_STR, ACCESS_CONTROL_READ, (void *)&zclGenericApp_SoftwareBuildID}},
-  {ZCL_CLUSTER_ID_GEN_BASIC, {ATTRID_CLUSTER_REVISION, ZCL_DATATYPE_UINT16, ACCESS_CONTROL_READ, (void *)&zclGenericApp_clusterRevision_all}},
+
+  {ZCL_CLUSTER_ID_GEN_POWER_CFG, {ATTRID_POWER_CFG_BATTERY_PERCENTAGE_REMAINING, ZCL_DATATYPE_UINT8, ACCESS_REPORTABLE | ACCESS_CONTROL_READ, (void *)&zclGenericApp_PowerConfiguration_BatteryPercentageRemaining}},
   
 #ifdef ZCL_IDENTIFY
   // *** Identify Cluster Attribute ***
@@ -166,9 +151,7 @@ CONST zclAttrRec_t zclGenericApp_Attrs[] =
   // *** On / Off Cluster *** //
   {ZCL_CLUSTER_ID_GEN_ON_OFF, {ATTRID_ON_OFF, ZCL_DATATYPE_BOOLEAN, ACCESS_CONTROL_READ, (void *)&zclGenericApp_OnOff}},
   {ZCL_CLUSTER_ID_GEN_ON_OFF, {ATTRID_CLUSTER_REVISION, ZCL_DATATYPE_UINT16, ACCESS_CONTROL_READ | ACCESS_CLIENT, (void *)&zclGenericApp_clusterRevision_all}},
- 
-  // *** Groups Cluster *** //
-  //{ZCL_CLUSTER_ID_GEN_GROUPS, {ATTRID_CLUSTER_REVISION, ZCL_DATATYPE_UINT16, ACCESS_CONTROL_READ | ACCESS_CLIENT, (void *)&zclGenericApp_clusterRevision_all}}
+
  };
 
 uint8 CONST zclGenericApp_NumAttributes = ( sizeof(zclGenericApp_Attrs) / sizeof(zclGenericApp_Attrs[0]) );
@@ -182,7 +165,6 @@ const cId_t zclGenericApp_InClusterList[] =
 {
   ZCL_CLUSTER_ID_GEN_BASIC,
   ZCL_CLUSTER_ID_GEN_IDENTIFY,
-  //ZCL_CLUSTER_ID_GEN_ON_OFF_SWITCH_CONFIG
   
   // GENERICAPP_TODO: Add application specific Input Clusters Here. 
   //       See zcl.h for Cluster ID definitions
@@ -194,14 +176,26 @@ const cId_t zclGenericApp_InClusterList[] =
 const cId_t zclGenericApp_OutClusterList[] =
 {
   ZCL_CLUSTER_ID_GEN_BASIC,
+  ZCL_CLUSTER_ID_GEN_POWER_CFG,
   ZCL_CLUSTER_ID_GEN_IDENTIFY,
   ZCL_CLUSTER_ID_GEN_ON_OFF
-  //ZCL_CLUSTER_ID_GEN_GROUPS,
  
   // GENERICAPP_TODO: Add application specific Output Clusters Here. 
   //       See zcl.h for Cluster ID definitions
 };
 #define ZCLGENERICAPP_MAX_OUTCLUSTERS  (sizeof(zclGenericApp_OutClusterList) / sizeof(zclGenericApp_OutClusterList[0]))
+
+const cId_t zclGenericApp_OutClusterList2[] =
+{
+  ZCL_CLUSTER_ID_GEN_BASIC,
+  ZCL_CLUSTER_ID_GEN_IDENTIFY,
+  ZCL_CLUSTER_ID_GEN_ON_OFF
+ 
+  // GENERICAPP_TODO: Add application specific Output Clusters Here. 
+  //       See zcl.h for Cluster ID definitions
+};
+#define ZCLGENERICAPP_MAX_OUTCLUSTERS2  (sizeof(zclGenericApp_OutClusterList2) / sizeof(zclGenericApp_OutClusterList2[0]))
+
 
 
 SimpleDescriptionFormat_t zclGenericApp_SimpleDesc =
@@ -217,6 +211,33 @@ SimpleDescriptionFormat_t zclGenericApp_SimpleDesc =
   ZCLGENERICAPP_MAX_OUTCLUSTERS,        //  byte  AppNumInClusters;
   (cId_t *)zclGenericApp_OutClusterList //  byte *pAppInClusterList;
 };
+SimpleDescriptionFormat_t zclGenericApp_SimpleDesc2 =
+{
+  GENERICAPP_ENDPOINT2,                  //  int Endpoint;
+  ZCL_HA_PROFILE_ID,                     //  uint16 AppProfId;
+  // GENERICAPP_TODO: Replace ZCL_HA_DEVICEID_ON_OFF_LIGHT with application specific device ID
+  ZCL_HA_DEVICEID_ON_OFF_SWITCH,  //  uint16 AppDeviceId; 
+  GENERICAPP_DEVICE_VERSION,            //  int   AppDevVer:4;
+  GENERICAPP_FLAGS,                     //  int   AppFlags:4;
+  ZCLGENERICAPP_MAX_INCLUSTERS,         //  byte  AppNumInClusters;
+  (cId_t *)zclGenericApp_InClusterList, //  byte *pAppInClusterList;
+  ZCLGENERICAPP_MAX_OUTCLUSTERS2,        //  byte  AppNumInClusters;
+  (cId_t *)zclGenericApp_OutClusterList2 //  byte *pAppInClusterList;
+};
+SimpleDescriptionFormat_t zclGenericApp_SimpleDesc3 =
+{
+  GENERICAPP_ENDPOINT3,                  //  int Endpoint;
+  ZCL_HA_PROFILE_ID,                     //  uint16 AppProfId;
+  // GENERICAPP_TODO: Replace ZCL_HA_DEVICEID_ON_OFF_LIGHT with application specific device ID
+  ZCL_HA_DEVICEID_ON_OFF_SWITCH,  //  uint16 AppDeviceId; 
+  GENERICAPP_DEVICE_VERSION,            //  int   AppDevVer:4;
+  GENERICAPP_FLAGS,                     //  int   AppFlags:4;
+  ZCLGENERICAPP_MAX_INCLUSTERS,         //  byte  AppNumInClusters;
+  (cId_t *)zclGenericApp_InClusterList, //  byte *pAppInClusterList;
+  ZCLGENERICAPP_MAX_OUTCLUSTERS2,        //  byte  AppNumInClusters;
+  (cId_t *)zclGenericApp_OutClusterList2 //  byte *pAppInClusterList;
+};
+
 
 // Added to include ZLL Target functionality
 #if defined ( BDB_TL_INITIATOR ) || defined ( BDB_TL_TARGET )
@@ -241,22 +262,22 @@ bdbTLDeviceInfo_t tlGenericApp_DeviceInfo =
   
 void zclGenericApp_ResetAttributesToDefaultValues(void)
 {
-  int i;
-  
-  zclGenericApp_LocationDescription[0] = 16;
-  for (i = 1; i <= 16; i++)
-  {
-    zclGenericApp_LocationDescription[i] = ' ';
-  }
-  
-  zclGenericApp_PhysicalEnvironment = PHY_UNSPECIFIED_ENV;
-  zclGenericApp_DeviceEnable = DEVICE_ENABLED;
-  
-#ifdef ZCL_IDENTIFY
-  zclGenericApp_IdentifyTime = 0;
-#endif
-  
-  /* GENERICAPP_TODO: initialize cluster attribute variables. */
+//  int i;
+//  
+//  zclGenericApp_LocationDescription[0] = 16;
+//  for (i = 1; i <= 16; i++)
+//  {
+//    zclGenericApp_LocationDescription[i] = ' ';
+//  }
+//  
+//  zclGenericApp_PhysicalEnvironment = PHY_UNSPECIFIED_ENV;
+//  zclGenericApp_DeviceEnable = DEVICE_ENABLED;
+//  
+//#ifdef ZCL_IDENTIFY
+//  zclGenericApp_IdentifyTime = 0;
+//#endif
+//  
+//  /* GENERICAPP_TODO: initialize cluster attribute variables. */
 }
 
 /****************************************************************************

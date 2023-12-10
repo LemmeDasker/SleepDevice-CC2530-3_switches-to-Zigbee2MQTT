@@ -88,8 +88,16 @@
 
 /* HAL */
 #include "hal_lcd.h"
-#include "hal_led.h"
+#include "hal_led.h" 
 #include "hal_key.h"
+
+/* SW_1 is at P2.0 */
+#define HAL_KEY_SW_1_PORT   P2
+#define HAL_KEY_SW_1_BIT    BV(0)
+
+#include "battery_reporting.h"
+//#include <stdio.h>
+
 
 /*********************************************************************
  * MACROS
@@ -116,12 +124,14 @@ uint8 zclGenericApp_OnOffSwitchActions;
 /*********************************************************************
  * GLOBAL FUNCTIONS
  */
- 
+void zclGenericApp_reset(void); 
 /*********************************************************************
  * LOCAL VARIABLES
  */
 
-bool isToggleSet1 = false;
+bool isToggleSet6 = false;
+bool isToggleSet5 = false;
+bool isToggleSet4 = false;
 
 uint8 giGenAppScreenMode = GENERIC_MAINMODE;   // display the main screen mode first
 
@@ -130,6 +140,9 @@ uint8 gPermitDuration = 0;    // permit joining default to disabled
 devStates_t zclGenericApp_NwkState = DEV_INIT;
 
 afAddrType_t zclGenericApp_DstAddr;
+afAddrType_t zclGenericApp_DstAddr2;
+afAddrType_t zclGenericApp_DstAddr3;
+
 // Endpoint to allow SYS_APP_MSGs
 static endPointDesc_t sampleSw_TestEp =
 {
@@ -139,6 +152,23 @@ static endPointDesc_t sampleSw_TestEp =
   (SimpleDescriptionFormat_t *)NULL,  // No Simple description for this test endpoint
   (afNetworkLatencyReq_t)0            // No Network Latency req
 };
+static endPointDesc_t sampleSw_TestEp2 =
+{
+  GENERICAPP_ENDPOINT2,                  // endpoint
+  0,
+  &zclGenericApp_TaskID,
+  (SimpleDescriptionFormat_t *)NULL,  // No Simple description for this test endpoint
+  (afNetworkLatencyReq_t)0            // No Network Latency req
+};
+static endPointDesc_t sampleSw_TestEp3 =
+{
+  GENERICAPP_ENDPOINT3,                  // endpoint
+  0,
+  &zclGenericApp_TaskID,
+  (SimpleDescriptionFormat_t *)NULL,  // No Simple description for this test endpoint
+  (afNetworkLatencyReq_t)0            // No Network Latency req
+};
+
 
 /*********************************************************************
  * LOCAL FUNCTIONS
@@ -258,28 +288,44 @@ void zclGenericApp_Init( byte task_id )
   zclGenericApp_TaskID = task_id;
   
     // Set destination address to indirect
-    //zclGenericApp_DstAddr.addrMode = (afAddrMode_t)AddrNotPresent;
   zclGenericApp_DstAddr.addrMode = (afAddrMode_t)Addr16Bit;
   zclGenericApp_DstAddr.endPoint = GENERICAPP_ENDPOINT;
   zclGenericApp_DstAddr.addr.shortAddr = 0x0000;
 
+  zclGenericApp_DstAddr2.addrMode = (afAddrMode_t)Addr16Bit;
+  zclGenericApp_DstAddr2.endPoint = GENERICAPP_ENDPOINT2;
+  zclGenericApp_DstAddr2.addr.shortAddr = 0x0000;  
+  
+  zclGenericApp_DstAddr3.addrMode = (afAddrMode_t)Addr16Bit;
+  zclGenericApp_DstAddr3.endPoint = GENERICAPP_ENDPOINT3;
+  zclGenericApp_DstAddr3.addr.shortAddr = 0x0000;
+
+  
   // This app is part of the Home Automation Profile
   bdb_RegisterSimpleDescriptor( &zclGenericApp_SimpleDesc );
-
+  bdb_RegisterSimpleDescriptor( &zclGenericApp_SimpleDesc2 );
+  bdb_RegisterSimpleDescriptor( &zclGenericApp_SimpleDesc3 );  
+  
   // Register the ZCL General Cluster Library callback functions
   zclGeneral_RegisterCmdCallbacks( GENERICAPP_ENDPOINT, &zclGenericApp_CmdCallbacks );
+  zclGeneral_RegisterCmdCallbacks( GENERICAPP_ENDPOINT2, &zclGenericApp_CmdCallbacks );
+  zclGeneral_RegisterCmdCallbacks( GENERICAPP_ENDPOINT3, &zclGenericApp_CmdCallbacks );
   
   // GENERICAPP_TODO: Register other cluster command callbacks here
 
   // Register the application's attribute list
   zcl_registerAttrList( GENERICAPP_ENDPOINT, zclGenericApp_NumAttributes, zclGenericApp_Attrs );
-
+  zcl_registerAttrList( GENERICAPP_ENDPOINT2, zclGenericApp_NumAttributes, zclGenericApp_Attrs );
+  zcl_registerAttrList( GENERICAPP_ENDPOINT3, zclGenericApp_NumAttributes, zclGenericApp_Attrs );  
+  
   // Register the Application to receive the unprocessed Foundation command/response messages
   zcl_registerForMsg( zclGenericApp_TaskID );
 
 #ifdef ZCL_DISCOVER
   // Register the application's command list
   zcl_registerCmdList( GENERICAPP_ENDPOINT, zclCmdsArraySize, zclGenericApp_Cmds );
+  zcl_registerCmdList( GENERICAPP_ENDPOINT2, zclCmdsArraySize, zclGenericApp_Cmds );
+  zcl_registerCmdList( GENERICAPP_ENDPOINT3, zclCmdsArraySize, zclGenericApp_Cmds );
 #endif
 
   // Register low voltage NV memory protection application callback
@@ -289,7 +335,9 @@ void zclGenericApp_Init( byte task_id )
   RegisterForKeys( zclGenericApp_TaskID );
   
   // Register for a test endpoint
-  afRegister( &sampleSw_TestEp );    
+  afRegister( &sampleSw_TestEp );
+  afRegister( &sampleSw_TestEp2 );
+  afRegister( &sampleSw_TestEp3 );
 
   bdb_RegisterCommissioningStatusCB( zclGenericApp_ProcessCommissioningStatus );
   bdb_RegisterIdentifyTimeChangeCB( zclGenericApp_ProcessIdentifyTimeChange );
@@ -303,6 +351,8 @@ void zclGenericApp_Init( byte task_id )
   // Register the application's callback function to read/write attribute data.
   // This is only required when the attribute data format is unknown to ZCL.
   zcl_registerReadWriteCB( GENERICAPP_ENDPOINT, zclDiagnostic_ReadWriteAttrCB, NULL );
+  zcl_registerReadWriteCB( GENERICAPP_ENDPOINT2, zclDiagnostic_ReadWriteAttrCB, NULL );
+  zcl_registerReadWriteCB( GENERICAPP_ENDPOINT3, zclDiagnostic_ReadWriteAttrCB, NULL );
 
   if ( zclDiagnostic_InitStats() == ZSuccess )
   {
@@ -314,7 +364,6 @@ void zclGenericApp_Init( byte task_id )
 #ifdef LCD_SUPPORTED
   HalLcdWriteString ( (char *)sDeviceName, HAL_LCD_LINE_3 );
 #endif  // LCD_SUPPORTED
-
 
 bdb_StartCommissioning(BDB_COMMISSIONING_REJOIN_EXISTING_NETWORK_ON_STARTUP);
 }
@@ -393,28 +442,34 @@ uint16 zclGenericApp_event_loop( uint8 task_id, uint16 events )
   
   if ( events & GENERICAPP_EVT_1 )
   {
+    zclGenericApp_ReadADC();    // Send battery info for first time initialization
     NLME_SetPollRate( 0 );
     NLME_SetQueuedPollRate( 0 );
     NLME_SetResponseRate( 0 );
-//    HalLedSet ( HAL_LED_2, HAL_LED_MODE_TOGGLE );
-//    osal_start_timerEx( zclGenericApp_TaskID, GENERICAPP_EVT_1, 500 );
-    
+    HAL_TURN_OFF_LED1();    
+
     return ( events ^ GENERICAPP_EVT_1 );
   }
   
-  /*
+
   if ( events & GENERICAPP_EVT_2 )
   {
-    
+  // Leaves the existing network reset ZED. Used for Factory Reset - if the button is pressed for 5 seconds 
+    if ((HAL_KEY_SW_1_PORT & HAL_KEY_SW_1_BIT)) {
+    } else {
+            bdb_resetLocalAction();
+            HAL_TURN_OFF_LED1();
+           }  
+
     return ( events ^ GENERICAPP_EVT_2 );
   }
-  
+
+
   if ( events & GENERICAPP_EVT_3 )
   {
-    
+
     return ( events ^ GENERICAPP_EVT_3 );
   }
-  */
   
   // Discard unknown events
   return 0;
@@ -439,28 +494,48 @@ static void zclGenericApp_HandleKeys( byte shift, byte keys )
 {
   if ( keys & HAL_KEY_SW_1 )
   {
-    //HAL_TOGGLE_LED1();
-    // Start the BDB commissioning method
+    HAL_TURN_ON_LED1();
+    osal_start_timerEx( zclGenericApp_TaskID, GENERICAPP_EVT_2, 5000 );
     bdb_StartCommissioning(BDB_COMMISSIONING_MODE_NWK_STEERING);
   }
+
   if ( keys & HAL_KEY_SW_6 )
   {
+    // Send switch on/off command
+    if (isToggleSet6) {
+        zclGeneral_SendOnOff_CmdOn( GENERICAPP_ENDPOINT3, &zclGenericApp_DstAddr3, FALSE, bdb_getZCLFrameCounter() );
+    } else {
+        zclGeneral_SendOnOff_CmdOff( GENERICAPP_ENDPOINT3, &zclGenericApp_DstAddr3, FALSE, bdb_getZCLFrameCounter() );
+    }
+      // Skift tilstanden
+    isToggleSet6 = !isToggleSet6;
+  zclGenericApp_ReadADC();
+  }  
+
+  if ( keys & HAL_KEY_SW_5 )
+  {
+    // Send switch on/off command
+    if (isToggleSet5) {
+        zclGeneral_SendOnOff_CmdOn( GENERICAPP_ENDPOINT2, &zclGenericApp_DstAddr2, FALSE, bdb_getZCLFrameCounter() );
+    } else {
+        zclGeneral_SendOnOff_CmdOff( GENERICAPP_ENDPOINT2, &zclGenericApp_DstAddr2, FALSE, bdb_getZCLFrameCounter() );
+    }
+      // Skift tilstanden
+    isToggleSet5 = !isToggleSet5;
+  zclGenericApp_ReadADC();
+  } 
+
+  if ( keys & HAL_KEY_SW_4 )
+  {
       // Send switch on/off command
-    if (isToggleSet1) {
-        //HAL_TURN_ON_LED2();
+    if (isToggleSet4) {
         zclGeneral_SendOnOff_CmdOn( GENERICAPP_ENDPOINT, &zclGenericApp_DstAddr, FALSE, bdb_getZCLFrameCounter() );
     } else {
-        //HAL_TURN_OFF_LED2();
         zclGeneral_SendOnOff_CmdOff( GENERICAPP_ENDPOINT, &zclGenericApp_DstAddr, FALSE, bdb_getZCLFrameCounter() );
     }
       // Skift tilstanden
-    isToggleSet1 = !isToggleSet1;
-  }  
-  if ( keys & HAL_KEY_SW_5 )
-  {
-    // Send switch toggle command
-    //HAL_TOGGLE_LED3();
-    //zclGeneral_SendOnOff_CmdToggle( GENERICAPP_ENDPOINT, &zclGenericApp_DstAddr, FALSE, bdb_getZCLFrameCounter() );
+    isToggleSet4 = !isToggleSet4;
+  zclGenericApp_ReadADC();
   } 
 }
 
@@ -523,6 +598,13 @@ static void zclGenericApp_ProcessCommissioningStatus(bdbCommissioningModeMsg_t *
       //YOUR JOB:
       //We are on a network, what now?
 
+       // The device tries to join a new network upon startup, if it has not joined any network before (like a re-flashed device).
+//      if(bdbCommissioningModeMsg->bdbCommissioningStatus == BDB_COMMISSIONING_SUCCESS) {
+//      } else if(bdbCommissioningModeMsg->bdbCommissioningStatus == BDB_COMMISSIONING_NO_NETWORK) {
+//        HAL_TURN_ON_LED1();
+//        bdb_StartCommissioning(BDB_COMMISSIONING_MODE_NWK_STEERING);
+//      }     
+    
     break;
 #if ZG_BUILD_ENDDEVICE_TYPE    
     case BDB_COMMISSIONING_PARENT_LOST:

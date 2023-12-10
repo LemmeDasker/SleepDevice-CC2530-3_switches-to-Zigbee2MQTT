@@ -3232,10 +3232,16 @@
     <group>
         <name>App</name>
         <file>
-            <name>$PROJ_DIR$\..\Source\hal_key.c</name>
+            <name>$PROJ_DIR$\..\Source\battery_reporting.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\Source\OnBoard.c</name>
+            <name>$PROJ_DIR$\..\Source\battery_reporting.h</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Source\hal_board_cfg.h</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Source\hal_key.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\Source\OSAL_GenericApp.c</name>
@@ -3386,6 +3392,9 @@
                     </file>
                     <file>
                         <name>$PROJ_DIR$\..\..\..\..\..\Components\hal\target\CC2530EB\hal_flash.c</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\..\..\..\..\Components\hal\target\CC2530EB\hal_key.c</name>
                     </file>
                     <file>
                         <name>$PROJ_DIR$\..\..\..\..\..\Components\hal\target\CC2530EB\hal_lcd.c</name>
@@ -3956,6 +3965,9 @@
         <name>ZMain</name>
         <file>
             <name>$PROJ_DIR$\..\..\..\ZMain\TI2530DB\chipcon_cstartup.s51</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\ZMain\TI2530DB\OnBoard.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\ZMain\TI2530DB\OnBoard.h</name>

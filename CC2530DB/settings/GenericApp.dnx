@@ -12,7 +12,7 @@
         <ByteLimit>50</ByteLimit>
     </Stack>
     <DebugChecksum>
-        <Checksum>1901694975</Checksum>
+        <Checksum>1976026821</Checksum>
     </DebugChecksum>
     <CallStack>
         <ShowArgs>0</ShowArgs>
@@ -30,8 +30,8 @@
         <Category>_ 0</Category>
     </LogFile>
     <Breakpoints>
-        <Bp0>_ "STD_CODE" "{$PROJ_DIR$\..\..\..\..\..\Components\hal\target\CC2530EB\hal_key.c}.534.3" 0 0 0 0 "" 0 ""</Bp0>
-        <Bp1>_ "STD_CODE" "{$PROJ_DIR$\..\..\..\..\..\Components\hal\target\CC2530EB\hal_key.c}.505.3" 0 0 0 0 "" 0 ""</Bp1>
+        <Bp0>_ "STD_CODE" "{$PROJ_DIR$\..\..\..\..\..\Components\hal\target\CC2530EB\hal_key.c}.541.1" 0 0 0 0 "" 0 ""</Bp0>
+        <Bp1>_ "STD_CODE" "{$PROJ_DIR$\..\..\..\..\..\Components\hal\target\CC2530EB\hal_key.c}.524.3" 0 0 0 0 "" 0 ""</Bp1>
         <Count>2</Count>
     </Breakpoints>
     <ChipconEmu>

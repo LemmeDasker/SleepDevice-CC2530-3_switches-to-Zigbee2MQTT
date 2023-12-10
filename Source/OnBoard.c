@@ -72,7 +72,7 @@
 // Minimum length RAM "pattern" for Stack check
 #define MIN_RAM_INIT 12
 
-#define ISR_KEYINTERRUPT
+//#define ISR_KEYINTERRUPT
 /*********************************************************************
  * GLOBAL VARIABLES
  */

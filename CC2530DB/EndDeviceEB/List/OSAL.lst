@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR C/C++ Compiler V10.30.1.6000 for 8051               22/Sep/2023  19:42:39
+# IAR C/C++ Compiler V10.30.1.6000 for 8051               10/Dec/2023  13:11:53
 # Copyright 2004-2018 IAR Systems AB.
 # PC-locked license - IAR Embedded Workbench for 8051
 #
@@ -14,29 +14,30 @@
 #    Source file        =  
 #        C:\Texas Instruments\Z-Stack 3.0.2\Components\osal\common\OSAL.c
 #    Command line       =  
-#        -f C:\Users\Flemming\AppData\Local\Temp\EW96A0.tmp ("C:\Texas
+#        -f C:\Users\Flemming\AppData\Local\Temp\EWC55F.tmp ("C:\Texas
 #        Instruments\Z-Stack 3.0.2\Components\osal\common\OSAL.c" -D SECURE=1
-#        -D TC_LINKKEY_JOIN -D NV_INIT -D NV_RESTORE -D xPOWER_SAVING -D
+#        -D TC_LINKKEY_JOIN -D NV_INIT -D NV_RESTORE -D POWER_SAVING -D
 #        NWK_AUTO_POLL -D xZTOOL_P1 -D xMT_TASK -D xMT_APP_FUNC -D xMT_SYS_FUNC
 #        -D xMT_ZDO_FUNC -D xMT_ZDO_MGMT -D xMT_APP_CNF_FUNC -D
 #        xLEGACY_LCD_DEBUG -D xLCD_SUPPORTED=DEBUG -D MULTICAST_ENABLED=FALSE
 #        -D ZCL_READ -D ZCL_WRITE -D ZCL_BASIC -D ZCL_IDENTIFY -D xZCL_SCENES
-#        -D xZCL_GROUPS -D ZCL_ON_OFF -D xZCL_DISCOVER -lC "C:\Texas
-#        Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\EndDeviceEB\List"
+#        -D xZCL_GROUPS -D ZCL_ON_OFF -D xZCL_DISCOVER -D ZCL_REPORTING_DEVICE
+#        -D ISR_KEYINTERRUPT -D HAL_LCD=FALSE -D HAL_UARTE=FALSE -D
+#        HAL_SPI=FALSE -D HAL_HID=FALSE -lC "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\EndDeviceEB\List"
 #        -lA "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\EndDeviceEB\List"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\EndDeviceEB\List"
 #        --diag_suppress Pe001,Pa010 -o "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\EndDeviceEB\Obj"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\EndDeviceEB\Obj"
 #        -e --debug --core=plain --dptr=16,1 --data_model=large
 #        --code_model=banked --calling_convention=xdata_reentrant
 #        --place_constants=data_rom --nr_virtual_regs 16 -f "C:\Texas
 #        Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
 #        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3
 #        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f "C:\Texas
 #        Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
 #        (-DZIGBEEPRO -DSECURE=1 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
 #        -DDEFAULT_CHANLIST=0x00000800 -DZDAPP_CONFIG_PAN_ID=0xFFFF
 #        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
@@ -52,65 +53,65 @@
 #        -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100 -DREJOIN_POLL_RATE=440
 #        -DREJOIN_BACKOFF=900000 -DREJOIN_SCAN=900000 -DENABLE_LED4_DISABLE_S1)
 #        -f "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wZCL.cfg"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\Tools\CC2530DB\f8wZCL.cfg"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\" -I
-#        "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\Source\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\Source\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\Source\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\ZMain\TI2530DB\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\Source\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\hal\include\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\ZMain\TI2530DB\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\hal\include\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mac\include\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mac\include\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mt\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\osal\include\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mt\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\services\saddr\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\osal\include\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\services\sdata\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\services\saddr\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\af\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\services\sdata\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\bdb\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\af\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\gp\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\bdb\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\gp\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\sec\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\sys\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\sec\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\zcl\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\sys\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\zcl\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\zmac\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\zmac\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
 #        -Ohz --require_prototypes)
 #    Locale             =  Danish_DNK.1252
 #    List file          =  
 #        C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\EndDeviceEB\List\OSAL.lst
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\EndDeviceEB\List\OSAL.lst
 #    Object file        =  
 #        C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\EndDeviceEB\Obj\OSAL.r51
+#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\EndDeviceEB\Obj\OSAL.r51
 #
 ###############################################################################
 
@@ -3606,7 +3607,7 @@ C:\Texas Instruments\Z-Stack 3.0.2\Components\osal\common\OSAL.c
    \   00002C   E5..         MOV       A,?V0
    \   00002E   C3           CLR       C
    \   00002F   98           SUBB      A,R0
-   \   000030   5064         JNC       ??osal_run_system_2
+   \   000030   5066         JNC       ??osal_run_system_2
    1652            {
    1653              uint16 events;
    1654              halIntState_t intState;
@@ -3691,11 +3692,15 @@ C:\Texas Instruments\Z-Stack 3.0.2\Components\osal\common\OSAL.c
    \   000091   E8           MOV       A,R0
    \   000092   A2E7         MOV       C,0xE0 /* A   */.7
    \   000094   92AF         MOV       0xa8.7,C
+   \   000096   8003         SJMP      ??osal_run_system_3
    1668            }
    1669          #if defined( POWER_SAVING ) && !defined(USE_ICALL)
    1670            else  // Complete pass through all task events with no activity?
    1671            {
    1672              osal_pwrmgr_powerconserve();  // Put the processor/system into sleep
+   \                     ??osal_run_system_2:
+   \   000098                ; Setup parameters for call to function osal_pwrmgr_powerconserve
+   \   000098   12....       LCALL     `??osal_pwrmgr_powerconserve::?relay`; Banked call to: osal_pwrmgr_powerconserve
    1673            }
    1674          #endif
    1675          
@@ -3748,9 +3753,9 @@ C:\Texas Instruments\Z-Stack 3.0.2\Components\osal\common\OSAL.c
    1722            }
    1723          #endif /* USE_ICALL */
    1724          }
-   \                     ??osal_run_system_2:
-   \   000096   02....       LJMP      ?Subroutine2 & 0xFFFF
-   \   000099                REQUIRE _A_IEN0
+   \                     ??osal_run_system_3:
+   \   00009B   02....       LJMP      ?Subroutine2 & 0xFFFF
+   \   00009E                REQUIRE _A_IEN0
    1725          
    1726          /*********************************************************************
    1727           * @fn      osal_buffer_uint32
@@ -4098,6 +4103,7 @@ C:\Texas Instruments\Z-Stack 3.0.2\Components\osal\common\OSAL.c
       0     10   osal_run_system
         0     10   -> Hal_ProcessPoll
         0     10   -> osalTimeUpdate
+        0     10   -> osal_pwrmgr_powerconserve
       2      0   osal_self
       0     23   osal_set_event
       2      0   osal_start_system
@@ -4183,7 +4189,7 @@ C:\Texas Instruments\Z-Stack 3.0.2\Components\osal\common\OSAL.c
        2  osal_qHead
        9  osal_rand
       58  osal_revmemcpy
-     153  osal_run_system
+     158  osal_run_system
       12  osal_self
       59  osal_set_event
        9  osal_start_system
@@ -4191,7 +4197,7 @@ C:\Texas Instruments\Z-Stack 3.0.2\Components\osal\common\OSAL.c
      210  -- Other
 
  
- 2 649 bytes in segment BANKED_CODE
+ 2 654 bytes in segment BANKED_CODE
    210 bytes in segment BANK_RELAYS
      1 byte  in segment SFR_AN
      1 byte  in segment XDATA_I
@@ -4202,7 +4208,7 @@ C:\Texas Instruments\Z-Stack 3.0.2\Components\osal\common\OSAL.c
    211 bytes of CODE     memory
     32 bytes of CONST    memory (+ 8 bytes shared)
      0 bytes of DATA     memory (+ 1 byte  shared)
- 2 649 bytes of HUGECODE memory
+ 2 654 bytes of HUGECODE memory
      3 bytes of XDATA    memory
 
 Errors: none

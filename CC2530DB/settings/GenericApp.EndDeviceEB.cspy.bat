@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\common\bin\cspybat" -f "C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\settings\GenericApp.EndDeviceEB.general.xcl" --backend -f "C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\settings\GenericApp.EndDeviceEB.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\common\bin\cspybat" -f "C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\settings\GenericApp.EndDeviceEB.general.xcl" --backend -f "C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\settings\GenericApp.EndDeviceEB.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\common\bin\cspybat" -f "C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\settings\GenericApp.EndDeviceEB.general.xcl" "--debug_file=%~1" --backend -f "C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\settings\GenericApp.EndDeviceEB.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\common\bin\cspybat" -f "C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\settings\GenericApp.EndDeviceEB.general.xcl" "--debug_file=%~1" --backend -f "C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\settings\GenericApp.EndDeviceEB.driver.xcl" 
 
 @echo off 
 :end

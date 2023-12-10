@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// IAR C/C++ Compiler V10.30.1.6000 for 8051              22/Sep/2023  19:42:39
+// IAR C/C++ Compiler V10.30.1.6000 for 8051              10/Dec/2023  13:11:54
 // Copyright 2004-2018 IAR Systems AB.
 // PC-locked license - IAR Embedded Workbench for 8051
 //
@@ -15,29 +15,30 @@
 //        C:\Texas Instruments\Z-Stack
 //        3.0.2\Components\osal\common\OSAL_PwrMgr.c
 //    Command line       =  
-//        -f C:\Users\Flemming\AppData\Local\Temp\EW9AAC.tmp ("C:\Texas
+//        -f C:\Users\Flemming\AppData\Local\Temp\EWC9F8.tmp ("C:\Texas
 //        Instruments\Z-Stack 3.0.2\Components\osal\common\OSAL_PwrMgr.c" -D
-//        SECURE=1 -D TC_LINKKEY_JOIN -D NV_INIT -D NV_RESTORE -D xPOWER_SAVING
+//        SECURE=1 -D TC_LINKKEY_JOIN -D NV_INIT -D NV_RESTORE -D POWER_SAVING
 //        -D NWK_AUTO_POLL -D xZTOOL_P1 -D xMT_TASK -D xMT_APP_FUNC -D
 //        xMT_SYS_FUNC -D xMT_ZDO_FUNC -D xMT_ZDO_MGMT -D xMT_APP_CNF_FUNC -D
 //        xLEGACY_LCD_DEBUG -D xLCD_SUPPORTED=DEBUG -D MULTICAST_ENABLED=FALSE
 //        -D ZCL_READ -D ZCL_WRITE -D ZCL_BASIC -D ZCL_IDENTIFY -D xZCL_SCENES
-//        -D xZCL_GROUPS -D ZCL_ON_OFF -D xZCL_DISCOVER -lC "C:\Texas
-//        Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\EndDeviceEB\List"
+//        -D xZCL_GROUPS -D ZCL_ON_OFF -D xZCL_DISCOVER -D ZCL_REPORTING_DEVICE
+//        -D ISR_KEYINTERRUPT -D HAL_LCD=FALSE -D HAL_UARTE=FALSE -D
+//        HAL_SPI=FALSE -D HAL_HID=FALSE -lC "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\EndDeviceEB\List"
 //        -lA "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\EndDeviceEB\List"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\EndDeviceEB\List"
 //        --diag_suppress Pe001,Pa010 -o "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\EndDeviceEB\Obj"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\EndDeviceEB\Obj"
 //        -e --debug --core=plain --dptr=16,1 --data_model=large
 //        --code_model=banked --calling_convention=xdata_reentrant
 //        --place_constants=data_rom --nr_virtual_regs 16 -f "C:\Texas
 //        Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
 //        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3
 //        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f "C:\Texas
 //        Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
 //        (-DZIGBEEPRO -DSECURE=1 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
 //        -DDEFAULT_CHANLIST=0x00000800 -DZDAPP_CONFIG_PAN_ID=0xFFFF
 //        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
@@ -53,62 +54,62 @@
 //        -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100
 //        -DREJOIN_POLL_RATE=440 -DREJOIN_BACKOFF=900000 -DREJOIN_SCAN=900000
 //        -DENABLE_LED4_DISABLE_S1) -f "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wZCL.cfg"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\Tools\CC2530DB\f8wZCL.cfg"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\" -I
-//        "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\Source\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\Source\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\Source\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\ZMain\TI2530DB\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\Source\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\hal\include\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\ZMain\TI2530DB\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\hal\include\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mac\include\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mac\include\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\mt\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\osal\include\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mt\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\services\saddr\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\osal\include\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\services\sdata\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\services\saddr\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\af\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\services\sdata\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\bdb\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\af\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\gp\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\bdb\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\gp\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\sec\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\sys\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\sec\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\zcl\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\sys\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\zcl\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\zmac\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\zmac\"
+//        -I "C:\Texas Instruments\Z-Stack
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
 //        -Ohz --require_prototypes)
 //    Locale             =  Danish_DNK.1252
 //    List file          =  
 //        C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\GenericApp\CC2530DB\EndDeviceEB\List\OSAL_PwrMgr.s51
+//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\EndDeviceEB\List\OSAL_PwrMgr.s51
 //
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -134,6 +135,8 @@
 
         EXTERN ?V0
         EXTERN ?V1
+        EXTERN ?V2
+        EXTERN ?V3
         EXTERN ?BANKED_ENTER_XDATA
         EXTERN ?BANKED_LEAVE_XDATA
         EXTERN ?BDISPATCH
@@ -145,6 +148,8 @@
         FUNCTION `??osal_pwrmgr_device::?relay`,0203H
         PUBLIC `??osal_pwrmgr_init::?relay`
         FUNCTION `??osal_pwrmgr_init::?relay`,0203H
+        PUBLIC `??osal_pwrmgr_powerconserve::?relay`
+        FUNCTION `??osal_pwrmgr_powerconserve::?relay`,0203H
         PUBLIC `??osal_pwrmgr_task_state::?relay`
         FUNCTION `??osal_pwrmgr_task_state::?relay`,0203H
         PUBWEAK _A_IEN0
@@ -156,6 +161,10 @@
         FUNCTION osal_pwrmgr_init,0203H
         ARGFRAME XSTACK, 0, STACK
         LOCFRAME ISTACK, 2, STACK
+        PUBLIC osal_pwrmgr_powerconserve
+        FUNCTION osal_pwrmgr_powerconserve,0a1203H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
         PUBLIC osal_pwrmgr_task_state
         FUNCTION osal_pwrmgr_task_state,080203H
         ARGFRAME XSTACK, 0, STACK
@@ -250,13 +259,37 @@
           CFI ?RET_LOW Frame(CFA_SP, 1)
           CFI EndCommon cfiCommon0
         
+halSleep            SYMBOL "halSleep"
+`??halSleep::?relay` SYMBOL "?relay", halSleep
+osal_next_timeout   SYMBOL "osal_next_timeout"
+`??osal_next_timeout::?relay` SYMBOL "?relay", osal_next_timeout
 osal_pwrmgr_device  SYMBOL "osal_pwrmgr_device"
 `??osal_pwrmgr_device::?relay` SYMBOL "?relay", osal_pwrmgr_device
 osal_pwrmgr_init    SYMBOL "osal_pwrmgr_init"
 `??osal_pwrmgr_init::?relay` SYMBOL "?relay", osal_pwrmgr_init
+osal_pwrmgr_powerconserve SYMBOL "osal_pwrmgr_powerconserve"
+`??osal_pwrmgr_powerconserve::?relay` SYMBOL "?relay", osal_pwrmgr_powerconserve
 osal_pwrmgr_task_state SYMBOL "osal_pwrmgr_task_state"
 `??osal_pwrmgr_task_state::?relay` SYMBOL "?relay", osal_pwrmgr_task_state
 
+        EXTERN `??halSleep::?relay`
+        FUNCTION `??halSleep::?relay`,00H
+        EXTERN `??osal_next_timeout::?relay`
+        FUNCTION `??osal_next_timeout::?relay`,00H
+        EXTERN halSleep
+        FUNCTION halSleep,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN osal_next_timeout
+        FUNCTION osal_next_timeout,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
         EXTERN tasksCnt
 
 // C:\Texas Instruments\Z-Stack 3.0.2\Components\osal\common\OSAL_PwrMgr.c
@@ -406,15 +439,16 @@ osal_pwrmgr_init:
 //  118 #if !defined USE_ICALL && !defined OSAL_PORT2TIRTOS
 //  119 #if defined POWER_SAVING && ZSTACK_END_DEVICE_BUILD                  
 //  120   pwrmgr_attribute.pwrmgr_device = PWRMGR_BATTERY;   // Default to power conservation for ZED if power saving enabled.
+        MOV       DPTR,#pwrmgr_attribute + 6
+        MOV       A,#0x1
+        MOVX      @DPTR,A
 //  121 #else
 //  122   pwrmgr_attribute.pwrmgr_device = PWRMGR_ALWAYS_ON; // No power conservation for routing devices.
-        MOV       DPTR,#pwrmgr_attribute + 6
-        CLR       A
-        MOVX      @DPTR,A
 //  123 #endif
 //  124 #endif /* USE_ICALL */
 //  125   pwrmgr_attribute.pwrmgr_task_state = 0;            // Cleared.  All set to conserve
         MOV       DPTR,#pwrmgr_attribute
+        CLR       A
         MOVX      @DPTR,A
         INC       DPTR
           CFI EndBlock cfiBlock0
@@ -634,6 +668,119 @@ osal_pwrmgr_task_state:
           CFI EndBlock cfiBlock3
         REQUIRE _A_IEN0
 //  223 }
+//  224 
+//  225 #if defined( POWER_SAVING ) && !(defined USE_ICALL || defined OSAL_PORT2TIRTOS)
+//  226 /*********************************************************************
+//  227  * @fn      osal_pwrmgr_powerconserve
+//  228  *
+//  229  * @brief   This function is called from the main OSAL loop when there are
+//  230  *          no events scheduled and shouldn't be called from anywhere else.
+//  231  *
+//  232  * @param   none.
+//  233  *
+//  234  * @return  none.
+//  235  */
+
+        RSEG BANKED_CODE:HUGECODE:NOROOT(0)
+//  236 void osal_pwrmgr_powerconserve( void )
+osal_pwrmgr_powerconserve:
+          CFI Block cfiBlock4 Using cfiCommon0
+          CFI Function osal_pwrmgr_powerconserve
+        CODE
+//  237 {
+        FUNCALL osal_pwrmgr_powerconserve, osal_next_timeout
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL osal_pwrmgr_powerconserve, halSleep
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        REQUIRE ?V0
+        REQUIRE ?V1
+        REQUIRE ?V2
+        REQUIRE ?V3
+        MOV       A,#-0xc
+        LCALL     ?BANKED_ENTER_XDATA
+          CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+          CFI VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+          CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+          CFI CFA_SP SP+0
+          CFI CFA_XSP16 add(XSP16, 12)
+        ; Saved register size: 12
+        ; Auto size: 0
+//  238   uint32        next;
+//  239   halIntState_t intState;
+//  240 
+//  241   // Should we even look into power conservation
+//  242   if ( pwrmgr_attribute.pwrmgr_device != PWRMGR_ALWAYS_ON )
+        MOV       DPTR,#pwrmgr_attribute + 6
+        MOVX      A,@DPTR
+        JZ        ??osal_pwrmgr_powerconserve_0
+//  243   {
+//  244     // Are all tasks in agreement to conserve
+//  245     if ( pwrmgr_attribute.pwrmgr_task_state == 0 )
+        MOV       DPTR,#pwrmgr_attribute
+        MOVX      A,@DPTR
+        MOV       R0,A
+        INC       DPTR
+        MOVX      A,@DPTR
+        MOV       R1,A
+        MOV       A,R0
+        ORL       A,R1
+        JNZ       ??osal_pwrmgr_powerconserve_0
+//  246     {
+//  247       // Hold off interrupts.
+//  248       HAL_ENTER_CRITICAL_SECTION( intState );
+        MOV       R6,0xa8+0x0
+        CLR       0xa8.7
+//  249 
+//  250       // Get next time-out
+//  251       next = osal_next_timeout();
+        ; Setup parameters for call to function osal_next_timeout
+        LCALL     `??osal_next_timeout::?relay`; Banked call to: osal_next_timeout
+//  252 
+//  253       // Re-enable interrupts.
+//  254       HAL_EXIT_CRITICAL_SECTION( intState );
+        MOV       A,R6
+        MOV       C,0xE0 /* A   */.7
+        MOV       0xa8.7,C
+//  255 
+//  256       // Put the processor into sleep mode
+//  257       OSAL_SET_CPU_INTO_SLEEP( next );
+        ; Setup parameters for call to function halSleep
+        LCALL     `??halSleep::?relay`; Banked call to: halSleep
+//  258     }
+//  259   }
+//  260 }
+??osal_pwrmgr_powerconserve_0:
+        MOV       R7,#0x4
+        LJMP      ?BANKED_LEAVE_XDATA
+          CFI EndBlock cfiBlock4
+        REQUIRE _A_IEN0
 
         RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
 `??osal_pwrmgr_init::?relay`:
@@ -656,57 +803,27 @@ osal_pwrmgr_task_state:
         DATA24
         DC24    osal_pwrmgr_task_state
 
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+`??osal_pwrmgr_powerconserve::?relay`:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    osal_pwrmgr_powerconserve
+
         END
-//  224 
-//  225 #if defined( POWER_SAVING ) && !(defined USE_ICALL || defined OSAL_PORT2TIRTOS)
-//  226 /*********************************************************************
-//  227  * @fn      osal_pwrmgr_powerconserve
-//  228  *
-//  229  * @brief   This function is called from the main OSAL loop when there are
-//  230  *          no events scheduled and shouldn't be called from anywhere else.
-//  231  *
-//  232  * @param   none.
-//  233  *
-//  234  * @return  none.
-//  235  */
-//  236 void osal_pwrmgr_powerconserve( void )
-//  237 {
-//  238   uint32        next;
-//  239   halIntState_t intState;
-//  240 
-//  241   // Should we even look into power conservation
-//  242   if ( pwrmgr_attribute.pwrmgr_device != PWRMGR_ALWAYS_ON )
-//  243   {
-//  244     // Are all tasks in agreement to conserve
-//  245     if ( pwrmgr_attribute.pwrmgr_task_state == 0 )
-//  246     {
-//  247       // Hold off interrupts.
-//  248       HAL_ENTER_CRITICAL_SECTION( intState );
-//  249 
-//  250       // Get next time-out
-//  251       next = osal_next_timeout();
-//  252 
-//  253       // Re-enable interrupts.
-//  254       HAL_EXIT_CRITICAL_SECTION( intState );
-//  255 
-//  256       // Put the processor into sleep mode
-//  257       OSAL_SET_CPU_INTO_SLEEP( next );
-//  258     }
-//  259   }
-//  260 }
 //  261 #endif /* POWER_SAVING */
 //  262 
 //  263 /*********************************************************************
 //  264 *********************************************************************/
 // 
-// 116 bytes in segment BANKED_CODE
-//  18 bytes in segment BANK_RELAYS
+// 161 bytes in segment BANKED_CODE
+//  24 bytes in segment BANK_RELAYS
 //   1 byte  in segment SFR_AN
 //   7 bytes in segment XDATA_Z
 // 
-//  18 bytes of CODE     memory
+//  24 bytes of CODE     memory
 //   0 bytes of DATA     memory (+ 1 byte shared)
-// 116 bytes of HUGECODE memory
+// 161 bytes of HUGECODE memory
 //   7 bytes of XDATA    memory
 //
 //Errors: none
