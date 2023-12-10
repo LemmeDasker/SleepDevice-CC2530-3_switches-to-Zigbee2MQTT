@@ -8,7 +8,8 @@ The foundation for the code is the GenericApp example with the ON-OFF Cluster fu
 
 It is programmed as an End Device with Power Saving enabled and is intended as a simple platform as starting point for future upgrades, where more switches, temperature sensors etc.can be implemented.
 
-![IMG2](https://github.com/LemmeDasker/TestZigbee/assets/38005465/5e3acf4f-fb30-45d9-8a93-845ba9567916)
+![Schematic](https://github.com/LemmeDasker/SleepDevice-CC2530-3_switches-to-Zigbee2MQTT/assets/38005465/7e8d0212-825d-4056-b781-a90dd48e3811)
+
 
 ## Compiling
 The compile flags are embedded in the IAR project file. But they can also be ssen in the Compile-flags.txt file.
