@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR C/C++ Compiler V10.30.1.6000 for 8051               10/Dec/2023  13:11:58
+# IAR C/C++ Compiler V10.30.1.6000 for 8051               10/Dec/2023  14:04:58
 # Copyright 2004-2018 IAR Systems AB.
 # PC-locked license - IAR Embedded Workbench for 8051
 #
@@ -15,7 +15,7 @@
 #        C:\Texas Instruments\Z-Stack
 #        3.0.2\Projects\zstack\HomeAutomation\Source\zcl_ha.c
 #    Command line       =  
-#        -f C:\Users\Flemming\AppData\Local\Temp\EWD81B.tmp ("C:\Texas
+#        -f C:\Users\Flemming\AppData\Local\Temp\EW5BEE.tmp ("C:\Texas
 #        Instruments\Z-Stack
 #        3.0.2\Projects\zstack\HomeAutomation\Source\zcl_ha.c" -D SECURE=1 -D
 #        TC_LINKKEY_JOIN -D NV_INIT -D NV_RESTORE -D POWER_SAVING -D

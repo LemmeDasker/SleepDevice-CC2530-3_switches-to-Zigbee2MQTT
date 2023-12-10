@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// IAR C/C++ Compiler V10.30.1.6000 for 8051              10/Dec/2023  13:11:45
+// IAR C/C++ Compiler V10.30.1.6000 for 8051              10/Dec/2023  14:04:44
 // Copyright 2004-2018 IAR Systems AB.
 // PC-locked license - IAR Embedded Workbench for 8051
 //
@@ -15,7 +15,7 @@
 //        C:\Texas Instruments\Z-Stack
 //        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\Source\hal_key.c
 //    Command line       =  
-//        -f C:\Users\Flemming\AppData\Local\Temp\EWA751.tmp ("C:\Texas
+//        -f C:\Users\Flemming\AppData\Local\Temp\EW225A.tmp ("C:\Texas
 //        Instruments\Z-Stack
 //        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\Source\hal_key.c"
 //        -D SECURE=1 -D TC_LINKKEY_JOIN -D NV_INIT -D NV_RESTORE -D
@@ -227,7 +227,6 @@
         ARGFRAME DOVERLAY, 0, STATIC
         LOCFRAME ISTACK, 2, STACK
         LOCFRAME XSTACK, 4, STACK
-        PUBLIC isEdgeBitSet1
         PUBLIC isEdgeBitSet4
         PUBLIC isEdgeBitSet5
         PUBLIC isEdgeBitSet6
@@ -747,13 +746,7 @@ isEdgeBitSet5:
 isEdgeBitSet4:
         DS 1
         REQUIRE __INIT_XDATA_Z
-
-        RSEG XDATA_Z:XDATA:NOROOT(0)
-        DATA8
-//  177 bool isEdgeBitSet1 = false;
-isEdgeBitSet1:
-        DS 1
-        REQUIRE __INIT_XDATA_Z
+//  177 
 
         RSEG XDATA_Z:XDATA:NOROOT(0)
         DATA8
@@ -1865,13 +1858,13 @@ __Constant_19:
 // 192 bytes in segment NEAR_CODE
 //  18 bytes in segment SFR_AN
 //   4 bytes in segment XDATA_ROM_C
-//  12 bytes in segment XDATA_Z
+//  11 bytes in segment XDATA_Z
 // 
 // 234 bytes of CODE     memory (+  9 bytes shared)
 //   0 bytes of CONST    memory (+  4 bytes shared)
 //   0 bytes of DATA     memory (+ 18 bytes shared)
 // 316 bytes of HUGECODE memory
-//  12 bytes of XDATA    memory
+//  11 bytes of XDATA    memory
 //
 //Errors: none
 //Warnings: 1

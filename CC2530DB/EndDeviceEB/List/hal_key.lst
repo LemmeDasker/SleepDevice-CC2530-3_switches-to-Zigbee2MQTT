@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR C/C++ Compiler V10.30.1.6000 for 8051               10/Dec/2023  13:11:45
+# IAR C/C++ Compiler V10.30.1.6000 for 8051               10/Dec/2023  14:04:44
 # Copyright 2004-2018 IAR Systems AB.
 # PC-locked license - IAR Embedded Workbench for 8051
 #
@@ -15,7 +15,7 @@
 #        C:\Texas Instruments\Z-Stack
 #        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\Source\hal_key.c
 #    Command line       =  
-#        -f C:\Users\Flemming\AppData\Local\Temp\EWA751.tmp ("C:\Texas
+#        -f C:\Users\Flemming\AppData\Local\Temp\EW225A.tmp ("C:\Texas
 #        Instruments\Z-Stack
 #        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\Source\hal_key.c"
 #        -D SECURE=1 -D TC_LINKKEY_JOIN -D NV_INIT -D NV_RESTORE -D
@@ -399,12 +399,7 @@ C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-Power
    \                     isEdgeBitSet4:
    \   000000                DS 1
    \   000001                REQUIRE __INIT_XDATA_Z
-
-   \                                 In  segment XDATA_Z, align 1, keep-with-next
-    177          bool isEdgeBitSet1 = false;
-   \                     isEdgeBitSet1:
-   \   000000                DS 1
-   \   000001                REQUIRE __INIT_XDATA_Z
+    177          
 
    \                                 In  segment XDATA_Z, align 1, keep-with-next
     178          bool HAL_KEY_SW_6_ACTIVE = false;
@@ -1294,7 +1289,6 @@ Warning[Pe069]: integer conversion resulted in truncation
       37  halKeyPort2Isr
        3  halKeyPort2Isr::??INTVEC 51
       30  halProcessKeyInterrupt
-       1  isEdgeBitSet1
        1  isEdgeBitSet4
        1  isEdgeBitSet5
        1  isEdgeBitSet6
@@ -1308,13 +1302,13 @@ Warning[Pe069]: integer conversion resulted in truncation
  192 bytes in segment NEAR_CODE
   18 bytes in segment SFR_AN
    4 bytes in segment XDATA_ROM_C
-  12 bytes in segment XDATA_Z
+  11 bytes in segment XDATA_Z
  
  234 bytes of CODE     memory (+  9 bytes shared)
    0 bytes of CONST    memory (+  4 bytes shared)
    0 bytes of DATA     memory (+ 18 bytes shared)
  316 bytes of HUGECODE memory
-  12 bytes of XDATA    memory
+  11 bytes of XDATA    memory
 
 Errors: none
 Warnings: 1

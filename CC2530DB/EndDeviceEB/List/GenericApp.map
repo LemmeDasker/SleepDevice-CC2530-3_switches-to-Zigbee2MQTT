@@ -2,7 +2,7 @@
 #                                                                              #
 #      IAR Universal Linker V6.5.4.100                                         #
 #                                                                              #
-#           Link time     =  10/Dec/2023  13:12:05                             #
+#           Link time     =  10/Dec/2023  14:05:05                             #
 #           Target CPU    =  x51                                               #
 #           List file     =  "C:\Texas Instruments\Z-Stack 3.0.2\Projects\zsta #
 #                            ck\HomeAutomation\4-Switch-PowerSaving-firmware\C #
@@ -12,7 +12,7 @@
 #                            C2530DB\EndDeviceEB\Exe\GenericApp.hex"           #
 #                            Format: intel-extended                            #
 #           Command line  =  -f                                                #
-#                            C:\Users\Flemming\AppData\Local\Temp\EWF7A6.tmp   #
+#                            C:\Users\Flemming\AppData\Local\Temp\EW785C.tmp   #
 #                            ("C:\Texas Instruments\Z-Stack 3.0.2\Projects\zst #
 #                            ack\HomeAutomation\4-Switch-PowerSaving-firmware\ #
 #                            CC2530DB\EndDeviceEB\Obj\AF.r51"                  #
@@ -8727,7 +8727,7 @@ XDATA_Z
     -------------------------------------------------------------------------
 XDATA_Z
   Relative segment, address: XDATA 00000477 - 00000477 (0x1 bytes), align: 0
-  Segment part 31.            Intra module refs:   HalKeyPoll
+  Segment part 30.            Intra module refs:   HalKeyPoll
                                                    halKeyPort0Isr
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
@@ -8735,7 +8735,7 @@ XDATA_Z
     -------------------------------------------------------------------------
 XDATA_Z
   Relative segment, address: XDATA 00000478 - 00000478 (0x1 bytes), align: 0
-  Segment part 32.            Intra module refs:   HalKeyPoll
+  Segment part 31.            Intra module refs:   HalKeyPoll
                                                    halKeyPort1Isr
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
@@ -8743,7 +8743,7 @@ XDATA_Z
     -------------------------------------------------------------------------
 XDATA_Z
   Relative segment, address: XDATA 00000479 - 00000479 (0x1 bytes), align: 0
-  Segment part 33.            Intra module refs:   HalKeyPoll
+  Segment part 32.            Intra module refs:   HalKeyPoll
                                                    halKeyPort1Isr
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
@@ -8751,7 +8751,7 @@ XDATA_Z
     -------------------------------------------------------------------------
 XDATA_Z
   Relative segment, address: XDATA 0000047A - 0000047A (0x1 bytes), align: 0
-  Segment part 34.            Intra module refs:   HalKeyPoll
+  Segment part 33.            Intra module refs:   HalKeyPoll
                                                    halKeyPort2Isr
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
@@ -8759,7 +8759,7 @@ XDATA_Z
     -------------------------------------------------------------------------
 XDATA_Z
   Relative segment, address: XDATA 0000047B - 0000047C (0x2 bytes), align: 0
-  Segment part 35.            Intra module refs:   HalKeyConfig
+  Segment part 34.            Intra module refs:   HalKeyConfig
                                                    HalKeyInit
                                                    HalKeyPoll
            LOCAL                   ADDRESS         
@@ -8769,7 +8769,7 @@ XDATA_Z
     -------------------------------------------------------------------------
 XDATA_Z
   Relative segment, address: XDATA 0000047D - 0000047D (0x1 bytes), align: 0
-  Segment part 36.            Intra module refs:   HalKeyConfig
+  Segment part 35.            Intra module refs:   HalKeyConfig
                                                    HalKeyInit
            LOCAL                   ADDRESS         
            =====                   =======         
@@ -8777,14 +8777,14 @@ XDATA_Z
     -------------------------------------------------------------------------
 XDATA_Z
   Relative segment, address: XDATA 0000047E - 0000047E (0x1 bytes), align: 0
-  Segment part 37.            Intra module refs:   HalKeyConfig
+  Segment part 36.            Intra module refs:   HalKeyConfig
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            Hal_KeyIntEnable        0000047E        Hal_ProcessEvent (hal_drivers)
     -------------------------------------------------------------------------
 <BANKED_CODE> 3 (was BANKED_CODE)
   Relative segment, address: CODE 00023B8F - 00023BB5 (0x27 bytes), align: 0
-  Segment part 39.            Intra module refs:   HalKeyInit::?relay
+  Segment part 38.            Intra module refs:   HalKeyInit::?relay
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            HalKeyInit              00023B8F 
@@ -8792,7 +8792,7 @@ XDATA_Z
     -------------------------------------------------------------------------
 <BANKED_CODE> 3 (was BANKED_CODE)
   Relative segment, address: CODE 00023BB6 - 00023BBC (0x7 bytes), align: 0
-  Segment part 41.            Intra module refs:   HalKeyInit
+  Segment part 40.            Intra module refs:   HalKeyInit
                                                    HalKeyPoll
                                                    halProcessKeyInterrupt
            LOCAL                   ADDRESS         
@@ -8801,7 +8801,7 @@ XDATA_Z
     -------------------------------------------------------------------------
 <BANKED_CODE> 3 (was BANKED_CODE)
   Relative segment, address: CODE 00023BBD - 00023C46 (0x8a bytes), align: 0
-  Segment part 42.            Intra module refs:   HalKeyConfig::?relay
+  Segment part 41.            Intra module refs:   HalKeyConfig::?relay
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            HalKeyConfig            00023BBD 
@@ -8810,14 +8810,14 @@ XDATA_Z
     -------------------------------------------------------------------------
 <BANKED_CODE> 3 (was BANKED_CODE)
   Relative segment, address: CODE 00023C47 - 00023C4B (0x5 bytes), align: 0
-  Segment part 46.            Intra module refs:   HalKeyExitSleep
+  Segment part 45.            Intra module refs:   HalKeyExitSleep
            LOCAL                   ADDRESS         
            =====                   =======         
            ?Subroutine1            00023C47 
     -------------------------------------------------------------------------
 <BANKED_CODE> 3 (was BANKED_CODE)
   Relative segment, address: CODE 00023C4C - 00023CA6 (0x5b bytes), align: 0
-  Segment part 47.            Intra module refs:   HalKeyPoll::?relay
+  Segment part 46.            Intra module refs:   HalKeyPoll::?relay
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            HalKeyPoll              00023C4C 
@@ -8825,7 +8825,7 @@ XDATA_Z
     -------------------------------------------------------------------------
 <BANKED_CODE> 3 (was BANKED_CODE)
   Relative segment, address: CODE 00023CA7 - 00023CC4 (0x1e bytes), align: 0
-  Segment part 49.            Intra module refs:   halProcessKeyInterrupt::?relay
+  Segment part 48.            Intra module refs:   halProcessKeyInterrupt::?relay
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            halProcessKeyInterrupt
@@ -8836,21 +8836,21 @@ XDATA_Z
     -------------------------------------------------------------------------
 <BANKED_CODE> 3 (was BANKED_CODE)
   Relative segment, address: CODE 00023CC5 - 00023CC7 (0x3 bytes), align: 0
-  Segment part 51.            Intra module refs:   HalKeyEnterSleep::?relay
+  Segment part 50.            Intra module refs:   HalKeyEnterSleep::?relay
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            HalKeyEnterSleep        00023CC5 
     -------------------------------------------------------------------------
 <BANKED_CODE> 3 (was BANKED_CODE)
   Relative segment, address: CODE 00023CC8 - 00023CCA (0x3 bytes), align: 0
-  Segment part 53.            Intra module refs:   HalKeyExitSleep::?relay
+  Segment part 52.            Intra module refs:   HalKeyExitSleep::?relay
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            HalKeyExitSleep         00023CC8 
     -------------------------------------------------------------------------
 <BANKED_CODE,BANK_RELAYS..> 1 (was NEAR_CODE)
   Relative segment, address: CODE 000007CF - 00000802 (0x34 bytes), align: 0
-  Segment part 55.            Intra module refs:   halKeyPort0Isr::??INTVEC 107
+  Segment part 54.            Intra module refs:   halKeyPort0Isr::??INTVEC 107
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            halKeyPort0Isr          000007CF 
@@ -8860,7 +8860,7 @@ XDATA_Z
     -------------------------------------------------------------------------
 <BANKED_CODE,BANK_RELAYS..> 1 (was NEAR_CODE)
   Relative segment, address: CODE 00000803 - 0000080F (0xd bytes), align: 0
-  Segment part 56.            Intra module refs:   halKeyPort0Isr
+  Segment part 55.            Intra module refs:   halKeyPort0Isr
                                                    halKeyPort1Isr
                                                    halKeyPort2Isr
            LOCAL                   ADDRESS         
@@ -8869,7 +8869,7 @@ XDATA_Z
     -------------------------------------------------------------------------
 <BANKED_CODE,BANK_RELAYS..> 1 (was NEAR_CODE)
   Relative segment, address: CODE 00000810 - 00000869 (0x5a bytes), align: 0
-  Segment part 57.            Intra module refs:   halKeyPort1Isr::??INTVEC 123
+  Segment part 56.            Intra module refs:   halKeyPort1Isr::??INTVEC 123
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            halKeyPort1Isr          00000810 
@@ -8879,7 +8879,7 @@ XDATA_Z
     -------------------------------------------------------------------------
 <BANKED_CODE,BANK_RELAYS..> 1 (was NEAR_CODE)
   Relative segment, address: CODE 0000086A - 0000088E (0x25 bytes), align: 0
-  Segment part 58.            Intra module refs:   halKeyPort2Isr::??INTVEC 51
+  Segment part 57.            Intra module refs:   halKeyPort2Isr::??INTVEC 51
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            halKeyPort2Isr          0000086A 
@@ -8913,35 +8913,35 @@ INTVEC
     -------------------------------------------------------------------------
 <XDATA_ROM_C> 1 (was XDATA_ROM_C)
   Relative segment, address: CONST 00008134 - 00008137 (0x4 bytes), align: 0
-  Segment part 38.            Intra module refs:   halProcessKeyInterrupt
+  Segment part 37.            Intra module refs:   halProcessKeyInterrupt
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            __Constant_19           00008134 
     -------------------------------------------------------------------------
 <BANKED_CODE,BANK_RELAYS..> 1 (was BANK_RELAYS)
   Relative segment, address: CODE 00001382 - 00001387 (0x6 bytes), align: 0
-  Segment part 40.
+  Segment part 39.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            HalKeyInit::?relay      00001382        HalDriverInit (hal_drivers)
     -------------------------------------------------------------------------
 <BANKED_CODE,BANK_RELAYS..> 1 (was BANK_RELAYS)
   Relative segment, address: CODE 00001388 - 0000138D (0x6 bytes), align: 0
-  Segment part 43.
+  Segment part 42.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            HalKeyConfig::?relay    00001388        InitBoard (OnBoard)
     -------------------------------------------------------------------------
 <BANKED_CODE,BANK_RELAYS..> 1 (was BANK_RELAYS)
   Relative segment, address: CODE 0000138E - 00001393 (0x6 bytes), align: 0
-  Segment part 48.
+  Segment part 47.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            HalKeyPoll::?relay      0000138E        Hal_ProcessEvent (hal_drivers)
     -------------------------------------------------------------------------
 <BANKED_CODE,BANK_RELAYS..> 1 (was BANK_RELAYS)
   Relative segment, address: CODE 00001394 - 00001399 (0x6 bytes), align: 0
-  Segment part 50.            Intra module refs:   halKeyPort0Isr
+  Segment part 49.            Intra module refs:   halKeyPort0Isr
                                                    halKeyPort1Isr
                                                    halKeyPort2Isr
            ENTRY                   ADDRESS         REF BY
@@ -8951,7 +8951,7 @@ INTVEC
     -------------------------------------------------------------------------
 <BANKED_CODE,BANK_RELAYS..> 1 (was BANK_RELAYS)
   Relative segment, address: CODE 0000139A - 0000139F (0x6 bytes), align: 0
-  Segment part 52.
+  Segment part 51.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            HalKeyEnterSleep::?relay
@@ -8959,7 +8959,7 @@ INTVEC
     -------------------------------------------------------------------------
 <BANKED_CODE,BANK_RELAYS..> 1 (was BANK_RELAYS)
   Relative segment, address: CODE 000013A0 - 000013A5 (0x6 bytes), align: 0
-  Segment part 54.
+  Segment part 53.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            HalKeyExitSleep::?relay
@@ -8967,7 +8967,7 @@ INTVEC
     -------------------------------------------------------------------------
 <BANKED_CODE,XDATA_ROM_C_FLASH> 1 (was XDATA_ROM_C_FLASH)
   Relative segment, address: CODE 00008134 - 00008137 (0x4 bytes), align: 0
-  Segment part 59.            Intra module refs:   __Constant_19
+  Segment part 58.            Intra module refs:   __Constant_19
 
     *************************************************************************
 

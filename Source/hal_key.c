@@ -174,7 +174,7 @@
 bool isEdgeBitSet6 = false;
 bool isEdgeBitSet5 = false;
 bool isEdgeBitSet4 = false;
-bool isEdgeBitSet1 = false;
+
 bool HAL_KEY_SW_6_ACTIVE = false;
 bool HAL_KEY_SW_5_ACTIVE = false;
 bool HAL_KEY_SW_4_ACTIVE = false;
