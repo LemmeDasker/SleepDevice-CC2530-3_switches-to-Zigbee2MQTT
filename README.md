@@ -1,6 +1,6 @@
 # SleepDevice-CC2530-3_switches-to-Zigbee2MQTT
 This sleeping ZigBee switch is based on TI's CC2530 connecting to Zigbee2MQTT.
-It incoorporates 3 switches this device goes into Sleep Mode when not used. This is ideal for battery powered devices. The power consumption is extremly low - about a few uA. 
+It incoorporates 3 switches and this device goes into Sleep Mode when not used. This is ideal for battery powered devices. The power consumption is extremly low - about a few uA. 
 
 It is based on a CC2530 from Texas Instruments using Z-Stack 3.0.2 and IAR 10.30 as compiler.
 
