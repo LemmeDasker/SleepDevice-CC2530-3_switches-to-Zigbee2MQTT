@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR C/C++ Compiler V10.30.1.6000 for 8051               10/Dec/2023  14:04:57
+# IAR C/C++ Compiler V10.30.1.6000 for 8051               28/Sep/2024  17:57:08
 # Copyright 2004-2018 IAR Systems AB.
 # PC-locked license - IAR Embedded Workbench for 8051
 #
@@ -13,11 +13,11 @@
 #                          
 #    Source file        =  
 #        C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\Source\zcl_genericapp.c
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\Source\zcl_genericapp.c
 #    Command line       =  
-#        -f C:\Users\Flemming\AppData\Local\Temp\EW5757.tmp ("C:\Texas
+#        -f C:\Users\Flemming\AppData\Local\Temp\EWD781.tmp ("C:\Texas
 #        Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\Source\zcl_genericapp.c"
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\Source\zcl_genericapp.c"
 #        -D SECURE=1 -D TC_LINKKEY_JOIN -D NV_INIT -D NV_RESTORE -D
 #        POWER_SAVING -D NWK_AUTO_POLL -D xZTOOL_P1 -D xMT_TASK -D xMT_APP_FUNC
 #        -D xMT_SYS_FUNC -D xMT_ZDO_FUNC -D xMT_ZDO_MGMT -D xMT_APP_CNF_FUNC -D
@@ -26,20 +26,20 @@
 #        -D xZCL_GROUPS -D ZCL_ON_OFF -D xZCL_DISCOVER -D ZCL_REPORTING_DEVICE
 #        -D ISR_KEYINTERRUPT -D HAL_LCD=FALSE -D HAL_UARTE=FALSE -D
 #        HAL_SPI=FALSE -D HAL_HID=FALSE -lC "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\EndDeviceEB\List"
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\EndDeviceEB\List"
 #        -lA "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\EndDeviceEB\List"
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\EndDeviceEB\List"
 #        --diag_suppress Pe001,Pa010 -o "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\EndDeviceEB\Obj"
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\EndDeviceEB\Obj"
 #        -e --debug --core=plain --dptr=16,1 --data_model=large
 #        --code_model=banked --calling_convention=xdata_reentrant
 #        --place_constants=data_rom --nr_virtual_regs 16 -f "C:\Texas
 #        Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
 #        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3
 #        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f "C:\Texas
 #        Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
 #        (-DZIGBEEPRO -DSECURE=1 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
 #        -DDEFAULT_CHANLIST=0x00000800 -DZDAPP_CONFIG_PAN_ID=0xFFFF
 #        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
@@ -55,69 +55,69 @@
 #        -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100 -DREJOIN_POLL_RATE=440
 #        -DREJOIN_BACKOFF=900000 -DREJOIN_SCAN=900000 -DENABLE_LED4_DISABLE_S1)
 #        -f "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\Tools\CC2530DB\f8wZCL.cfg"
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\Tools\CC2530DB\f8wZCL.cfg"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\"
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\Source\"
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\Source\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\Source\"
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\Source\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\ZMain\TI2530DB\"
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\ZMain\TI2530DB\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\hal\include\"
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\hal\include\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mac\include\"
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\mac\include\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mt\"
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\mt\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\osal\include\"
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\osal\include\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\services\saddr\"
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\services\saddr\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\services\sdata\"
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\services\sdata\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\af\"
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\stack\af\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\bdb\"
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\stack\bdb\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\gp\"
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\stack\gp\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\sec\"
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\stack\sec\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\sys\"
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\stack\sys\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\zcl\"
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\stack\zcl\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\zmac\"
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\zmac\"
 #        -I "C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
 #        -Ohz --require_prototypes)
 #    Locale             =  Danish_DNK.1252
 #    List file          =  
 #        C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\EndDeviceEB\List\zcl_genericapp.lst
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\EndDeviceEB\List\zcl_genericapp.lst
 #    Object file        =  
 #        C:\Texas Instruments\Z-Stack
-#        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\EndDeviceEB\Obj\zcl_genericapp.r51
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\EndDeviceEB\Obj\zcl_genericapp.r51
 #
 ###############################################################################
 
-C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\Source\zcl_genericapp.c
+C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\Source\zcl_genericapp.c
       1          /**************************************************************************************************
       2            Filename:       zcl_genericapp.c
       3            Revised:        $Date: 2014-10-24 16:04:46 -0700 (Fri, 24 Oct 2014) $
@@ -322,18 +322,8 @@ C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-Power
    \                     zclGenericApp_DstAddr:
    \   000000                DS 12
    \   00000C                REQUIRE __INIT_XDATA_Z
-
-   \                                 In  segment XDATA_Z, align 1, keep-with-next
-    143          afAddrType_t zclGenericApp_DstAddr2;
-   \                     zclGenericApp_DstAddr2:
-   \   000000                DS 12
-   \   00000C                REQUIRE __INIT_XDATA_Z
-
-   \                                 In  segment XDATA_Z, align 1, keep-with-next
-    144          afAddrType_t zclGenericApp_DstAddr3;
-   \                     zclGenericApp_DstAddr3:
-   \   000000                DS 12
-   \   00000C                REQUIRE __INIT_XDATA_Z
+    143          //afAddrType_t zclGenericApp_DstAddr2;
+    144          //afAddrType_t zclGenericApp_DstAddr3;
     145          
     146          // Endpoint to allow SYS_APP_MSGs
 
@@ -350,34 +340,22 @@ C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-Power
     152            (SimpleDescriptionFormat_t *)NULL,  // No Simple description for this test endpoint
     153            (afNetworkLatencyReq_t)0            // No Network Latency req
     154          };
-
-   \                                 In  segment XDATA_I, align 1, keep-with-next
-    155          static endPointDesc_t sampleSw_TestEp2 =
-   \                     sampleSw_TestEp2:
-   \   000000                DS 7
-   \   000007                REQUIRE `?<Initializer for sampleSw_TestEp2>`
-   \   000007                REQUIRE __INIT_XDATA_I
-    156          {
-    157            GENERICAPP_ENDPOINT2,                  // endpoint
-    158            0,
-    159            &zclGenericApp_TaskID,
-    160            (SimpleDescriptionFormat_t *)NULL,  // No Simple description for this test endpoint
-    161            (afNetworkLatencyReq_t)0            // No Network Latency req
-    162          };
-
-   \                                 In  segment XDATA_I, align 1, keep-with-next
-    163          static endPointDesc_t sampleSw_TestEp3 =
-   \                     sampleSw_TestEp3:
-   \   000000                DS 7
-   \   000007                REQUIRE `?<Initializer for sampleSw_TestEp3>`
-   \   000007                REQUIRE __INIT_XDATA_I
-    164          {
-    165            GENERICAPP_ENDPOINT3,                  // endpoint
-    166            0,
-    167            &zclGenericApp_TaskID,
-    168            (SimpleDescriptionFormat_t *)NULL,  // No Simple description for this test endpoint
-    169            (afNetworkLatencyReq_t)0            // No Network Latency req
-    170          };
+    155          //static endPointDesc_t sampleSw_TestEp2 =
+    156          //{
+    157          //  GENERICAPP_ENDPOINT2,                  // endpoint
+    158          //  0,
+    159          //  &zclGenericApp_TaskID,
+    160          //  (SimpleDescriptionFormat_t *)NULL,  // No Simple description for this test endpoint
+    161          //  (afNetworkLatencyReq_t)0            // No Network Latency req
+    162          //};
+    163          //static endPointDesc_t sampleSw_TestEp3 =
+    164          //{
+    165          //  GENERICAPP_ENDPOINT3,                  // endpoint
+    166          //  0,
+    167          //  &zclGenericApp_TaskID,
+    168          //  (SimpleDescriptionFormat_t *)NULL,  // No Simple description for this test endpoint
+    169          //  (afNetworkLatencyReq_t)0            // No Network Latency req
+    170          //};
     171          
     172          
     173          /*********************************************************************
@@ -529,157 +507,104 @@ C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-Power
    \   000018   A3           INC       DPTR
    \   000019   F0           MOVX      @DPTR,A
     294          
-    295            zclGenericApp_DstAddr2.addrMode = (afAddrMode_t)Addr16Bit;
-   \   00001A   90....       MOV       DPTR,#zclGenericApp_DstAddr2 + 8
-   \   00001D   7402         MOV       A,#0x2
-   \   00001F   F0           MOVX      @DPTR,A
-    296            zclGenericApp_DstAddr2.endPoint = GENERICAPP_ENDPOINT2;
-   \   000020   A3           INC       DPTR
-   \   000021   F0           MOVX      @DPTR,A
-    297            zclGenericApp_DstAddr2.addr.shortAddr = 0x0000;  
-   \   000022   90....       MOV       DPTR,#zclGenericApp_DstAddr2
-   \   000025   E4           CLR       A
-   \   000026   F0           MOVX      @DPTR,A
-   \   000027   A3           INC       DPTR
-   \   000028   F0           MOVX      @DPTR,A
-    298            
-    299            zclGenericApp_DstAddr3.addrMode = (afAddrMode_t)Addr16Bit;
-   \   000029   90....       MOV       DPTR,#zclGenericApp_DstAddr3 + 8
-   \   00002C   7402         MOV       A,#0x2
-   \   00002E   F0           MOVX      @DPTR,A
-    300            zclGenericApp_DstAddr3.endPoint = GENERICAPP_ENDPOINT3;
-   \   00002F   A3           INC       DPTR
-   \   000030   04           INC       A
-   \   000031   F0           MOVX      @DPTR,A
-    301            zclGenericApp_DstAddr3.addr.shortAddr = 0x0000;
-   \   000032   90....       MOV       DPTR,#zclGenericApp_DstAddr3
-   \   000035   E4           CLR       A
-   \   000036   F0           MOVX      @DPTR,A
-   \   000037   A3           INC       DPTR
-   \   000038   F0           MOVX      @DPTR,A
+    295          //  zclGenericApp_DstAddr2.addrMode = (afAddrMode_t)Addr16Bit;
+    296          //  zclGenericApp_DstAddr2.endPoint = GENERICAPP_ENDPOINT2;
+    297          //  zclGenericApp_DstAddr2.addr.shortAddr = 0x0000;  
+    298          //  
+    299          //  zclGenericApp_DstAddr3.addrMode = (afAddrMode_t)Addr16Bit;
+    300          //  zclGenericApp_DstAddr3.endPoint = GENERICAPP_ENDPOINT3;
+    301          //  zclGenericApp_DstAddr3.addr.shortAddr = 0x0000;
     302          
     303            
     304            // This app is part of the Home Automation Profile
     305            bdb_RegisterSimpleDescriptor( &zclGenericApp_SimpleDesc );
-   \   000039                ; Setup parameters for call to function bdb_RegisterSimpleDescriptor
-   \   000039   7A..         MOV       R2,#zclGenericApp_SimpleDesc & 0xff
-   \   00003B   7B..         MOV       R3,#(zclGenericApp_SimpleDesc >> 8) & 0xff
-   \   00003D   12....       LCALL     `??bdb_RegisterSimpleDescriptor::?relay`; Banked call to: bdb_RegisterSimpleDescriptor
-    306            bdb_RegisterSimpleDescriptor( &zclGenericApp_SimpleDesc2 );
-   \   000040                ; Setup parameters for call to function bdb_RegisterSimpleDescriptor
-   \   000040   7A..         MOV       R2,#zclGenericApp_SimpleDesc2 & 0xff
-   \   000042   7B..         MOV       R3,#(zclGenericApp_SimpleDesc2 >> 8) & 0xff
-   \   000044   12....       LCALL     `??bdb_RegisterSimpleDescriptor::?relay`; Banked call to: bdb_RegisterSimpleDescriptor
-    307            bdb_RegisterSimpleDescriptor( &zclGenericApp_SimpleDesc3 );  
-   \   000047                ; Setup parameters for call to function bdb_RegisterSimpleDescriptor
-   \   000047   7A..         MOV       R2,#zclGenericApp_SimpleDesc3 & 0xff
-   \   000049   7B..         MOV       R3,#(zclGenericApp_SimpleDesc3 >> 8) & 0xff
-   \   00004B   12....       LCALL     `??bdb_RegisterSimpleDescriptor::?relay`; Banked call to: bdb_RegisterSimpleDescriptor
+   \   00001A                ; Setup parameters for call to function bdb_RegisterSimpleDescriptor
+   \   00001A   7A..         MOV       R2,#zclGenericApp_SimpleDesc & 0xff
+   \   00001C   7B..         MOV       R3,#(zclGenericApp_SimpleDesc >> 8) & 0xff
+   \   00001E   12....       LCALL     `??bdb_RegisterSimpleDescriptor::?relay`; Banked call to: bdb_RegisterSimpleDescriptor
+    306          //  bdb_RegisterSimpleDescriptor( &zclGenericApp_SimpleDesc2 );
+    307          //  bdb_RegisterSimpleDescriptor( &zclGenericApp_SimpleDesc3 );  
     308            
     309            // Register the ZCL General Cluster Library callback functions
     310            zclGeneral_RegisterCmdCallbacks( GENERICAPP_ENDPOINT, &zclGenericApp_CmdCallbacks );
-   \   00004E                ; Setup parameters for call to function zclGeneral_RegisterCmdCallbacks
-   \   00004E   7A..         MOV       R2,#zclGenericApp_CmdCallbacks & 0xff
-   \   000050   7B..         MOV       R3,#(zclGenericApp_CmdCallbacks >> 8) & 0xff
-   \   000052   7901         MOV       R1,#0x1
-   \   000054   12....       LCALL     `??zclGeneral_RegisterCmdCallbacks::?relay`; Banked call to: zclGeneral_RegisterCmdCallbacks
-    311            zclGeneral_RegisterCmdCallbacks( GENERICAPP_ENDPOINT2, &zclGenericApp_CmdCallbacks );
-   \   000057                ; Setup parameters for call to function zclGeneral_RegisterCmdCallbacks
-   \   000057   7A..         MOV       R2,#zclGenericApp_CmdCallbacks & 0xff
-   \   000059   7B..         MOV       R3,#(zclGenericApp_CmdCallbacks >> 8) & 0xff
-   \   00005B   7902         MOV       R1,#0x2
-   \   00005D   12....       LCALL     `??zclGeneral_RegisterCmdCallbacks::?relay`; Banked call to: zclGeneral_RegisterCmdCallbacks
-    312            zclGeneral_RegisterCmdCallbacks( GENERICAPP_ENDPOINT3, &zclGenericApp_CmdCallbacks );
-   \   000060                ; Setup parameters for call to function zclGeneral_RegisterCmdCallbacks
-   \   000060   7A..         MOV       R2,#zclGenericApp_CmdCallbacks & 0xff
-   \   000062   7B..         MOV       R3,#(zclGenericApp_CmdCallbacks >> 8) & 0xff
-   \   000064   7903         MOV       R1,#0x3
-   \   000066   12....       LCALL     `??zclGeneral_RegisterCmdCallbacks::?relay`; Banked call to: zclGeneral_RegisterCmdCallbacks
+   \   000021                ; Setup parameters for call to function zclGeneral_RegisterCmdCallbacks
+   \   000021   7A..         MOV       R2,#zclGenericApp_CmdCallbacks & 0xff
+   \   000023   7B..         MOV       R3,#(zclGenericApp_CmdCallbacks >> 8) & 0xff
+   \   000025   7901         MOV       R1,#0x1
+   \   000027   12....       LCALL     `??zclGeneral_RegisterCmdCallbacks::?relay`; Banked call to: zclGeneral_RegisterCmdCallbacks
+    311          //  zclGeneral_RegisterCmdCallbacks( GENERICAPP_ENDPOINT2, &zclGenericApp_CmdCallbacks );
+    312          //  zclGeneral_RegisterCmdCallbacks( GENERICAPP_ENDPOINT3, &zclGenericApp_CmdCallbacks );
     313            
     314            // GENERICAPP_TODO: Register other cluster command callbacks here
     315          
     316            // Register the application's attribute list
     317            zcl_registerAttrList( GENERICAPP_ENDPOINT, zclGenericApp_NumAttributes, zclGenericApp_Attrs );
-   \   000069                ; Setup parameters for call to function zcl_registerAttrList
-   \   000069   7C..         MOV       R4,#zclGenericApp_Attrs & 0xff
-   \   00006B   7D..         MOV       R5,#(zclGenericApp_Attrs >> 8) & 0xff
-   \   00006D   90....       MOV       DPTR,#zclGenericApp_NumAttributes
-   \   000070   E4           CLR       A
-   \   000071   93           MOVC      A,@A+DPTR
-   \   000072   FA           MOV       R2,A
-   \   000073   7901         MOV       R1,#0x1
-   \   000075   12....       LCALL     ?Subroutine2 & 0xFFFF
-    318            zcl_registerAttrList( GENERICAPP_ENDPOINT2, zclGenericApp_NumAttributes, zclGenericApp_Attrs );
-   \                     ??CrossCallReturnLabel_6:
-   \   000078   7902         MOV       R1,#0x2
-   \   00007A   12....       LCALL     ?Subroutine2 & 0xFFFF
-    319            zcl_registerAttrList( GENERICAPP_ENDPOINT3, zclGenericApp_NumAttributes, zclGenericApp_Attrs );  
-   \                     ??CrossCallReturnLabel_7:
-   \   00007D   7903         MOV       R1,#0x3
-   \   00007F   12....       LCALL     `??zcl_registerAttrList::?relay`; Banked call to: zcl_registerAttrList
+   \   00002A                ; Setup parameters for call to function zcl_registerAttrList
+   \   00002A   7C..         MOV       R4,#zclGenericApp_Attrs & 0xff
+   \   00002C   7D..         MOV       R5,#(zclGenericApp_Attrs >> 8) & 0xff
+   \   00002E   90....       MOV       DPTR,#zclGenericApp_NumAttributes
+   \   000031   E4           CLR       A
+   \   000032   93           MOVC      A,@A+DPTR
+   \   000033   FA           MOV       R2,A
+   \   000034   7901         MOV       R1,#0x1
+   \   000036   12....       LCALL     `??zcl_registerAttrList::?relay`; Banked call to: zcl_registerAttrList
+    318          //  zcl_registerAttrList( GENERICAPP_ENDPOINT2, zclGenericApp_NumAttributes, zclGenericApp_Attrs );
+    319          //  zcl_registerAttrList( GENERICAPP_ENDPOINT3, zclGenericApp_NumAttributes, zclGenericApp_Attrs );  
     320            
     321            // Register the Application to receive the unprocessed Foundation command/response messages
     322            zcl_registerForMsg( zclGenericApp_TaskID );
-   \   000082                ; Setup parameters for call to function zcl_registerForMsg
-   \   000082   90....       MOV       DPTR,#zclGenericApp_TaskID
-   \   000085   E0           MOVX      A,@DPTR
-   \   000086   F9           MOV       R1,A
-   \   000087   12....       LCALL     `??zcl_registerForMsg::?relay`; Banked call to: zcl_registerForMsg
+   \   000039                ; Setup parameters for call to function zcl_registerForMsg
+   \   000039   90....       MOV       DPTR,#zclGenericApp_TaskID
+   \   00003C   E0           MOVX      A,@DPTR
+   \   00003D   F9           MOV       R1,A
+   \   00003E   12....       LCALL     `??zcl_registerForMsg::?relay`; Banked call to: zcl_registerForMsg
     323          
     324          #ifdef ZCL_DISCOVER
     325            // Register the application's command list
     326            zcl_registerCmdList( GENERICAPP_ENDPOINT, zclCmdsArraySize, zclGenericApp_Cmds );
-    327            zcl_registerCmdList( GENERICAPP_ENDPOINT2, zclCmdsArraySize, zclGenericApp_Cmds );
-    328            zcl_registerCmdList( GENERICAPP_ENDPOINT3, zclCmdsArraySize, zclGenericApp_Cmds );
+    327          //  zcl_registerCmdList( GENERICAPP_ENDPOINT2, zclCmdsArraySize, zclGenericApp_Cmds );
+    328          //  zcl_registerCmdList( GENERICAPP_ENDPOINT3, zclCmdsArraySize, zclGenericApp_Cmds );
     329          #endif
     330          
     331            // Register low voltage NV memory protection application callback
     332            RegisterVoltageWarningCB( zclSampleApp_BatteryWarningCB );
-   \   00008A                ; Setup parameters for call to function RegisterVoltageWarningCB
-   \   00008A   7A..         MOV       R2,#`??zclSampleApp_BatteryWarningCB::?relay` & 0xff
-   \   00008C   7B..         MOV       R3,#(`??zclSampleApp_BatteryWarningCB::?relay` >> 8) & 0xff
-   \   00008E   12....       LCALL     `??RegisterVoltageWarningCB::?relay`; Banked call to: RegisterVoltageWarningCB
+   \   000041                ; Setup parameters for call to function RegisterVoltageWarningCB
+   \   000041   7A..         MOV       R2,#`??zclSampleApp_BatteryWarningCB::?relay` & 0xff
+   \   000043   7B..         MOV       R3,#(`??zclSampleApp_BatteryWarningCB::?relay` >> 8) & 0xff
+   \   000045   12....       LCALL     `??RegisterVoltageWarningCB::?relay`; Banked call to: RegisterVoltageWarningCB
     333          
     334            // Register for all key events - This app will handle all key events
     335            RegisterForKeys( zclGenericApp_TaskID );
-   \   000091                ; Setup parameters for call to function RegisterForKeys
-   \   000091   90....       MOV       DPTR,#zclGenericApp_TaskID
-   \   000094   E0           MOVX      A,@DPTR
-   \   000095   F9           MOV       R1,A
-   \   000096   12....       LCALL     `??RegisterForKeys::?relay`; Banked call to: RegisterForKeys
+   \   000048                ; Setup parameters for call to function RegisterForKeys
+   \   000048   90....       MOV       DPTR,#zclGenericApp_TaskID
+   \   00004B   E0           MOVX      A,@DPTR
+   \   00004C   F9           MOV       R1,A
+   \   00004D   12....       LCALL     `??RegisterForKeys::?relay`; Banked call to: RegisterForKeys
     336            
     337            // Register for a test endpoint
     338            afRegister( &sampleSw_TestEp );
-   \   000099                ; Setup parameters for call to function afRegister
-   \   000099   7A..         MOV       R2,#sampleSw_TestEp & 0xff
-   \   00009B   7B..         MOV       R3,#(sampleSw_TestEp >> 8) & 0xff
-   \   00009D   12....       LCALL     `??afRegister::?relay`; Banked call to: afRegister
-    339            afRegister( &sampleSw_TestEp2 );
-   \   0000A0                ; Setup parameters for call to function afRegister
-   \   0000A0   7A..         MOV       R2,#sampleSw_TestEp2 & 0xff
-   \   0000A2   7B..         MOV       R3,#(sampleSw_TestEp2 >> 8) & 0xff
-   \   0000A4   12....       LCALL     `??afRegister::?relay`; Banked call to: afRegister
-    340            afRegister( &sampleSw_TestEp3 );
-   \   0000A7                ; Setup parameters for call to function afRegister
-   \   0000A7   7A..         MOV       R2,#sampleSw_TestEp3 & 0xff
-   \   0000A9   7B..         MOV       R3,#(sampleSw_TestEp3 >> 8) & 0xff
-   \   0000AB   12....       LCALL     `??afRegister::?relay`; Banked call to: afRegister
+   \   000050                ; Setup parameters for call to function afRegister
+   \   000050   7A..         MOV       R2,#sampleSw_TestEp & 0xff
+   \   000052   7B..         MOV       R3,#(sampleSw_TestEp >> 8) & 0xff
+   \   000054   12....       LCALL     `??afRegister::?relay`; Banked call to: afRegister
+    339          //  afRegister( &sampleSw_TestEp2 );
+    340          //  afRegister( &sampleSw_TestEp3 );
     341          
     342            bdb_RegisterCommissioningStatusCB( zclGenericApp_ProcessCommissioningStatus );
-   \   0000AE                ; Setup parameters for call to function bdb_RegisterCommissioningStatusCB
-   \   0000AE   7A..         MOV       R2,#`??zclGenericApp_ProcessCommissioningStatus::?re` & 0xff
-   \   0000B0   7B..         MOV       R3,#(`??zclGenericApp_ProcessCommissioningStatus::?re` >> 8) & 0xff
-   \   0000B2   12....       LCALL     `??bdb_RegisterCommissioningStatusCB::?relay`; Banked call to: bdb_RegisterCommissioningStatusCB
+   \   000057                ; Setup parameters for call to function bdb_RegisterCommissioningStatusCB
+   \   000057   7A..         MOV       R2,#`??zclGenericApp_ProcessCommissioningStatus::?re` & 0xff
+   \   000059   7B..         MOV       R3,#(`??zclGenericApp_ProcessCommissioningStatus::?re` >> 8) & 0xff
+   \   00005B   12....       LCALL     `??bdb_RegisterCommissioningStatusCB::?relay`; Banked call to: bdb_RegisterCommissioningStatusCB
     343            bdb_RegisterIdentifyTimeChangeCB( zclGenericApp_ProcessIdentifyTimeChange );
-   \   0000B5                ; Setup parameters for call to function bdb_RegisterIdentifyTimeChangeCB
-   \   0000B5   7A..         MOV       R2,#`??zclGenericApp_ProcessIdentifyTimeChange::?rel` & 0xff
-   \   0000B7   7B..         MOV       R3,#(`??zclGenericApp_ProcessIdentifyTimeChange::?rel` >> 8) & 0xff
-   \   0000B9   12....       LCALL     `??bdb_RegisterIdentifyTimeChangeCB::?relay`; Banked call to: bdb_RegisterIdentifyTimeChangeCB
+   \   00005E                ; Setup parameters for call to function bdb_RegisterIdentifyTimeChangeCB
+   \   00005E   7A..         MOV       R2,#`??zclGenericApp_ProcessIdentifyTimeChange::?rel` & 0xff
+   \   000060   7B..         MOV       R3,#(`??zclGenericApp_ProcessIdentifyTimeChange::?rel` >> 8) & 0xff
+   \   000062   12....       LCALL     `??bdb_RegisterIdentifyTimeChangeCB::?relay`; Banked call to: bdb_RegisterIdentifyTimeChangeCB
     344            bdb_RegisterBindNotificationCB( zclGenericApp_BindNotification );
-   \   0000BC                ; Setup parameters for call to function bdb_RegisterBindNotificationCB
-   \   0000BC   7A..         MOV       R2,#`??zclGenericApp_BindNotification::?relay` & 0xff
-   \   0000BE   7B..         MOV       R3,#(`??zclGenericApp_BindNotification::?relay` >> 8) & 0xff
-   \   0000C0   12....       LCALL     `??bdb_RegisterBindNotificationCB::?relay`; Banked call to: bdb_RegisterBindNotificationCB
+   \   000065                ; Setup parameters for call to function bdb_RegisterBindNotificationCB
+   \   000065   7A..         MOV       R2,#`??zclGenericApp_BindNotification::?relay` & 0xff
+   \   000067   7B..         MOV       R3,#(`??zclGenericApp_BindNotification::?relay` >> 8) & 0xff
+   \   000069   12....       LCALL     `??bdb_RegisterBindNotificationCB::?relay`; Banked call to: bdb_RegisterBindNotificationCB
     345          
     346          #if ( defined ( BDB_TL_TARGET ) && (BDB_TOUCHLINK_CAPABILITY_ENABLED == TRUE) )
     347            bdb_RegisterTouchlinkTargetEnableCB( zclGenericApp_ProcessTouchlinkTargetEnable );
@@ -689,8 +614,8 @@ C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-Power
     351            // Register the application's callback function to read/write attribute data.
     352            // This is only required when the attribute data format is unknown to ZCL.
     353            zcl_registerReadWriteCB( GENERICAPP_ENDPOINT, zclDiagnostic_ReadWriteAttrCB, NULL );
-    354            zcl_registerReadWriteCB( GENERICAPP_ENDPOINT2, zclDiagnostic_ReadWriteAttrCB, NULL );
-    355            zcl_registerReadWriteCB( GENERICAPP_ENDPOINT3, zclDiagnostic_ReadWriteAttrCB, NULL );
+    354          //  zcl_registerReadWriteCB( GENERICAPP_ENDPOINT2, zclDiagnostic_ReadWriteAttrCB, NULL );
+    355          //  zcl_registerReadWriteCB( GENERICAPP_ENDPOINT3, zclDiagnostic_ReadWriteAttrCB, NULL );
     356          
     357            if ( zclDiagnostic_InitStats() == ZSuccess )
     358            {
@@ -704,25 +629,12 @@ C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-Power
     366          #endif  // LCD_SUPPORTED
     367          
     368          bdb_StartCommissioning(BDB_COMMISSIONING_REJOIN_EXISTING_NETWORK_ON_STARTUP);
-   \   0000C3                ; Setup parameters for call to function bdb_StartCommissioning
-   \   0000C3   7900         MOV       R1,#0x0
-   \   0000C5   12....       LCALL     `??bdb_StartCommissioning::?relay`; Banked call to: bdb_StartCommissioning
+   \   00006C                ; Setup parameters for call to function bdb_StartCommissioning
+   \   00006C   7900         MOV       R1,#0x0
+   \   00006E   12....       LCALL     `??bdb_StartCommissioning::?relay`; Banked call to: bdb_StartCommissioning
     369          }
-   \   0000C8   7F01         MOV       R7,#0x1
-   \   0000CA   02....       LJMP      ?BANKED_LEAVE_XDATA
-
-   \                                 In  segment BANKED_CODE, align 1, keep-with-next
-   \                     ?Subroutine2:
-   \   000000   12....       LCALL     `??zcl_registerAttrList::?relay`; Banked call to: zcl_registerAttrList
-   \   000003                ; Setup parameters for call to function zcl_registerAttrList
-   \   000003                ; Setup parameters for call to function zcl_registerAttrList
-   \   000003   7C..         MOV       R4,#zclGenericApp_Attrs & 0xff
-   \   000005   7D..         MOV       R5,#(zclGenericApp_Attrs >> 8) & 0xff
-   \   000007   90....       MOV       DPTR,#zclGenericApp_NumAttributes
-   \   00000A   E4           CLR       A
-   \   00000B   93           MOVC      A,@A+DPTR
-   \   00000C   FA           MOV       R2,A
-   \   00000D   22           RET
+   \   000071   7F01         MOV       R7,#0x1
+   \   000073   02....       LJMP      ?BANKED_LEAVE_XDATA
     370          
     371          /*********************************************************************
     372           * @fn          zclSample_event_loop
@@ -877,8 +789,8 @@ C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-Power
    \   000078   6011         JZ        ??zclGenericApp_event_loop_9
    \   00007A   24FD         ADD       A,#-0x3
    \   00007C   701A         JNZ       ??zclGenericApp_event_loop_10
-   \   00007E   12....       LCALL     ?Subroutine3 & 0xFFFF
-   \                     ??CrossCallReturnLabel_8:
+   \   00007E   12....       LCALL     ?Subroutine2 & 0xFFFF
+   \                     ??CrossCallReturnLabel_2:
    \   000081   E0           MOVX      A,@DPTR
    \   000082   F9           MOV       R1,A
    \   000083   E8           MOV       A,R0
@@ -886,10 +798,10 @@ C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-Power
    \   000085   99           SUBB      A,R1
    \   000086   5010         JNC       ??zclGenericApp_event_loop_10
    \   000088   08           INC       R0
-   \   000089   80F6         SJMP      ??CrossCallReturnLabel_8
+   \   000089   80F6         SJMP      ??CrossCallReturnLabel_2
    \                     ??zclGenericApp_event_loop_9:
-   \   00008B   12....       LCALL     ?Subroutine3 & 0xFFFF
-   \                     ??CrossCallReturnLabel_9:
+   \   00008B   12....       LCALL     ?Subroutine2 & 0xFFFF
+   \                     ??CrossCallReturnLabel_3:
    \   00008E   8001         SJMP      ??zclGenericApp_event_loop_11
    \                     ??zclGenericApp_event_loop_12:
    \   000090   08           INC       R0
@@ -1048,7 +960,7 @@ C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-Power
     476          }
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
-   \                     ?Subroutine3:
+   \                     ?Subroutine2:
    \   000000   8882         MOV       DPL,R0
    \   000002   8983         MOV       DPH,R1
    \   000004   E0           MOVX      A,@DPTR
@@ -1113,21 +1025,47 @@ C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-Power
     500            }
     501          
     502            if ( keys & HAL_KEY_SW_6 )
-   \                     ??zclGenericApp_HandleKeys_0:
-   \   000029   EE           MOV       A,R6
-   \   00002A   A2E5         MOV       C,0xE0 /* A   */.5
-   \   00002C   4003         JC        $+5
-   \   00002E   02....       LJMP      ??zclGenericApp_HandleKeys_1 & 0xFFFF
     503            {
     504              // Send switch on/off command
-    505              if (isToggleSet6) {
-   \   000031   90....       MOV       DPTR,#isToggleSet6
+    505          //    if (isToggleSet6) {
+    506          //        zclGeneral_SendOnOff_CmdOn( GENERICAPP_ENDPOINT3, &zclGenericApp_DstAddr3, FALSE, bdb_getZCLFrameCounter() );
+    507          //    } else {
+    508          //        zclGeneral_SendOnOff_CmdOff( GENERICAPP_ENDPOINT3, &zclGenericApp_DstAddr3, FALSE, bdb_getZCLFrameCounter() );
+    509          //    }
+    510          //      // Skift tilstanden
+    511          //    isToggleSet6 = !isToggleSet6;
+    512          //  zclGenericApp_ReadADC();
+    513            }  
+    514          
+    515            if ( keys & HAL_KEY_SW_4 )
+    516            {
+    517              // Send switch on/off command
+    518          //    if (isToggleSet5) {
+    519          //        zclGeneral_SendOnOff_CmdOn( GENERICAPP_ENDPOINT2, &zclGenericApp_DstAddr2, FALSE, bdb_getZCLFrameCounter() );
+    520          //    } else {
+    521          //        zclGeneral_SendOnOff_CmdOff( GENERICAPP_ENDPOINT2, &zclGenericApp_DstAddr2, FALSE, bdb_getZCLFrameCounter() );
+    522          //    }
+    523          //      // Skift tilstanden
+    524          //    isToggleSet5 = !isToggleSet5;
+    525          //  zclGenericApp_ReadADC();
+    526            } 
+    527          
+    528            if ( keys & HAL_KEY_SW_5 )
+   \                     ??zclGenericApp_HandleKeys_0:
+   \   000029   EE           MOV       A,R6
+   \   00002A   A2E2         MOV       C,0xE0 /* A   */.2
+   \   00002C   4003         JC        $+5
+   \   00002E   02....       LJMP      ??zclGenericApp_HandleKeys_1 & 0xFFFF
+    529            {
+    530                // Send switch on/off command
+    531              if (isToggleSet4) {
+   \   000031   90....       MOV       DPTR,#isToggleSet4
    \   000034   E0           MOVX      A,@DPTR
    \   000035   602F         JZ        ??zclGenericApp_HandleKeys_2
-    506                  zclGeneral_SendOnOff_CmdOn( GENERICAPP_ENDPOINT3, &zclGenericApp_DstAddr3, FALSE, bdb_getZCLFrameCounter() );
+    532                  zclGeneral_SendOnOff_CmdOn( GENERICAPP_ENDPOINT, &zclGenericApp_DstAddr, FALSE, bdb_getZCLFrameCounter() );
    \   000037                ; Setup parameters for call to function bdb_getZCLFrameCounter
    \   000037   12....       LCALL     ?Subroutine1 & 0xFFFF
-    507              } else {
+    533              } else {
    \                     ??CrossCallReturnLabel_0:
    \   00003A   12....       LCALL     ?PUSH_XSTACK_I_TWO
    \   00003D   78..         MOV       R0,#?V0
@@ -1148,11 +1086,11 @@ C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-Power
    \   00005F   78..         MOV       R0,#?V0
    \   000061   12....       LCALL     ?PUSH_XSTACK_I_ONE
    \   000064   8030         SJMP      ??zclGenericApp_HandleKeys_3
-    508                  zclGeneral_SendOnOff_CmdOff( GENERICAPP_ENDPOINT3, &zclGenericApp_DstAddr3, FALSE, bdb_getZCLFrameCounter() );
+    534                  zclGeneral_SendOnOff_CmdOff( GENERICAPP_ENDPOINT, &zclGenericApp_DstAddr, FALSE, bdb_getZCLFrameCounter() );
    \                     ??zclGenericApp_HandleKeys_2:
    \   000066                ; Setup parameters for call to function bdb_getZCLFrameCounter
    \   000066   12....       LCALL     ?Subroutine1 & 0xFFFF
-    509              }
+    535              }
    \                     ??CrossCallReturnLabel_1:
    \   000069   12....       LCALL     ?PUSH_XSTACK_I_TWO
    \   00006C   78..         MOV       R0,#?V0
@@ -1178,15 +1116,15 @@ C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-Power
    \   000098   12....       LCALL     ?PUSH_XSTACK_I_ONE
    \   00009B   7C06         MOV       R4,#0x6
    \   00009D   7D00         MOV       R5,#0x0
-   \   00009F   7A..         MOV       R2,#zclGenericApp_DstAddr3 & 0xff
-   \   0000A1   7B..         MOV       R3,#(zclGenericApp_DstAddr3 >> 8) & 0xff
-   \   0000A3   7903         MOV       R1,#0x3
+   \   00009F   7A..         MOV       R2,#zclGenericApp_DstAddr & 0xff
+   \   0000A1   7B..         MOV       R3,#(zclGenericApp_DstAddr >> 8) & 0xff
+   \   0000A3   7901         MOV       R1,#0x1
    \   0000A5   12....       LCALL     `??zcl_SendCommand::?relay`; Banked call to: zcl_SendCommand
    \   0000A8   740B         MOV       A,#0xb
    \   0000AA   12....       LCALL     ?DEALLOC_XSTACK8
-    510                // Skift tilstanden
-    511              isToggleSet6 = !isToggleSet6;
-   \   0000AD   90....       MOV       DPTR,#isToggleSet6
+    536                // Skift tilstanden
+    537              isToggleSet4 = !isToggleSet4;
+   \   0000AD   90....       MOV       DPTR,#isToggleSet4
    \   0000B0   E0           MOVX      A,@DPTR
    \   0000B1   7004         JNZ       ??zclGenericApp_HandleKeys_4
    \   0000B3   7401         MOV       A,#0x1
@@ -1195,201 +1133,21 @@ C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-Power
    \   0000B7   E4           CLR       A
    \                     ??zclGenericApp_HandleKeys_5:
    \   0000B8   F0           MOVX      @DPTR,A
-    512            zclGenericApp_ReadADC();
+    538              zclGenericApp_ReadADC();
    \   0000B9                ; Setup parameters for call to function zclGenericApp_ReadADC
    \   0000B9   12....       LCALL     `??zclGenericApp_ReadADC::?relay`; Banked call to: zclGenericApp_ReadADC
-    513            }  
-    514          
-    515            if ( keys & HAL_KEY_SW_5 )
-   \                     ??zclGenericApp_HandleKeys_1:
-   \   0000BC   EE           MOV       A,R6
-   \   0000BD   A2E2         MOV       C,0xE0 /* A   */.2
-   \   0000BF   4003         JC        $+5
-   \   0000C1   02....       LJMP      ??zclGenericApp_HandleKeys_6 & 0xFFFF
-    516            {
-    517              // Send switch on/off command
-    518              if (isToggleSet5) {
-   \   0000C4   90....       MOV       DPTR,#isToggleSet5
-   \   0000C7   E0           MOVX      A,@DPTR
-   \   0000C8   602F         JZ        ??zclGenericApp_HandleKeys_7
-    519                  zclGeneral_SendOnOff_CmdOn( GENERICAPP_ENDPOINT2, &zclGenericApp_DstAddr2, FALSE, bdb_getZCLFrameCounter() );
-   \   0000CA                ; Setup parameters for call to function bdb_getZCLFrameCounter
-   \   0000CA   12....       LCALL     ?Subroutine1 & 0xFFFF
-    520              } else {
-   \                     ??CrossCallReturnLabel_2:
-   \   0000CD   12....       LCALL     ?PUSH_XSTACK_I_TWO
-   \   0000D0   78..         MOV       R0,#?V0
-   \   0000D2   12....       LCALL     ?PUSH_XSTACK_I_TWO
-   \   0000D5   E9           MOV       A,R1
-   \   0000D6   F5..         MOV       ?V0,A
-   \   0000D8   78..         MOV       R0,#?V0
-   \   0000DA   12....       LCALL     ?PUSH_XSTACK_I_ONE
-   \   0000DD   E4           CLR       A
-   \   0000DE   F5..         MOV       ?V0,A
-   \   0000E0   78..         MOV       R0,#?V0
-   \   0000E2   12....       LCALL     ?PUSH_XSTACK_I_TWO
-   \   0000E5   78..         MOV       R0,#?V0
-   \   0000E7   12....       LCALL     ?PUSH_XSTACK_I_ONE
-   \   0000EA   78..         MOV       R0,#?V0
-   \   0000EC   12....       LCALL     ?PUSH_XSTACK_I_ONE
-   \   0000EF   75..01       MOV       ?V0,#0x1
-   \   0000F2   78..         MOV       R0,#?V0
-   \   0000F4   12....       LCALL     ?PUSH_XSTACK_I_ONE
-   \   0000F7   8030         SJMP      ??zclGenericApp_HandleKeys_8
-    521                  zclGeneral_SendOnOff_CmdOff( GENERICAPP_ENDPOINT2, &zclGenericApp_DstAddr2, FALSE, bdb_getZCLFrameCounter() );
-   \                     ??zclGenericApp_HandleKeys_7:
-   \   0000F9                ; Setup parameters for call to function bdb_getZCLFrameCounter
-   \   0000F9   12....       LCALL     ?Subroutine1 & 0xFFFF
-    522              }
-   \                     ??CrossCallReturnLabel_3:
-   \   0000FC   12....       LCALL     ?PUSH_XSTACK_I_TWO
-   \   0000FF   78..         MOV       R0,#?V0
-   \   000101   12....       LCALL     ?PUSH_XSTACK_I_TWO
-   \   000104   E9           MOV       A,R1
-   \   000105   F5..         MOV       ?V0,A
-   \   000107   78..         MOV       R0,#?V0
-   \   000109   12....       LCALL     ?PUSH_XSTACK_I_ONE
-   \   00010C   E4           CLR       A
-   \   00010D   F5..         MOV       ?V0,A
-   \   00010F   78..         MOV       R0,#?V0
-   \   000111   12....       LCALL     ?PUSH_XSTACK_I_TWO
-   \   000114   78..         MOV       R0,#?V0
-   \   000116   12....       LCALL     ?PUSH_XSTACK_I_ONE
-   \   000119   78..         MOV       R0,#?V0
-   \   00011B   12....       LCALL     ?PUSH_XSTACK_I_ONE
-   \   00011E   75..01       MOV       ?V0,#0x1
-   \   000121   78..         MOV       R0,#?V0
-   \   000123   12....       LCALL     ?PUSH_XSTACK_I_ONE
-   \   000126   75..00       MOV       ?V0,#0x0
-   \                     ??zclGenericApp_HandleKeys_8:
-   \   000129   78..         MOV       R0,#?V0
-   \   00012B   12....       LCALL     ?PUSH_XSTACK_I_ONE
-   \   00012E   7C06         MOV       R4,#0x6
-   \   000130   7D00         MOV       R5,#0x0
-   \   000132   7A..         MOV       R2,#zclGenericApp_DstAddr2 & 0xff
-   \   000134   7B..         MOV       R3,#(zclGenericApp_DstAddr2 >> 8) & 0xff
-   \   000136   7902         MOV       R1,#0x2
-   \   000138   12....       LCALL     `??zcl_SendCommand::?relay`; Banked call to: zcl_SendCommand
-   \   00013B   740B         MOV       A,#0xb
-   \   00013D   12....       LCALL     ?DEALLOC_XSTACK8
-    523                // Skift tilstanden
-    524              isToggleSet5 = !isToggleSet5;
-   \   000140   90....       MOV       DPTR,#isToggleSet5
-   \   000143   E0           MOVX      A,@DPTR
-   \   000144   7004         JNZ       ??zclGenericApp_HandleKeys_9
-   \   000146   7401         MOV       A,#0x1
-   \   000148   8001         SJMP      ??zclGenericApp_HandleKeys_10
-   \                     ??zclGenericApp_HandleKeys_9:
-   \   00014A   E4           CLR       A
-   \                     ??zclGenericApp_HandleKeys_10:
-   \   00014B   F0           MOVX      @DPTR,A
-    525            zclGenericApp_ReadADC();
-   \   00014C                ; Setup parameters for call to function zclGenericApp_ReadADC
-   \   00014C   12....       LCALL     `??zclGenericApp_ReadADC::?relay`; Banked call to: zclGenericApp_ReadADC
-    526            } 
-    527          
-    528            if ( keys & HAL_KEY_SW_4 )
-   \                     ??zclGenericApp_HandleKeys_6:
-   \   00014F   EE           MOV       A,R6
-   \   000150   A2E3         MOV       C,0xE0 /* A   */.3
-   \   000152   4003         JC        $+5
-   \   000154   02....       LJMP      ??zclGenericApp_HandleKeys_11 & 0xFFFF
-    529            {
-    530                // Send switch on/off command
-    531              if (isToggleSet4) {
-   \   000157   90....       MOV       DPTR,#isToggleSet4
-   \   00015A   E0           MOVX      A,@DPTR
-   \   00015B   602F         JZ        ??zclGenericApp_HandleKeys_12
-    532                  zclGeneral_SendOnOff_CmdOn( GENERICAPP_ENDPOINT, &zclGenericApp_DstAddr, FALSE, bdb_getZCLFrameCounter() );
-   \   00015D                ; Setup parameters for call to function bdb_getZCLFrameCounter
-   \   00015D   12....       LCALL     ?Subroutine1 & 0xFFFF
-    533              } else {
-   \                     ??CrossCallReturnLabel_4:
-   \   000160   12....       LCALL     ?PUSH_XSTACK_I_TWO
-   \   000163   78..         MOV       R0,#?V0
-   \   000165   12....       LCALL     ?PUSH_XSTACK_I_TWO
-   \   000168   E9           MOV       A,R1
-   \   000169   F5..         MOV       ?V0,A
-   \   00016B   78..         MOV       R0,#?V0
-   \   00016D   12....       LCALL     ?PUSH_XSTACK_I_ONE
-   \   000170   E4           CLR       A
-   \   000171   F5..         MOV       ?V0,A
-   \   000173   78..         MOV       R0,#?V0
-   \   000175   12....       LCALL     ?PUSH_XSTACK_I_TWO
-   \   000178   78..         MOV       R0,#?V0
-   \   00017A   12....       LCALL     ?PUSH_XSTACK_I_ONE
-   \   00017D   78..         MOV       R0,#?V0
-   \   00017F   12....       LCALL     ?PUSH_XSTACK_I_ONE
-   \   000182   75..01       MOV       ?V0,#0x1
-   \   000185   78..         MOV       R0,#?V0
-   \   000187   12....       LCALL     ?PUSH_XSTACK_I_ONE
-   \   00018A   8030         SJMP      ??zclGenericApp_HandleKeys_13
-    534                  zclGeneral_SendOnOff_CmdOff( GENERICAPP_ENDPOINT, &zclGenericApp_DstAddr, FALSE, bdb_getZCLFrameCounter() );
-   \                     ??zclGenericApp_HandleKeys_12:
-   \   00018C                ; Setup parameters for call to function bdb_getZCLFrameCounter
-   \   00018C   12....       LCALL     ?Subroutine1 & 0xFFFF
-    535              }
-   \                     ??CrossCallReturnLabel_5:
-   \   00018F   12....       LCALL     ?PUSH_XSTACK_I_TWO
-   \   000192   78..         MOV       R0,#?V0
-   \   000194   12....       LCALL     ?PUSH_XSTACK_I_TWO
-   \   000197   E9           MOV       A,R1
-   \   000198   F5..         MOV       ?V0,A
-   \   00019A   78..         MOV       R0,#?V0
-   \   00019C   12....       LCALL     ?PUSH_XSTACK_I_ONE
-   \   00019F   E4           CLR       A
-   \   0001A0   F5..         MOV       ?V0,A
-   \   0001A2   78..         MOV       R0,#?V0
-   \   0001A4   12....       LCALL     ?PUSH_XSTACK_I_TWO
-   \   0001A7   78..         MOV       R0,#?V0
-   \   0001A9   12....       LCALL     ?PUSH_XSTACK_I_ONE
-   \   0001AC   78..         MOV       R0,#?V0
-   \   0001AE   12....       LCALL     ?PUSH_XSTACK_I_ONE
-   \   0001B1   75..01       MOV       ?V0,#0x1
-   \   0001B4   78..         MOV       R0,#?V0
-   \   0001B6   12....       LCALL     ?PUSH_XSTACK_I_ONE
-   \   0001B9   75..00       MOV       ?V0,#0x0
-   \                     ??zclGenericApp_HandleKeys_13:
-   \   0001BC   78..         MOV       R0,#?V0
-   \   0001BE   12....       LCALL     ?PUSH_XSTACK_I_ONE
-   \   0001C1   7C06         MOV       R4,#0x6
-   \   0001C3   7D00         MOV       R5,#0x0
-   \   0001C5   7A..         MOV       R2,#zclGenericApp_DstAddr & 0xff
-   \   0001C7   7B..         MOV       R3,#(zclGenericApp_DstAddr >> 8) & 0xff
-   \   0001C9   7901         MOV       R1,#0x1
-   \   0001CB   12....       LCALL     `??zcl_SendCommand::?relay`; Banked call to: zcl_SendCommand
-   \   0001CE   740B         MOV       A,#0xb
-   \   0001D0   12....       LCALL     ?DEALLOC_XSTACK8
-    536                // Skift tilstanden
-    537              isToggleSet4 = !isToggleSet4;
-   \   0001D3   90....       MOV       DPTR,#isToggleSet4
-   \   0001D6   E0           MOVX      A,@DPTR
-   \   0001D7   7004         JNZ       ??zclGenericApp_HandleKeys_14
-   \   0001D9   7401         MOV       A,#0x1
-   \   0001DB   8001         SJMP      ??zclGenericApp_HandleKeys_15
-   \                     ??zclGenericApp_HandleKeys_14:
-   \   0001DD   E4           CLR       A
-   \                     ??zclGenericApp_HandleKeys_15:
-   \   0001DE   F0           MOVX      @DPTR,A
-    538            zclGenericApp_ReadADC();
-   \   0001DF                ; Setup parameters for call to function zclGenericApp_ReadADC
-   \   0001DF   12....       LCALL     `??zclGenericApp_ReadADC::?relay`; Banked call to: zclGenericApp_ReadADC
     539            } 
     540          }
-   \                     ??zclGenericApp_HandleKeys_11:
-   \   0001E2   7F02         MOV       R7,#0x2
-   \   0001E4   02....       LJMP      ?BANKED_LEAVE_XDATA
-   \   0001E7                REQUIRE _A_P1
+   \                     ??zclGenericApp_HandleKeys_1:
+   \   0000BC   7F02         MOV       R7,#0x2
+   \   0000BE   02....       LJMP      ?BANKED_LEAVE_XDATA
+   \   0000C1                REQUIRE _A_P1
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
    \                     ?Subroutine1:
    \   000000   12....       LCALL     `??bdb_getZCLFrameCounter::?relay`; Banked call to: bdb_getZCLFrameCounter
    \   000003   E9           MOV       A,R1
    \   000004   F9           MOV       R1,A
-   \   000005                ; Setup parameters for call to function zcl_SendCommand
-   \   000005                ; Setup parameters for call to function zcl_SendCommand
-   \   000005                ; Setup parameters for call to function zcl_SendCommand
-   \   000005                ; Setup parameters for call to function zcl_SendCommand
    \   000005                ; Setup parameters for call to function zcl_SendCommand
    \   000005                ; Setup parameters for call to function zcl_SendCommand
    \   000005   E4           CLR       A
@@ -1721,22 +1479,6 @@ C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-Power
    \   000006   00           DB 0
 
    \                                 In  segment XDATA_ID, align 1, keep-with-next
-   \                     `?<Initializer for sampleSw_TestEp2>`:
-   \   000000   02           DB 2
-   \   000001   00           DB 0
-   \   000002   ....         DW zclGenericApp_TaskID
-   \   000004   0000         DW 0H
-   \   000006   00           DB 0
-
-   \                                 In  segment XDATA_ID, align 1, keep-with-next
-   \                     `?<Initializer for sampleSw_TestEp3>`:
-   \   000000   03           DB 3
-   \   000001   00           DB 0
-   \   000002   ....         DW zclGenericApp_TaskID
-   \   000004   0000         DW 0H
-   \   000006   00           DB 0
-
-   \                                 In  segment XDATA_ID, align 1, keep-with-next
    \                     `?<Initializer for zclGenericApp_CmdCallbacks>`:
    \   000000   ....         DW `??zclGenericApp_BasicResetCB::?relay`
    \   000002   0000         DW 0H
@@ -2021,16 +1763,13 @@ C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-Power
 
    Bytes  Function/Label
    -----  --------------
-       7  ?<Initializer for sampleSw_TestEp2>
-       7  ?<Initializer for sampleSw_TestEp3>
        7  ?<Initializer for sampleSw_TestEp>
       16  ?<Initializer for zclGenericApp_CmdCallbacks>
        1  ?<Initializer for zclGenericApp_NwkState>
        1  ?<Initializer for zclGenericApp_OnOffSwitchTyp
        7  ?Subroutine0
       13  ?Subroutine1
-      14  ?Subroutine2
-      15  ?Subroutine3
+      15  ?Subroutine2
        1  _A_P1
        1  _A_P2
        4  __Constant_0
@@ -2042,16 +1781,12 @@ C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-Power
        1  isToggleSet5
        1  isToggleSet6
        7  sampleSw_TestEp
-       7  sampleSw_TestEp2
-       7  sampleSw_TestEp3
        9  zclGenericApp_BasicResetCB
        3  zclGenericApp_BindNotification
       16  zclGenericApp_CmdCallbacks
       12  zclGenericApp_DstAddr
-      12  zclGenericApp_DstAddr2
-      12  zclGenericApp_DstAddr3
-     487  zclGenericApp_HandleKeys
-     205  zclGenericApp_Init
+     193  zclGenericApp_HandleKeys
+     118  zclGenericApp_Init
        1  zclGenericApp_NwkState
        1  zclGenericApp_OnOffSwitchActions
        1  zclGenericApp_OnOffSwitchType
@@ -2063,19 +1798,19 @@ C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-Power
       48  -- Other
 
  
- 1 174 bytes in segment BANKED_CODE
-    48 bytes in segment BANK_RELAYS
-     2 bytes in segment SFR_AN
-    39 bytes in segment XDATA_I
-    39 bytes in segment XDATA_ID
-    12 bytes in segment XDATA_ROM_C
-    43 bytes in segment XDATA_Z
+ 779 bytes in segment BANKED_CODE
+  48 bytes in segment BANK_RELAYS
+   2 bytes in segment SFR_AN
+  25 bytes in segment XDATA_I
+  25 bytes in segment XDATA_ID
+  12 bytes in segment XDATA_ROM_C
+  19 bytes in segment XDATA_Z
  
-    87 bytes of CODE     memory
-     0 bytes of CONST    memory (+ 12 bytes shared)
-     0 bytes of DATA     memory (+  2 bytes shared)
- 1 174 bytes of HUGECODE memory
-    82 bytes of XDATA    memory
+  73 bytes of CODE     memory
+   0 bytes of CONST    memory (+ 12 bytes shared)
+   0 bytes of DATA     memory (+  2 bytes shared)
+ 779 bytes of HUGECODE memory
+  44 bytes of XDATA    memory
 
 Errors: none
 Warnings: none

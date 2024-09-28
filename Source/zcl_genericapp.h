@@ -62,9 +62,9 @@ extern "C"
  * CONSTANTS
  */
 #define GENERICAPP_ENDPOINT            1
-#define GENERICAPP_ENDPOINT2           2
-#define GENERICAPP_ENDPOINT3           3
-#define GENERICAPP_ENDPOINT4           4   
+//#define GENERICAPP_ENDPOINT2           2
+//#define GENERICAPP_ENDPOINT3           3
+//#define GENERICAPP_ENDPOINT4           4   
    
 // Added to include ZLL Target functionality
 #define GENERICAPP_NUM_GRPS            2
@@ -105,9 +105,9 @@ extern "C"
 #endif
 
 extern SimpleDescriptionFormat_t zclGenericApp_SimpleDesc;
-extern SimpleDescriptionFormat_t zclGenericApp_SimpleDesc2;
-extern SimpleDescriptionFormat_t zclGenericApp_SimpleDesc3;
-extern SimpleDescriptionFormat_t zclGenericApp_SimpleDesc4;
+//extern SimpleDescriptionFormat_t zclGenericApp_SimpleDesc2;
+//extern SimpleDescriptionFormat_t zclGenericApp_SimpleDesc3;
+//extern SimpleDescriptionFormat_t zclGenericApp_SimpleDesc4;
 
 extern CONST zclCommandRec_t zclGenericApp_Cmds[];
 

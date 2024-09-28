@@ -140,8 +140,8 @@ uint8 gPermitDuration = 0;    // permit joining default to disabled
 devStates_t zclGenericApp_NwkState = DEV_INIT;
 
 afAddrType_t zclGenericApp_DstAddr;
-afAddrType_t zclGenericApp_DstAddr2;
-afAddrType_t zclGenericApp_DstAddr3;
+//afAddrType_t zclGenericApp_DstAddr2;
+//afAddrType_t zclGenericApp_DstAddr3;
 
 // Endpoint to allow SYS_APP_MSGs
 static endPointDesc_t sampleSw_TestEp =
@@ -152,22 +152,22 @@ static endPointDesc_t sampleSw_TestEp =
   (SimpleDescriptionFormat_t *)NULL,  // No Simple description for this test endpoint
   (afNetworkLatencyReq_t)0            // No Network Latency req
 };
-static endPointDesc_t sampleSw_TestEp2 =
-{
-  GENERICAPP_ENDPOINT2,                  // endpoint
-  0,
-  &zclGenericApp_TaskID,
-  (SimpleDescriptionFormat_t *)NULL,  // No Simple description for this test endpoint
-  (afNetworkLatencyReq_t)0            // No Network Latency req
-};
-static endPointDesc_t sampleSw_TestEp3 =
-{
-  GENERICAPP_ENDPOINT3,                  // endpoint
-  0,
-  &zclGenericApp_TaskID,
-  (SimpleDescriptionFormat_t *)NULL,  // No Simple description for this test endpoint
-  (afNetworkLatencyReq_t)0            // No Network Latency req
-};
+//static endPointDesc_t sampleSw_TestEp2 =
+//{
+//  GENERICAPP_ENDPOINT2,                  // endpoint
+//  0,
+//  &zclGenericApp_TaskID,
+//  (SimpleDescriptionFormat_t *)NULL,  // No Simple description for this test endpoint
+//  (afNetworkLatencyReq_t)0            // No Network Latency req
+//};
+//static endPointDesc_t sampleSw_TestEp3 =
+//{
+//  GENERICAPP_ENDPOINT3,                  // endpoint
+//  0,
+//  &zclGenericApp_TaskID,
+//  (SimpleDescriptionFormat_t *)NULL,  // No Simple description for this test endpoint
+//  (afNetworkLatencyReq_t)0            // No Network Latency req
+//};
 
 
 /*********************************************************************
@@ -292,31 +292,31 @@ void zclGenericApp_Init( byte task_id )
   zclGenericApp_DstAddr.endPoint = GENERICAPP_ENDPOINT;
   zclGenericApp_DstAddr.addr.shortAddr = 0x0000;
 
-  zclGenericApp_DstAddr2.addrMode = (afAddrMode_t)Addr16Bit;
-  zclGenericApp_DstAddr2.endPoint = GENERICAPP_ENDPOINT2;
-  zclGenericApp_DstAddr2.addr.shortAddr = 0x0000;  
-  
-  zclGenericApp_DstAddr3.addrMode = (afAddrMode_t)Addr16Bit;
-  zclGenericApp_DstAddr3.endPoint = GENERICAPP_ENDPOINT3;
-  zclGenericApp_DstAddr3.addr.shortAddr = 0x0000;
+//  zclGenericApp_DstAddr2.addrMode = (afAddrMode_t)Addr16Bit;
+//  zclGenericApp_DstAddr2.endPoint = GENERICAPP_ENDPOINT2;
+//  zclGenericApp_DstAddr2.addr.shortAddr = 0x0000;  
+//  
+//  zclGenericApp_DstAddr3.addrMode = (afAddrMode_t)Addr16Bit;
+//  zclGenericApp_DstAddr3.endPoint = GENERICAPP_ENDPOINT3;
+//  zclGenericApp_DstAddr3.addr.shortAddr = 0x0000;
 
   
   // This app is part of the Home Automation Profile
   bdb_RegisterSimpleDescriptor( &zclGenericApp_SimpleDesc );
-  bdb_RegisterSimpleDescriptor( &zclGenericApp_SimpleDesc2 );
-  bdb_RegisterSimpleDescriptor( &zclGenericApp_SimpleDesc3 );  
+//  bdb_RegisterSimpleDescriptor( &zclGenericApp_SimpleDesc2 );
+//  bdb_RegisterSimpleDescriptor( &zclGenericApp_SimpleDesc3 );  
   
   // Register the ZCL General Cluster Library callback functions
   zclGeneral_RegisterCmdCallbacks( GENERICAPP_ENDPOINT, &zclGenericApp_CmdCallbacks );
-  zclGeneral_RegisterCmdCallbacks( GENERICAPP_ENDPOINT2, &zclGenericApp_CmdCallbacks );
-  zclGeneral_RegisterCmdCallbacks( GENERICAPP_ENDPOINT3, &zclGenericApp_CmdCallbacks );
+//  zclGeneral_RegisterCmdCallbacks( GENERICAPP_ENDPOINT2, &zclGenericApp_CmdCallbacks );
+//  zclGeneral_RegisterCmdCallbacks( GENERICAPP_ENDPOINT3, &zclGenericApp_CmdCallbacks );
   
   // GENERICAPP_TODO: Register other cluster command callbacks here
 
   // Register the application's attribute list
   zcl_registerAttrList( GENERICAPP_ENDPOINT, zclGenericApp_NumAttributes, zclGenericApp_Attrs );
-  zcl_registerAttrList( GENERICAPP_ENDPOINT2, zclGenericApp_NumAttributes, zclGenericApp_Attrs );
-  zcl_registerAttrList( GENERICAPP_ENDPOINT3, zclGenericApp_NumAttributes, zclGenericApp_Attrs );  
+//  zcl_registerAttrList( GENERICAPP_ENDPOINT2, zclGenericApp_NumAttributes, zclGenericApp_Attrs );
+//  zcl_registerAttrList( GENERICAPP_ENDPOINT3, zclGenericApp_NumAttributes, zclGenericApp_Attrs );  
   
   // Register the Application to receive the unprocessed Foundation command/response messages
   zcl_registerForMsg( zclGenericApp_TaskID );
@@ -324,8 +324,8 @@ void zclGenericApp_Init( byte task_id )
 #ifdef ZCL_DISCOVER
   // Register the application's command list
   zcl_registerCmdList( GENERICAPP_ENDPOINT, zclCmdsArraySize, zclGenericApp_Cmds );
-  zcl_registerCmdList( GENERICAPP_ENDPOINT2, zclCmdsArraySize, zclGenericApp_Cmds );
-  zcl_registerCmdList( GENERICAPP_ENDPOINT3, zclCmdsArraySize, zclGenericApp_Cmds );
+//  zcl_registerCmdList( GENERICAPP_ENDPOINT2, zclCmdsArraySize, zclGenericApp_Cmds );
+//  zcl_registerCmdList( GENERICAPP_ENDPOINT3, zclCmdsArraySize, zclGenericApp_Cmds );
 #endif
 
   // Register low voltage NV memory protection application callback
@@ -336,8 +336,8 @@ void zclGenericApp_Init( byte task_id )
   
   // Register for a test endpoint
   afRegister( &sampleSw_TestEp );
-  afRegister( &sampleSw_TestEp2 );
-  afRegister( &sampleSw_TestEp3 );
+//  afRegister( &sampleSw_TestEp2 );
+//  afRegister( &sampleSw_TestEp3 );
 
   bdb_RegisterCommissioningStatusCB( zclGenericApp_ProcessCommissioningStatus );
   bdb_RegisterIdentifyTimeChangeCB( zclGenericApp_ProcessIdentifyTimeChange );
@@ -351,8 +351,8 @@ void zclGenericApp_Init( byte task_id )
   // Register the application's callback function to read/write attribute data.
   // This is only required when the attribute data format is unknown to ZCL.
   zcl_registerReadWriteCB( GENERICAPP_ENDPOINT, zclDiagnostic_ReadWriteAttrCB, NULL );
-  zcl_registerReadWriteCB( GENERICAPP_ENDPOINT2, zclDiagnostic_ReadWriteAttrCB, NULL );
-  zcl_registerReadWriteCB( GENERICAPP_ENDPOINT3, zclDiagnostic_ReadWriteAttrCB, NULL );
+//  zcl_registerReadWriteCB( GENERICAPP_ENDPOINT2, zclDiagnostic_ReadWriteAttrCB, NULL );
+//  zcl_registerReadWriteCB( GENERICAPP_ENDPOINT3, zclDiagnostic_ReadWriteAttrCB, NULL );
 
   if ( zclDiagnostic_InitStats() == ZSuccess )
   {
@@ -502,30 +502,30 @@ static void zclGenericApp_HandleKeys( byte shift, byte keys )
   if ( keys & HAL_KEY_SW_6 )
   {
     // Send switch on/off command
-    if (isToggleSet6) {
-        zclGeneral_SendOnOff_CmdOn( GENERICAPP_ENDPOINT3, &zclGenericApp_DstAddr3, FALSE, bdb_getZCLFrameCounter() );
-    } else {
-        zclGeneral_SendOnOff_CmdOff( GENERICAPP_ENDPOINT3, &zclGenericApp_DstAddr3, FALSE, bdb_getZCLFrameCounter() );
-    }
-      // Skift tilstanden
-    isToggleSet6 = !isToggleSet6;
-  zclGenericApp_ReadADC();
+//    if (isToggleSet6) {
+//        zclGeneral_SendOnOff_CmdOn( GENERICAPP_ENDPOINT3, &zclGenericApp_DstAddr3, FALSE, bdb_getZCLFrameCounter() );
+//    } else {
+//        zclGeneral_SendOnOff_CmdOff( GENERICAPP_ENDPOINT3, &zclGenericApp_DstAddr3, FALSE, bdb_getZCLFrameCounter() );
+//    }
+//      // Skift tilstanden
+//    isToggleSet6 = !isToggleSet6;
+//  zclGenericApp_ReadADC();
   }  
 
-  if ( keys & HAL_KEY_SW_5 )
+  if ( keys & HAL_KEY_SW_4 )
   {
     // Send switch on/off command
-    if (isToggleSet5) {
-        zclGeneral_SendOnOff_CmdOn( GENERICAPP_ENDPOINT2, &zclGenericApp_DstAddr2, FALSE, bdb_getZCLFrameCounter() );
-    } else {
-        zclGeneral_SendOnOff_CmdOff( GENERICAPP_ENDPOINT2, &zclGenericApp_DstAddr2, FALSE, bdb_getZCLFrameCounter() );
-    }
-      // Skift tilstanden
-    isToggleSet5 = !isToggleSet5;
-  zclGenericApp_ReadADC();
+//    if (isToggleSet5) {
+//        zclGeneral_SendOnOff_CmdOn( GENERICAPP_ENDPOINT2, &zclGenericApp_DstAddr2, FALSE, bdb_getZCLFrameCounter() );
+//    } else {
+//        zclGeneral_SendOnOff_CmdOff( GENERICAPP_ENDPOINT2, &zclGenericApp_DstAddr2, FALSE, bdb_getZCLFrameCounter() );
+//    }
+//      // Skift tilstanden
+//    isToggleSet5 = !isToggleSet5;
+//  zclGenericApp_ReadADC();
   } 
 
-  if ( keys & HAL_KEY_SW_4 )
+  if ( keys & HAL_KEY_SW_5 )
   {
       // Send switch on/off command
     if (isToggleSet4) {
@@ -535,7 +535,7 @@ static void zclGenericApp_HandleKeys( byte shift, byte keys )
     }
       // Skift tilstanden
     isToggleSet4 = !isToggleSet4;
-  zclGenericApp_ReadADC();
+    zclGenericApp_ReadADC();
   } 
 }
 

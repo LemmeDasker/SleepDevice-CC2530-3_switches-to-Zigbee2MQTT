@@ -93,7 +93,7 @@
 const uint16 zclGenericApp_clusterRevision_all = 0x0001; 
 
 // Basic Cluster
-const uint8 zclGenericApp_ManufacturerName[] = { 9, 'S','L','E','E','P','-','S','W','3' };
+const uint8 zclGenericApp_ManufacturerName[] = { 9, 'S','L','E','E','P','-','S','W','1' };
 const uint8 zclGenericApp_ModelId[] = { 11, 'H','o','m','e','-','s','w','i','t','c','h' };
 const uint8 zclGenericApp_PowerSource = POWER_SOURCE_BATTERY;
 uint8 zclGenericApp_DeviceEnable = DEVICE_ENABLED;
@@ -185,16 +185,16 @@ const cId_t zclGenericApp_OutClusterList[] =
 };
 #define ZCLGENERICAPP_MAX_OUTCLUSTERS  (sizeof(zclGenericApp_OutClusterList) / sizeof(zclGenericApp_OutClusterList[0]))
 
-const cId_t zclGenericApp_OutClusterList2[] =
-{
-  ZCL_CLUSTER_ID_GEN_BASIC,
-  ZCL_CLUSTER_ID_GEN_IDENTIFY,
-  ZCL_CLUSTER_ID_GEN_ON_OFF
- 
-  // GENERICAPP_TODO: Add application specific Output Clusters Here. 
-  //       See zcl.h for Cluster ID definitions
-};
-#define ZCLGENERICAPP_MAX_OUTCLUSTERS2  (sizeof(zclGenericApp_OutClusterList2) / sizeof(zclGenericApp_OutClusterList2[0]))
+//const cId_t zclGenericApp_OutClusterList2[] =
+//{
+//  ZCL_CLUSTER_ID_GEN_BASIC,
+//  ZCL_CLUSTER_ID_GEN_IDENTIFY,
+//  ZCL_CLUSTER_ID_GEN_ON_OFF
+// 
+//  // GENERICAPP_TODO: Add application specific Output Clusters Here. 
+//  //       See zcl.h for Cluster ID definitions
+//};
+//#define ZCLGENERICAPP_MAX_OUTCLUSTERS2  (sizeof(zclGenericApp_OutClusterList2) / sizeof(zclGenericApp_OutClusterList2[0]))
 
 
 
@@ -211,32 +211,32 @@ SimpleDescriptionFormat_t zclGenericApp_SimpleDesc =
   ZCLGENERICAPP_MAX_OUTCLUSTERS,        //  byte  AppNumInClusters;
   (cId_t *)zclGenericApp_OutClusterList //  byte *pAppInClusterList;
 };
-SimpleDescriptionFormat_t zclGenericApp_SimpleDesc2 =
-{
-  GENERICAPP_ENDPOINT2,                  //  int Endpoint;
-  ZCL_HA_PROFILE_ID,                     //  uint16 AppProfId;
-  // GENERICAPP_TODO: Replace ZCL_HA_DEVICEID_ON_OFF_LIGHT with application specific device ID
-  ZCL_HA_DEVICEID_ON_OFF_SWITCH,  //  uint16 AppDeviceId; 
-  GENERICAPP_DEVICE_VERSION,            //  int   AppDevVer:4;
-  GENERICAPP_FLAGS,                     //  int   AppFlags:4;
-  ZCLGENERICAPP_MAX_INCLUSTERS,         //  byte  AppNumInClusters;
-  (cId_t *)zclGenericApp_InClusterList, //  byte *pAppInClusterList;
-  ZCLGENERICAPP_MAX_OUTCLUSTERS2,        //  byte  AppNumInClusters;
-  (cId_t *)zclGenericApp_OutClusterList2 //  byte *pAppInClusterList;
-};
-SimpleDescriptionFormat_t zclGenericApp_SimpleDesc3 =
-{
-  GENERICAPP_ENDPOINT3,                  //  int Endpoint;
-  ZCL_HA_PROFILE_ID,                     //  uint16 AppProfId;
-  // GENERICAPP_TODO: Replace ZCL_HA_DEVICEID_ON_OFF_LIGHT with application specific device ID
-  ZCL_HA_DEVICEID_ON_OFF_SWITCH,  //  uint16 AppDeviceId; 
-  GENERICAPP_DEVICE_VERSION,            //  int   AppDevVer:4;
-  GENERICAPP_FLAGS,                     //  int   AppFlags:4;
-  ZCLGENERICAPP_MAX_INCLUSTERS,         //  byte  AppNumInClusters;
-  (cId_t *)zclGenericApp_InClusterList, //  byte *pAppInClusterList;
-  ZCLGENERICAPP_MAX_OUTCLUSTERS2,        //  byte  AppNumInClusters;
-  (cId_t *)zclGenericApp_OutClusterList2 //  byte *pAppInClusterList;
-};
+//SimpleDescriptionFormat_t zclGenericApp_SimpleDesc2 =
+//{
+//  GENERICAPP_ENDPOINT2,                  //  int Endpoint;
+//  ZCL_HA_PROFILE_ID,                     //  uint16 AppProfId;
+//  // GENERICAPP_TODO: Replace ZCL_HA_DEVICEID_ON_OFF_LIGHT with application specific device ID
+//  ZCL_HA_DEVICEID_ON_OFF_SWITCH,  //  uint16 AppDeviceId; 
+//  GENERICAPP_DEVICE_VERSION,            //  int   AppDevVer:4;
+//  GENERICAPP_FLAGS,                     //  int   AppFlags:4;
+//  ZCLGENERICAPP_MAX_INCLUSTERS,         //  byte  AppNumInClusters;
+//  (cId_t *)zclGenericApp_InClusterList, //  byte *pAppInClusterList;
+//  ZCLGENERICAPP_MAX_OUTCLUSTERS2,        //  byte  AppNumInClusters;
+//  (cId_t *)zclGenericApp_OutClusterList2 //  byte *pAppInClusterList;
+//};
+//SimpleDescriptionFormat_t zclGenericApp_SimpleDesc3 =
+//{
+//  GENERICAPP_ENDPOINT3,                  //  int Endpoint;
+//  ZCL_HA_PROFILE_ID,                     //  uint16 AppProfId;
+//  // GENERICAPP_TODO: Replace ZCL_HA_DEVICEID_ON_OFF_LIGHT with application specific device ID
+//  ZCL_HA_DEVICEID_ON_OFF_SWITCH,  //  uint16 AppDeviceId; 
+//  GENERICAPP_DEVICE_VERSION,            //  int   AppDevVer:4;
+//  GENERICAPP_FLAGS,                     //  int   AppFlags:4;
+//  ZCLGENERICAPP_MAX_INCLUSTERS,         //  byte  AppNumInClusters;
+//  (cId_t *)zclGenericApp_InClusterList, //  byte *pAppInClusterList;
+//  ZCLGENERICAPP_MAX_OUTCLUSTERS2,        //  byte  AppNumInClusters;
+//  (cId_t *)zclGenericApp_OutClusterList2 //  byte *pAppInClusterList;
+//};
 
 
 // Added to include ZLL Target functionality

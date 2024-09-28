@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// IAR C/C++ Compiler V10.30.1.6000 for 8051              10/Dec/2023  14:04:44
+// IAR C/C++ Compiler V10.30.1.6000 for 8051              28/Sep/2024  17:56:58
 // Copyright 2004-2018 IAR Systems AB.
 // PC-locked license - IAR Embedded Workbench for 8051
 //
@@ -13,11 +13,11 @@
 //                          
 //    Source file        =  
 //        C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\Source\hal_key.c
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\Source\hal_key.c
 //    Command line       =  
-//        -f C:\Users\Flemming\AppData\Local\Temp\EW225A.tmp ("C:\Texas
+//        -f C:\Users\Flemming\AppData\Local\Temp\EWAEB8.tmp ("C:\Texas
 //        Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\Source\hal_key.c"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\Source\hal_key.c"
 //        -D SECURE=1 -D TC_LINKKEY_JOIN -D NV_INIT -D NV_RESTORE -D
 //        POWER_SAVING -D NWK_AUTO_POLL -D xZTOOL_P1 -D xMT_TASK -D
 //        xMT_APP_FUNC -D xMT_SYS_FUNC -D xMT_ZDO_FUNC -D xMT_ZDO_MGMT -D
@@ -27,20 +27,20 @@
 //        xZCL_DISCOVER -D ZCL_REPORTING_DEVICE -D ISR_KEYINTERRUPT -D
 //        HAL_LCD=FALSE -D HAL_UARTE=FALSE -D HAL_SPI=FALSE -D HAL_HID=FALSE
 //        -lC "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\EndDeviceEB\List"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\EndDeviceEB\List"
 //        -lA "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\EndDeviceEB\List"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\EndDeviceEB\List"
 //        --diag_suppress Pe001,Pa010 -o "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\EndDeviceEB\Obj"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\EndDeviceEB\Obj"
 //        -e --debug --core=plain --dptr=16,1 --data_model=large
 //        --code_model=banked --calling_convention=xdata_reentrant
 //        --place_constants=data_rom --nr_virtual_regs 16 -f "C:\Texas
 //        Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
 //        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3
 //        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f "C:\Texas
 //        Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
 //        (-DZIGBEEPRO -DSECURE=1 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
 //        -DDEFAULT_CHANLIST=0x00000800 -DZDAPP_CONFIG_PAN_ID=0xFFFF
 //        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
@@ -56,62 +56,62 @@
 //        -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100
 //        -DREJOIN_POLL_RATE=440 -DREJOIN_BACKOFF=900000 -DREJOIN_SCAN=900000
 //        -DENABLE_LED4_DISABLE_S1) -f "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\Tools\CC2530DB\f8wZCL.cfg"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\Tools\CC2530DB\f8wZCL.cfg"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\Source\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\Source\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\Source\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\Source\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\ZMain\TI2530DB\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\ZMain\TI2530DB\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\hal\include\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\hal\include\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mac\include\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\mac\include\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mt\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\mt\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\osal\include\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\osal\include\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\services\saddr\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\services\saddr\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\services\sdata\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\services\sdata\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\af\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\stack\af\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\bdb\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\stack\bdb\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\gp\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\stack\gp\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\sec\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\stack\sec\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\sys\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\stack\sys\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\zcl\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\stack\zcl\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\zmac\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\zmac\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
 //        -Ohz --require_prototypes)
 //    Locale             =  Danish_DNK.1252
 //    List file          =  
 //        C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\EndDeviceEB\List\hal_key.s51
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\EndDeviceEB\List\hal_key.s51
 //
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -158,7 +158,6 @@
         FUNCTION `??HalKeyPoll::?relay`,0203H
         PUBLIC `??HalKeyRead::?relay`
         FUNCTION `??HalKeyRead::?relay`,0203H
-        PUBWEAK `??halKeyPort0Isr::??INTVEC 107`
         PUBWEAK `??halKeyPort1Isr::??INTVEC 123`
         PUBWEAK `??halKeyPort2Isr::??INTVEC 51`
         PUBLIC `??halProcessKeyInterrupt::?relay`
@@ -205,13 +204,8 @@
         PUBWEAK PICTL
         PUBWEAK _A_IEN0
         PUBWEAK _A_IEN1
-        PUBWEAK _A_IRCON
         PUBWEAK _A_IRCON2
         PUBWEAK __Constant_19
-        PUBLIC halKeyPort0Isr
-        FUNCTION halKeyPort0Isr,021233H
-        ARGFRAME XSTACK, 0, STACK
-        LOCFRAME XSTACK, 14, STACK
         PUBLIC halKeyPort1Isr
         FUNCTION halKeyPort1Isr,021233H
         ARGFRAME XSTACK, 0, STACK
@@ -404,8 +398,6 @@ HalKeyPoll          SYMBOL "HalKeyPoll"
 `??HalKeyPoll::?relay` SYMBOL "?relay", HalKeyPoll
 HalKeyRead          SYMBOL "HalKeyRead"
 `??HalKeyRead::?relay` SYMBOL "?relay", HalKeyRead
-halKeyPort0Isr      SYMBOL "halKeyPort0Isr"
-`??halKeyPort0Isr::??INTVEC 107` SYMBOL "??INTVEC 107", halKeyPort0Isr
 halKeyPort1Isr      SYMBOL "halKeyPort1Isr"
 `??halKeyPort1Isr::??INTVEC 123` SYMBOL "??INTVEC 123", halKeyPort1Isr
 halKeyPort2Isr      SYMBOL "halKeyPort2Isr"
@@ -443,7 +435,7 @@ halProcessKeyInterrupt SYMBOL "halProcessKeyInterrupt"
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
 
-// C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\Source\hal_key.c
+// C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\Source\hal_key.c
 //    1 /**************************************************************************************************
 //    2   Filename:       hal_key.c
 //    3   Revised:        $Date: 2010-09-15 19:02:45 -0700 (Wed, 15 Sep 2010) $
@@ -585,12 +577,6 @@ P2IEN:
         ASEGN SFR_AN:DATA:NOROOT,0b8H
 // union <unnamed> volatile __sfr _A_IEN1
 _A_IEN1:
-        DATA8
-        DS 1
-
-        ASEGN SFR_AN:DATA:NOROOT,0c0H
-// union <unnamed> volatile __sfr _A_IRCON
-_A_IRCON:
         DATA8
         DS 1
 
@@ -1387,135 +1373,33 @@ HalKeyExitSleep:
 //  453  *
 //  454  * @return
 //  455  **************************************************************************************************/
-
-        RSEG NEAR_CODE:CODE:NOROOT(0)
-//  456 HAL_ISR_FUNCTION( halKeyPort0Isr, P0INT_VECTOR )
-halKeyPort0Isr:
-          CFI Block cfiBlock8 Using cfiCommon1
-          CFI Function halKeyPort0Isr
-        CODE
-//  457 {
-        FUNCALL halKeyPort0Isr, halProcessKeyInterrupt
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 14, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 14, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        PUSH      A
-          CFI A Frame(CFA_SP, 3)
-          CFI CFA_SP SP+-3
-        MOV       A,#-0xe
-        LCALL     ?INTERRUPT_ENTER_XSP
-          CFI B load(1, XDATA, add(CFA_XSP16, literal(-1)))
-          CFI VB load(1, XDATA, add(CFA_XSP16, literal(-2)))
-          CFI PSW load(1, XDATA, add(CFA_XSP16, literal(-3)))
-          CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-4)))
-          CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-5)))
-          CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
-          CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-7)))
-          CFI R5 load(1, XDATA, add(CFA_XSP16, literal(-8)))
-          CFI R4 load(1, XDATA, add(CFA_XSP16, literal(-9)))
-          CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
-          CFI R3 load(1, XDATA, add(CFA_XSP16, literal(-11)))
-          CFI R2 load(1, XDATA, add(CFA_XSP16, literal(-12)))
-          CFI R1 load(1, XDATA, add(CFA_XSP16, literal(-13)))
-          CFI R0 load(1, XDATA, add(CFA_XSP16, literal(-14)))
-          CFI CFA_XSP16 add(XSP16, 14)
-        ; Saved register size: 14
-        ; Auto size: 0
-//  458   HAL_ENTER_ISR();
-        MOV       C,0xa8.7
-        CLR       A
-        RLC       A
-        MOV       R6,A
-        SETB      0xa8.7
-//  459 
-//  460   if (HAL_KEY_SW_6_PXIFG & HAL_KEY_SW_6_BIT)  /* Interrupt Flag has been set */
-        MOV       A,0x89
-        MOV       C,0xE0 /* A   */.1
-        JNC       ??halKeyPort0Isr_0
-//  461   {
-//  462     HAL_KEY_SW_6_ACTIVE = true;
-        MOV       DPTR,#HAL_KEY_SW_6_ACTIVE
-        MOV       A,#0x1
-        MOVX      @DPTR,A
-//  463 
-//  464     if (isEdgeBitSet6) {
-        MOV       DPTR,#isEdgeBitSet6
-        MOVX      A,@DPTR
-        JZ        ??halKeyPort0Isr_1
-//  465         PICTL |= HAL_KEY_SW_6_EDGEBIT;
-        ORL       0x8c,#0x1
-        CLR       A
-        SJMP      ??halKeyPort0Isr_2
-//  466     } else {
-//  467         PICTL &= ~(HAL_KEY_SW_6_EDGEBIT);
-??halKeyPort0Isr_1:
-        ANL       0x8c,#0xfe
-        MOV       A,#0x1
-??halKeyPort0Isr_2:
-        MOVX      @DPTR,A
-//  468     }
-//  469     // Skift tilstanden
-//  470     isEdgeBitSet6 = !isEdgeBitSet6;
-//  471     halProcessKeyInterrupt();
-        ; Setup parameters for call to function halProcessKeyInterrupt
-        LCALL     `??halProcessKeyInterrupt::?relay`; Banked call to: halProcessKeyInterrupt
-//  472   }
-//  473   //printf("P0INT_VECTOR\n");
-//  474 
-//  475   //Clear the CPU interrupt flag for Port_0
-//  476   //PxIFG has to be cleared before PxIF
-//  477   HAL_KEY_SW_6_PXIFG = 0;
-??halKeyPort0Isr_0:
-        MOV       0x89,#0x0
-//  478   HAL_KEY_CPU_PORT_0_IF = 0;
-        CLR       0xc0.5
-//  479   
-//  480   CLEAR_SLEEP_MODE();
-          CFI EndBlock cfiBlock8
-        REQUIRE ?Subroutine2
-        REQUIRE _A_IEN0
-        REQUIRE P0IFG
-        REQUIRE PICTL
-        REQUIRE _A_IRCON
-        ; // Fall through to label ?Subroutine2
-//  481   HAL_EXIT_ISR();
-//  482 }
-
-        RSEG NEAR_CODE:CODE:NOROOT(0)
-?Subroutine2:
-          CFI Block cfiBlock9 Using cfiCommon1
-          CFI NoFunction
-          CFI CFA_SP SP+-3
-          CFI CFA_XSP16 add(XSP16, 14)
-          CFI VB load(1, XDATA, add(CFA_XSP16, literal(-2)))
-          CFI B load(1, XDATA, add(CFA_XSP16, literal(-1)))
-          CFI A Frame(CFA_SP, 3)
-          CFI PSW load(1, XDATA, add(CFA_XSP16, literal(-3)))
-          CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-4)))
-          CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-5)))
-          CFI R0 load(1, XDATA, add(CFA_XSP16, literal(-14)))
-          CFI R1 load(1, XDATA, add(CFA_XSP16, literal(-13)))
-          CFI R2 load(1, XDATA, add(CFA_XSP16, literal(-12)))
-          CFI R3 load(1, XDATA, add(CFA_XSP16, literal(-11)))
-          CFI R4 load(1, XDATA, add(CFA_XSP16, literal(-9)))
-          CFI R5 load(1, XDATA, add(CFA_XSP16, literal(-8)))
-          CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-7)))
-          CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
-          CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
-        MOV       halSleepPconValue,#0x0
-        MOV       A,R6
-        MOV       C,0xE0 /* A   */.0
-        MOV       0xa8.7,C
-        MOV       R7,#0x1
-        LJMP      ?INTERRUPT_LEAVE_XSP
-          CFI EndBlock cfiBlock9
+//  456 //HAL_ISR_FUNCTION( halKeyPort0Isr, P0INT_VECTOR )
+//  457 //{
+//  458 //  HAL_ENTER_ISR();
+//  459 //
+//  460 //  if (HAL_KEY_SW_6_PXIFG & HAL_KEY_SW_6_BIT)  /* Interrupt Flag has been set */
+//  461 //  {
+//  462 //    HAL_KEY_SW_6_ACTIVE = true;
+//  463 //
+//  464 //    if (isEdgeBitSet6) {
+//  465 //        PICTL |= HAL_KEY_SW_6_EDGEBIT;
+//  466 //    } else {
+//  467 //        PICTL &= ~(HAL_KEY_SW_6_EDGEBIT);
+//  468 //    }
+//  469 //    // Skift tilstanden
+//  470 //    isEdgeBitSet6 = !isEdgeBitSet6;
+//  471 //    halProcessKeyInterrupt();
+//  472 //  }
+//  473 //  //printf("P0INT_VECTOR\n");
+//  474 //
+//  475 //  //Clear the CPU interrupt flag for Port_0
+//  476 //  //PxIFG has to be cleared before PxIF
+//  477 //  HAL_KEY_SW_6_PXIFG = 0;
+//  478 //  HAL_KEY_CPU_PORT_0_IF = 0;
+//  479 //  
+//  480 //  CLEAR_SLEEP_MODE();
+//  481 //  HAL_EXIT_ISR();
+//  482 //}
 //  483 
 //  484 /**************************************************************************************************
 //  485  * @fn      halKeyPort1Isr
@@ -1530,21 +1414,10 @@ halKeyPort0Isr:
         RSEG NEAR_CODE:CODE:NOROOT(0)
 //  493 HAL_ISR_FUNCTION( halKeyPort1Isr, P1INT_VECTOR )
 halKeyPort1Isr:
-          CFI Block cfiBlock10 Using cfiCommon1
+          CFI Block cfiBlock8 Using cfiCommon1
           CFI Function halKeyPort1Isr
         CODE
 //  494 {
-        FUNCALL halKeyPort1Isr, halProcessKeyInterrupt
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 14, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 14, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
         FUNCALL halKeyPort1Isr, halProcessKeyInterrupt
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
@@ -1618,60 +1491,69 @@ halKeyPort1Isr:
         LCALL     `??halProcessKeyInterrupt::?relay`; Banked call to: halProcessKeyInterrupt
 //  509   }
 //  510 
-//  511   if (HAL_KEY_SW_4_PXIFG & HAL_KEY_SW_4_BIT)  /* Interrupt Flag has been set */
-??halKeyPort1Isr_0:
-        MOV       A,0x8a
-        MOV       C,0xE0 /* A   */.7
-        JNC       ??halKeyPort1Isr_3
-//  512   {
-//  513     HAL_KEY_SW_4_ACTIVE = true;
-        MOV       DPTR,#HAL_KEY_SW_4_ACTIVE
-        MOV       A,#0x1
-        MOVX      @DPTR,A
-//  514 
-//  515     if (isEdgeBitSet4) {
-        MOV       DPTR,#isEdgeBitSet4
-        MOVX      A,@DPTR
-        JZ        ??halKeyPort1Isr_4
-//  516         PICTL |= HAL_KEY_SW_4_EDGEBIT;
-        ORL       0x8c,#0x4
-        CLR       A
-        SJMP      ??halKeyPort1Isr_5
-//  517     } else {
-//  518         PICTL &= ~(HAL_KEY_SW_4_EDGEBIT);
-??halKeyPort1Isr_4:
-        ANL       0x8c,#0xfb
-        MOV       A,#0x1
-??halKeyPort1Isr_5:
-        MOVX      @DPTR,A
-//  519     }
-//  520     // Skift tilstanden
-//  521     isEdgeBitSet4 = !isEdgeBitSet4;
-//  522     halProcessKeyInterrupt();
-        ; Setup parameters for call to function halProcessKeyInterrupt
-        LCALL     `??halProcessKeyInterrupt::?relay`; Banked call to: halProcessKeyInterrupt
-//  523   }  
+//  511 //  if (HAL_KEY_SW_4_PXIFG & HAL_KEY_SW_4_BIT)  /* Interrupt Flag has been set */
+//  512 //  {
+//  513 //    HAL_KEY_SW_4_ACTIVE = true;
+//  514 //
+//  515 //    if (isEdgeBitSet4) {
+//  516 //        PICTL |= HAL_KEY_SW_4_EDGEBIT;
+//  517 //    } else {
+//  518 //        PICTL &= ~(HAL_KEY_SW_4_EDGEBIT);
+//  519 //    }
+//  520 //    // Skift tilstanden
+//  521 //    isEdgeBitSet4 = !isEdgeBitSet4;
+//  522 //    halProcessKeyInterrupt();
+//  523 //  }  
 //  524   //printf("P1INT_VECTOR\n");
 //  525   
 //  526   //Clear the CPU interrupt flag for Port_1
 //  527   //PxIFG has to be cleared before PxIF
 //  528   HAL_KEY_SW_5_PXIFG = 0;
-??halKeyPort1Isr_3:
+??halKeyPort1Isr_0:
         MOV       0x8a,#0x0
-//  529   HAL_KEY_SW_4_PXIFG = 0;
-        MOV       0x8a,#0x0
+//  529 //  HAL_KEY_SW_4_PXIFG = 0;
 //  530   HAL_KEY_CPU_PORT_1_IF = 0;
         CLR       0xe8.3
 //  531   
 //  532   CLEAR_SLEEP_MODE();
-        SJMP      ?Subroutine2
-          CFI EndBlock cfiBlock10
+          CFI EndBlock cfiBlock8
+        REQUIRE ?Subroutine2
         REQUIRE _A_IEN0
         REQUIRE P1IFG
         REQUIRE PICTL
         REQUIRE _A_IRCON2
+        ; // Fall through to label ?Subroutine2
 //  533   HAL_EXIT_ISR();
 //  534 }
+
+        RSEG NEAR_CODE:CODE:NOROOT(0)
+?Subroutine2:
+          CFI Block cfiBlock9 Using cfiCommon1
+          CFI NoFunction
+          CFI CFA_SP SP+-3
+          CFI CFA_XSP16 add(XSP16, 14)
+          CFI VB load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI B load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI A Frame(CFA_SP, 3)
+          CFI PSW load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI R0 load(1, XDATA, add(CFA_XSP16, literal(-14)))
+          CFI R1 load(1, XDATA, add(CFA_XSP16, literal(-13)))
+          CFI R2 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+          CFI R3 load(1, XDATA, add(CFA_XSP16, literal(-11)))
+          CFI R4 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI R5 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        MOV       halSleepPconValue,#0x0
+        MOV       A,R6
+        MOV       C,0xE0 /* A   */.0
+        MOV       0xa8.7,C
+        MOV       R7,#0x1
+        LJMP      ?INTERRUPT_LEAVE_XSP
+          CFI EndBlock cfiBlock9
 //  535 
 //  536 /**************************************************************************************************
 //  537  * @fn      halKeyPort2Isr
@@ -1686,7 +1568,7 @@ halKeyPort1Isr:
         RSEG NEAR_CODE:CODE:NOROOT(0)
 //  545 HAL_ISR_FUNCTION( halKeyPort2Isr, P2INT_VECTOR )
 halKeyPort2Isr:
-          CFI Block cfiBlock11 Using cfiCommon1
+          CFI Block cfiBlock10 Using cfiCommon1
           CFI Function halKeyPort2Isr
         CODE
 //  546 {
@@ -1754,8 +1636,8 @@ halKeyPort2Isr:
         CLR       0xe8.0
 //  560    
 //  561   CLEAR_SLEEP_MODE();
-        LJMP      ?Subroutine2
-          CFI EndBlock cfiBlock11
+        SJMP      ?Subroutine2
+          CFI EndBlock cfiBlock10
         REQUIRE _A_IEN0
         REQUIRE P2IFG
         REQUIRE _A_IRCON2
@@ -1766,11 +1648,6 @@ halKeyPort2Isr:
         ORG 51
 `??halKeyPort2Isr::??INTVEC 51`:
         LJMP       (halKeyPort2Isr)
-
-        COMMON INTVEC:CODE:ROOT(0)
-        ORG 107
-`??halKeyPort0Isr::??INTVEC 107`:
-        LJMP       (halKeyPort0Isr)
 
         COMMON INTVEC:CODE:ROOT(0)
         ORG 123
@@ -1854,15 +1731,15 @@ __Constant_19:
 // 
 // 316 bytes in segment BANKED_CODE
 //  42 bytes in segment BANK_RELAYS
-//   9 bytes in segment INTVEC
-// 192 bytes in segment NEAR_CODE
-//  18 bytes in segment SFR_AN
+//   6 bytes in segment INTVEC
+// 101 bytes in segment NEAR_CODE
+//  17 bytes in segment SFR_AN
 //   4 bytes in segment XDATA_ROM_C
 //  11 bytes in segment XDATA_Z
 // 
-// 234 bytes of CODE     memory (+  9 bytes shared)
+// 143 bytes of CODE     memory (+  6 bytes shared)
 //   0 bytes of CONST    memory (+  4 bytes shared)
-//   0 bytes of DATA     memory (+ 18 bytes shared)
+//   0 bytes of DATA     memory (+ 17 bytes shared)
 // 316 bytes of HUGECODE memory
 //  11 bytes of XDATA    memory
 //

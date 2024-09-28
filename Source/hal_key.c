@@ -453,33 +453,33 @@ uint8 HalKeyExitSleep ( void )
  *
  * @return
  **************************************************************************************************/
-HAL_ISR_FUNCTION( halKeyPort0Isr, P0INT_VECTOR )
-{
-  HAL_ENTER_ISR();
-
-  if (HAL_KEY_SW_6_PXIFG & HAL_KEY_SW_6_BIT)  /* Interrupt Flag has been set */
-  {
-    HAL_KEY_SW_6_ACTIVE = true;
-
-    if (isEdgeBitSet6) {
-        PICTL |= HAL_KEY_SW_6_EDGEBIT;
-    } else {
-        PICTL &= ~(HAL_KEY_SW_6_EDGEBIT);
-    }
-    // Skift tilstanden
-    isEdgeBitSet6 = !isEdgeBitSet6;
-    halProcessKeyInterrupt();
-  }
-  //printf("P0INT_VECTOR\n");
-
-  //Clear the CPU interrupt flag for Port_0
-  //PxIFG has to be cleared before PxIF
-  HAL_KEY_SW_6_PXIFG = 0;
-  HAL_KEY_CPU_PORT_0_IF = 0;
-  
-  CLEAR_SLEEP_MODE();
-  HAL_EXIT_ISR();
-}
+//HAL_ISR_FUNCTION( halKeyPort0Isr, P0INT_VECTOR )
+//{
+//  HAL_ENTER_ISR();
+//
+//  if (HAL_KEY_SW_6_PXIFG & HAL_KEY_SW_6_BIT)  /* Interrupt Flag has been set */
+//  {
+//    HAL_KEY_SW_6_ACTIVE = true;
+//
+//    if (isEdgeBitSet6) {
+//        PICTL |= HAL_KEY_SW_6_EDGEBIT;
+//    } else {
+//        PICTL &= ~(HAL_KEY_SW_6_EDGEBIT);
+//    }
+//    // Skift tilstanden
+//    isEdgeBitSet6 = !isEdgeBitSet6;
+//    halProcessKeyInterrupt();
+//  }
+//  //printf("P0INT_VECTOR\n");
+//
+//  //Clear the CPU interrupt flag for Port_0
+//  //PxIFG has to be cleared before PxIF
+//  HAL_KEY_SW_6_PXIFG = 0;
+//  HAL_KEY_CPU_PORT_0_IF = 0;
+//  
+//  CLEAR_SLEEP_MODE();
+//  HAL_EXIT_ISR();
+//}
 
 /**************************************************************************************************
  * @fn      halKeyPort1Isr
@@ -508,25 +508,25 @@ HAL_ISR_FUNCTION( halKeyPort1Isr, P1INT_VECTOR )
     halProcessKeyInterrupt();
   }
 
-  if (HAL_KEY_SW_4_PXIFG & HAL_KEY_SW_4_BIT)  /* Interrupt Flag has been set */
-  {
-    HAL_KEY_SW_4_ACTIVE = true;
-
-    if (isEdgeBitSet4) {
-        PICTL |= HAL_KEY_SW_4_EDGEBIT;
-    } else {
-        PICTL &= ~(HAL_KEY_SW_4_EDGEBIT);
-    }
-    // Skift tilstanden
-    isEdgeBitSet4 = !isEdgeBitSet4;
-    halProcessKeyInterrupt();
-  }  
+//  if (HAL_KEY_SW_4_PXIFG & HAL_KEY_SW_4_BIT)  /* Interrupt Flag has been set */
+//  {
+//    HAL_KEY_SW_4_ACTIVE = true;
+//
+//    if (isEdgeBitSet4) {
+//        PICTL |= HAL_KEY_SW_4_EDGEBIT;
+//    } else {
+//        PICTL &= ~(HAL_KEY_SW_4_EDGEBIT);
+//    }
+//    // Skift tilstanden
+//    isEdgeBitSet4 = !isEdgeBitSet4;
+//    halProcessKeyInterrupt();
+//  }  
   //printf("P1INT_VECTOR\n");
   
   //Clear the CPU interrupt flag for Port_1
   //PxIFG has to be cleared before PxIF
   HAL_KEY_SW_5_PXIFG = 0;
-  HAL_KEY_SW_4_PXIFG = 0;
+//  HAL_KEY_SW_4_PXIFG = 0;
   HAL_KEY_CPU_PORT_1_IF = 0;
   
   CLEAR_SLEEP_MODE();

@@ -2,7 +2,7 @@
 
 "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\8051\bin\8051emu_cc.dll" 
 
-"C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\EndDeviceEB\Exe\GenericApp.hex" 
+"C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\EndDeviceEB\Exe\GenericApp.hex" 
 
 --plugin="C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\8051\bin\8051bat.dll" 
 

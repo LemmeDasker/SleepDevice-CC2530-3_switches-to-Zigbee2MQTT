@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// IAR C/C++ Compiler V10.30.1.6000 for 8051              10/Dec/2023  14:04:57
+// IAR C/C++ Compiler V10.30.1.6000 for 8051              28/Sep/2024  17:57:09
 // Copyright 2004-2018 IAR Systems AB.
 // PC-locked license - IAR Embedded Workbench for 8051
 //
@@ -13,11 +13,11 @@
 //                          
 //    Source file        =  
 //        C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\Source\zcl_genericapp_data.c
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\Source\zcl_genericapp_data.c
 //    Command line       =  
-//        -f C:\Users\Flemming\AppData\Local\Temp\EW596C.tmp ("C:\Texas
+//        -f C:\Users\Flemming\AppData\Local\Temp\EWD9F3.tmp ("C:\Texas
 //        Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\Source\zcl_genericapp_data.c"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\Source\zcl_genericapp_data.c"
 //        -D SECURE=1 -D TC_LINKKEY_JOIN -D NV_INIT -D NV_RESTORE -D
 //        POWER_SAVING -D NWK_AUTO_POLL -D xZTOOL_P1 -D xMT_TASK -D
 //        xMT_APP_FUNC -D xMT_SYS_FUNC -D xMT_ZDO_FUNC -D xMT_ZDO_MGMT -D
@@ -27,20 +27,20 @@
 //        xZCL_DISCOVER -D ZCL_REPORTING_DEVICE -D ISR_KEYINTERRUPT -D
 //        HAL_LCD=FALSE -D HAL_UARTE=FALSE -D HAL_SPI=FALSE -D HAL_HID=FALSE
 //        -lC "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\EndDeviceEB\List"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\EndDeviceEB\List"
 //        -lA "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\EndDeviceEB\List"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\EndDeviceEB\List"
 //        --diag_suppress Pe001,Pa010 -o "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\EndDeviceEB\Obj"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\EndDeviceEB\Obj"
 //        -e --debug --core=plain --dptr=16,1 --data_model=large
 //        --code_model=banked --calling_convention=xdata_reentrant
 //        --place_constants=data_rom --nr_virtual_regs 16 -f "C:\Texas
 //        Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
 //        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3
 //        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f "C:\Texas
 //        Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
 //        (-DZIGBEEPRO -DSECURE=1 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
 //        -DDEFAULT_CHANLIST=0x00000800 -DZDAPP_CONFIG_PAN_ID=0xFFFF
 //        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
@@ -56,62 +56,62 @@
 //        -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100
 //        -DREJOIN_POLL_RATE=440 -DREJOIN_BACKOFF=900000 -DREJOIN_SCAN=900000
 //        -DENABLE_LED4_DISABLE_S1) -f "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\Tools\CC2530DB\f8wZCL.cfg"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\Tools\CC2530DB\f8wZCL.cfg"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\Source\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\Source\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\Source\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\Source\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\ZMain\TI2530DB\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\ZMain\TI2530DB\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\hal\include\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\hal\include\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mac\include\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\mac\include\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\mt\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\mt\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\osal\include\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\osal\include\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\services\saddr\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\services\saddr\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\services\sdata\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\services\sdata\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\af\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\stack\af\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\bdb\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\stack\bdb\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\gp\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\stack\gp\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\sec\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\stack\sec\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\sys\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\stack\sys\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\zcl\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\stack\zcl\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\zmac\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\zmac\"
 //        -I "C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
 //        -Ohz --require_prototypes)
 //    Locale             =  Danish_DNK.1252
 //    List file          =  
 //        C:\Texas Instruments\Z-Stack
-//        3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\CC2530DB\EndDeviceEB\List\zcl_genericapp_data.s51
+//        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\CC2530DB\EndDeviceEB\List\zcl_genericapp_data.s51
 //
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -151,15 +151,12 @@
         PUBLIC zclGenericApp_NumAttributes
         PUBLIC zclGenericApp_OnOff
         PUBLIC zclGenericApp_OutClusterList
-        PUBLIC zclGenericApp_OutClusterList2
         PUBLIC zclGenericApp_PowerConfiguration_BatteryPercentageRemaining
         PUBLIC zclGenericApp_PowerSource
         PUBLIC zclGenericApp_ResetAttributesToDefaultValues
         FUNCTION zclGenericApp_ResetAttributesToDefaultValues,0203H
         ARGFRAME XSTACK, 0, STACK
         PUBLIC zclGenericApp_SimpleDesc
-        PUBLIC zclGenericApp_SimpleDesc2
-        PUBLIC zclGenericApp_SimpleDesc3
         PUBLIC zclGenericApp_clusterRevision_all
         
           CFI Names cfiNames0
@@ -253,7 +250,7 @@
 zclGenericApp_ResetAttributesToDefaultValues SYMBOL "zclGenericApp_ResetAttributesToDefaultValues"
 `??zclGenericApp_ResetAttributesToDefaultValues:` SYMBOL "?relay", zclGenericApp_ResetAttributesToDefaultValues
 
-// C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\4-Switch-PowerSaving-firmware\Source\zcl_genericapp_data.c
+// C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-1_switch-to-Zigbee2MQTT\Source\zcl_genericapp_data.c
 //    1 /**************************************************************************************************
 //    2   Filename:       zcl_genericapp_data.c
 //    3   Revised:        $Date: 2014-05-12 13:14:02 -0700 (Mon, 12 May 2014) $
@@ -357,7 +354,7 @@ zclGenericApp_clusterRevision_all:
 
         RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
         DATA8
-//   96 const uint8 zclGenericApp_ManufacturerName[] = { 9, 'S','L','E','E','P','-','S','W','3' };
+//   96 const uint8 zclGenericApp_ManufacturerName[] = { 9, 'S','L','E','E','P','-','S','W','1' };
 zclGenericApp_ManufacturerName:
         DB 9
         DB 83
@@ -368,7 +365,7 @@ zclGenericApp_ManufacturerName:
         DB 45
         DB 83
         DB 87
-        DB 51
+        DB 49
 
         RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
         DATA8
@@ -595,24 +592,16 @@ zclGenericApp_OutClusterList:
 //  185 };
 //  186 #define ZCLGENERICAPP_MAX_OUTCLUSTERS  (sizeof(zclGenericApp_OutClusterList) / sizeof(zclGenericApp_OutClusterList[0]))
 //  187 
-
-        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
-        DATA8
-//  188 const cId_t zclGenericApp_OutClusterList2[] =
-zclGenericApp_OutClusterList2:
-        DATA16
-        DW 0
-        DW 3
-        DW 6
-//  189 {
-//  190   ZCL_CLUSTER_ID_GEN_BASIC,
-//  191   ZCL_CLUSTER_ID_GEN_IDENTIFY,
-//  192   ZCL_CLUSTER_ID_GEN_ON_OFF
-//  193  
-//  194   // GENERICAPP_TODO: Add application specific Output Clusters Here. 
-//  195   //       See zcl.h for Cluster ID definitions
-//  196 };
-//  197 #define ZCLGENERICAPP_MAX_OUTCLUSTERS2  (sizeof(zclGenericApp_OutClusterList2) / sizeof(zclGenericApp_OutClusterList2[0]))
+//  188 //const cId_t zclGenericApp_OutClusterList2[] =
+//  189 //{
+//  190 //  ZCL_CLUSTER_ID_GEN_BASIC,
+//  191 //  ZCL_CLUSTER_ID_GEN_IDENTIFY,
+//  192 //  ZCL_CLUSTER_ID_GEN_ON_OFF
+//  193 // 
+//  194 //  // GENERICAPP_TODO: Add application specific Output Clusters Here. 
+//  195 //  //       See zcl.h for Cluster ID definitions
+//  196 //};
+//  197 //#define ZCLGENERICAPP_MAX_OUTCLUSTERS2  (sizeof(zclGenericApp_OutClusterList2) / sizeof(zclGenericApp_OutClusterList2[0]))
 //  198 
 //  199 
 //  200 
@@ -636,46 +625,32 @@ zclGenericApp_SimpleDesc:
 //  211   ZCLGENERICAPP_MAX_OUTCLUSTERS,        //  byte  AppNumInClusters;
 //  212   (cId_t *)zclGenericApp_OutClusterList //  byte *pAppInClusterList;
 //  213 };
-
-        RSEG XDATA_I:XDATA:NOROOT(0)
-//  214 SimpleDescriptionFormat_t zclGenericApp_SimpleDesc2 =
-zclGenericApp_SimpleDesc2:
-        DATA8
-        DS 12
-        REQUIRE `?<Initializer for zclGenericApp_SimpleDesc2>`
-        REQUIRE __INIT_XDATA_I
-//  215 {
-//  216   GENERICAPP_ENDPOINT2,                  //  int Endpoint;
-//  217   ZCL_HA_PROFILE_ID,                     //  uint16 AppProfId;
-//  218   // GENERICAPP_TODO: Replace ZCL_HA_DEVICEID_ON_OFF_LIGHT with application specific device ID
-//  219   ZCL_HA_DEVICEID_ON_OFF_SWITCH,  //  uint16 AppDeviceId; 
-//  220   GENERICAPP_DEVICE_VERSION,            //  int   AppDevVer:4;
-//  221   GENERICAPP_FLAGS,                     //  int   AppFlags:4;
-//  222   ZCLGENERICAPP_MAX_INCLUSTERS,         //  byte  AppNumInClusters;
-//  223   (cId_t *)zclGenericApp_InClusterList, //  byte *pAppInClusterList;
-//  224   ZCLGENERICAPP_MAX_OUTCLUSTERS2,        //  byte  AppNumInClusters;
-//  225   (cId_t *)zclGenericApp_OutClusterList2 //  byte *pAppInClusterList;
-//  226 };
-
-        RSEG XDATA_I:XDATA:NOROOT(0)
-//  227 SimpleDescriptionFormat_t zclGenericApp_SimpleDesc3 =
-zclGenericApp_SimpleDesc3:
-        DATA8
-        DS 12
-        REQUIRE `?<Initializer for zclGenericApp_SimpleDesc3>`
-        REQUIRE __INIT_XDATA_I
-//  228 {
-//  229   GENERICAPP_ENDPOINT3,                  //  int Endpoint;
-//  230   ZCL_HA_PROFILE_ID,                     //  uint16 AppProfId;
-//  231   // GENERICAPP_TODO: Replace ZCL_HA_DEVICEID_ON_OFF_LIGHT with application specific device ID
-//  232   ZCL_HA_DEVICEID_ON_OFF_SWITCH,  //  uint16 AppDeviceId; 
-//  233   GENERICAPP_DEVICE_VERSION,            //  int   AppDevVer:4;
-//  234   GENERICAPP_FLAGS,                     //  int   AppFlags:4;
-//  235   ZCLGENERICAPP_MAX_INCLUSTERS,         //  byte  AppNumInClusters;
-//  236   (cId_t *)zclGenericApp_InClusterList, //  byte *pAppInClusterList;
-//  237   ZCLGENERICAPP_MAX_OUTCLUSTERS2,        //  byte  AppNumInClusters;
-//  238   (cId_t *)zclGenericApp_OutClusterList2 //  byte *pAppInClusterList;
-//  239 };
+//  214 //SimpleDescriptionFormat_t zclGenericApp_SimpleDesc2 =
+//  215 //{
+//  216 //  GENERICAPP_ENDPOINT2,                  //  int Endpoint;
+//  217 //  ZCL_HA_PROFILE_ID,                     //  uint16 AppProfId;
+//  218 //  // GENERICAPP_TODO: Replace ZCL_HA_DEVICEID_ON_OFF_LIGHT with application specific device ID
+//  219 //  ZCL_HA_DEVICEID_ON_OFF_SWITCH,  //  uint16 AppDeviceId; 
+//  220 //  GENERICAPP_DEVICE_VERSION,            //  int   AppDevVer:4;
+//  221 //  GENERICAPP_FLAGS,                     //  int   AppFlags:4;
+//  222 //  ZCLGENERICAPP_MAX_INCLUSTERS,         //  byte  AppNumInClusters;
+//  223 //  (cId_t *)zclGenericApp_InClusterList, //  byte *pAppInClusterList;
+//  224 //  ZCLGENERICAPP_MAX_OUTCLUSTERS2,        //  byte  AppNumInClusters;
+//  225 //  (cId_t *)zclGenericApp_OutClusterList2 //  byte *pAppInClusterList;
+//  226 //};
+//  227 //SimpleDescriptionFormat_t zclGenericApp_SimpleDesc3 =
+//  228 //{
+//  229 //  GENERICAPP_ENDPOINT3,                  //  int Endpoint;
+//  230 //  ZCL_HA_PROFILE_ID,                     //  uint16 AppProfId;
+//  231 //  // GENERICAPP_TODO: Replace ZCL_HA_DEVICEID_ON_OFF_LIGHT with application specific device ID
+//  232 //  ZCL_HA_DEVICEID_ON_OFF_SWITCH,  //  uint16 AppDeviceId; 
+//  233 //  GENERICAPP_DEVICE_VERSION,            //  int   AppDevVer:4;
+//  234 //  GENERICAPP_FLAGS,                     //  int   AppFlags:4;
+//  235 //  ZCLGENERICAPP_MAX_INCLUSTERS,         //  byte  AppNumInClusters;
+//  236 //  (cId_t *)zclGenericApp_InClusterList, //  byte *pAppInClusterList;
+//  237 //  ZCLGENERICAPP_MAX_OUTCLUSTERS2,        //  byte  AppNumInClusters;
+//  238 //  (cId_t *)zclGenericApp_OutClusterList2 //  byte *pAppInClusterList;
+//  239 //};
 //  240 
 //  241 
 //  242 // Added to include ZLL Target functionality
@@ -751,40 +726,6 @@ zclGenericApp_ResetAttributesToDefaultValues:
         DATA16
         DW zclGenericApp_OutClusterList
 
-        RSEG XDATA_ID:CODE:NOROOT(0)
-`?<Initializer for zclGenericApp_SimpleDesc2>`:
-        DATA8
-        DB 2
-        DATA16
-        DW 260
-        DW 0
-        DATA8
-        DB 0
-        DB 2
-        DATA16
-        DW zclGenericApp_InClusterList
-        DATA8
-        DB 3
-        DATA16
-        DW zclGenericApp_OutClusterList2
-
-        RSEG XDATA_ID:CODE:NOROOT(0)
-`?<Initializer for zclGenericApp_SimpleDesc3>`:
-        DATA8
-        DB 3
-        DATA16
-        DW 260
-        DW 0
-        DATA8
-        DB 0
-        DB 2
-        DATA16
-        DW zclGenericApp_InClusterList
-        DATA8
-        DB 3
-        DATA16
-        DW zclGenericApp_OutClusterList2
-
         RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
 `??zclGenericApp_ResetAttributesToDefaultValues:`:
         CODE
@@ -802,15 +743,15 @@ zclGenericApp_ResetAttributesToDefaultValues:
 //  3 bytes in segment BANKED_CODE
 //  6 bytes in segment BANK_RELAYS
 // 73 bytes in segment CODE_C
-// 37 bytes in segment XDATA_I
-// 37 bytes in segment XDATA_ID
-// 43 bytes in segment XDATA_ROM_C
+// 13 bytes in segment XDATA_I
+// 13 bytes in segment XDATA_ID
+// 37 bytes in segment XDATA_ROM_C
 //  4 bytes in segment XDATA_Z
 // 
-// 116 bytes of CODE     memory
-//  43 bytes of CONST    memory
-//   3 bytes of HUGECODE memory
-//  41 bytes of XDATA    memory
+// 92 bytes of CODE     memory
+// 37 bytes of CONST    memory
+//  3 bytes of HUGECODE memory
+// 17 bytes of XDATA    memory
 //
 //Errors: none
 //Warnings: none
