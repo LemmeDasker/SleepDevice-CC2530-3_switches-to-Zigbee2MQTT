@@ -1,0 +1,417 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V10.30.1.6000 for 8051               28/Sep/2024  20:28:40
+# Copyright 2004-2018 IAR Systems AB.
+# PC-locked license - IAR Embedded Workbench for 8051
+#
+#    Core               =  plain
+#    Code model         =  banked
+#    Data model         =  large
+#    Calling convention =  xdata reentrant
+#    Constant location  =  data_rom
+#    Dptr setup         =  1,16
+#                          
+#    Source file        =  
+#        C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\Source\OSAL_GenericApp.c
+#    Command line       =  
+#        -f C:\Users\Flemming\AppData\Local\Temp\EW93E1.tmp ("C:\Texas
+#        Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\Source\OSAL_GenericApp.c"
+#        -D SECURE=1 -D TC_LINKKEY_JOIN -D NV_INIT -D NV_RESTORE -D
+#        POWER_SAVING -D NWK_AUTO_POLL -D xZTOOL_P1 -D xMT_TASK -D xMT_APP_FUNC
+#        -D xMT_SYS_FUNC -D xMT_ZDO_FUNC -D xMT_ZDO_MGMT -D xMT_APP_CNF_FUNC -D
+#        xLEGACY_LCD_DEBUG -D xLCD_SUPPORTED=DEBUG -D MULTICAST_ENABLED=FALSE
+#        -D ZCL_READ -D ZCL_WRITE -D ZCL_BASIC -D ZCL_IDENTIFY -D xZCL_SCENES
+#        -D xZCL_GROUPS -D ZCL_ON_OFF -D xZCL_DISCOVER -D ZCL_REPORTING_DEVICE
+#        -D ISR_KEYINTERRUPT -D HAL_LCD=FALSE -D HAL_UARTE=FALSE -D
+#        HAL_SPI=FALSE -D HAL_HID=FALSE -lC "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\EndDeviceEB\List"
+#        -lA "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\EndDeviceEB\List"
+#        --diag_suppress Pe001,Pa010 -o "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\EndDeviceEB\Obj"
+#        -e --debug --core=plain --dptr=16,1 --data_model=large
+#        --code_model=banked --calling_convention=xdata_reentrant
+#        --place_constants=data_rom --nr_virtual_regs 16 -f "C:\Texas
+#        Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
+#        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3
+#        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f "C:\Texas
+#        Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
+#        (-DZIGBEEPRO -DSECURE=1 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
+#        -DDEFAULT_CHANLIST=0x00000800 -DZDAPP_CONFIG_PAN_ID=0xFFFF
+#        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
+#        -DBEACON_REQUEST_DELAY=100 -DBEACON_REQ_DELAY_MASK=0x00FF
+#        -DLINK_STATUS_JITTER_MASK=0x007F -DROUTE_EXPIRY_TIME=30
+#        -DAPSC_ACK_WAIT_DURATION_POLLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7
+#        -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3
+#        -DNWK_MAX_DATA_RETRIES=2 -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9
+#        -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40 -DNWK_MAX_BINDING_ENTRIES=4
+#        -DMAX_BINDING_CLUSTER_IDS=4 -DDEFAULT_KEY={0} -DMAC_MAX_FRAME_SIZE=116
+#        -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const __code"
+#        -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000
+#        -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100 -DREJOIN_POLL_RATE=440
+#        -DREJOIN_BACKOFF=900000 -DREJOIN_SCAN=900000 -DENABLE_LED4_DISABLE_S1)
+#        -f "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\Tools\CC2530DB\f8wZCL.cfg"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\Source\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\Source\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\ZMain\TI2530DB\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\hal\include\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\mac\include\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\mt\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\osal\include\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\services\saddr\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\services\sdata\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\stack\af\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\stack\bdb\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\stack\gp\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\stack\sec\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\stack\sys\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\stack\zcl\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\zmac\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
+#        -Ohz --require_prototypes)
+#    Locale             =  Danish_DNK.1252
+#    List file          =  
+#        C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\EndDeviceEB\List\OSAL_GenericApp.lst
+#    Object file        =  
+#        C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\EndDeviceEB\Obj\OSAL_GenericApp.r51
+#
+###############################################################################
+
+C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\Source\OSAL_GenericApp.c
+      1          /**************************************************************************************************
+      2            Filename:       OSAL_GenericApp.c
+      3            Revised:        $Date: 2008-02-07 12:10:00 -0800 (Thu, 07 Feb 2008) $
+      4            Revision:       $Revision: 16360 $
+      5          
+      6            Description:    This file contains all the settings and other functions
+      7                            that the user should set and change.
+      8          
+      9          
+     10            Copyright 2006-2007 Texas Instruments Incorporated. All rights reserved.
+     11          
+     12            IMPORTANT: Your use of this Software is limited to those specific rights
+     13            granted under the terms of a software license agreement between the user
+     14            who downloaded the software, his/her employer (which must be your employer)
+     15            and Texas Instruments Incorporated (the "License").  You may not use this
+     16            Software unless you agree to abide by the terms of the License. The License
+     17            limits your use, and you acknowledge, that the Software may not be modified,
+     18            copied or distributed unless embedded on a Texas Instruments microcontroller
+     19            or used solely and exclusively in conjunction with a Texas Instruments radio
+     20            frequency transceiver, which is integrated into your product.  Other than for
+     21            the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+     22            works of, modify, distribute, perform, display or sell this Software and/or
+     23            its documentation for any purpose.
+     24          
+     25            YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+     26            PROVIDED “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+     27            INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
+     28            NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+     29            TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+     30            NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+     31            LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+     32            INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+     33            OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+     34            OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+     35            (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+     36          
+     37            Should you have any questions regarding your right to use this Software,
+     38            contact Texas Instruments Incorporated at www.TI.com.
+     39          **************************************************************************************************/
+     40          
+     41          /*********************************************************************
+     42           * INCLUDES
+     43           */
+     44          
+     45          #include "ZComDef.h"
+     46          #include "hal_drivers.h"
+     47          #include "OSAL.h"
+     48          #include "OSAL_Tasks.h"
+     49          
+     50          #if defined ( MT_TASK )
+     51            #include "MT.h"
+     52            #include "MT_TASK.h"
+     53          #endif
+     54          
+     55          #include "nwk.h"
+     56          #include "APS.h"
+     57          #include "ZDApp.h"
+     58          
+     59          
+     60          #include "bdb_interface.h"
+     61          #if !defined (DISABLE_GREENPOWER_BASIC_PROXY) && (ZG_BUILD_RTR_TYPE)
+     62            #include "gp_common.h"
+     63          #endif  
+     64          
+     65          #if defined ( ZIGBEE_FREQ_AGILITY ) || defined ( ZIGBEE_PANID_CONFLICT )
+     66            #include "ZDNwkMgr.h"
+     67          #endif
+     68          #if defined ( ZIGBEE_FRAGMENTATION )
+     69            #include "aps_frag.h"
+     70          #endif
+     71          
+     72          #if defined ( INTER_PAN )
+     73            #include "stub_aps.h"
+     74          #if defined ( BDB_TL_INITIATOR )
+     75            #include "bdb_touchlink_initiator.h"
+     76          #endif // BDB_TL_INITIATOR
+     77          #if defined ( BDB_TL_TARGET )
+     78            #include "bdb_touchlink_target.h"
+     79          #endif // BDB_TL_TARGET
+     80          #endif // INTER_PAN
+     81          
+     82          #include "zcl_genericapp.h"
+     83          
+     84          /*********************************************************************
+     85           * GLOBAL VARIABLES
+     86           */
+     87          
+     88          // The order in this table must be identical to the task initialization calls below in osalInitTask.
+
+   \                                 In  segment XDATA_ROM_C, align 1
+     89          const pTaskEventHandlerFn tasksArr[] = {
+   \                     tasksArr:
+   \   000000   ....         DW `??macEventLoop::?relay`
+   \   000002   ....         DW `??nwk_event_loop::?relay`
+   \   000004   ....         DW `??Hal_ProcessEvent::?relay`
+   \   000006   ....         DW `??APS_event_loop::?relay`
+   \   000008   ....         DW `??APSF_ProcessEvent::?relay`
+   \   00000A   ....         DW `??ZDApp_event_loop::?relay`
+   \   00000C   ....         DW `??zcl_event_loop::?relay`
+   \   00000E   ....         DW `??bdb_event_loop::?relay`
+   \   000010   ....         DW `??zclGenericApp_event_loop::?relay`
+     90            macEventLoop,
+     91            nwk_event_loop,
+     92          #if !defined (DISABLE_GREENPOWER_BASIC_PROXY) && (ZG_BUILD_RTR_TYPE)
+     93            gp_event_loop,
+     94          #endif  
+     95            Hal_ProcessEvent,
+     96          #if defined( MT_TASK )
+     97            MT_ProcessEvent,
+     98          #endif
+     99            APS_event_loop,
+    100          #if defined ( ZIGBEE_FRAGMENTATION )
+    101            APSF_ProcessEvent,
+    102          #endif
+    103            ZDApp_event_loop,
+    104          #if defined ( ZIGBEE_FREQ_AGILITY ) || defined ( ZIGBEE_PANID_CONFLICT )
+    105            ZDNwkMgr_event_loop,
+    106          #endif
+    107            //Added to include TouchLink functionality
+    108            #if defined ( INTER_PAN )
+    109              StubAPS_ProcessEvent,
+    110            #endif
+    111            // Added to include TouchLink initiator functionality
+    112            #if defined ( BDB_TL_INITIATOR )
+    113              touchLinkInitiator_event_loop,
+    114            #endif
+    115            // Added to include TouchLink target functionality
+    116            #if defined ( BDB_TL_TARGET )
+    117              touchLinkTarget_event_loop,
+    118            #endif
+    119            zcl_event_loop,
+    120            bdb_event_loop,
+    121            zclGenericApp_event_loop
+    122          };
+    123          
+
+   \                                 In  segment XDATA_ROM_C, align 1
+    124          const uint8 tasksCnt = sizeof( tasksArr ) / sizeof( tasksArr[0] );
+   \                     tasksCnt:
+   \   000000   09           DB 9
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    125          uint16 *tasksEvents;
+   \                     tasksEvents:
+   \   000000                DS 2
+   \   000002                REQUIRE __INIT_XDATA_Z
+    126          
+    127          /*********************************************************************
+    128           * FUNCTIONS
+    129           *********************************************************************/
+    130          
+    131          /*********************************************************************
+    132           * @fn      osalInitTasks
+    133           *
+    134           * @brief   This function invokes the initialization function for each task.
+    135           *
+    136           * @param   void
+    137           *
+    138           * @return  none
+    139           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    140          void osalInitTasks( void )
+   \                     osalInitTasks:
+    141          {
+   \   000000   C082         PUSH      DPL
+   \   000002   C083         PUSH      DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    142            uint8 taskID = 0;
+    143          
+    144            tasksEvents = (uint16 *)osal_mem_alloc( sizeof( uint16 ) * tasksCnt);
+   \   000004                ; Setup parameters for call to function osal_mem_alloc
+   \   000004   7A12         MOV       R2,#0x12
+   \   000006   7B00         MOV       R3,#0x0
+   \   000008   12....       LCALL     `??osal_mem_alloc::?relay`; Banked call to: osal_mem_alloc
+   \   00000B   90....       MOV       DPTR,#tasksEvents
+   \   00000E   EA           MOV       A,R2
+   \   00000F   F0           MOVX      @DPTR,A
+   \   000010   A3           INC       DPTR
+   \   000011   EB           MOV       A,R3
+   \   000012   F0           MOVX      @DPTR,A
+    145            osal_memset( tasksEvents, 0, (sizeof( uint16 ) * tasksCnt));
+   \   000013                ; Setup parameters for call to function osal_memset
+   \   000013   7C12         MOV       R4,#0x12
+   \   000015   7D00         MOV       R5,#0x0
+   \   000017   7900         MOV       R1,#0x0
+   \   000019   12....       LCALL     `??osal_memset::?relay`; Banked call to: osal_memset
+    146          
+    147            macTaskInit( taskID++ );
+   \   00001C                ; Setup parameters for call to function macTaskInit
+   \   00001C   7900         MOV       R1,#0x0
+   \   00001E   12....       LCALL     `??macTaskInit::?relay`; Banked call to: macTaskInit
+    148            nwk_init( taskID++ );
+   \   000021                ; Setup parameters for call to function nwk_init
+   \   000021   7901         MOV       R1,#0x1
+   \   000023   12....       LCALL     `??nwk_init::?relay`; Banked call to: nwk_init
+    149          #if !defined (DISABLE_GREENPOWER_BASIC_PROXY) && (ZG_BUILD_RTR_TYPE)
+    150            gp_Init( taskID++ );
+    151          #endif
+    152            Hal_Init( taskID++ );
+   \   000026                ; Setup parameters for call to function Hal_Init
+   \   000026   7902         MOV       R1,#0x2
+   \   000028   12....       LCALL     `??Hal_Init::?relay`; Banked call to: Hal_Init
+    153          #if defined( MT_TASK )
+    154            MT_TaskInit( taskID++ );
+    155          #endif
+    156            APS_Init( taskID++ );
+   \   00002B                ; Setup parameters for call to function APS_Init
+   \   00002B   7903         MOV       R1,#0x3
+   \   00002D   12....       LCALL     `??APS_Init::?relay`; Banked call to: APS_Init
+    157          #if defined ( ZIGBEE_FRAGMENTATION )
+    158            APSF_Init( taskID++ );
+   \   000030                ; Setup parameters for call to function APSF_Init
+   \   000030   7904         MOV       R1,#0x4
+   \   000032   12....       LCALL     `??APSF_Init::?relay`; Banked call to: APSF_Init
+    159          #endif
+    160            ZDApp_Init( taskID++ );
+   \   000035                ; Setup parameters for call to function ZDApp_Init
+   \   000035   7905         MOV       R1,#0x5
+   \   000037   12....       LCALL     `??ZDApp_Init::?relay`; Banked call to: ZDApp_Init
+    161          #if defined ( ZIGBEE_FREQ_AGILITY ) || defined ( ZIGBEE_PANID_CONFLICT )
+    162            ZDNwkMgr_Init( taskID++ );
+    163          #endif
+    164            // Added to include TouchLink functionality
+    165          #if defined ( INTER_PAN )
+    166            StubAPS_Init( taskID++ );
+    167          #endif
+    168          // Added to include TouchLink initiator functionality
+    169          #if defined( BDB_TL_INITIATOR )
+    170            touchLinkInitiator_Init( taskID++ );
+    171          #endif
+    172          // Added to include TouchLink target functionality
+    173          #if defined ( BDB_TL_TARGET )
+    174            touchLinkTarget_Init( taskID++ );
+    175          #endif
+    176            zcl_Init( taskID++ );
+   \   00003A                ; Setup parameters for call to function zcl_Init
+   \   00003A   7906         MOV       R1,#0x6
+   \   00003C   12....       LCALL     `??zcl_Init::?relay`; Banked call to: zcl_Init
+    177            bdb_Init( taskID++ );
+   \   00003F                ; Setup parameters for call to function bdb_Init
+   \   00003F   7907         MOV       R1,#0x7
+   \   000041   12....       LCALL     `??bdb_Init::?relay`; Banked call to: bdb_Init
+    178            zclGenericApp_Init( taskID );
+   \   000044                ; Setup parameters for call to function zclGenericApp_Init
+   \   000044   7908         MOV       R1,#0x8
+   \   000046   12....       LCALL     `??zclGenericApp_Init::?relay`; Banked call to: zclGenericApp_Init
+    179          }
+   \   000049   D083         POP       DPH
+   \   00004B   D082         POP       DPL
+   \   00004D   02....       LJMP      ?BRET
+    180          
+    181          /*********************************************************************
+    182          *********************************************************************/
+
+   Maximum stack usage in bytes:
+
+   ISTACK Function
+   ------ --------
+      2   osalInitTasks
+        2   -> APSF_Init
+        2   -> APS_Init
+        2   -> Hal_Init
+        2   -> ZDApp_Init
+        2   -> bdb_Init
+        2   -> macTaskInit
+        2   -> nwk_init
+        2   -> osal_mem_alloc
+        2   -> osal_memset
+        2   -> zclGenericApp_Init
+        2   -> zcl_Init
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      80  osalInitTasks
+      18  tasksArr
+       1  tasksCnt
+       2  tasksEvents
+       6  -- Other
+
+ 
+ 80 bytes in segment BANKED_CODE
+  6 bytes in segment BANK_RELAYS
+ 19 bytes in segment XDATA_ROM_C
+  2 bytes in segment XDATA_Z
+ 
+  6 bytes of CODE     memory
+ 19 bytes of CONST    memory
+ 80 bytes of HUGECODE memory
+  2 bytes of XDATA    memory
+
+Errors: none
+Warnings: none

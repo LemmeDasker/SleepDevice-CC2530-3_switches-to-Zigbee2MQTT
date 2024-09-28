@@ -1,0 +1,479 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V10.30.1.6000 for 8051               28/Sep/2024  20:28:44
+# Copyright 2004-2018 IAR Systems AB.
+# PC-locked license - IAR Embedded Workbench for 8051
+#
+#    Core               =  plain
+#    Code model         =  banked
+#    Data model         =  large
+#    Calling convention =  xdata reentrant
+#    Constant location  =  data_rom
+#    Dptr setup         =  1,16
+#                          
+#    Source file        =  
+#        C:\Texas Instruments\Z-Stack 3.0.2\Components\stack\zdo\ZDConfig.c
+#    Command line       =  
+#        -f C:\Users\Flemming\AppData\Local\Temp\EWA351.tmp ("C:\Texas
+#        Instruments\Z-Stack 3.0.2\Components\stack\zdo\ZDConfig.c" -D SECURE=1
+#        -D TC_LINKKEY_JOIN -D NV_INIT -D NV_RESTORE -D POWER_SAVING -D
+#        NWK_AUTO_POLL -D xZTOOL_P1 -D xMT_TASK -D xMT_APP_FUNC -D xMT_SYS_FUNC
+#        -D xMT_ZDO_FUNC -D xMT_ZDO_MGMT -D xMT_APP_CNF_FUNC -D
+#        xLEGACY_LCD_DEBUG -D xLCD_SUPPORTED=DEBUG -D MULTICAST_ENABLED=FALSE
+#        -D ZCL_READ -D ZCL_WRITE -D ZCL_BASIC -D ZCL_IDENTIFY -D xZCL_SCENES
+#        -D xZCL_GROUPS -D ZCL_ON_OFF -D xZCL_DISCOVER -D ZCL_REPORTING_DEVICE
+#        -D ISR_KEYINTERRUPT -D HAL_LCD=FALSE -D HAL_UARTE=FALSE -D
+#        HAL_SPI=FALSE -D HAL_HID=FALSE -lC "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\EndDeviceEB\List"
+#        -lA "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\EndDeviceEB\List"
+#        --diag_suppress Pe001,Pa010 -o "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\EndDeviceEB\Obj"
+#        -e --debug --core=plain --dptr=16,1 --data_model=large
+#        --code_model=banked --calling_convention=xdata_reentrant
+#        --place_constants=data_rom --nr_virtual_regs 16 -f "C:\Texas
+#        Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
+#        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3
+#        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f "C:\Texas
+#        Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
+#        (-DZIGBEEPRO -DSECURE=1 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
+#        -DDEFAULT_CHANLIST=0x00000800 -DZDAPP_CONFIG_PAN_ID=0xFFFF
+#        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
+#        -DBEACON_REQUEST_DELAY=100 -DBEACON_REQ_DELAY_MASK=0x00FF
+#        -DLINK_STATUS_JITTER_MASK=0x007F -DROUTE_EXPIRY_TIME=30
+#        -DAPSC_ACK_WAIT_DURATION_POLLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7
+#        -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3
+#        -DNWK_MAX_DATA_RETRIES=2 -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9
+#        -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40 -DNWK_MAX_BINDING_ENTRIES=4
+#        -DMAX_BINDING_CLUSTER_IDS=4 -DDEFAULT_KEY={0} -DMAC_MAX_FRAME_SIZE=116
+#        -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const __code"
+#        -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000
+#        -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100 -DREJOIN_POLL_RATE=440
+#        -DREJOIN_BACKOFF=900000 -DREJOIN_SCAN=900000 -DENABLE_LED4_DISABLE_S1)
+#        -f "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\Tools\CC2530DB\f8wZCL.cfg"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\Source\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\Source\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\ZMain\TI2530DB\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\hal\include\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\mac\include\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\mt\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\osal\include\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\services\saddr\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\services\sdata\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\stack\af\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\stack\bdb\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\stack\gp\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\stack\sec\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\stack\sys\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\stack\zcl\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\zmac\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
+#        -Ohz --require_prototypes)
+#    Locale             =  Danish_DNK.1252
+#    List file          =  
+#        C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\EndDeviceEB\List\ZDConfig.lst
+#    Object file        =  
+#        C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\SleepDevice-CC2530-3_switches-to-Zigbee2MQTT\CC2530DB\EndDeviceEB\Obj\ZDConfig.r51
+#
+###############################################################################
+
+C:\Texas Instruments\Z-Stack 3.0.2\Components\stack\zdo\ZDConfig.c
+      1          /**************************************************************************************************
+      2            Filename:       ZDConfig.c
+      3            Revised:        $Date: 2013-05-07 13:02:49 -0700 (Tue, 07 May 2013) $
+      4            Revision:       $Revision: 34167 $
+      5          
+      6          
+      7            Description:    This file contains the configuration attributes for the Zigbee Device Object.
+      8                            These are references to Configuration items that MUST be defined in ZDApp.c.
+      9                            The names mustn't change.
+     10          
+     11          
+     12            Copyright 2004-2013 Texas Instruments Incorporated. All rights reserved.
+     13          
+     14            IMPORTANT: Your use of this Software is limited to those specific rights
+     15            granted under the terms of a software license agreement between the user
+     16            who downloaded the software, his/her employer (which must be your employer)
+     17            and Texas Instruments Incorporated (the "License").  You may not use this
+     18            Software unless you agree to abide by the terms of the License. The License
+     19            limits your use, and you acknowledge, that the Software may not be modified,
+     20            copied or distributed unless embedded on a Texas Instruments microcontroller
+     21            or used solely and exclusively in conjunction with a Texas Instruments radio
+     22            frequency transceiver, which is integrated into your product.  Other than for
+     23            the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+     24            works of, modify, distribute, perform, display or sell this Software and/or
+     25            its documentation for any purpose.
+     26          
+     27            YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+     28            PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+     29            INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
+     30            NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+     31            TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+     32            NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+     33            LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+     34            INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+     35            OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+     36            OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+     37            (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+     38          
+     39            Should you have any questions regarding your right to use this Software,
+     40            contact Texas Instruments Incorporated at www.TI.com.
+     41          **************************************************************************************************/
+     42          
+     43          /*********************************************************************
+     44           * INCLUDES
+     45           */
+     46          #include "ZComDef.h"
+     47          #include "AF.h"
+     48          #include "ZDObject.h"
+     49          #include "ZDConfig.h"
+     50          
+     51           /*********************************************************************
+     52           * MACROS
+     53           */
+     54          
+     55          /*********************************************************************
+     56           * CONSTANTS
+     57           */
+     58          
+     59          /*********************************************************************
+     60           * TYPEDEFS
+     61           */
+     62          
+     63          /*********************************************************************
+     64           * GLOBAL VARIABLES
+     65           */
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     66          NodeDescriptorFormat_t ZDO_Config_Node_Descriptor;
+   \                     ZDO_Config_Node_Descriptor:
+   \   000000                DS 13
+   \   00000D                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     67          NodePowerDescriptorFormat_t ZDO_Config_Power_Descriptor;
+   \                     ZDO_Config_Power_Descriptor:
+   \   000000                DS 2
+   \   000002                REQUIRE __INIT_XDATA_Z
+     68          
+     69          /*********************************************************************
+     70           * EXTERNAL VARIABLES
+     71           */
+     72          
+     73          /*********************************************************************
+     74           * EXTERNAL FUNCTIONS
+     75           */
+     76          
+     77          /*********************************************************************
+     78           * LOCAL FUNCTIONS
+     79           */
+     80          
+     81          /*********************************************************************
+     82           * LOCAL VARIABLES
+     83           */
+     84          
+     85          /*********************************************************************
+     86           * @fn      ZDConfig_InitDescriptors()
+     87           *
+     88           * @brief   Setup the ZDO descriptors
+     89           *             Node, Power
+     90           *
+     91           * @param   none
+     92           *
+     93           * @return  none
+     94           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     95          void ZDConfig_InitDescriptors( void )
+   \                     ZDConfig_InitDescriptors:
+     96          {
+   \   000000   C082         PUSH      DPL
+   \   000002   C083         PUSH      DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+     97            ZDConfig_UpdateNodeDescriptor();
+   \   000004                ; Setup parameters for call to function ZDConfig_UpdateNodeDescriptor
+   \   000004   12....       LCALL     `??ZDConfig_UpdateNodeDescriptor::?relay`; Banked call to: ZDConfig_UpdateNodeDescriptor
+     98            ZDConfig_UpdatePowerDescriptor();
+   \   000007                ; Setup parameters for call to function ZDConfig_UpdatePowerDescriptor
+   \   000007   12....       LCALL     `??ZDConfig_UpdatePowerDescriptor::?relay`; Banked call to: ZDConfig_UpdatePowerDescriptor
+     99          }
+   \   00000A   80..         SJMP      ??Subroutine1_0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ??Subroutine1_0:
+   \   000000   D083         POP       DPH
+   \   000002   D082         POP       DPL
+   \   000004   02....       LJMP      ?BRET
+    100          
+    101          /*********************************************************************
+    102           * @fn      ZDConfig_UpdateNodeDescriptor()
+    103           *
+    104           * @brief   Update the ZDO Node Descriptor
+    105           *
+    106           * @param   none
+    107           *
+    108           * @return  none
+    109           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    110          void ZDConfig_UpdateNodeDescriptor( void )
+   \                     ZDConfig_UpdateNodeDescriptor:
+    111          {
+   \   000000   C082         PUSH      DPL
+   \   000002   C083         PUSH      DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    112            // Build the Node Descriptor
+    113            if ( ZG_BUILD_COORDINATOR_TYPE && ZG_DEVICE_COORDINATOR_TYPE )
+    114              ZDO_Config_Node_Descriptor.LogicalType = NODETYPE_COORDINATOR;
+    115            else if ( ZSTACK_ROUTER_BUILD )
+    116              ZDO_Config_Node_Descriptor.LogicalType = NODETYPE_ROUTER;
+    117            else if ( ZSTACK_END_DEVICE_BUILD )
+    118              ZDO_Config_Node_Descriptor.LogicalType = NODETYPE_DEVICE;
+    119          
+    120            ZDO_Config_Node_Descriptor.ComplexDescAvail = FALSE;      // set elsewhere
+    121            ZDO_Config_Node_Descriptor.UserDescAvail = FALSE;         // set elsewhere
+    122            ZDO_Config_Node_Descriptor.Reserved = 0;                  // Reserved
+   \   000004   90....       MOV       DPTR,#ZDO_Config_Node_Descriptor
+   \   000007   7402         MOV       A,#0x2
+   \   000009   F0           MOVX      @DPTR,A
+    123            ZDO_Config_Node_Descriptor.APSFlags = 0;                  // NO APS flags
+    124            ZDO_Config_Node_Descriptor.FrequencyBand = NODEFREQ_2400; // Frequency Band
+   \   00000A   A3           INC       DPTR
+   \   00000B   7440         MOV       A,#0x40
+   \   00000D   F0           MOVX      @DPTR,A
+    125          
+    126            // MAC Capabilities
+    127            if ( ZSTACK_ROUTER_BUILD )
+    128            {
+    129              ZDO_Config_Node_Descriptor.CapabilityFlags
+    130                        = (CAPINFO_DEVICETYPE_FFD | CAPINFO_POWER_AC |
+    131                           CAPINFO_RCVR_ON_IDLE | CAPINFO_ALLOC_ADDR);
+    132          
+    133              if ( ZG_BUILD_COORDINATOR_TYPE && ZG_DEVICE_COORDINATOR_TYPE )
+    134                ZDO_Config_Node_Descriptor.CapabilityFlags |= CAPINFO_ALTPANCOORD;
+    135            }
+    136            else if ( ZSTACK_END_DEVICE_BUILD )
+    137            {
+    138              ZDO_Config_Node_Descriptor.CapabilityFlags = (CAPINFO_DEVICETYPE_RFD
+    139            #if ( RFD_RCVC_ALWAYS_ON == TRUE)
+    140                      | CAPINFO_RCVR_ON_IDLE
+    141            #endif
+    142                  | CAPINFO_ALLOC_ADDR);
+   \   00000E   A3           INC       DPTR
+   \   00000F   7480         MOV       A,#-0x80
+   \   000011   F0           MOVX      @DPTR,A
+    143            }
+    144          
+    145            // Manufacturer Code - *YOU FILL IN*
+    146            ZDO_Config_Node_Descriptor.ManufacturerCode[0] = 0;
+   \   000012   A3           INC       DPTR
+   \   000013   E4           CLR       A
+   \   000014   F0           MOVX      @DPTR,A
+    147            ZDO_Config_Node_Descriptor.ManufacturerCode[1] = 0;
+   \   000015   A3           INC       DPTR
+   \   000016   F0           MOVX      @DPTR,A
+    148          
+    149            // Maximum Buffer Size
+    150            ZDO_Config_Node_Descriptor.MaxBufferSize = MAX_BUFFER_SIZE;
+   \   000017   A3           INC       DPTR
+   \   000018   7450         MOV       A,#0x50
+   \   00001A   F0           MOVX      @DPTR,A
+    151          
+    152            // Maximum Incoming Transfer Size Field
+    153            ZDO_Config_Node_Descriptor.MaxInTransferSize[0] = LO_UINT16( MAX_TRANSFER_SIZE );
+   \   00001B   A3           INC       DPTR
+   \   00001C   74A0         MOV       A,#-0x60
+   \   00001E   F0           MOVX      @DPTR,A
+    154            ZDO_Config_Node_Descriptor.MaxInTransferSize[1] = HI_UINT16( MAX_TRANSFER_SIZE );
+   \   00001F   A3           INC       DPTR
+   \   000020   E4           CLR       A
+   \   000021   F0           MOVX      @DPTR,A
+    155          
+    156            // Maximum Outgoing Transfer Size Field
+    157            ZDO_Config_Node_Descriptor.MaxOutTransferSize[0] = LO_UINT16( MAX_TRANSFER_SIZE );
+   \   000022   90....       MOV       DPTR,#ZDO_Config_Node_Descriptor + 10
+   \   000025   74A0         MOV       A,#-0x60
+   \   000027   F0           MOVX      @DPTR,A
+    158            ZDO_Config_Node_Descriptor.MaxOutTransferSize[1] = HI_UINT16( MAX_TRANSFER_SIZE );
+   \   000028   A3           INC       DPTR
+   \   000029   E4           CLR       A
+   \   00002A   F0           MOVX      @DPTR,A
+    159          
+    160          #ifdef TP2_LEGACY_ZC
+    161            //Do not set the current stack revision
+    162          #else
+    163            // Set the current stack revision
+    164            ZDO_Config_Node_Descriptor.ServerMask |= (STACK_COMPLIANCE_CURRENT_REV << STACK_COMPLIANCE_CURRENT_REV_POS);
+   \   00002B   90....       MOV       DPTR,#ZDO_Config_Node_Descriptor + 9
+   \   00002E   E0           MOVX      A,@DPTR
+   \   00002F   442A         ORL       A,#0x2a
+   \   000031   F0           MOVX      @DPTR,A
+    165          #endif
+    166            
+    167            // Descriptor Capability Field - extended active endpoint list and
+    168            // extended simple descriptor are not supported.
+    169            ZDO_Config_Node_Descriptor.DescriptorCapability = 0;
+   \   000032   90....       MOV       DPTR,#ZDO_Config_Node_Descriptor + 12
+   \   000035   E4           CLR       A
+   \   000036                REQUIRE ?Subroutine0
+   \   000036                ; // Fall through to label ?Subroutine0
+    170          }
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   F0           MOVX      @DPTR,A
+   \   000001                REQUIRE ??Subroutine1_0
+   \   000001                ; // Fall through to label ??Subroutine1_0
+    171          
+    172          /*********************************************************************
+    173           * @fn      ZDConfig_UpdatePowerDescriptor()
+    174           *
+    175           * @brief   Update the ZDO Power Descriptor
+    176           *
+    177           * @param   none
+    178           *
+    179           * @return  none
+    180           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    181          void ZDConfig_UpdatePowerDescriptor( void )
+   \                     ZDConfig_UpdatePowerDescriptor:
+    182          {
+   \   000000   C082         PUSH      DPL
+   \   000002   C083         PUSH      DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    183            // Build the Power Descriptor
+    184            if ( ZSTACK_ROUTER_BUILD )
+    185            {
+    186              ZDO_Config_Power_Descriptor.PowerMode = NODECURPWR_RCVR_ALWAYS_ON;
+    187              ZDO_Config_Power_Descriptor.AvailablePowerSources = NODEAVAILPWR_MAINS;
+    188              ZDO_Config_Power_Descriptor.CurrentPowerSource = NODEAVAILPWR_MAINS;
+    189              ZDO_Config_Power_Descriptor.CurrentPowerSourceLevel = NODEPOWER_LEVEL_100;
+    190            }
+    191            else if ( ZSTACK_END_DEVICE_BUILD )
+    192            {
+    193              if ( zgPollRate )
+   \   000004   90....       MOV       DPTR,#zgPollRate
+   \   000007   12....       LCALL     ?XLOAD_R0123
+   \   00000A   E8           MOV       A,R0
+   \   00000B   49           ORL       A,R1
+   \   00000C   4A           ORL       A,R2
+   \   00000D   4B           ORL       A,R3
+   \   00000E   90....       MOV       DPTR,#ZDO_Config_Power_Descriptor
+   \   000011   6008         JZ        ??ZDConfig_UpdatePowerDescriptor_0
+    194                ZDO_Config_Power_Descriptor.PowerMode = NODECURPWR_RCVR_AUTO;
+   \   000013   E0           MOVX      A,@DPTR
+   \   000014   54F0         ANL       A,#0xf0
+   \   000016   F0           MOVX      @DPTR,A
+   \   000017   4401         ORL       A,#0x1
+   \   000019   8006         SJMP      ??ZDConfig_UpdatePowerDescriptor_1
+    195              else
+    196                ZDO_Config_Power_Descriptor.PowerMode = NODECURPWR_RCVR_STIM;
+   \                     ??ZDConfig_UpdatePowerDescriptor_0:
+   \   00001B   E0           MOVX      A,@DPTR
+   \   00001C   54F0         ANL       A,#0xf0
+   \   00001E   F0           MOVX      @DPTR,A
+   \   00001F   4402         ORL       A,#0x2
+   \                     ??ZDConfig_UpdatePowerDescriptor_1:
+   \   000021   F0           MOVX      @DPTR,A
+    197          
+    198              ZDO_Config_Power_Descriptor.AvailablePowerSources = NODEAVAILPWR_RECHARGE;
+    199              ZDO_Config_Power_Descriptor.CurrentPowerSource = NODEAVAILPWR_RECHARGE;
+    200              ZDO_Config_Power_Descriptor.CurrentPowerSourceLevel = NODEPOWER_LEVEL_66;
+   \   000022   E0           MOVX      A,@DPTR
+   \   000023   540F         ANL       A,#0xf
+   \   000025   F0           MOVX      @DPTR,A
+   \   000026   A3           INC       DPTR
+   \   000027   E4           CLR       A
+   \   000028   F0           MOVX      @DPTR,A
+   \   000029   90....       MOV       DPTR,#ZDO_Config_Power_Descriptor
+   \   00002C   E0           MOVX      A,@DPTR
+   \   00002D   4420         ORL       A,#0x20
+   \   00002F   F0           MOVX      @DPTR,A
+   \   000030   A3           INC       DPTR
+   \   000031   7482         MOV       A,#-0x7e
+   \   000033   80..         SJMP      ?Subroutine0
+    201            }
+    202          }
+    203          
+    204          /*********************************************************************
+    205          *********************************************************************/
+    206          
+    207          
+
+   Maximum stack usage in bytes:
+
+   ISTACK Function
+   ------ --------
+      2   ZDConfig_InitDescriptors
+        2   -> ZDConfig_UpdateNodeDescriptor
+        2   -> ZDConfig_UpdatePowerDescriptor
+      2   ZDConfig_UpdateNodeDescriptor
+      2   ZDConfig_UpdatePowerDescriptor
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       7  ??Subroutine1_0
+       1  ?Subroutine0
+      12  ZDConfig_InitDescriptors
+      54  ZDConfig_UpdateNodeDescriptor
+      53  ZDConfig_UpdatePowerDescriptor
+      13  ZDO_Config_Node_Descriptor
+       2  ZDO_Config_Power_Descriptor
+      18  -- Other
+
+ 
+ 127 bytes in segment BANKED_CODE
+  18 bytes in segment BANK_RELAYS
+  15 bytes in segment XDATA_Z
+ 
+  18 bytes of CODE     memory
+ 127 bytes of HUGECODE memory
+  15 bytes of XDATA    memory
+
+Errors: none
+Warnings: none
